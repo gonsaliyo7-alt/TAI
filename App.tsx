@@ -8,7 +8,7 @@ import StatisticsView from './components/StatisticsView';
 import FlashcardView from './components/FlashcardView';
 import { TESTS_DATA, ALL_QUESTIONS } from './data/questions';
 import { PRACTICAL_CASES } from './data/practicalCases';
-import type { Test, TestResult, TestResults, Question } from './types';
+import type { Test, TestResult, TestResults, Question, UserTrophies } from './types';
 import { useCookie } from './hooks/useCookie';
 import { useLocalStorage } from './hooks/useLocalStorage';
 
@@ -50,6 +50,11 @@ const shuffleQuestionOptions = (question: Question): Question => {
     };
 };
 
+const getTodayDateString = () => {
+    const date = new Date();
+    return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
+};
+
 function App() {
     const [results, setResults] = useCookie<TestResults>('testResults', {});
     // Usamos localStorage para las preguntas falladas porque la lista puede ser muy larga para una cookie
@@ -58,6 +63,12 @@ function App() {
     const [survivalRecord, setSurvivalRecord] = useLocalStorage<number>('survivalRecord', 0);
     // LocalStorage para la experiencia (XP) y Rangos
     const [userXP, setUserXP] = useLocalStorage<number>('userXP', 0);
+    const [userTrophies, setUserTrophies] = useLocalStorage<UserTrophies>('userTrophies', { diamonds: 0, trophies: 0, diplomas: 0 });
+    const [dailyProgress, setDailyProgress] = useLocalStorage<{ date: string, count: number, rewards: { diploma: boolean, trophy: boolean, diamond: boolean } }>('dailyProgress', {
+        date: getTodayDateString(),
+        count: 0,
+        rewards: { diploma: false, trophy: false, diamond: false }
+    });
 
     const [activeTest, setActiveTest] = useState<Test | null>(null);
     // Nuevo estado para el mazo de flashcards activo
@@ -177,6 +188,54 @@ function App() {
         setUserXP(newUserXP);
         // -----------------------------------
 
+        // --- Lógica de Trofeos Diarios ---
+        const today = getTodayDateString();
+        let currentDaily = { ...dailyProgress };
+
+        // Si cambió el día, resetear
+        if (currentDaily.date !== today) {
+            currentDaily = {
+                date: today,
+                count: 0,
+                rewards: { diploma: false, trophy: false, diamond: false }
+            };
+        }
+
+        // Sumar preguntas respondidas (aciertos + fallos)
+        const questionsAnswered = details.correct.length + details.incorrect.length;
+        currentDaily.count += questionsAnswered;
+
+        // Verificar recompensas
+        let newTrophies = { ...userTrophies };
+        let rewardsChanged = false;
+
+        // 100 preguntas -> 1 diploma
+        if (currentDaily.count >= 100 && !currentDaily.rewards.diploma) {
+            currentDaily.rewards.diploma = true;
+            newTrophies.diplomas += 1;
+            rewardsChanged = true;
+        }
+
+        // 500 preguntas -> 1 trofeo
+        if (currentDaily.count >= 500 && !currentDaily.rewards.trophy) {
+            currentDaily.rewards.trophy = true;
+            newTrophies.trophies += 1;
+            rewardsChanged = true;
+        }
+
+        // 1000 preguntas -> 1 diamante
+        if (currentDaily.count >= 1000 && !currentDaily.rewards.diamond) {
+            currentDaily.rewards.diamond = true;
+            newTrophies.diamonds += 1;
+            rewardsChanged = true;
+        }
+
+        setDailyProgress(currentDaily);
+        if (rewardsChanged) {
+            setUserTrophies(newTrophies);
+        }
+        // ---------------------------------
+
         // Lógica Específica para Supervivencia
         if (testId === 'test-survival') {
             // En supervivencia, el 'score' son los aciertos (la racha).
@@ -227,6 +286,14 @@ function App() {
         return 'dashboard';
     }, [activeTest, activeFlashcards, lastResult]);
 
+    const dailyTarget = useMemo(() => {
+        const count = dailyProgress.count;
+        if (count < 100) return { target: 100, icon: '📜', label: 'Diploma' };
+        if (count < 500) return { target: 500, icon: '🏆', label: 'Trofeo' };
+        if (count < 1000) return { target: 1000, icon: '💎', label: 'Diamante' };
+        return { target: null, icon: '👑', label: 'Completo' };
+    }, [dailyProgress.count]);
+
     return (
         <div className="min-h-screen bg-slate-50 font-sans">
             <header className="bg-white shadow-md sticky top-0 z-10">
@@ -237,6 +304,23 @@ function App() {
                             <h1 className="text-2xl md:text-3xl font-bold text-slate-800 tracking-tight">OpoTest <span className="text-blue-600">Penitenciarias</span></h1>
                         </div>
                         <div className="flex items-center gap-3">
+                            {/* Daily Progress Badge */}
+                            <div className="hidden md:flex flex-col items-end justify-center text-xs font-mono text-slate-500 bg-yellow-50 border border-yellow-100 px-3 py-1 rounded" title={`Progreso diario: ${dailyProgress.count} preguntas`}>
+                                {dailyTarget.target ? (
+                                    <>
+                                        <div className="flex items-center gap-1 mb-0.5">
+                                            <span role="img" aria-label={dailyTarget.label}>{dailyTarget.icon}</span>
+                                            <span className="font-bold text-yellow-700">{dailyProgress.count} / {dailyTarget.target}</span>
+                                        </div>
+                                        <div className="w-full bg-yellow-200 h-1.5 rounded-full overflow-hidden">
+                                            <div className="bg-yellow-500 h-full transition-all duration-500" style={{ width: `${(dailyProgress.count / dailyTarget.target) * 100}%` }}></div>
+                                        </div>
+                                    </>
+                                ) : (
+                                    <span className="font-bold text-yellow-600 flex items-center gap-1">👑 Misión Cumplida</span>
+                                )}
+                            </div>
+
                             {/* Mini badge de XP en el header */}
                             <div className="hidden md:flex flex-col items-end text-xs font-mono text-slate-500 bg-slate-100 px-2 py-1 rounded">
                                 <span className="font-bold text-blue-600">XP: {userXP.toLocaleString()}</span>
@@ -394,6 +478,7 @@ function App() {
                                 failedQuestions={failedQuestionTexts}
                                 allTests={[...TESTS_DATA, ...PRACTICAL_CASES]}
                                 userXP={userXP}
+                                userTrophies={userTrophies}
                             />
                         )}
                     </>

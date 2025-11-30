@@ -1,6 +1,6 @@
 
 import React, { useMemo } from 'react';
-import type { Test, TestResults, TestResult } from '../types';
+import type { Test, TestResults, TestResult, UserTrophies } from '../types';
 import { RANKS } from '../data/ranks';
 
 interface StatisticsViewProps {
@@ -8,6 +8,7 @@ interface StatisticsViewProps {
     failedQuestions: string[];
     allTests: Test[];
     userXP?: number;
+    userTrophies?: UserTrophies;
 }
 
 const getRankInfo = (xp: number) => {
@@ -38,7 +39,7 @@ const getRankInfo = (xp: number) => {
     return { currentRank, nextRank, progress, xpForNextLevel };
 };
 
-const StatisticsView: React.FC<StatisticsViewProps> = ({ results, failedQuestions, allTests, userXP = 0 }) => {
+const StatisticsView: React.FC<StatisticsViewProps> = ({ results, failedQuestions, allTests, userXP = 0, userTrophies }) => {
 
     const stats = useMemo(() => {
         // 1. Cálculos Generales
@@ -173,6 +174,33 @@ const StatisticsView: React.FC<StatisticsViewProps> = ({ results, failedQuestion
                             <span className="flex items-center gap-1"><span className="text-green-400 font-bold">+200 XP</span> por Acierto</span>
                             <span className="flex items-center gap-1"><span className="text-red-400 font-bold">-100 XP</span> por Fallo</span>
                         </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* Trophy Case */}
+            <div className="bg-white rounded-xl p-6 shadow-lg border border-slate-200 mb-8 relative overflow-hidden">
+                <h2 className="text-xl font-bold text-slate-700 mb-4 flex items-center gap-2">
+                    <span>🏆</span> Sala de Trofeos
+                </h2>
+                <div className="grid grid-cols-3 gap-4 text-center">
+                    <div className="flex flex-col items-center p-4 bg-blue-50 rounded-lg border border-blue-100 transform transition hover:scale-105">
+                        <span className="text-4xl mb-2 filter drop-shadow-md">💎</span>
+                        <span className="text-3xl font-bold text-slate-800">{userTrophies?.diamonds || 0}</span>
+                        <span className="text-xs text-slate-500 uppercase tracking-wide font-semibold">Diamantes</span>
+                        <span className="text-[10px] text-slate-400 mt-1">1000 preguntas/día</span>
+                    </div>
+                    <div className="flex flex-col items-center p-4 bg-yellow-50 rounded-lg border border-yellow-100 transform transition hover:scale-105">
+                        <span className="text-4xl mb-2 filter drop-shadow-md">🏆</span>
+                        <span className="text-3xl font-bold text-slate-800">{userTrophies?.trophies || 0}</span>
+                        <span className="text-xs text-slate-500 uppercase tracking-wide font-semibold">Trofeos</span>
+                        <span className="text-[10px] text-slate-400 mt-1">500 preguntas/día</span>
+                    </div>
+                    <div className="flex flex-col items-center p-4 bg-slate-50 rounded-lg border border-slate-100 transform transition hover:scale-105">
+                        <span className="text-4xl mb-2 filter drop-shadow-md">📜</span>
+                        <span className="text-3xl font-bold text-slate-800">{userTrophies?.diplomas || 0}</span>
+                        <span className="text-xs text-slate-500 uppercase tracking-wide font-semibold">Diplomas</span>
+                        <span className="text-[10px] text-slate-400 mt-1">100 preguntas/día</span>
                     </div>
                 </div>
             </div>

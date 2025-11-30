@@ -24,3 +24,9 @@ export interface TestResult {
 export interface TestResults {
   [key: string]: TestResult;
 }
+
+export interface UserTrophies {
+  diamonds: number;
+  trophies: number;
+  diplomas: number;
+}
