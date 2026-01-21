@@ -14,6 +14,7 @@ const TestView: React.FC<TestViewProps> = ({ test, onComplete, onExit }) => {
   const isAI = test.id === 'test-ai' || test.id === 'test-ai-ko' || test.id === 'test-ai-practical';
   const isPracticalAI = test.id === 'test-ai-practical';
   const isSurvival = test.id === 'test-survival' || test.id === 'test-ko-exams' || test.id === 'test-ai-ko';
+  const isRoulette = test.id === 'test-roulette';
   const isInfinite = test.id === 'test-infinite';
 
   // State for AI Mode
@@ -33,8 +34,9 @@ const TestView: React.FC<TestViewProps> = ({ test, onComplete, onExit }) => {
   const [answers, setAnswers] = useState<(number | null)[]>([]);
 
   // Survival Mode States
-  const [lives, setLives] = useState(3);
+  const [lives, setLives] = useState(isRoulette ? 6 : 3);
   const [gameOver, setGameOver] = useState(false);
+  const [correctStreak, setCorrectStreak] = useState(0);
 
   // Initialize answers array when questions change (or initially)
   useEffect(() => {
@@ -97,16 +99,26 @@ const TestView: React.FC<TestViewProps> = ({ test, onComplete, onExit }) => {
     setAnswers(newAnswers);
 
     // Logic for Survival Mode
-    if (isSurvival) {
+    if (isSurvival || isRoulette) {
       const isCorrect = optionIndex === currentQuestion.correctAnswer;
       if (!isCorrect) {
         const newLives = lives - 1;
         setLives(newLives);
+        if (isRoulette) {
+          setCorrectStreak(0); // Reset streak on failure
+        }
         if (newLives === 0) {
           setGameOver(true);
           setTimeout(() => {
             handleFinishSurvival(newAnswers);
           }, 1500);
+        }
+      } else if (isRoulette) {
+        // Roulette mode: recover life every 5 correct answers
+        const newStreak = correctStreak + 1;
+        setCorrectStreak(newStreak);
+        if (newStreak % 5 === 0) {
+          setLives(prev => prev + 1);
         }
       }
     }
@@ -271,7 +283,7 @@ const TestView: React.FC<TestViewProps> = ({ test, onComplete, onExit }) => {
   }
 
   return (
-    <div className={`flex flex-col transition-colors duration-300 ${isSurvival && lives === 1 ? 'animate-pulse bg-red-50 dark:bg-red-900/10 p-2 rounded-xl' : ''}`}>
+    <div className={`flex flex-col transition-colors duration-300 ${(isSurvival || isRoulette) && lives === 1 ? 'animate-pulse bg-red-50 dark:bg-red-900/10 p-2 rounded-xl' : ''}`}>
       <div className="flex flex-col-reverse sm:flex-row justify-between items-start sm:items-center mb-6 gap-4">
         <div>
           <h2 className="text-2xl font-bold text-slate-700 dark:text-white flex items-center gap-2">
@@ -280,17 +292,24 @@ const TestView: React.FC<TestViewProps> = ({ test, onComplete, onExit }) => {
             {isAI && <span className="bg-purple-100 dark:bg-purple-900/40 text-purple-800 dark:text-purple-300 text-xs px-2 py-1 rounded-full border border-purple-200 dark:border-purple-800 flex items-center gap-1">✨ IA Generativa</span>}
           </h2>
 
-          {isSurvival ? (
+          {(isSurvival || isRoulette) ? (
             <div className="flex items-center gap-2 mt-2">
               <span className="text-slate-600 dark:text-slate-400 font-semibold">Vidas:</span>
               <div className="flex gap-1">
-                {[...Array(3)].map((_, i) => (
+                {[...Array(isRoulette ? 6 : 3)].map((_, i) => (
                   <span key={i} className={`text-2xl transition-all duration-500 ${i < lives ? 'text-red-500 scale-100' : 'text-gray-300 dark:text-slate-700 scale-75 grayscale'}`}>
                     ❤️
                   </span>
                 ))}
               </div>
-              <span className="ml-4 text-sm font-mono bg-slate-800 dark:bg-slate-700 text-white px-2 py-1 rounded">Racha: {answers.filter((a, i) => a !== null && activeQuestions[i] && a === activeQuestions[i].correctAnswer).length}</span>
+              {isRoulette && (
+                <span className="ml-4 text-sm font-mono bg-orange-600 dark:bg-orange-700 text-white px-3 py-1 rounded-lg font-bold">
+                  Racha: {correctStreak}/5 🎯
+                </span>
+              )}
+              {isSurvival && (
+                <span className="ml-4 text-sm font-mono bg-slate-800 dark:bg-slate-700 text-white px-2 py-1 rounded">Racha: {answers.filter((a, i) => a !== null && activeQuestions[i] && a === activeQuestions[i].correctAnswer).length}</span>
+              )}
             </div>
           ) : (
             <p className="text-slate-500 dark:text-slate-400 mt-1">

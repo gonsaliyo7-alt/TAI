@@ -132,11 +132,19 @@ const koExamTestPlaceholder: Test = {
   totalQuestions: 0,
 };
 
+const rouletteTestPlaceholder: Test = {
+  id: 'test-roulette',
+  title: '🎲 Ruleta Rusa (6 Vidas - Recupera cada 5 aciertos)',
+  questions: [],
+  totalQuestions: 0,
+};
+
 // 3. Exportar todos los tests
 export const TESTS_DATA: Test[] = [
   aiTestPlaceholder,
   aiKoTestPlaceholder,
   koExamTestPlaceholder,
+  rouletteTestPlaceholder,
   survivalTestPlaceholder,
   failedQuestionsTestPlaceholder,
   infiniteTestPlaceholder,

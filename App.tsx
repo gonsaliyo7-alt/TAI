@@ -118,7 +118,7 @@ function App() {
 
             testWithQuestions.questions = getRandomQuestions(failedQuestions, failedQuestions.length).map(shuffleQuestionOptions);
             testWithQuestions.totalQuestions = failedQuestions.length;
-        } else if (testId === 'test-infinite' || testId === 'test-survival') {
+        } else if (testId === 'test-infinite' || testId === 'test-survival' || testId === 'test-roulette') {
             const allQuestionsShuffled = getRandomQuestions(ALL_QUESTIONS, ALL_QUESTIONS.length);
             testWithQuestions.questions = allQuestionsShuffled.map(shuffleQuestionOptions);
             testWithQuestions.totalQuestions = allQuestionsShuffled.length;

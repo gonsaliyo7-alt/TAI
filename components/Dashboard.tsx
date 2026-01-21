@@ -14,6 +14,9 @@ const getStatusClasses = (status: 'passed' | 'failed' | undefined, testId: strin
     if (testId === 'test-survival' || testId === 'test-ko-exams') {
         return 'bg-gradient-to-r from-red-50 to-red-100 dark:from-red-900/20 dark:to-red-900/30 border-red-600 dark:border-red-500 shadow-red-500/10';
     }
+    if (testId === 'test-roulette') {
+        return 'bg-gradient-to-r from-orange-50 to-yellow-100 dark:from-orange-900/20 dark:to-yellow-900/30 border-orange-600 dark:border-orange-500 shadow-orange-500/10';
+    }
     if (testId === 'test-ai' || testId === 'test-ai-ko' || testId === 'test-ai-practical') {
         return 'bg-gradient-to-r from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-900/30 border-purple-600 dark:border-purple-500 shadow-purple-500/10';
     }
@@ -30,6 +33,9 @@ const getButtonClasses = (status: 'passed' | 'failed' | undefined, testId: strin
     if (testId === 'test-survival' || testId === 'test-ko-exams') {
         return 'bg-red-600 hover:bg-red-700 text-white ring-2 ring-red-300 dark:ring-red-900/50';
     }
+    if (testId === 'test-roulette') {
+        return 'bg-orange-600 hover:bg-orange-700 text-white ring-2 ring-orange-300 dark:ring-orange-900/50';
+    }
     if (testId === 'test-ai' || testId === 'test-ai-ko' || testId === 'test-ai-practical') {
         return 'bg-purple-600 hover:bg-purple-700 text-white ring-2 ring-purple-300 dark:ring-purple-900/50';
     }
@@ -44,7 +50,7 @@ const getButtonClasses = (status: 'passed' | 'failed' | undefined, testId: strin
 
 const TestCard: React.FC<{ test: Test, result?: TestResult, onStartTest: (id: string) => void, survivalRecord?: number }> = ({ test, result, onStartTest, survivalRecord }) => {
     const totalQuestions = result?.totalQuestions ?? test.totalQuestions ?? test.questions.length;
-    const isSurvival = test.id === 'test-survival' || test.id === 'test-ko-exams' || test.id === 'test-ai-ko';
+    const isSurvival = test.id === 'test-survival' || test.id === 'test-ko-exams' || test.id === 'test-ai-ko' || test.id === 'test-roulette';
 
     return (
         <div className={`p-4 rounded-lg border-l-4 transition-transform transform hover:-translate-y-1 shadow-sm ${getStatusClasses(result?.status, test.id)}`}>
