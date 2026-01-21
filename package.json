@@ -10,7 +10,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
-  "homepage": "https://gonsaliyo7-alt.github.io/tai",
+  "homepage": "https://gonsaliyo7-alt.github.io/TAI",
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
     "react": "^19.1.1",
