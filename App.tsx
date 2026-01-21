@@ -81,7 +81,7 @@ function App() {
         count: 0,
         rewards: { diploma: false, trophy: false, diamond: false }
     });
-    const [aiQuestionsCache, setAiQuestionsCache] = useLocalStorage<Record<string, Question>>('aiQuestionsCache', {});
+    const [aiQuestionsCache, setAiQuestionsCache] = useCookie<Record<string, Question>>('aiQuestionsCache', {});
 
     const [activeTest, setActiveTest] = useState<Test | null>(null);
     const [activeFlashcards, setActiveFlashcards] = useState<{ id: string, title: string, questions: Question[] } | null>(null);
@@ -147,12 +147,32 @@ function App() {
         });
         setFailedQuestionTexts(newFailed);
 
-        // Si hay objetos de preguntas (de la IA), los guardamos en el cache
+        // Logic for AI Cache
+        const newCache = { ...aiQuestionsCache };
+        let cacheChanged = false;
+
+        // Eliminar de caché si se ha acertado (para que no ocupe espacio innecesario)
+        details.correct.forEach(qText => {
+            const key = qText.trim();
+            if (newCache[key]) {
+                delete newCache[key];
+                cacheChanged = true;
+            }
+        });
+
+        // Guardar en caché si hay preguntas fallidas de la IA
         if (details.questions && details.questions.length > 0) {
-            const newCache = { ...aiQuestionsCache };
-            details.questions.forEach(q => {
-                newCache[q.questionText.trim()] = q;
+            details.incorrect.forEach(qText => {
+                const qTextTrim = qText.trim();
+                const aiQ = details.questions?.find(q => q.questionText.trim() === qTextTrim);
+                if (aiQ && !newCache[qTextTrim]) {
+                    newCache[qTextTrim] = aiQ;
+                    cacheChanged = true;
+                }
             });
+        }
+
+        if (cacheChanged) {
             setAiQuestionsCache(newCache);
         }
 
