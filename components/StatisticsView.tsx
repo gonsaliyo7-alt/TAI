@@ -10,6 +10,7 @@ interface StatisticsViewProps {
     userXP?: number;
     userTrophies?: UserTrophies;
     testHistory?: TestHistory;
+    studyStreak?: number;
 }
 
 const EvolutionChart: React.FC<{ history: TestHistory }> = ({ history }) => {
@@ -126,7 +127,7 @@ const getRankInfo = (xp: number) => {
     return { currentRank, nextRank, progress, xpForNextLevel };
 };
 
-const StatisticsView: React.FC<StatisticsViewProps> = ({ results, failedQuestions, allTests, userXP = 0, userTrophies, testHistory = [] }) => {
+const StatisticsView: React.FC<StatisticsViewProps> = ({ results, failedQuestions, allTests, userXP = 0, userTrophies, testHistory = [], studyStreak = 0 }) => {
 
     const stats = useMemo(() => {
         // ... (cálculos idénticos)
@@ -201,51 +202,62 @@ const StatisticsView: React.FC<StatisticsViewProps> = ({ results, failedQuestion
     return (
         <div className="space-y-6 animate-fade-in pb-10">
             {/* Rango de Funcionario Card */}
-            <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-6 text-white shadow-2xl border-2 border-slate-700 relative overflow-hidden">
-                <div className="absolute top-0 right-0 opacity-10 transform translate-x-10 -translate-y-10">
-                    <span className="text-9xl">🏛️</span>
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
+                <div className="lg:col-span-3 bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-6 text-white shadow-2xl border-2 border-slate-700 relative overflow-hidden">
+                    <div className="absolute top-0 right-0 opacity-10 transform translate-x-10 -translate-y-10">
+                        <span className="text-9xl">🏛️</span>
+                    </div>
+
+                    <div className="flex flex-col md:flex-row items-center gap-8 z-10 relative">
+                        <div className="flex flex-col items-center">
+                            <div className="w-28 h-28 bg-slate-700 rounded-2xl flex items-center justify-center border-4 border-blue-400 shadow-xl text-6xl mb-3 transform rotate-3">
+                                {rankInfo.currentRank.icon}
+                            </div>
+                            <span className="text-[10px] uppercase tracking-[0.2em] text-blue-300 font-bold">Cargo Público Actual</span>
+                            <h2 className="text-xl font-black text-white text-center">{rankInfo.currentRank.name}</h2>
+                        </div>
+
+                        <div className="flex-1 w-full">
+                            <div className="flex justify-between items-end mb-3">
+                                <div>
+                                    <p className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-white">{userXP.toLocaleString()} <span className="text-sm font-normal text-slate-400 uppercase tracking-widest">XP de Méritos</span></p>
+                                </div>
+                                <div className="text-right">
+                                    {rankInfo.nextRank ? (
+                                        <>
+                                            <p className="text-xs text-slate-400 font-bold uppercase tracking-wider mb-1">Próximo Escalafón: <span className="text-white">{rankInfo.nextRank.name}</span></p>
+                                            <p className="text-[10px] text-blue-300">Faltan {rankInfo.xpForNextLevel.toLocaleString()} XP</p>
+                                        </>
+                                    ) : (
+                                        <p className="text-yellow-400 font-black animate-pulse">¡NIVEL MÁXIMO DE ADMINISTRACIÓN!</p>
+                                    )}
+                                </div>
+                            </div>
+
+                            <div className="w-full bg-slate-950/50 rounded-full h-5 border border-slate-700 p-1">
+                                <div
+                                    className="bg-gradient-to-r from-blue-600 to-blue-300 h-full rounded-full transition-all duration-1000 ease-out relative shadow-[0_0_15px_rgba(59,130,246,0.5)]"
+                                    style={{ width: `${rankInfo.progress}%` }}
+                                >
+                                    <div className="absolute right-0 top-0 bottom-0 w-2 bg-white/30 animate-pulse rounded-r-full"></div>
+                                </div>
+                            </div>
+
+                            <div className="flex justify-between mt-3 text-[10px] text-slate-500 font-bold">
+                                <span>{rankInfo.currentRank.minXP.toLocaleString()} XP base</span>
+                                <span>{rankInfo.nextRank ? rankInfo.nextRank.minXP.toLocaleString() : 'LÍMITE'} XP</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div className="flex flex-col md:flex-row items-center gap-8 z-10 relative">
-                    <div className="flex flex-col items-center">
-                        <div className="w-28 h-28 bg-slate-700 rounded-2xl flex items-center justify-center border-4 border-blue-400 shadow-xl text-6xl mb-3 transform rotate-3">
-                            {rankInfo.currentRank.icon}
-                        </div>
-                        <span className="text-[10px] uppercase tracking-[0.2em] text-blue-300 font-bold">Cargo Público Actual</span>
-                        <h2 className="text-xl font-black text-white text-center">{rankInfo.currentRank.name}</h2>
-                    </div>
-
-                    <div className="flex-1 w-full">
-                        <div className="flex justify-between items-end mb-3">
-                            <div>
-                                <p className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-white">{userXP.toLocaleString()} <span className="text-sm font-normal text-slate-400 uppercase tracking-widest">XP de Méritos</span></p>
-                            </div>
-                            <div className="text-right">
-                                {rankInfo.nextRank ? (
-                                    <>
-                                        <p className="text-xs text-slate-400 font-bold uppercase tracking-wider mb-1">Próximo Escalafón: <span className="text-white">{rankInfo.nextRank.name}</span></p>
-                                        <p className="text-[10px] text-blue-300">Faltan {rankInfo.xpForNextLevel.toLocaleString()} XP</p>
-                                    </>
-                                ) : (
-                                    <p className="text-yellow-400 font-black animate-pulse">¡NIVEL MÁXIMO DE ADMINISTRACIÓN!</p>
-                                )}
-                            </div>
-                        </div>
-
-                        <div className="w-full bg-slate-950/50 rounded-full h-5 border border-slate-700 p-1">
-                            <div
-                                className="bg-gradient-to-r from-blue-600 to-blue-300 h-full rounded-full transition-all duration-1000 ease-out relative shadow-[0_0_15px_rgba(59,130,246,0.5)]"
-                                style={{ width: `${rankInfo.progress}%` }}
-                            >
-                                <div className="absolute right-0 top-0 bottom-0 w-2 bg-white/30 animate-pulse rounded-r-full"></div>
-                            </div>
-                        </div>
-
-                        <div className="flex justify-between mt-3 text-[10px] text-slate-500 font-bold">
-                            <span>{rankInfo.currentRank.minXP.toLocaleString()} XP base</span>
-                            <span>{rankInfo.nextRank ? rankInfo.nextRank.minXP.toLocaleString() : 'LÍMITE'} XP</span>
-                        </div>
-                    </div>
+                {/* Study Streak Card */}
+                <div className="bg-gradient-to-br from-orange-500 to-red-600 rounded-2xl p-6 text-white shadow-2xl border-2 border-orange-400 flex flex-col items-center justify-center relative overflow-hidden group">
+                    <div className="absolute -top-4 -right-4 text-white/10 text-8xl transform group-hover:scale-110 transition-transform">🔥</div>
+                    <span className="text-5xl mb-2 drop-shadow-lg animate-bounce">🔥</span>
+                    <span className="text-5xl font-black leading-none">{studyStreak}</span>
+                    <span className="text-[10px] font-black uppercase tracking-widest mt-2 border-t border-white/20 pt-2 w-full text-center">Días de Racha</span>
+                    <p className="text-[10px] text-orange-100 mt-1 opacity-80">¡Sigue así, TAI!</p>
                 </div>
             </div>
 
@@ -297,8 +309,8 @@ const StatisticsView: React.FC<StatisticsViewProps> = ({ results, failedQuestion
                         <p className="text-lg font-black text-purple-600 dark:text-purple-400">Alta</p>
                     </div>
                     <div className="bg-slate-50 dark:bg-slate-900/40 p-3 rounded-xl border border-slate-100 dark:border-slate-700">
-                        <p className="text-[10px] font-black text-slate-400 uppercase">Mejor Racha</p>
-                        <p className="text-lg font-black text-green-600 dark:text-green-400">5 Tests</p>
+                        <p className="text-[10px] font-black text-slate-400 uppercase">Racha Actual</p>
+                        <p className="text-lg font-black text-orange-600 dark:text-orange-400">{studyStreak} Días</p>
                     </div>
                     <div className="bg-slate-50 dark:bg-slate-900/40 p-3 rounded-xl border border-slate-100 dark:border-slate-700">
                         <p className="text-[10px] font-black text-slate-400 uppercase">Velocidad</p>

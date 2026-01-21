@@ -42,6 +42,11 @@ const shuffleQuestionOptions = (question: Question): Question => {
 };
 
 const getTodayDateString = () => new Date().toISOString().split('T')[0];
+const getYesterdayDateString = () => {
+    const d = new Date();
+    d.setDate(d.getDate() - 1);
+    return d.toISOString().split('T')[0];
+};
 
 const getRankInfo = (xp: number) => {
     let currentRank = RANKS[0];
@@ -82,6 +87,7 @@ function App() {
         rewards: { diploma: false, trophy: false, diamond: false }
     });
     const [aiQuestionsCache, setAiQuestionsCache] = useCookie<Record<string, Question>>('aiQuestionsCache', {});
+    const [studyStreak, setStudyStreak] = useLocalStorage<{ count: number, lastDate: string }>('studyStreak', { count: 0, lastDate: '' });
 
     const [activeTest, setActiveTest] = useState<Test | null>(null);
     const [activeFlashcards, setActiveFlashcards] = useState<{ id: string, title: string, questions: Question[] } | null>(null);
@@ -176,10 +182,21 @@ function App() {
             setAiQuestionsCache(newCache);
         }
 
+        // Logic for Study Streak
+        const today = getTodayDateString();
+        const yesterday = getYesterdayDateString();
+
+        if (studyStreak.lastDate !== today) {
+            if (studyStreak.lastDate === yesterday) {
+                setStudyStreak({ count: studyStreak.count + 1, lastDate: today });
+            } else {
+                setStudyStreak({ count: 1, lastDate: today });
+            }
+        }
+
         const xpChange = (details.correct.length * 200) - (details.incorrect.length * 100);
         setUserXP(prev => Math.max(0, prev + xpChange));
 
-        const today = getTodayDateString();
         let newDaily = { ...dailyProgress };
         if (newDaily.date !== today) {
             newDaily = { date: today, count: details.correct.length + details.incorrect.length, rewards: { diploma: false, trophy: false, diamond: false } };
@@ -414,6 +431,7 @@ function App() {
                         userXP={userXP}
                         userTrophies={userTrophies}
                         testHistory={testHistory}
+                        studyStreak={studyStreak.count}
                     />
                 )}
 
