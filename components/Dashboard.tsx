@@ -14,7 +14,7 @@ const getStatusClasses = (status: 'passed' | 'failed' | undefined, testId: strin
     if (testId === 'test-survival' || testId === 'test-ko-exams') {
         return 'bg-gradient-to-r from-red-50 to-red-100 dark:from-red-900/20 dark:to-red-900/30 border-red-600 dark:border-red-500 shadow-red-500/10';
     }
-    if (testId === 'test-ai' || testId === 'test-ai-ko') {
+    if (testId === 'test-ai' || testId === 'test-ai-ko' || testId === 'test-ai-practical') {
         return 'bg-gradient-to-r from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-900/30 border-purple-600 dark:border-purple-500 shadow-purple-500/10';
     }
     if (status === 'passed') {
@@ -30,7 +30,7 @@ const getButtonClasses = (status: 'passed' | 'failed' | undefined, testId: strin
     if (testId === 'test-survival' || testId === 'test-ko-exams') {
         return 'bg-red-600 hover:bg-red-700 text-white ring-2 ring-red-300 dark:ring-red-900/50';
     }
-    if (testId === 'test-ai' || testId === 'test-ai-ko') {
+    if (testId === 'test-ai' || testId === 'test-ai-ko' || testId === 'test-ai-practical') {
         return 'bg-purple-600 hover:bg-purple-700 text-white ring-2 ring-purple-300 dark:ring-purple-900/50';
     }
     if (status === 'passed') {
@@ -53,7 +53,7 @@ const TestCard: React.FC<{ test: Test, result?: TestResult, onStartTest: (id: st
                     <h3 className="font-bold text-lg flex items-center gap-2 dark:text-white">
                         {test.title}
                         {isSurvival && <span className="text-2xl">💀</span>}
-                        {(test.id === 'test-ai' || test.id === 'test-ai-ko') && <span className="text-2xl">🤖</span>}
+                        {(test.id === 'test-ai' || test.id === 'test-ai-ko' || test.id === 'test-ai-practical') && <span className="text-2xl">🤖</span>}
                     </h3>
 
                     {isSurvival ? (
