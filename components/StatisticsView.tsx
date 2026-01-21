@@ -201,63 +201,73 @@ const StatisticsView: React.FC<StatisticsViewProps> = ({ results, failedQuestion
 
     return (
         <div className="space-y-6 animate-fade-in pb-10">
-            {/* Rango de Funcionario Card */}
-            <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
-                <div className="lg:col-span-3 bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-6 text-white shadow-2xl border-2 border-slate-700 relative overflow-hidden">
-                    <div className="absolute top-0 right-0 opacity-10 transform translate-x-10 -translate-y-10">
-                        <span className="text-9xl">🏛️</span>
+            {/* Study Streak Card - High Visibility */}
+            <div className="bg-gradient-to-r from-orange-500 via-red-500 to-pink-600 rounded-2xl p-6 text-white shadow-2xl border-2 border-orange-400 relative overflow-hidden group animate-fade-in">
+                <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+                <div className="flex items-center justify-between z-10 relative">
+                    <div className="flex items-center gap-6">
+                        <div className="bg-white/20 p-4 rounded-2xl backdrop-blur-md animate-bounce">
+                            <span className="text-5xl">🔥</span>
+                        </div>
+                        <div>
+                            <h2 className="text-3xl font-black uppercase tracking-tighter italic">Racha de Estudio Actual</h2>
+                            <p className="text-orange-100 font-bold opacity-80 uppercase text-xs tracking-widest">¡Tu disciplina te llevará directo a la plaza!</p>
+                        </div>
                     </div>
-
-                    <div className="flex flex-col md:flex-row items-center gap-8 z-10 relative">
-                        <div className="flex flex-col items-center">
-                            <div className="w-28 h-28 bg-slate-700 rounded-2xl flex items-center justify-center border-4 border-blue-400 shadow-xl text-6xl mb-3 transform rotate-3">
-                                {rankInfo.currentRank.icon}
-                            </div>
-                            <span className="text-[10px] uppercase tracking-[0.2em] text-blue-300 font-bold">Cargo Público Actual</span>
-                            <h2 className="text-xl font-black text-white text-center">{rankInfo.currentRank.name}</h2>
-                        </div>
-
-                        <div className="flex-1 w-full">
-                            <div className="flex justify-between items-end mb-3">
-                                <div>
-                                    <p className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-white">{userXP.toLocaleString()} <span className="text-sm font-normal text-slate-400 uppercase tracking-widest">XP de Méritos</span></p>
-                                </div>
-                                <div className="text-right">
-                                    {rankInfo.nextRank ? (
-                                        <>
-                                            <p className="text-xs text-slate-400 font-bold uppercase tracking-wider mb-1">Próximo Escalafón: <span className="text-white">{rankInfo.nextRank.name}</span></p>
-                                            <p className="text-[10px] text-blue-300">Faltan {rankInfo.xpForNextLevel.toLocaleString()} XP</p>
-                                        </>
-                                    ) : (
-                                        <p className="text-yellow-400 font-black animate-pulse">¡NIVEL MÁXIMO DE ADMINISTRACIÓN!</p>
-                                    )}
-                                </div>
-                            </div>
-
-                            <div className="w-full bg-slate-950/50 rounded-full h-5 border border-slate-700 p-1">
-                                <div
-                                    className="bg-gradient-to-r from-blue-600 to-blue-300 h-full rounded-full transition-all duration-1000 ease-out relative shadow-[0_0_15px_rgba(59,130,246,0.5)]"
-                                    style={{ width: `${rankInfo.progress}%` }}
-                                >
-                                    <div className="absolute right-0 top-0 bottom-0 w-2 bg-white/30 animate-pulse rounded-r-full"></div>
-                                </div>
-                            </div>
-
-                            <div className="flex justify-between mt-3 text-[10px] text-slate-500 font-bold">
-                                <span>{rankInfo.currentRank.minXP.toLocaleString()} XP base</span>
-                                <span>{rankInfo.nextRank ? rankInfo.nextRank.minXP.toLocaleString() : 'LÍMITE'} XP</span>
-                            </div>
-                        </div>
+                    <div className="flex flex-col items-center bg-black/20 px-8 py-3 rounded-2xl border border-white/20 backdrop-blur-sm">
+                        <span className="text-6xl font-black leading-none">{studyStreak}</span>
+                        <span className="text-xs font-black uppercase tracking-[0.3em] mt-1">Días Seguidos</span>
                     </div>
                 </div>
+                <div className="absolute -bottom-10 -right-10 text-white/10 text-[12rem] font-black italic pointer-events-none">TAI</div>
+            </div>
 
-                {/* Study Streak Card */}
-                <div className="bg-gradient-to-br from-orange-500 to-red-600 rounded-2xl p-6 text-white shadow-2xl border-2 border-orange-400 flex flex-col items-center justify-center relative overflow-hidden group">
-                    <div className="absolute -top-4 -right-4 text-white/10 text-8xl transform group-hover:scale-110 transition-transform">🔥</div>
-                    <span className="text-5xl mb-2 drop-shadow-lg animate-bounce">🔥</span>
-                    <span className="text-5xl font-black leading-none">{studyStreak}</span>
-                    <span className="text-[10px] font-black uppercase tracking-widest mt-2 border-t border-white/20 pt-2 w-full text-center">Días de Racha</span>
-                    <p className="text-[10px] text-orange-100 mt-1 opacity-80">¡Sigue así, TAI!</p>
+            {/* Rango de Funcionario Card */}
+            <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-6 text-white shadow-2xl border-2 border-slate-700 relative overflow-hidden">
+                <div className="absolute top-0 right-0 opacity-10 transform translate-x-10 -translate-y-10">
+                    <span className="text-9xl">🏛️</span>
+                </div>
+
+                <div className="flex flex-col md:flex-row items-center gap-8 z-10 relative">
+                    <div className="flex flex-col items-center">
+                        <div className="w-28 h-28 bg-slate-700 rounded-2xl flex items-center justify-center border-4 border-blue-400 shadow-xl text-6xl mb-3 transform rotate-3">
+                            {rankInfo.currentRank.icon}
+                        </div>
+                        <span className="text-[10px] uppercase tracking-[0.2em] text-blue-300 font-bold">Cargo Público Actual</span>
+                        <h2 className="text-xl font-black text-white text-center">{rankInfo.currentRank.name}</h2>
+                    </div>
+
+                    <div className="flex-1 w-full">
+                        <div className="flex justify-between items-end mb-3">
+                            <div>
+                                <p className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-white">{userXP.toLocaleString()} <span className="text-sm font-normal text-slate-400 uppercase tracking-widest">XP de Méritos</span></p>
+                            </div>
+                            <div className="text-right">
+                                {rankInfo.nextRank ? (
+                                    <>
+                                        <p className="text-xs text-slate-400 font-bold uppercase tracking-wider mb-1">Próximo Escalafón: <span className="text-white">{rankInfo.nextRank.name}</span></p>
+                                        <p className="text-[10px] text-blue-300">Faltan {rankInfo.xpForNextLevel.toLocaleString()} XP</p>
+                                    </>
+                                ) : (
+                                    <p className="text-yellow-400 font-black animate-pulse">¡NIVEL MÁXIMO DE ADMINISTRACIÓN!</p>
+                                )}
+                            </div>
+                        </div>
+
+                        <div className="w-full bg-slate-950/50 rounded-full h-5 border border-slate-700 p-1">
+                            <div
+                                className="bg-gradient-to-r from-blue-600 to-blue-300 h-full rounded-full transition-all duration-1000 ease-out relative shadow-[0_0_15px_rgba(59,130,246,0.5)]"
+                                style={{ width: `${rankInfo.progress}%` }}
+                            >
+                                <div className="absolute right-0 top-0 bottom-0 w-2 bg-white/30 animate-pulse rounded-r-full"></div>
+                            </div>
+                        </div>
+
+                        <div className="flex justify-between mt-3 text-[10px] text-slate-500 font-bold">
+                            <span>{rankInfo.currentRank.minXP.toLocaleString()} XP base</span>
+                            <span>{rankInfo.nextRank ? rankInfo.nextRank.minXP.toLocaleString() : 'LÍMITE'} XP</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
