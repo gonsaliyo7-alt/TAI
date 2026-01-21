@@ -100,7 +100,7 @@ const Dashboard: React.FC<DashboardProps> = ({ tests, results, onStartTest, titl
 
     const survivalTest = filteredTests.find(t => t.id === 'test-survival');
     const simulationTests = filteredTests.filter(t => t.id.startsWith('test-examen-'));
-    const dynamicTests = filteredTests.filter(t => t.id.startsWith('test-all-') || t.id === 'test-infinite' || t.id === 'test-ai');
+    const dynamicTests = filteredTests.filter(t => t.id.startsWith('test-all-') || t.id === 'test-infinite' || t.id === 'test-ai' || t.id === 'test-ai-ko' || t.id === 'test-ai-practical');
 
     // Todo lo que no sea simulacro o dinámico va aquí (Temas, Bloques y Casos Prácticos)
     const topicTests = filteredTests.filter(t =>
