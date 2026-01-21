@@ -11,7 +11,8 @@ interface TestViewProps {
 }
 
 const TestView: React.FC<TestViewProps> = ({ test, onComplete, onExit }) => {
-  const isAI = test.id === 'test-ai' || test.id === 'test-ai-ko';
+  const isAI = test.id === 'test-ai' || test.id === 'test-ai-ko' || test.id === 'test-ai-practical';
+  const isPracticalAI = test.id === 'test-ai-practical';
   const isSurvival = test.id === 'test-survival' || test.id === 'test-ko-exams' || test.id === 'test-ai-ko';
   const isInfinite = test.id === 'test-infinite';
 
@@ -21,6 +22,7 @@ const TestView: React.FC<TestViewProps> = ({ test, onComplete, onExit }) => {
   const [apiKey, setApiKey] = useState('');
   const [showKeyInput, setShowKeyInput] = useState(isAI && !aiService.hasKey());
   const [aiError, setAiError] = useState<string | null>(null);
+  const [aiScenario, setAiScenario] = useState<string | null>(null);
 
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
 
@@ -52,9 +54,16 @@ const TestView: React.FC<TestViewProps> = ({ test, onComplete, onExit }) => {
     setIsGenerating(true);
     setAiError(null);
     try {
-      const newQuestion = await aiService.generateQuestion();
-      setAiQuestions(prev => [...prev, newQuestion]);
-      setAnswers(prev => [...prev, null]);
+      if (isPracticalAI) {
+        const data = await aiService.generatePracticalCase();
+        setAiScenario(data.scenario);
+        setAiQuestions(data.questions);
+        setAnswers(new Array(data.questions.length).fill(null));
+      } else {
+        const newQuestion = await aiService.generateQuestion();
+        setAiQuestions(prev => [...prev, newQuestion]);
+        setAnswers(prev => [...prev, null]);
+      }
     } catch (err: any) {
       console.error(err);
       setAiError(err.message || "Error inesperado generando la pregunta.");
@@ -77,7 +86,7 @@ const TestView: React.FC<TestViewProps> = ({ test, onComplete, onExit }) => {
 
   const currentQuestion = useMemo(() => activeQuestions[currentQuestionIndex], [activeQuestions, currentQuestionIndex]);
 
-  const currentScenario = currentQuestion?.scenario || test.scenario;
+  const currentScenario = currentQuestion?.scenario || aiScenario || test.scenario;
 
   const handleAnswerSelect = (optionIndex: number) => {
     // Bloquear la respuesta si ya se ha contestado
@@ -107,8 +116,10 @@ const TestView: React.FC<TestViewProps> = ({ test, onComplete, onExit }) => {
     if (isAI) {
       // In AI mode, if we are at the last generated question, generate a new one
       if (currentQuestionIndex === activeQuestions.length - 1) {
-        setCurrentQuestionIndex(currentQuestionIndex + 1);
-        generateNextQuestion();
+        if (!isPracticalAI) {
+          setCurrentQuestionIndex(currentQuestionIndex + 1);
+          generateNextQuestion();
+        }
       } else {
         setCurrentQuestionIndex(currentQuestionIndex + 1);
       }

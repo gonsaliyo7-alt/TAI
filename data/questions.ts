@@ -136,6 +136,12 @@ const koExamTestPlaceholder: Test = {
 export const TESTS_DATA: Test[] = [
   aiTestPlaceholder,
   aiKoTestPlaceholder,
+  {
+    id: 'test-ai-practical',
+    title: 'Supuesto Práctico por IA (Generativo)',
+    questions: [],
+    totalQuestions: 0,
+  },
   koExamTestPlaceholder,
   survivalTestPlaceholder,
   failedQuestionsTestPlaceholder,

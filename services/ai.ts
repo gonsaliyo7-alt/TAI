@@ -103,6 +103,58 @@ IMPORTANTE: Responde ÚNICAMENTE con el JSON, sin texto antes ni después.`;
             }
         }
     }
+
+    async generatePracticalCase(): Promise<{ scenario: string, questions: Question[] }> {
+        if (!this.genAI) {
+            throw new Error("API Key no configurada");
+        }
+
+        if (!this.model) {
+            this.model = this.genAI.getGenerativeModel({ model: "gemini-2.5-flash-lite" });
+        }
+
+        const prompt = `Eres un experto en oposiciones de España. Crea un "Supuesto Práctico" de examen para el Cuerpo de Técnicos Auxiliares de Informática (TAI).
+        
+El supuesto debe consistir en un texto inicial descriptivo (escenario técnico: por ejemplo, una migración de servidores, un problema de red en una sede, o el desarrollo de una aplicación web administrativa) seguido de 5 preguntas técnicas basadas en ese escenario.
+
+FORMATO REQUERIDO (responde SOLO con este JSON):
+{
+  "scenario": "Descripción detallada del supuesto técnico...",
+  "questions": [
+    {
+      "questionText": "¿Pregunta 1 sobre el escenario...?",
+      "options": ["Opción A", "Opción B", "Opción C", "Opción D"],
+      "correctAnswer": 0,
+      "explanation": "Explicación técnica detallada"
+    },
+    ... (así hasta 5 preguntas)
+  ]
+}
+
+IMPORTANTE: Responde ÚNICAMENTE con el JSON, sin texto antes ni después. El tono debe ser profesional y de nivel de oposición oficial.`;
+
+        try {
+            const result = await this.model.generateContent(prompt);
+            const response = await result.response;
+            const text = response.text();
+
+            let cleanText = text.trim();
+            cleanText = cleanText.replace(/```json\n?/g, '');
+            cleanText = cleanText.replace(/```\n?/g, '');
+            cleanText = cleanText.replace(/^[^{]*({[\s\S]*})[^}]*$/, '$1');
+
+            const data = JSON.parse(cleanText);
+
+            if (!data.scenario || !Array.isArray(data.questions)) {
+                throw new Error("Estructura de supuesto inválida");
+            }
+
+            return data;
+        } catch (error: any) {
+            console.error("AI Practical Case Error:", error);
+            throw new Error(`🧩 ERROR EN SUPUESTO IA: ${error.message || "No se pudo generar el supuesto práctico"}`);
+        }
+    }
 }
 
 export const aiService = new AIService();
