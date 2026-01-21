@@ -3,76 +3,76 @@ import type { Test } from '../../types';
 
 export const TEST_8: Test = {
   id: 'test-8',
-  title: 'Test 8: Dº Penitenciario III (Temas 36-40)',
+  title: 'Test 8: Bases de Datos',
   questions: [
-    // Tema 36: Régimen Cerrado
-    { 
-      questionText: 'El régimen cerrado se aplica a internos calificados en:', 
-      options: ['Segundo grado', 'Primer grado', 'Tercer grado', 'Preventivos siempre'], 
+    // Tema: Modelo Relacional
+    {
+      questionText: 'En el modelo relacional, ¿qué es una tupla?',
+      options: ['Una columna', 'Una fila', 'Una tabla', 'Una base de datos'],
       correctAnswer: 1,
-      explanation: 'El artículo 72 de la LOGP vincula el primer grado de tratamiento con el régimen cerrado.'
+      explanation: 'En el modelo relacional, una tupla corresponde a una fila de una tabla.'
     },
-    { 
-      questionText: 'En la modalidad de departamentos de régimen cerrado, los internos disfrutarán de un mínimo de horas de salida al patio de:', 
-      options: ['1 hora diaria', '4 horas diarias', '3 horas diarias (o 4 si hay actividades)', '8 horas diarias'], 
-      correctAnswer: 1,
-      explanation: 'El artículo 93 del Reglamento Penitenciario establece que en los departamentos de régimen cerrado los internos disfrutarán de un mínimo de cuatro horas diarias de vida en común (o tres si no realizan actividades programadas).'
-    },
-    
-    // Tema 37: Permisos de salida
-    { 
-      questionText: 'Para conceder un permiso ordinario es necesario haber cumplido:', 
-      options: ['La mitad de la condena', 'La cuarta parte de la condena', 'Las tres cuartas partes', 'Un año de prisión'], 
-      correctAnswer: 1,
-      explanation: 'El artículo 47.2 de la LOGP y el 154 del RP exigen haber extinguido la cuarta parte de la condena para la concesión de permisos ordinarios.'
-    },
-    { 
-      questionText: 'Los permisos extraordinarios se conceden por:', 
-      options: ['Buena conducta', 'Motivos graves justificados (fallecimiento familiar, nacimiento hijo...)', 'Antigüedad', 'Vacaciones'], 
-      correctAnswer: 1,
-      explanation: 'El artículo 47.1 de la LOGP y el 155 del RP prevén la concesión de permisos extraordinarios en caso de fallecimiento o enfermedad grave de los padres, cónyuge, hijos, hermanos y otras personas íntimamente vinculadas, alumbramiento de la esposa, etc.'
-    },
-    
-    // Tema 38: Libertad condicional
-    { 
-      questionText: 'La revocación de la libertad condicional se produce si:', 
-      options: ['El liberado delinque o incumple las reglas de conducta', 'No encuentra trabajo', 'Llega tarde a casa un día', 'No tiene dinero'], 
-      correctAnswer: 0,
-      explanation: 'El artículo 90 del Código Penal establece que el juez de vigilancia penitenciaria revocará la libertad condicional si el penado delinque o incumple las prohibiciones y reglas de conducta impuestas.'
-    },
-    { 
-      questionText: '¿Qué grado de tratamiento es necesario para acceder a la libertad condicional ordinaria?', 
-      options: ['Primero', 'Segundo', 'Tercero', 'Cuarto'], 
+    {
+      questionText: '¿Qué forma normal elimina las dependencias transitivas?',
+      options: ['Primera Forma Normal (1FN)', 'Segunda Forma Normal (2FN)', 'Tercera Forma Normal (3FN)', 'Cuarta Forma Normal (4FN)'],
       correctAnswer: 2,
-      explanation: 'Para acceder a la libertad condicional es requisito indispensable estar clasificado en tercer grado de tratamiento penitenciario (Art. 90 CP).'
+      explanation: 'La Tercera Forma Normal (3FN) requiere que la tabla esté en 2FN y que no existan dependencias transitivas (los atributos no clave deben depender solo de la clave primaria).'
     },
-    
-    // Tema 39: Asistencia Social
-    { 
-      questionText: 'La Comisión de Asistencia Social Penitenciaria tiene como función:', 
-      options: ['Juzgar al interno', 'Prestar asistencia a los internos, liberados y familiares', 'Vigilar los muros', 'Limpiar las celdas'], 
+
+    // Tema: SQL
+    {
+      questionText: '¿Qué comando SQL se utiliza para eliminar registros de una tabla?',
+      options: ['DROP', 'DELETE', 'REMOVE', 'TRUNCATE'],
       correctAnswer: 1,
-      explanation: 'El artículo 74 de la LOGP atribuye a la Comisión de Asistencia Social la función de prestar la asistencia social necesaria a los internos, a los liberados condicionales o definitivos y a los familiares de unos y otros.'
+      explanation: 'DELETE se usa para eliminar filas específicas (o todas) de una tabla. DROP elimina la tabla entera. TRUNCATE vacía la tabla rápidamente.'
     },
-    { 
-      questionText: '¿Qué ayuda económica existe para los liberados de prisión que no tengan derecho a desempleo?', 
-      options: ['El subsidio de liberados de prisión', 'La pensión de jubilación', 'La beca de estudios', 'Ninguna'], 
+    {
+      questionText: '¿Qué cláusula SQL se usa para filtrar los resultados de una función de agregación (como COUNT o SUM)?',
+      options: ['WHERE', 'HAVING', 'ORDER BY', 'GROUP BY'],
+      correctAnswer: 1,
+      explanation: 'HAVING se utiliza para filtrar grupos de filas creados por GROUP BY, a diferencia de WHERE que filtra filas antes de agrupar.'
+    },
+
+    // Tema: Diseño
+    {
+      questionText: 'En un diagrama Entidad-Relación, ¿qué representa un rombo?',
+      options: ['Una entidad', 'Un atributo', 'Una relación', 'Una clave'],
+      correctAnswer: 2,
+      explanation: 'En la notación estándar de Chen, los rombos representan las relaciones entre entidades.'
+    },
+    {
+      questionText: '¿Qué es una clave candidata?',
+      options: ['Cualquier columna de la tabla', 'Un conjunto de atributos que identifica unívocamente a una tupla y del cual se puede elegir la clave primaria', 'Una clave foránea', 'Un índice'],
+      correctAnswer: 1,
+      explanation: 'Una clave candidata es un atributo o conjunto de atributos que identifica de forma única cada fila y podría ser elegida como clave primaria.'
+    },
+
+    // Tema: Administración de BD
+    {
+      questionText: '¿Qué propiedad ACID asegura que una transacción se completa totalmente o no se realiza en absoluto?',
+      options: ['Atomicidad', 'Consistencia', 'Aislamiento', 'Durabilidad'],
       correctAnswer: 0,
-      explanation: 'Existe un subsidio por desempleo específico para liberados de prisión que hayan cumplido una pena superior a 6 meses y no tengan derecho a la prestación contributiva.'
+      explanation: 'La Atomicidad garantiza que la transacción es indivisible.'
     },
-    
-    // Tema 40: El trabajo penitenciario
-    { 
-      questionText: 'La relación laboral especial penitenciaria se caracteriza por:', 
-      options: ['Ser obligatoria para todos', 'Ser voluntaria, retribuida y con Seguridad Social', 'No tener derecho a vacaciones', 'Ser gratuita'], 
+    {
+      questionText: '¿Qué es un índice en una base de datos?',
+      options: ['Una tabla de datos', 'Una estructura de datos que mejora la velocidad de recuperación de datos', 'Una copia de seguridad', 'Un usuario'],
       correctAnswer: 1,
-      explanation: 'El trabajo productivo en prisión se configura como una relación laboral de carácter especial, siendo voluntario, retribuido y con protección de Seguridad Social (RD 782/2001).'
+      explanation: 'Los índices se utilizan para encontrar filas con valores específicos de una columna rápidamente.'
     },
-    { 
-      questionText: '¿Quién es el empleador en el trabajo productivo en los talleres penitenciarios?', 
-      options: ['El Director de la prisión', 'La Entidad Estatal TPFE (o empresa colaboradora)', 'El Ministerio de Justicia', 'El funcionario de vigilancia'], 
+
+    // Tema: SGBD
+    {
+      questionText: '¿Cuál de los siguientes es un SGBD de código abierto?',
+      options: ['Oracle Database', 'Microsoft SQL Server', 'PostgreSQL', 'IBM DB2'],
+      correctAnswer: 2,
+      explanation: 'PostgreSQL es un sistema de gestión de bases de datos relacional de código abierto.'
+    },
+    {
+      questionText: '¿Qué lenguaje se utiliza para definir la estructura de la base de datos (crear tablas, etc.)?',
+      options: ['DML (Data Manipulation Language)', 'DDL (Data Definition Language)', 'DCL (Data Control Language)', 'TCL (Transaction Control Language)'],
       correctAnswer: 1,
-      explanation: 'El empleador en la relación laboral especial penitenciaria es la Entidad Estatal Trabajo Penitenciario y Formación para el Empleo (TPFE).'
+      explanation: 'DDL (Data Definition Language) incluye comandos como CREATE, ALTER y DROP.'
     },
   ]
 };

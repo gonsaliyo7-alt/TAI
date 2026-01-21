@@ -3,76 +3,71 @@ import type { Test } from '../../types';
 
 export const TEST_15: Test = {
   id: 'test-15',
-  title: 'Test 15: Dº Penal III (Temas 21-25)',
+  title: 'Test 15: Bases de Datos y SQL',
   questions: [
-    // Tema 21: Formas delito
-    { 
-      questionText: 'La inducción consiste en:', 
-      options: ['Ayudar al autor', 'Hacer nacer en otro la resolución de cometer un delito', 'Ser testigo del delito', 'Ocultar el delito'], 
+    {
+      questionText: '¿Qué es la normalización en bases de datos?',
+      options: ['El proceso de organizar los datos para reducir la redundancia', 'Hacer copias de seguridad', 'Crear usuarios', 'Instalar el software'],
       correctAnswer: 1,
-      explanation: 'El artículo 28 del Código Penal considera autores a los que inducen directamente a otro u otros a ejecutar el delito. La inducción consiste en hacer nacer en otro la voluntad criminal.'
+      explanation: 'La normalización es el proceso de diseño de la base de datos que busca minimizar la redundancia y la dependencia de datos.'
     },
-    { 
-      questionText: 'Existe autoría mediata cuando:', 
-      options: ['Se realiza el hecho por medio de otro del que se sirve como instrumento', 'Se coopera necesariamente', 'Se conspira', 'Se encubre'], 
+    {
+      questionText: '¿Qué es una relación 1:N (Uno a Muchos)?',
+      options: ['Un registro de una tabla se asocia a uno de otra', 'Un registro de una tabla se asocia a varios de otra', 'Varios registros se asocian a varios', 'Ninguna de las anteriores'],
+      correctAnswer: 1,
+      explanation: 'En una relación 1:N, un registro de la tabla A puede tener muchos registros coincidentes en la tabla B, pero un registro de B solo tiene uno en A.'
+    },
+
+    {
+      questionText: '¿Qué comando SQL se usa para recuperar datos?',
+      options: ['GET', 'SELECT', 'FETCH', 'RETRIEVE'],
+      correctAnswer: 1,
+      explanation: 'SELECT es el comando estándar para consultar datos en una base de datos relacional.'
+    },
+    {
+      questionText: '¿Qué cláusula se usa para ordenar los resultados?',
+      options: ['SORT BY', 'ORDER BY', 'ARRANGE BY', 'GROUP BY'],
+      correctAnswer: 1,
+      explanation: 'ORDER BY se utiliza para ordenar el conjunto de resultados de una consulta.'
+    },
+
+    {
+      questionText: '¿Qué es una clave foránea (Foreign Key)?',
+      options: ['Una clave de otro país', 'Un campo que enlaza con la clave primaria de otra tabla', 'Una clave secreta', 'Un índice'],
+      correctAnswer: 1,
+      explanation: 'Una clave foránea es una columna o grupo de columnas que proporciona un enlace entre datos de dos tablas.'
+    },
+    {
+      questionText: '¿Qué significa ACID en bases de datos?',
+      options: ['Atomicidad, Consistencia, Aislamiento, Durabilidad', 'Acceso, Control, Integridad, Datos', 'Algoritmo, Código, Interfaz, Diseño', 'Ninguna'],
       correctAnswer: 0,
-      explanation: 'El artículo 28 del Código Penal define la autoría mediata como la realización del hecho por medio de otro del que se sirven como instrumento.'
+      explanation: 'ACID son las propiedades que garantizan que las transacciones de la base de datos se procesen de manera fiable.'
     },
-    
-    // Tema 22: Extinción responsabilidad
-    { 
-      questionText: 'El indulto es una medida de gracia que corresponde otorgar a:', 
-      options: ['El Rey (a propuesta del Gobierno)', 'El Juez de Vigilancia', 'El Director de la prisión', 'El Tribunal Constitucional'], 
-      correctAnswer: 0,
-      explanation: 'El artículo 62.i) de la Constitución atribuye al Rey la función de ejercer el derecho de gracia con arreglo a la ley (Ley de 1870), que no podrá autorizar indultos generales.'
-    },
-    { 
-      questionText: 'El perdón del ofendido extingue la responsabilidad penal en:', 
-      options: ['Todos los delitos', 'Delitos leves perseguibles a instancia de parte o cuando la ley lo prevea', 'Delitos graves', 'Ningún caso'], 
+
+    {
+      questionText: '¿Qué es un procedimiento almacenado (Stored Procedure)?',
+      options: ['Un archivo guardado', 'Un conjunto de instrucciones SQL guardadas en la base de datos', 'Una copia de seguridad', 'Una tabla'],
       correctAnswer: 1,
-      explanation: 'El artículo 130.1.5º del Código Penal establece que el perdón del ofendido extingue la responsabilidad criminal cuando se trate de delitos leves perseguibles a instancias del agraviado o la ley así lo prevea.'
+      explanation: 'Un procedimiento almacenado es un código SQL preparado que se puede guardar para que el código pueda reutilizarse una y otra vez.'
     },
-    
-    // Tema 23: Penas
-    { 
-      questionText: 'El sistema de días-multa fija la cuota diaria en función de:', 
-      options: ['La gravedad del delito', 'La capacidad económica del reo', 'La edad del reo', 'El coste del juicio'], 
+    {
+      questionText: '¿Qué es NoSQL?',
+      options: ['No SQL', 'Bases de datos no relacionales', 'Nueva SQL', 'Nunca SQL'],
       correctAnswer: 1,
-      explanation: 'El artículo 50.5 del Código Penal establece que los jueces o tribunales determinarán la cuota diaria teniendo en cuenta exclusivamente la situación económica del reo.'
+      explanation: 'NoSQL se refiere a una amplia clase de sistemas de gestión de bases de datos que difieren del modelo clásico relacional (ej. MongoDB).'
     },
-    { 
-      questionText: 'La localización permanente obliga al penado a permanecer en su domicilio o lugar determinado:', 
-      options: ['Solo los fines de semana', 'Hasta 12 meses', 'Hasta 6 meses', 'De por vida'], 
+
+    {
+      questionText: '¿Qué comando SQL se usa para crear una nueva tabla?',
+      options: ['MAKE TABLE', 'NEW TABLE', 'CREATE TABLE', 'ADD TABLE'],
       correctAnswer: 2,
-      explanation: 'El artículo 37 del Código Penal establece que la localización permanente tendrá una duración de hasta seis meses.'
+      explanation: 'CREATE TABLE es el comando para definir una nueva tabla en la base de datos.'
     },
-    
-    // Tema 24: Suspensión
-    { 
-      questionText: '¿Se puede suspender una pena de prisión superior a 2 años?', 
-      options: ['Nunca', 'Excepcionalmente en casos de enfermedad muy grave con padecimientos incurables o drogodependencia (con requisitos)', 'Siempre si es primario', 'Si paga una fianza'], 
+    {
+      questionText: '¿Qué es un Trigger (Disparador)?',
+      options: ['Un botón', 'Un procedimiento que se ejecuta automáticamente en respuesta a ciertos eventos en una tabla', 'Un error', 'Un índice'],
       correctAnswer: 1,
-      explanation: 'El artículo 80 del Código Penal permite excepcionalmente suspender penas superiores a 2 años en casos de enfermedad muy grave con padecimientos incurables (sin límite de pena) o drogodependencia (penas hasta 5 años).'
-    },
-    { 
-      questionText: 'La sustitución de penas de prisión por expulsión del territorio nacional se aplica a:', 
-      options: ['Ciudadanos españoles', 'Ciudadanos extranjeros no residentes legalmente (y residentes con penas > 1 año)', 'Menores de edad', 'Diplomáticos'], 
-      correctAnswer: 1,
-      explanation: 'El artículo 89 del Código Penal regula la sustitución de penas de prisión por la expulsión del territorio nacional para ciudadanos extranjeros.'
-    },
-    
-    // Tema 25: Delitos Admin
-    { 
-      questionText: 'El funcionario que acepta una dádiva o regalo para realizar un acto propio de su cargo comete delito de:', 
-      options: ['Malversación', 'Cohecho', 'Prevaricación', 'Tráfico de influencias'], 
-      correctAnswer: 1,
-      explanation: 'El artículo 419 y siguientes del Código Penal tipifican el cohecho pasivo, que consiste en que la autoridad o funcionario público solicite o reciba dádiva, favor o retribución para realizar un acto propio de su cargo.'
-    },
-    { 
-      questionText: 'El delito de tráfico de influencias requiere que el sujeto activo:', 
-      options: ['Use armas', 'Influyan en un funcionario o autoridad prevaliéndose de su cargo o relación personal', 'Robe dinero público', 'Falsifique documentos'], 
-      correctAnswer: 1,
-      explanation: 'El artículo 428 del Código Penal define el tráfico de influencias como la conducta del funcionario público o autoridad que influyere en otro funcionario público o autoridad prevaliéndose del ejercicio de las facultades de su cargo o de cualquier otra situación derivada de su relación personal o jerárquica.'
+      explanation: 'Un trigger es un código SQL que se ejecuta automáticamente antes o después de un INSERT, UPDATE o DELETE.'
     },
   ]
 };

@@ -3,670 +3,670 @@ import type { Test } from '../../types';
 
 export const TEST_TOPIC_21: Test = {
   id: 'topic-21',
-  title: 'Tema 21: Formas del Delito',
+  title: 'Tema: Servidores Web y de Aplicaciones',
   questions: [
     { 
-      questionText: 'La conspiración existe cuando:', 
-      options: ['Dos o más personas se conciertan para la ejecución de un delito y resuelven ejecutarlo', 'Alguien lo piensa solo', 'Se intenta y falla', 'Se ayuda a otro'], 
+      questionText: '¿Cuál de los siguientes es un servidor de aplicaciones Java EE?', 
+      options: ['Apache HTTP Server', 'Nginx', 'Apache Tomcat', 'Microsoft IIS'], 
+      correctAnswer: 2,
+      explanation: 'Apache Tomcat es un contenedor de servlets y servidor de aplicaciones Java.'
+    },
+    { 
+      questionText: '¿Qué código de estado HTTP indica "Página no encontrada"?', 
+      options: ['200', '301', '404', '500'], 
+      correctAnswer: 2,
+      explanation: 'El código 404 Not Found indica que el servidor no puede encontrar el recurso solicitado.'
+    },
+    { 
+      questionText: '¿Qué archivo de configuración se utiliza comúnmente en Apache HTTP Server?', 
+      options: ['web.config', 'httpd.conf', 'server.xml', 'nginx.conf'], 
+      correctAnswer: 1,
+      explanation: 'httpd.conf es el archivo de configuración principal para el servidor web Apache.'
+    },
+    { 
+      questionText: '¿Qué significa LAMP en el contexto de servidores web?', 
+      options: ['Linux, Apache, MySQL, PHP', 'Local, Area, Map, Protocol', 'Link, Access, Mode, Port', 'Linux, Apple, Mac, PC'], 
       correctAnswer: 0,
-      explanation: 'El artículo 17 del Código Penal establece que la conspiración existe cuando dos o más personas se conciertan para la ejecución de un delito y resuelven ejecutarlo.'
+      explanation: 'LAMP es un acrónimo para un conjunto de soluciones de software: Linux, Apache, MySQL y PHP/Perl/Python.'
     },
     { 
-      questionText: 'El cómplice es aquel que:', 
-      options: ['Realiza el hecho', 'Coopera con actos anteriores o simultáneos no necesarios', 'Induce', 'Encubre'], 
-      correctAnswer: 1,
-      explanation: 'El artículo 29 del Código Penal define al cómplice como quien coopera a la ejecución del hecho con actos anteriores o simultáneos que no sean necesarios.'
+      questionText: '¿Qué puerto utiliza por defecto el protocolo HTTPS?', 
+      options: ['80', '8080', '443', '21'], 
+      correctAnswer: 2,
+      explanation: 'HTTPS utiliza el puerto 443 para comunicaciones seguras.'
     },
     { 
-      questionText: 'La provocación solo se castiga:', 
-      options: ['Siempre', 'En los casos previstos por la Ley', 'Nunca', 'Si hay violencia'], 
-      correctAnswer: 1,
-      explanation: 'El artículo 18 del Código Penal establece que la provocación, la conspiración y la proposición solo se castigarán en los casos especialmente previstos en la Ley.'
-    },
-    { 
-      questionText: 'La tentativa se castiga con:', 
-      options: ['La misma pena que el consumado', 'La pena inferior en uno o dos grados', 'Multa', 'No se castiga'], 
-      correctAnswer: 1,
-      explanation: 'El artículo 62 del Código Penal establece que a los autores de tentativa se les impondrá la pena inferior en uno o dos grados a la señalada por la Ley para el delito consumado.'
-    },
-    { 
-      questionText: 'Si el sujeto desiste voluntariamente de la ejecución del delito (arrepentimiento):', 
-      options: ['Quedará exento de responsabilidad penal por el delito intentado', 'Se le castiga igual', 'Se le rebaja la pena', 'Va a prisión'], 
+      questionText: '¿Qué es un Proxy Inverso?', 
+      options: ['Un servidor que recupera recursos en nombre de un cliente desde uno o más servidores', 'Un virus', 'Un error de red', 'Un cliente de correo'], 
       correctAnswer: 0,
-      explanation: 'El artículo 16.2 del Código Penal establece que quedará exento de responsabilidad penal por el delito intentado quien evite voluntariamente la consumación del delito.'
+      explanation: 'Un proxy inverso se sitúa delante de los servidores web y reenvía las solicitudes de los clientes a esos servidores (ej. para balanceo de carga).'
     },
     { 
-      questionText: 'Es autor quien realiza el hecho:', 
-      options: ['Por sí solo, conjuntamente o por medio de otro', 'Solo por sí solo', 'Solo conjuntamente', 'Solo por medio de otro'], 
+      questionText: '¿Qué tecnología permite ejecutar código Java en el servidor para generar contenido web dinámico?', 
+      options: ['Applet', 'Servlet', 'JavaScript', 'Flash'], 
+      correctAnswer: 1,
+      explanation: 'Los Servlets son clases Java que responden a peticiones HTTP y generan contenido dinámico.'
+    },
+    { 
+      questionText: '¿Qué es el Balanceo de Carga?', 
+      options: ['Distribuir el tráfico de red entre varios servidores', 'Pesar el servidor', 'Medir la electricidad', 'Apagar el servidor'], 
       correctAnswer: 0,
-      explanation: 'El artículo 28 del Código Penal considera autores a quienes realizan el hecho por sí solos (autor material), conjuntamente (coautores) o por medio de otro del que se sirven como instrumento (autor mediato).'
+      explanation: 'El balanceo de carga mejora la capacidad de respuesta y la disponibilidad de las aplicaciones distribuyendo la carga.'
     },
     { 
-      questionText: 'La proposición existe cuando:', 
-      options: ['El que ha resuelto cometer un delito invita a otro u otros a participar en él', 'Dos personas se ponen de acuerdo', 'Se provoca', 'Se sugiere'], 
+      questionText: '¿Qué es una sesión en una aplicación web?', 
+      options: ['Una reunión', 'Un mecanismo para persistir el estado entre múltiples peticiones del mismo usuario', 'Un error', 'Una base de datos'], 
+      correctAnswer: 1,
+      explanation: 'Las sesiones permiten mantener información sobre el usuario a través de diferentes páginas o peticiones.'
+    },
+    { 
+      questionText: '¿Qué es IIS?', 
+      options: ['Internet Information Services', 'Internal Internet System', 'International Information Standard', 'Intelligent Input System'], 
       correctAnswer: 0,
-      explanation: 'El artículo 17 del Código Penal define la proposición como la invitación que hace quien ha resuelto cometer un delito a otra u otras personas para que participen en él.'
-    },
-    { 
-      questionText: 'El cooperador necesario se considera:', 
-      options: ['Cómplice', 'Autor', 'Encubridor', 'Testigo'], 
-      correctAnswer: 1,
-      explanation: 'El artículo 28 del Código Penal equipara a los cooperadores necesarios (quienes cooperan con actos necesarios) con los autores.'
-    },
-    { 
-      questionText: 'Los actos preparatorios (conspiración, proposición, provocación) se castigan:', 
-      options: ['En todos los delitos', 'Solo en los casos especialmente previstos en la Ley', 'Nunca', 'Siempre'], 
-      correctAnswer: 1,
-      explanation: 'El artículo 18 del Código Penal establece expresamente que la provocación, la conspiración y la proposición solo se castigarán en los casos especialmente previstos en la Ley.'
-    },
-    { 
-      questionText: 'El inductor se castiga con la pena de:', 
-      options: ['Cómplice', 'Autor', 'Leve', 'Mitad'], 
-      correctAnswer: 1,
-      explanation: 'El artículo 28 del Código Penal equipara al inductor (quien induce directamente a otro a ejecutar el hecho) con los autores.'
+      explanation: 'IIS es el servidor web y de aplicaciones creado por Microsoft para sistemas operativos Windows.'
     }
   ]
 };
 
 export const TEST_TOPIC_22: Test = {
   id: 'topic-22',
-  title: 'Tema 22: Extinción Responsabilidad',
+  title: 'Tema: Interoperabilidad y XML',
   questions: [
     { 
-      questionText: 'La muerte del reo extingue:', 
-      options: ['La responsabilidad penal', 'La responsabilidad civil siempre', 'La deuda', 'Nada'], 
+      questionText: '¿Qué significa XML?', 
+      options: ['eXtensible Markup Language', 'Extra Modern Language', 'X-ray Machine Language', 'External Memory Link'], 
       correctAnswer: 0,
-      explanation: 'El artículo 130 del Código Penal establece que la responsabilidad criminal se extingue por la muerte del reo.'
+      explanation: 'XML (Lenguaje de Marcado Extensible) es un formato para almacenar y transportar datos.'
     },
     { 
-      questionText: 'La prescripción del delito se interrumpe por:', 
-      options: ['El paso del tiempo', 'La presentación de querella o denuncia formulada ante el juzgado (y admisión)', 'La huida', 'El silencio'], 
-      correctAnswer: 1,
-      explanation: 'El artículo 132 del Código Penal establece que la prescripción del delito se interrumpe, quedando sin efecto el tiempo transcurrido, cuando el procedimiento se dirija contra el culpable.'
-    },
-    { 
-      questionText: 'El indulto puede ser:', 
-      options: ['Total o parcial', 'Solo total', 'Preventivo', 'Judicial'], 
+      questionText: '¿Qué es un esquema XSD?', 
+      options: ['XML Schema Definition', 'XML Style Definition', 'XML Simple Data', 'XML System Design'], 
       correctAnswer: 0,
-      explanation: 'El indulto puede ser total (remisión de toda la pena) o parcial (remisión de alguna o algunas de las penas impuestas, o conmutación por otra menos grave).'
+      explanation: 'XSD describe la estructura de un documento XML.'
     },
     { 
-      questionText: 'El perdón del ofendido extingue la pena en delitos:', 
-      options: ['Públicos', 'Semipúblicos', 'Leves perseguibles a instancia de parte o cuando la Ley lo prevea', 'Graves'], 
-      correctAnswer: 2,
-      explanation: 'El artículo 130.1.5 del Código Penal establece que el perdón del ofendido extingue la responsabilidad penal en los delitos leves perseguibles a instancia del agraviado y en los casos en que la Ley así lo prevea.'
-    },
-    { 
-      questionText: 'Los delitos de lesa humanidad y genocidio:', 
-      options: ['Prescriben a los 20 años', 'No prescriben', 'Prescriben a los 30 años', 'Prescriben a los 5 años'], 
-      correctAnswer: 1,
-      explanation: 'El artículo 131.3 del Código Penal establece que los delitos de lesa humanidad y de genocidio, y los delitos contra las personas y bienes protegidos en caso de conflicto armado, no prescribirán en ningún caso.'
-    },
-    { 
-      questionText: 'La responsabilidad civil derivada del delito:', 
-      options: ['Se extingue con la muerte', 'Se transmite a los herederos', 'Desaparece', 'La paga el Estado'], 
-      correctAnswer: 1,
-      explanation: 'El artículo 116 del Código Penal establece que toda persona criminalmente responsable de un delito lo es también civilmente. Esta responsabilidad civil se transmite a los herederos.'
-    },
-    { 
-      questionText: 'El cumplimiento de la condena extingue:', 
-      options: ['La responsabilidad penal', 'Los antecedentes inmediatamente', 'La culpa moral', 'La deuda civil'], 
+      questionText: '¿Qué tecnología se usa para transformar documentos XML?', 
+      options: ['XSLT', 'HTML', 'CSS', 'JSON'], 
       correctAnswer: 0,
-      explanation: 'El artículo 130.2 del Código Penal establece que la responsabilidad penal se extingue por el cumplimiento de la condena.'
+      explanation: 'XSLT (Extensible Stylesheet Language Transformations) se usa para transformar documentos XML en otros formatos.'
     },
     { 
-      questionText: 'La amnistía:', 
-      options: ['Está prohibida explícitamente', 'No está regulada en la Constitución expresamente como tal (pero prohíbe indultos generales)', 'Es común', 'La da el juez'], 
-      correctAnswer: 1,
-      explanation: 'El artículo 62.i de la Constitución prohíbe el indulto general. La amnistía, aunque no expresamente prohibida, no está regulada en el ordenamiento actual.'
-    },
-    { 
-      questionText: 'Los antecedentes penales se cancelan:', 
-      options: ['De oficio o a instancia de parte tras los plazos legales sin delinquir', 'Nunca', 'Al salir de prisión', 'Pagando'], 
+      questionText: '¿Qué es JSON?', 
+      options: ['JavaScript Object Notation', 'Java Source Object Name', 'Just Some Other Name', 'Joint System On Network'], 
       correctAnswer: 0,
-      explanation: 'El artículo 136 del Código Penal regula la cancelación de antecedentes penales, que se produce de oficio o a instancia de parte, transcurridos los plazos establecidos sin haber vuelto a delinquir.'
+      explanation: 'JSON es un formato ligero de intercambio de datos, fácil de leer y escribir.'
     },
     { 
-      questionText: 'La prescripción de la pena comienza desde:', 
-      options: ['La comisión del hecho', 'La firmeza de la sentencia (o quebrantamiento)', 'El juicio', 'La detención'], 
-      correctAnswer: 1,
-      explanation: 'El artículo 133 del Código Penal establece que las penas impuestas por sentencia firme prescriben desde la fecha de la firmeza de la sentencia o desde el quebrantamiento de la condena.'
+      questionText: '¿Qué es el ENI?', 
+      options: ['Esquema Nacional de Interoperabilidad', 'Esquema Nacional de Internet', 'Entidad Nacional de Informática', 'Estándar Nacional de Intercambio'], 
+      correctAnswer: 0,
+      explanation: 'El ENI comprende el conjunto de criterios y recomendaciones en materia de seguridad, conservación y normalización de la información.'
+    },
+    { 
+      questionText: '¿Qué es un Servicio Web?', 
+      options: ['Un sistema de software diseñado para soportar la interacción máquina a máquina a través de una red', 'Una página web', 'Un navegador', 'Un servidor'], 
+      correctAnswer: 0,
+      explanation: 'Los servicios web permiten la comunicación entre aplicaciones diferentes.'
+    },
+    { 
+      questionText: '¿Qué protocolo utiliza SOAP?', 
+      options: ['XML', 'JSON', 'CSV', 'TXT'], 
+      correctAnswer: 0,
+      explanation: 'SOAP (Simple Object Access Protocol) utiliza XML para el intercambio de mensajes.'
+    },
+    { 
+      questionText: '¿Qué es REST?', 
+      options: ['Representational State Transfer', 'Remote Execution System Tool', 'Real State Transfer', 'Random External Service Type'], 
+      correctAnswer: 0,
+      explanation: 'REST es un estilo de arquitectura de software para sistemas hipermedia distribuidos como la World Wide Web.'
+    },
+    { 
+      questionText: '¿Qué es WSDL?', 
+      options: ['Web Services Description Language', 'Web Server Data Link', 'Wide System Data Language', 'Web Standard Design Language'], 
+      correctAnswer: 0,
+      explanation: 'WSDL es un formato XML para describir servicios de red como un conjunto de puntos finales.'
+    },
+    { 
+      questionText: '¿Qué es UDDI?', 
+      options: ['Universal Description, Discovery and Integration', 'User Data Direct Interface', 'Unified Data Definition Interface', 'Universal Data Design Integration'], 
+      correctAnswer: 0,
+      explanation: 'UDDI es un estándar XML para describir, publicar y encontrar servicios web.'
     }
   ]
 };
 
 export const TEST_TOPIC_23: Test = {
   id: 'topic-23',
-  title: 'Tema 23: La Pena',
+  title: 'Tema: Seguridad de la Información',
   questions: [
     { 
-      questionText: 'La pena de trabajos en beneficio de la comunidad requiere:', 
-      options: ['Pago previo', 'El consentimiento del penado', 'Ser funcionario', 'Tener coche'], 
-      correctAnswer: 1,
-      explanation: 'El artículo 49 del Código Penal establece que los trabajos en beneficio de la comunidad no podrán imponerse sin el consentimiento del penado.'
-    },
-    { 
-      questionText: 'Las penas privativas de derechos incluyen:', 
-      options: ['La prisión', 'La inhabilitación absoluta o especial', 'La multa', 'El arresto'], 
-      correctAnswer: 1,
-      explanation: 'El artículo 39 del Código Penal enumera las penas privativas de derechos, entre las que se encuentran la inhabilitación absoluta, la inhabilitación especial, la suspensión de empleo o cargo público, etc.'
-    },
-    { 
-      questionText: 'La medida de seguridad de internamiento en centro psiquiátrico es:', 
-      options: ['Privativa de libertad', 'No privativa', 'Una pena', 'Voluntaria'], 
+      questionText: '¿Qué es el ENS?', 
+      options: ['Esquema Nacional de Seguridad', 'Estándar Nacional de Software', 'Entidad Nacional de Sistemas', 'Equipo Nacional de Soporte'], 
       correctAnswer: 0,
-      explanation: 'El artículo 96 del Código Penal clasifica las medidas de seguridad en privativas y no privativas de libertad. El internamiento en centro psiquiátrico es una medida privativa de libertad.'
+      explanation: 'El ENS tiene por objeto establecer la política de seguridad en la utilización de medios electrónicos.'
     },
     { 
-      questionText: 'La prisión permanente revisable es una pena:', 
-      options: ['Grave', 'Menos grave', 'Leve', 'Inconstitucional'], 
+      questionText: '¿Qué es la firma electrónica?', 
+      options: ['Un conjunto de datos electrónicos que acompañan o están asociados a otros datos electrónicos y que permiten la identificación del firmante', 'Una foto de la firma', 'Un dibujo', 'Un nombre escrito'], 
       correctAnswer: 0,
-      explanation: 'El artículo 33 del Código Penal clasifica la prisión permanente revisable como pena grave.'
+      explanation: 'La firma electrónica garantiza la autenticidad, integridad y no repudio de los documentos.'
     },
     { 
-      questionText: 'La pena de multa se impone generalmente por el sistema de:', 
-      options: ['Días-multa', 'Cuota fija', 'Proporcional', 'Arbitrio judicial'], 
+      questionText: '¿Qué es un certificado digital?', 
+      options: ['Un documento firmado electrónicamente por un prestador de servicios de certificación que vincula unos datos de verificación de firma a un firmante', 'Un diploma', 'Un archivo de texto', 'Un programa'], 
       correctAnswer: 0,
-      explanation: 'El artículo 50 del Código Penal establece el sistema de días-multa como el general para la imposición de la pena de multa.'
+      explanation: 'El certificado digital permite la identificación de las partes en Internet.'
     },
     { 
-      questionText: 'La localización permanente tiene una duración máxima de:', 
-      options: ['3 meses', '6 meses', '1 año', '12 días'], 
-      correctAnswer: 1,
-      explanation: 'El artículo 37 del Código Penal establece que la localización permanente tiene una duración de hasta seis meses.'
-    },
-    { 
-      questionText: 'La responsabilidad personal subsidiaria por impago de multa:', 
-      options: ['No existe', 'Supone un día de privación de libertad por cada dos cuotas no satisfechas', 'Es de un año', 'Se paga con trabajo siempre'], 
-      correctAnswer: 1,
-      explanation: 'El artículo 53 del Código Penal establece que la responsabilidad personal subsidiaria por impago de multa será de un día de privación de libertad por cada dos cuotas diarias no satisfechas.'
-    },
-    { 
-      questionText: 'Las penas se clasifican en:', 
-      options: ['Graves, menos graves y leves', 'Altas y bajas', 'Caras y baratas', 'Justas e injustas'], 
+      questionText: '¿Qué es la criptografía asimétrica?', 
+      options: ['Usa una clave pública y una privada', 'Usa una sola clave', 'No usa claves', 'Es insegura'], 
       correctAnswer: 0,
-      explanation: 'El artículo 33 del Código Penal clasifica las penas en graves, menos graves y leves, según su naturaleza y duración.'
+      explanation: 'La criptografía asimétrica utiliza un par de claves: una pública para cifrar y una privada para descifrar (o viceversa para firma).'
     },
     { 
-      questionText: 'No se reputan penas:', 
-      options: ['La prisión', 'La detención y prisión preventiva', 'La multa', 'La inhabilitación'], 
-      correctAnswer: 1,
-      explanation: 'El artículo 35 del Código Penal establece expresamente que no se reputarán penas la detención y prisión preventiva y las demás medidas cautelares de naturaleza penal.'
+      questionText: '¿Qué es el DNI electrónico?', 
+      options: ['El documento nacional de identidad que acredita electrónicamente la identidad personal de su titular', 'Un DNI de plástico', 'Un DNI falso', 'Un DNI caducado'], 
+      correctAnswer: 0,
+      explanation: 'El DNIe permite la firma electrónica de documentos.'
     },
     { 
-      questionText: 'La prohibición de aproximación a la víctima es una pena:', 
-      options: ['Privativa de libertad', 'Privativa de derechos', 'Pecuniaria', 'Leve siempre'], 
+      questionText: '¿Qué es un ataque de fuerza bruta?', 
+      options: ['Probar todas las combinaciones posibles de contraseñas', 'Golpear el ordenador', 'Cortar los cables', 'Apagar la luz'], 
+      correctAnswer: 0,
+      explanation: 'Consiste en intentar adivinar una credencial probando sistemáticamente todas las opciones posibles.'
+    },
+    { 
+      questionText: '¿Qué es el Phishing?', 
+      options: ['Suplantación de identidad para robar credenciales', 'Pescar', 'Un virus', 'Un error'], 
       correctAnswer: 1,
-      explanation: 'El artículo 48 del Código Penal regula la prohibición de aproximación como una pena privativa de derechos.'
+      explanation: 'El phishing es una técnica de ingeniería social para engañar a los usuarios y obtener información confidencial.'
+    },
+    { 
+      questionText: '¿Qué es un Firewall?', 
+      options: ['Un sistema de seguridad que controla el tráfico de red', 'Un antivirus', 'Un programa de dibujo', 'Un juego'], 
+      correctAnswer: 0,
+      explanation: 'Un firewall monitoriza y filtra el tráfico de red basándose en reglas de seguridad.'
+    },
+    { 
+      questionText: '¿Qué es la LOPDGDD?', 
+      options: ['Ley Orgánica de Protección de Datos Personales y garantía de los derechos digitales', 'Ley de Ordenación de Pagos', 'Ley de Organización Policial', 'Ley de Obras Públicas'], 
+      correctAnswer: 0,
+      explanation: 'Es la norma española que adapta el RGPD europeo.'
+    },
+    { 
+      questionText: '¿Qué es el RGPD?', 
+      options: ['Reglamento General de Protección de Datos', 'Registro General de Protección de Datos', 'Regla General de Privacidad', 'Red Global de Protección'], 
+      correctAnswer: 0,
+      explanation: 'El RGPD es la normativa europea de protección de datos.'
     }
   ]
 };
 
 export const TEST_TOPIC_24: Test = {
   id: 'topic-24',
-  title: 'Tema 24: Suspensión',
+  title: 'Tema: Accesibilidad Web',
   questions: [
     { 
-      questionText: 'El plazo de suspensión de la pena será de:', 
-      options: ['2 a 5 años para penas <= 2 años', '1 año fijo', '10 años', 'Indefinido'], 
+      questionText: '¿Qué significan las siglas WCAG?', 
+      options: ['Web Content Accessibility Guidelines', 'World Computer Accessibility Group', 'Web Coding And Graphics', 'Wide Content Access Guide'], 
       correctAnswer: 0,
-      explanation: 'El artículo 81 del Código Penal establece que el plazo de suspensión será de dos a cinco años para las penas privativas de libertad no superiores a dos años.'
+      explanation: 'WCAG (Pautas de Accesibilidad para el Contenido Web) son documentos que explican cómo hacer que el contenido web sea más accesible.'
     },
     { 
-      questionText: 'La suspensión extraordinaria por enfermedad muy grave:', 
-      options: ['No requiere requisito de tiempo de pena', 'Requiere haber cumplido la mitad', 'Es automática', 'No existe'], 
+      questionText: '¿Cuál es el nivel de conformidad más alto en WCAG?', 
+      options: ['A', 'AA', 'AAA', 'AAAA'], 
+      correctAnswer: 2,
+      explanation: 'El nivel AAA es el más exigente.'
+    },
+    { 
+      questionText: '¿Qué es WAI-ARIA?', 
+      options: ['Una especificación para hacer el contenido web más accesible', 'Un navegador', 'Un virus', 'Un lenguaje'], 
+      correctAnswer: 1,
+      explanation: 'WAI-ARIA define formas de hacer el contenido web y las aplicaciones web más accesibles.'
+    },
+    { 
+      questionText: '¿Para qué sirve el atributo "alt" en las imágenes?', 
+      options: ['Para proporcionar un texto alternativo', 'Para decorar', 'Para el tamaño', 'Para el color'], 
       correctAnswer: 0,
-      explanation: 'El artículo 80.4 del Código Penal permite suspender la pena sin sujeción a requisito alguno en caso de enfermedad muy grave con padecimientos incurables.'
+      explanation: 'El texto alternativo es esencial para que los lectores de pantalla describan la imagen.'
     },
     { 
-      questionText: 'Si se delinque durante la suspensión:', 
-      options: ['No pasa nada', 'Se puede revocar la suspensión y ejecutar la pena', 'Se perdona', 'Se paga multa'], 
+      questionText: '¿Qué es un lector de pantalla?', 
+      options: ['Un software que lee el texto en voz alta', 'Una lupa', 'Un monitor', 'Un teclado'], 
       correctAnswer: 1,
-      explanation: 'El artículo 86 del Código Penal establece que el juez o tribunal revocará la suspensión y ordenará la ejecución de la pena si el penado delinque durante el plazo de suspensión.'
+      explanation: 'Los lectores de pantalla son tecnologías de asistencia para personas con discapacidad visual.'
     },
     { 
-      questionText: 'La suspensión ordinaria requiere que la pena de prisión no exceda de:', 
-      options: ['1 año', '2 años', '3 años', '4 años'], 
-      correctAnswer: 1,
-      explanation: 'El artículo 80.1 del Código Penal establece como requisito que la pena o la suma de las impuestas no sea superior a dos años.'
-    },
-    { 
-      questionText: 'Para suspender la pena es necesario:', 
-      options: ['Ser reincidente', 'Haber delinquido por primera vez (o no tener antecedentes computables)', 'Tener trabajo', 'Ser joven'], 
-      correctAnswer: 1,
-      explanation: 'El artículo 80.2.1ª del Código Penal exige que el condenado haya delinquido por primera vez (sin tener en cuenta antecedentes cancelados o por delitos leves/imprudentes).'
-    },
-    { 
-      questionText: 'La sustitución de la pena por expulsión se aplica a extranjeros con pena superior a:', 
-      options: ['6 meses', '1 año', '2 años', '5 años'], 
-      correctAnswer: 1,
-      explanation: 'El artículo 89 del Código Penal establece la sustitución de penas de prisión superiores a un año por la expulsión del territorio español para ciudadanos extranjeros.'
-    },
-    { 
-      questionText: 'La suspensión puede condicionarse al cumplimiento de:', 
-      options: ['Reglas de conducta', 'Deseos de la víctima', 'Órdenes de la policía', 'Nada'], 
+      questionText: '¿Qué principio de accesibilidad es "Perceptible"?', 
+      options: ['La información debe presentarse de manera que los usuarios puedan percibirla', 'Debe ser bonito', 'Debe ser rápido', 'Debe ser barato'], 
       correctAnswer: 0,
-      explanation: 'El artículo 83 del Código Penal permite condicionar la suspensión al cumplimiento de prohibiciones y deberes (reglas de conducta).'
+      explanation: 'Los 4 principios son: Perceptible, Operable, Comprensible y Robusto (POUR).'
     },
     { 
-      questionText: 'El plazo de suspensión se computa desde:', 
-      options: ['La fecha de la sentencia firme', 'El día del delito', 'El ingreso en prisión', 'Nunca'], 
+      questionText: '¿Qué es el contraste de color?', 
+      options: ['La diferencia de luminosidad entre el texto y el fondo', 'El brillo', 'La saturación', 'El tono'], 
       correctAnswer: 0,
-      explanation: 'El artículo 82 del Código Penal establece que el plazo de suspensión se computará desde la fecha de la resolución que la acuerda (normalmente en sentencia firme).'
+      explanation: 'Un contraste adecuado es necesario para que el texto sea legible para personas con baja visión.'
     },
     { 
-      questionText: 'La remisión definitiva de la pena se produce:', 
-      options: ['Si transcurre el plazo de suspensión sin delinquir y cumpliendo reglas', 'Al pagar', 'A los 10 años', 'Al morir'], 
+      questionText: '¿Qué es la navegación por teclado?', 
+      options: ['Poder usar el sitio web solo con el teclado', 'Escribir rápido', 'Usar un teclado musical', 'Navegar en barco'], 
       correctAnswer: 0,
-      explanation: 'El artículo 87 del Código Penal establece que transcurrido el plazo de suspensión sin haber cometido delito y cumplidas las reglas, se acordará la remisión de la pena.'
+      explanation: 'La accesibilidad requiere que todas las funcionalidades sean operables a través del teclado.'
     },
     { 
-      questionText: 'Para drogodependientes, la pena se puede suspender si no supera los:', 
-      options: ['2 años', '5 años', '3 años', '6 años'], 
-      correctAnswer: 1,
-      explanation: 'El artículo 80.5 del Código Penal permite suspender penas privativas de libertad no superiores a cinco años si el delito se cometió a causa de la dependencia y se certifica la deshabituación.'
+      questionText: '¿Qué es el diseño universal?', 
+      options: ['Diseño para todos, sin necesidad de adaptación', 'Diseño para el universo', 'Diseño solo para expertos', 'Diseño gráfico'], 
+      correctAnswer: 0,
+      explanation: 'El diseño universal busca crear productos y entornos que puedan ser utilizados por todas las personas.'
+    },
+    { 
+      questionText: '¿Qué es la usabilidad?', 
+      options: ['Facilidad de uso', 'Utilidad', 'Rapidez', 'Precio'], 
+      correctAnswer: 0,
+      explanation: 'La usabilidad se refiere a la eficacia, eficiencia y satisfacción con la que los usuarios pueden lograr objetivos.'
     }
   ]
 };
 
 export const TEST_TOPIC_25: Test = {
   id: 'topic-25',
-  title: 'Tema 25: Delitos AAPP',
+  title: 'Tema: Protección de Datos (RGPD)',
   questions: [
     { 
-      questionText: 'La desobediencia grave a la autoridad es delito si es:', 
-      options: ['Reiterada', 'Negativa abierta a cumplir una orden legítima', 'Secreta', 'Leve'], 
-      correctAnswer: 1,
-      explanation: 'El artículo 556 del Código Penal castiga la desobediencia grave a la autoridad, entendida como una negativa abierta y reiterada a cumplir una orden legítima.'
-    },
-    { 
-      questionText: 'El delito de atentado requiere:', 
-      options: ['Insultos', 'Acometimiento, empleo de fuerza, intimidación grave o resistencia activa grave', 'Huir', 'Mentir'], 
-      correctAnswer: 1,
-      explanation: 'El artículo 550 del Código Penal define el atentado como el acometimiento, empleo de fuerza, intimidación grave o resistencia activa también grave contra la autoridad, sus agentes o funcionarios públicos.'
-    },
-    { 
-      questionText: 'La malversación protege:', 
-      options: ['El honor', 'El patrimonio público', 'La libertad', 'La salud'], 
-      correctAnswer: 1,
-      explanation: 'El delito de malversación (art. 432 CP) protege el patrimonio público y la correcta gestión de los caudales públicos.'
-    },
-    { 
-      questionText: 'La prevaricación consiste en dictar una resolución arbitraria:', 
-      options: ['Por error', 'A sabiendas de su injusticia', 'Por orden superior', 'Por miedo'], 
-      correctAnswer: 1,
-      explanation: 'El artículo 404 del Código Penal castiga a la autoridad o funcionario público que, a sabiendas de su injusticia, dictare una resolución arbitraria en un asunto administrativo.'
-    },
-    { 
-      questionText: 'El cohecho pasivo lo comete:', 
-      options: ['El particular', 'La autoridad o funcionario que recibe/solicita dádiva', 'El juez', 'Nadie'], 
-      correctAnswer: 1,
-      explanation: 'El cohecho pasivo (art. 419 CP) es cometido por la autoridad o funcionario público que solicita o recibe dádiva o promesa.'
-    },
-    { 
-      questionText: 'El tráfico de influencias lo puede cometer:', 
-      options: ['Solo funcionario', 'Funcionario o particular', 'Solo particular', 'Nadie'], 
-      correctAnswer: 1,
-      explanation: 'El Código Penal tipifica el tráfico de influencias cometido tanto por funcionario público (art. 428) como por particular (art. 429).'
-    },
-    { 
-      questionText: 'La revelación de secretos por funcionario público:', 
-      options: ['Es delito', 'Es falta administrativa', 'Es legal', 'Es un derecho'], 
+      questionText: '¿Qué es un dato personal?', 
+      options: ['Cualquier información sobre una persona física identificada o identificable', 'Solo el nombre', 'Solo el DNI', 'Datos de empresas'], 
       correctAnswer: 0,
-      explanation: 'El artículo 417 del Código Penal castiga a la autoridad o funcionario público que revelare secretos o informaciones de los que tenga conocimiento por razón de su oficio o cargo.'
+      explanation: 'El RGPD define dato personal de forma muy amplia.'
     },
     { 
-      questionText: 'El abandono de destino para no impedir delitos es:', 
-      options: ['Delito', 'Falta leve', 'Permiso', 'Huelga'], 
+      questionText: '¿Qué es el consentimiento en el RGPD?', 
+      options: ['Manifestación de voluntad libre, específica, informada e inequívoca', 'Firmar un papel', 'Decir que sí', 'No decir nada'], 
       correctAnswer: 0,
-      explanation: 'El artículo 408 del Código Penal castiga la omisión del deber de perseguir delitos o el abandono de destino para no impedirlos.'
+      explanation: 'El consentimiento debe ser una acción afirmativa clara.'
     },
     { 
-      questionText: 'Los desórdenes públicos sancionan la alteración de:', 
-      options: ['La paz pública', 'El tráfico', 'El sueño', 'La moda'], 
+      questionText: '¿Qué es el DPO?', 
+      options: ['Data Protection Officer (Delegado de Protección de Datos)', 'Data Processing Officer', 'Digital Privacy Officer', 'Direct Public Officer'], 
       correctAnswer: 0,
-      explanation: 'El artículo 557 del Código Penal castiga a quienes actuando en grupo o individualmente pero amparados en él, alteren la paz pública.'
+      explanation: 'El DPO es el encargado de supervisar el cumplimiento de la normativa de protección de datos.'
     },
     { 
-      questionText: 'La tenencia ilícita de armas es un delito contra:', 
-      options: ['El orden público', 'La seguridad colectiva', 'El patrimonio', 'La salud'], 
+      questionText: '¿Qué es el derecho al olvido?', 
+      options: ['Derecho de supresión', 'Derecho a no recordar', 'Derecho a borrar la memoria', 'Derecho a desaparecer'], 
       correctAnswer: 0,
-      explanation: 'Los delitos de tenencia, tráfico y depósito de armas se encuentran regulados en el Título XXII "Delitos contra el orden público".'
+      explanation: 'Es el derecho a obtener la supresión de los datos personales.'
+    },
+    { 
+      questionText: '¿Qué es una violación de seguridad de los datos?', 
+      options: ['Destrucción, pérdida, alteración o comunicación no autorizada de datos', 'Romper un ordenador', 'Perder una llave', 'Olvidar la contraseña'], 
+      correctAnswer: 0,
+      explanation: 'Brecha de seguridad que afecta a datos personales.'
+    },
+    { 
+      questionText: '¿Qué es la AEPD?', 
+      options: ['Agencia Española de Protección de Datos', 'Asociación Española de Privacidad', 'Agencia Europea de Protección de Datos', 'Autoridad Estatal de Privacidad'], 
+      correctAnswer: 0,
+      explanation: 'La AEPD es la autoridad de control en España.'
+    },
+    { 
+      questionText: '¿Qué es el principio de minimización de datos?', 
+      options: ['Los datos deben ser adecuados, pertinentes y limitados a lo necesario', 'Recoger cuantos más datos mejor', 'No recoger datos', 'Guardar datos para siempre'], 
+      correctAnswer: 0,
+      explanation: 'Solo se deben tratar los datos estrictamente necesarios para el fin.'
+    },
+    { 
+      questionText: '¿Qué es la portabilidad de los datos?', 
+      options: ['Derecho a recibir los datos personales en un formato estructurado y transmitirlos a otro responsable', 'Llevar el ordenador', 'Mover datos en un USB', 'Copiar y pegar'], 
+      correctAnswer: 0,
+      explanation: 'Permite al interesado recuperar sus datos para reutilizarlos.'
+    },
+    { 
+      questionText: '¿Qué es una evaluación de impacto (EIPD)?', 
+      options: ['Análisis de los riesgos que un tratamiento puede conllevar para los derechos y libertades', 'Un examen', 'Una auditoría', 'Una multa'], 
+      correctAnswer: 0,
+      explanation: 'Es obligatoria para tratamientos de alto riesgo.'
+    },
+    { 
+      questionText: '¿Qué es el principio de licitud?', 
+      options: ['Los datos deben tratarse de manera lícita, leal y transparente', 'Todo vale', 'Solo si hay contrato', 'Solo si hay ley'], 
+      correctAnswer: 0,
+      explanation: 'El tratamiento debe tener una base legal válida.'
     }
   ]
 };
 
 export const TEST_TOPIC_26: Test = {
   id: 'topic-26',
-  title: 'Tema 26: Delitos Personas',
+  title: 'Tema: Inteligencia Artificial',
   questions: [
     { 
-      questionText: 'El homicidio se diferencia del asesinato por la ausencia de:', 
-      options: ['Muerte', 'Circunstancias específicas (alevosía, precio, ensañamiento, para facilitar otro delito)', 'Dolo', 'Arma'], 
-      correctAnswer: 1,
-      explanation: 'El asesinato (art. 139 CP) es un homicidio cualificado por la concurrencia de alevosía, precio/recompensa/promesa, ensañamiento o para facilitar/evitar otro delito.'
-    },
-    { 
-      questionText: 'El delito de lesiones requiere:', 
-      options: ['Solo una primera asistencia facultativa', 'Tratamiento médico o quirúrgico (además de la primera asistencia)', 'Dolor', 'Sangre'], 
-      correctAnswer: 1,
-      explanation: 'El artículo 147 del Código Penal establece que el delito de lesiones requiere objetivamente para su sanidad, además de una primera asistencia facultativa, tratamiento médico o quirúrgico.'
-    },
-    { 
-      questionText: 'La extorsión es un delito contra:', 
-      options: ['El patrimonio', 'La libertad sexual', 'El honor', 'La administración'], 
+      questionText: '¿Qué es el Machine Learning?', 
+      options: ['Aprendizaje Automático', 'Máquina de Aprender', 'Inteligencia Artificial General', 'Robótica'], 
       correctAnswer: 0,
-      explanation: 'La extorsión (art. 243 CP) es un delito contra el patrimonio y el orden socioeconómico.'
+      explanation: 'Es una rama de la IA que permite a las máquinas aprender de los datos.'
     },
     { 
-      questionText: 'La alevosía convierte el homicidio en:', 
-      options: ['Asesinato', 'Homicidio imprudente', 'Falta', 'Lesiones'], 
+      questionText: '¿Qué es una Red Neuronal Artificial?', 
+      options: ['Un modelo computacional inspirado en el cerebro humano', 'Una red de cables', 'Internet', 'Un virus'], 
       correctAnswer: 0,
-      explanation: 'La concurrencia de alevosía es una de las circunstancias que cualifican el homicidio como asesinato (art. 139 CP).'
+      explanation: 'Las redes neuronales son la base del Deep Learning.'
     },
     { 
-      questionText: 'La inducción al suicidio:', 
-      options: ['Es impune', 'Es delito', 'Es falta', 'Es legal'], 
-      correctAnswer: 1,
-      explanation: 'El artículo 143 del Código Penal castiga al que induzca al suicidio de otro.'
-    },
-    { 
-      questionText: 'Las amenazas consisten en:', 
-      options: ['Anunciar un mal futuro constitutivo o no de delito', 'Golpear', 'Insultar', 'Robar'], 
+      questionText: '¿Qué es el Deep Learning?', 
+      options: ['Aprendizaje Profundo', 'Aprendizaje Superficial', 'Aprendizaje Rápido', 'Aprendizaje Lento'], 
       correctAnswer: 0,
-      explanation: 'El delito de amenazas (art. 169 CP) consiste en anunciar a otro un mal futuro, injusto, determinado y posible, con el propósito de intimidar.'
+      explanation: 'Es un subcampo del Machine Learning basado en redes neuronales profundas.'
     },
     { 
-      questionText: 'El robo con fuerza en las cosas requiere:', 
-      options: ['Escalamiento, rompimiento, llaves falsas...', 'Violencia física', 'Intimidación', 'Engaño'], 
+      questionText: '¿Qué es el Procesamiento del Lenguaje Natural (PLN)?', 
+      options: ['La capacidad de las máquinas para entender y generar lenguaje humano', 'Hablar con robots', 'Traducir textos', 'Escribir código'], 
       correctAnswer: 0,
-      explanation: 'El artículo 238 del Código Penal enumera las circunstancias de fuerza en las cosas: escalamiento, rompimiento de pared/techo/suelo, fractura de puerta/ventana, uso de llaves falsas, etc.'
+      explanation: 'El PLN permite la interacción entre ordenadores y lenguaje humano.'
     },
     { 
-      questionText: 'El hurto se distingue del robo por:', 
-      options: ['La cuantía', 'La ausencia de fuerza, violencia o intimidación', 'El objeto', 'El lugar'], 
-      correctAnswer: 1,
-      explanation: 'El hurto (art. 234 CP) consiste en tomar cosas muebles ajenas sin la voluntad de su dueño, sin fuerza en las cosas ni violencia o intimidación en las personas (que constituirían robo).'
-    },
-    { 
-      questionText: 'La detención ilegal cometida por particular:', 
-      options: ['Es delito', 'Es legal', 'Es falta', 'Es broma'], 
+      questionText: '¿Qué es un Chatbot?', 
+      options: ['Un programa que simula una conversación humana', 'Un robot físico', 'Un chat de amigos', 'Un virus'], 
       correctAnswer: 0,
-      explanation: 'El artículo 163 del Código Penal castiga al particular que encerrare o detuviere a otro, privándole de su libertad.'
+      explanation: 'Los chatbots usan IA para interactuar con usuarios mediante texto o voz.'
     },
     { 
-      questionText: 'La violencia de género (lesiones) requiere que la víctima sea:', 
-      options: ['Cualquier mujer', 'Esposa o mujer ligada por análoga relación de afectividad (aún sin convivencia)', 'Hija', 'Madre'], 
-      correctAnswer: 1,
-      explanation: 'El artículo 153 del Código Penal protege específicamente a quien sea o haya sido esposa, o mujer que esté o haya estado ligada a él por una análoga relación de afectividad aun sin convivencia.'
+      questionText: '¿Qué es la Visión por Computadora?', 
+      options: ['La capacidad de las máquinas para "ver" e interpretar imágenes', 'Usar gafas', 'Pantallas grandes', 'Cámaras de seguridad'], 
+      correctAnswer: 0,
+      explanation: 'Permite a los ordenadores extraer información de imágenes y vídeos.'
+    },
+    { 
+      questionText: '¿Qué es el Big Data?', 
+      options: ['Grandes volúmenes de datos', 'Un disco duro grande', 'Una base de datos pequeña', 'Un virus'], 
+      correctAnswer: 0,
+      explanation: 'Big Data se refiere al análisis de conjuntos de datos muy grandes y complejos.'
+    },
+    { 
+      questionText: '¿Qué es la IA Generativa?', 
+      options: ['IA capaz de crear nuevo contenido (texto, imágenes, etc.)', 'IA que genera energía', 'IA antigua', 'IA básica'], 
+      correctAnswer: 0,
+      explanation: 'Modelos como GPT o DALL-E que generan contenido original.'
+    },
+    { 
+      questionText: '¿Qué es un Algoritmo Genético?', 
+      options: ['Un algoritmo de búsqueda inspirado en la evolución biológica', 'Un virus genético', 'ADN digital', 'Un programa médico'], 
+      correctAnswer: 0,
+      explanation: 'Utiliza conceptos como mutación y selección para resolver problemas de optimización.'
+    },
+    { 
+      questionText: '¿Qué es la Ética de la IA?', 
+      options: ['El estudio de los problemas morales relacionados con la IA', 'Programar bien', 'Hacer robots buenos', 'Leyes de la robótica'], 
+      correctAnswer: 0,
+      explanation: 'Aborda temas como el sesgo, la privacidad y la responsabilidad en sistemas de IA.'
     }
   ]
 };
 
 export const TEST_TOPIC_27: Test = {
   id: 'topic-27',
-  title: 'Tema 27: Delitos Sexuales/Honor',
+  title: 'Tema: Blockchain y Criptografía',
   questions: [
     { 
-      questionText: 'El consentimiento sexual debe ser:', 
-      options: ['Presunto', 'Manifestado libremente mediante actos que expresen clara voluntad', 'Tácito', 'Forzado'], 
+      questionText: '¿Qué es Blockchain?', 
+      options: ['Una cadena de bloques', 'Una base de datos distribuida y segura', 'Una moneda', 'Un banco'], 
       correctAnswer: 1,
-      explanation: 'El artículo 178 del Código Penal (tras la reforma de la LO 10/2022) establece que solo se entenderá que hay consentimiento cuando se haya manifestado libremente mediante actos que, en atención a las circunstancias del caso, expresen de manera clara la voluntad de la persona.'
+      explanation: 'Es un registro compartido e inmutable de transacciones.'
     },
     { 
-      questionText: 'La calumnia consiste en:', 
-      options: ['Insultar', 'La imputación de un delito hecha con conocimiento de su falsedad o temerario desprecio a la verdad', 'Hablar mal', 'Criticar'], 
+      questionText: '¿Qué es Bitcoin?', 
+      options: ['Una criptomoneda', 'Un banco', 'Una empresa', 'Un país'], 
+      correctAnswer: 0,
+      explanation: 'Bitcoin es la primera criptomoneda descentralizada basada en blockchain.'
+    },
+    { 
+      questionText: '¿Qué es un Smart Contract?', 
+      options: ['Un contrato inteligente', 'Un programa que se ejecuta automáticamente cuando se cumplen ciertas condiciones', 'Un abogado robot', 'Un contrato digital'], 
       correctAnswer: 1,
-      explanation: 'El artículo 205 del Código Penal define la calumnia como la imputación de un delito hecha con conocimiento de su falsedad o temerario desprecio hacia la verdad.'
+      explanation: 'Son programas almacenados en una blockchain que se ejecutan cuando se cumplen condiciones predeterminadas.'
     },
     { 
-      questionText: 'En los delitos contra el honor, la "exceptio veritatis" (prueba de la verdad) se admite en:', 
-      options: ['Injuria siempre', 'Calumnia', 'Nunca', 'Amenazas'], 
-      correctAnswer: 1,
-      explanation: 'El artículo 207 del Código Penal admite la prueba de la verdad en la calumnia (el acusado quedará exento de toda pena probando el hecho criminal imputado).'
-    },
-    { 
-      questionText: 'La agresión sexual incluye:', 
-      options: ['Cualquier acto contra la libertad sexual sin consentimiento', 'Solo violación', 'Solo tocamientos', 'Solo con violencia'], 
+      questionText: '¿Qué es la Minería de Criptomonedas?', 
+      options: ['El proceso de validar transacciones y crear nuevos bloques', 'Buscar oro', 'Robar monedas', 'Crear dinero falso'], 
       correctAnswer: 0,
-      explanation: 'Tras la reforma de la LO 10/2022, se unifica el abuso y la agresión, considerándose agresión sexual cualquier acto que atente contra la libertad sexual de otra persona sin su consentimiento.'
+      explanation: 'Es el proceso computacional para asegurar la red y procesar transacciones.'
     },
     { 
-      questionText: 'Si la víctima de agresión sexual es menor de 16 años:', 
-      options: ['No cabe consentimiento válido', 'Depende de la madurez', 'Es legal', 'Es falta'], 
+      questionText: '¿Qué es un Hash?', 
+      options: ['Una función matemática que convierte una entrada en una cadena de longitud fija', 'Una comida', 'Una clave', 'Un virus'], 
       correctAnswer: 0,
-      explanation: 'El artículo 181 del Código Penal establece que siempre se considera agresión sexual cuando la víctima sea menor de 16 años, ya que no cabe consentimiento válido.'
+      explanation: 'Los hashes son fundamentales en blockchain para asegurar la integridad de los datos.'
     },
     { 
-      questionText: 'Las injurias graves hechas con publicidad:', 
-      options: ['Son delito', 'Son falta', 'Son libres', 'Son legales'], 
+      questionText: '¿Qué es Ethereum?', 
+      options: ['Una plataforma de blockchain descentralizada', 'Una moneda', 'Un gas', 'Una empresa'], 
       correctAnswer: 0,
-      explanation: 'El artículo 209 del Código Penal castiga las injurias graves hechas con publicidad.'
+      explanation: 'Ethereum permite la creación de contratos inteligentes y aplicaciones descentralizadas (DApps).'
     },
     { 
-      questionText: 'El perdón del ofendido en delitos contra el honor:', 
-      options: ['Extingue la acción penal', 'No sirve', 'Atenúa', 'Agrava'], 
+      questionText: '¿Qué es un NFT?', 
+      options: ['Non-Fungible Token', 'New File Type', 'Network File Transfer', 'No Free Token'], 
       correctAnswer: 0,
-      explanation: 'El artículo 215 del Código Penal establece que el perdón del ofendido o de su representante legal, en su caso, extingue la acción penal.'
+      explanation: 'Un NFT es un activo digital único verificado mediante tecnología blockchain.'
     },
     { 
-      questionText: 'La prostitución coactiva es delito contra:', 
-      options: ['La libertad sexual', 'El patrimonio', 'El honor', 'La salud'], 
+      questionText: '¿Qué es la Descentralización?', 
+      options: ['La ausencia de una autoridad central', 'El caos', 'La anarquía', 'La libertad'], 
       correctAnswer: 0,
-      explanation: 'El delito de prostitución coactiva (art. 187 CP) atenta contra la libertad sexual de la víctima.'
+      explanation: 'En blockchain, significa que la red no está controlada por una sola entidad.'
     },
     { 
-      questionText: 'La pornografía infantil es delito:', 
-      options: ['Siempre', 'Solo si se distribuye', 'Solo si se vende', 'Nunca'], 
+      questionText: '¿Qué es una Wallet (Cartera)?', 
+      options: ['Un software o hardware para almacenar claves criptográficas', 'Una cartera de piel', 'Un banco', 'Una caja fuerte'], 
       correctAnswer: 0,
-      explanation: 'El artículo 189 del Código Penal castiga la producción, venta, distribución, exhibición y tenencia de pornografía infantil.'
+      explanation: 'Permite a los usuarios almacenar y gestionar sus criptomonedas.'
     },
     { 
-      questionText: 'El acoso sexual requiere:', 
-      options: ['Solicitar favores sexuales en el ámbito laboral/docente provocando situación objetiva y gravemente intimidatoria/hostil/humillante', 'Mirar mal', 'Invitar a café', 'Ser jefe'], 
+      questionText: '¿Qué es la Criptografía?', 
+      options: ['La técnica de escribir en clave', 'Escribir rápido', 'Escribir mal', 'Escribir en otro idioma'], 
       correctAnswer: 0,
-      explanation: 'El artículo 184 del Código Penal define el acoso sexual como solicitar favores de naturaleza sexual, en el ámbito de una relación laboral, docente o de prestación de servicios, provocando a la víctima una situación objetiva y gravemente intimidatoria, hostil o humillante.'
+      explanation: 'Es la práctica y el estudio de técnicas para la comunicación segura.'
     }
   ]
 };
 
 export const TEST_TOPIC_28: Test = {
   id: 'topic-28',
-  title: 'Tema 28: LOGP',
+  title: 'Tema: Metodologías Ágiles',
   questions: [
     { 
-      questionText: 'La LOGP fue la primera Ley Orgánica aprobada tras la Constitución, en fecha:', 
-      options: ['26 de septiembre de 1979', '1 de enero de 1980', '6 de diciembre de 1978', '20 de noviembre de 1975'], 
+      questionText: '¿Qué es el Manifiesto Ágil?', 
+      options: ['Un documento que establece los valores y principios del desarrollo ágil de software', 'Una ley', 'Un libro', 'Un contrato'], 
       correctAnswer: 0,
-      explanation: 'La Ley Orgánica 1/1979, General Penitenciaria, fue aprobada el 26 de septiembre de 1979.'
+      explanation: 'Publicado en 2001, define los 4 valores y 12 principios del desarrollo ágil.'
     },
     { 
-      questionText: 'El sistema penitenciario español se define como:', 
-      options: ['De individualización científica', 'Progresivo puro', 'Regresivo', 'Militar'], 
+      questionText: '¿Qué es Scrum?', 
+      options: ['Un marco de trabajo ágil', 'Un deporte', 'Un lenguaje de programación', 'Una herramienta'], 
       correctAnswer: 0,
-      explanation: 'El artículo 72.1 de la LOGP establece que el sistema penitenciario español es el de individualización científica, separado en grados.'
+      explanation: 'Scrum es un marco de trabajo para la gestión de proyectos complejos.'
     },
     { 
-      questionText: 'Las mujeres conservan el derecho a tener consigo a sus hijos en prisión hasta que cumplan:', 
-      options: ['1 año', '3 años', '6 años', '5 años'], 
+      questionText: '¿Qué es un Sprint?', 
+      options: ['Un periodo de tiempo fijo (iteración) en Scrum', 'Correr rápido', 'Una reunión', 'Un error'], 
       correctAnswer: 1,
-      explanation: 'El artículo 38 de la LOGP establece que las internas podrán tener en su compañía a los hijos menores de tres años.'
+      explanation: 'En Scrum, el trabajo se divide en iteraciones cortas llamadas Sprints.'
     },
     { 
-      questionText: 'El fin primordial de las instituciones penitenciarias es:', 
-      options: ['La reeducación y reinserción social', 'El castigo', 'La custodia', 'La venganza'], 
+      questionText: '¿Qué es Kanban?', 
+      options: ['Un método visual para gestionar el trabajo', 'Una ciudad', 'Una comida', 'Un software'], 
       correctAnswer: 0,
-      explanation: 'El artículo 1 de la LOGP establece que las instituciones penitenciarias tienen como fin primordial la reeducación y la reinserción social de los sentenciados.'
+      explanation: 'Kanban utiliza tableros visuales para gestionar el flujo de trabajo.'
     },
     { 
-      questionText: 'Los grados de tratamiento son:', 
-      options: ['1, 2, 3 y libertad condicional', 'A, B, C', 'Alto, medio, bajo', 'Abierto, cerrado'], 
+      questionText: '¿Qué es el Product Owner?', 
+      options: ['El dueño del producto', 'El jefe', 'El programador', 'El cliente'], 
       correctAnswer: 0,
-      explanation: 'El artículo 72 de la LOGP establece tres grados de tratamiento (primero, segundo y tercero). La libertad condicional se configura como la última fase (a veces referida como cuarto grado).'
+      explanation: 'En Scrum, es el responsable de maximizar el valor del producto.'
     },
     { 
-      questionText: 'El tratamiento penitenciario es:', 
-      options: ['Voluntario para el interno', 'Obligatorio', 'Forzoso', 'Innecesario'], 
+      questionText: '¿Qué es el Scrum Master?', 
+      options: ['El facilitador del equipo Scrum', 'El jefe', 'El dueño', 'El experto'], 
       correctAnswer: 0,
-      explanation: 'El artículo 112.3 del Reglamento Penitenciario (y 61 LOGP implícitamente) establece que el tratamiento será voluntario, no pudiendo imponerse coactivamente.'
+      explanation: 'Ayuda al equipo a entender y aplicar Scrum.'
     },
     { 
-      questionText: 'La separación entre detenidos y penados es:', 
-      options: ['Obligatoria', 'Opcional', 'Recomendable', 'Imposible'], 
+      questionText: '¿Qué es una Historia de Usuario?', 
+      options: ['Una descripción breve de una funcionalidad desde la perspectiva del usuario', 'Un cuento', 'Una novela', 'Un error'], 
       correctAnswer: 0,
-      explanation: 'El artículo 16 de la LOGP establece la separación obligatoria entre detenidos (preventivos) y penados (condenados).'
+      explanation: 'Es una forma de capturar requisitos en metodologías ágiles.'
     },
     { 
-      questionText: 'La LOGP reconoce el derecho de los internos a:', 
-      options: ['Un trabajo remunerado', 'No trabajar', 'Elegir celda', 'Tener móvil'], 
+      questionText: '¿Qué es el Daily Stand-up?', 
+      options: ['Una reunión diaria breve de sincronización', 'Estar de pie todo el día', 'Un monólogo', 'Una fiesta'], 
       correctAnswer: 0,
-      explanation: 'El artículo 26 de la LOGP establece que el trabajo será un derecho y un deber del interno, y tendrá carácter remunerado.'
+      explanation: 'Reunión diaria de 15 minutos para planificar el día.'
     },
     { 
-      questionText: 'La asistencia religiosa es:', 
-      options: ['Un derecho', 'Una obligación', 'Prohibida', 'Solo católica'], 
+      questionText: '¿Qué es la Retrospectiva?', 
+      options: ['Una reunión al final del Sprint para inspeccionar y adaptar el proceso', 'Mirar atrás', 'Un informe', 'Un castigo'], 
       correctAnswer: 0,
-      explanation: 'El artículo 54 de la LOGP garantiza la libertad religiosa de los internos y su derecho a la asistencia religiosa.'
+      explanation: 'Permite al equipo identificar mejoras para el siguiente Sprint.'
     },
     { 
-      questionText: 'El Reglamento Penitenciario desarrolla la LOGP y es de:', 
-      options: ['1996', '1979', '2011', '2000'], 
+      questionText: '¿Qué es el Backlog?', 
+      options: ['La lista ordenada de todo lo que se necesita en el producto', 'La espalda', 'Un registro', 'Un archivo'], 
       correctAnswer: 0,
-      explanation: 'El vigente Reglamento Penitenciario fue aprobado por Real Decreto 190/1996, de 9 de febrero.'
+      explanation: 'El Product Backlog es la fuente única de requisitos.'
     }
   ]
 };
 
 export const TEST_TOPIC_29: Test = {
   id: 'topic-29',
-  title: 'Tema 29: El Interno',
+  title: 'Tema: DevOps y CI/CD',
   questions: [
     { 
-      questionText: 'Los internos tienen el deber de:', 
-      options: ['Observar una conducta correcta y acatar las normas de régimen interior', 'Trabajar gratis', 'No hablar', 'Rezar'], 
+      questionText: '¿Qué es DevOps?', 
+      options: ['Un conjunto de prácticas que combinan el desarrollo de software y las operaciones de TI', 'Un departamento', 'Un software', 'Un servidor'], 
       correctAnswer: 0,
-      explanation: 'El artículo 4 de la LOGP establece como deber de los internos observar una conducta correcta y acatar las normas de régimen interior.'
+      explanation: 'DevOps busca acortar el ciclo de vida del desarrollo de sistemas y proporcionar una entrega continua de alta calidad.'
     },
     { 
-      questionText: 'Respecto a la religión, la Administración:', 
-      options: ['Impone la católica', 'Garantiza la libertad religiosa y de culto', 'Prohíbe el culto', 'Ignora el tema'], 
-      correctAnswer: 1,
-      explanation: 'El artículo 54 de la LOGP establece que la Administración garantizará la libertad religiosa y de culto de los internos.'
+      questionText: '¿Qué es CI?', 
+      options: ['Integración Continua', 'Inteligencia Colectiva', 'Informática Central', 'Internet Común'], 
+      correctAnswer: 0,
+      explanation: 'Continuous Integration es la práctica de fusionar copias de trabajo de todos los desarrolladores en una línea principal compartida varias veces al día.'
     },
     { 
-      questionText: 'Las comunicaciones orales pueden realizarse:', 
-      options: ['Por locutorios y vis a vis', 'Solo por carta', 'Solo por teléfono', 'Por señales de humo'], 
+      questionText: '¿Qué es CD?', 
+      options: ['Entrega Continua / Despliegue Continuo', 'Disco Compacto', 'Cambio de Directorio', 'Centro de Datos'], 
       correctAnswer: 0,
-      explanation: 'El artículo 51 de la LOGP regula las comunicaciones orales, que pueden ser a través de locutorios o, en su caso, comunicaciones íntimas, familiares y de convivencia (vis a vis).'
+      explanation: 'Continuous Delivery/Deployment automatiza la entrega de software.'
     },
     { 
-      questionText: 'El derecho a la información de los internos incluye:', 
-      options: ['Prensa, radio y TV', 'Internet libre', 'Móvil', 'Cine diario'], 
+      questionText: '¿Qué es Jenkins?', 
+      options: ['Un servidor de automatización de código abierto', 'Un mayordomo', 'Un lenguaje', 'Un sistema operativo'], 
       correctAnswer: 0,
-      explanation: 'El artículo 58 de la LOGP reconoce el derecho de los internos a la información a través de prensa, radio y televisión.'
+      explanation: 'Jenkins se utiliza para construir y probar proyectos de software de forma continua.'
     },
     { 
-      questionText: 'Las peticiones y quejas pueden dirigirse a:', 
-      options: ['Director, JVP, Defensor del Pueblo...', 'Solo al Director', 'Solo al Juez', 'A la prensa'], 
+      questionText: '¿Qué es Ansible?', 
+      options: ['Una herramienta de automatización de TI', 'Un juego', 'Un cable', 'Un servidor'], 
       correctAnswer: 0,
-      explanation: 'El artículo 50 de la LOGP permite a los internos formular peticiones y quejas al Director, al Juez de Vigilancia, al Defensor del Pueblo, al Ministerio Fiscal, etc.'
+      explanation: 'Ansible se usa para la gestión de configuración, despliegue de aplicaciones y orquestación.'
     },
     { 
-      questionText: 'El interno tiene derecho a ser designado por:', 
-      options: ['Su nombre', 'Un número', 'Un mote', 'Su delito'], 
+      questionText: '¿Qué es Terraform?', 
+      options: ['Una herramienta de infraestructura como código', 'Un planeta', 'Un juego', 'Un sistema de archivos'], 
       correctAnswer: 0,
-      explanation: 'El artículo 4 de la LOGP establece el derecho del interno a ser designado por su propio nombre.'
+      explanation: 'Terraform permite construir, cambiar y versionar infraestructura de forma segura y eficiente.'
     },
     { 
-      questionText: 'La higiene personal es:', 
-      options: ['Un deber y un derecho', 'Opcional', 'Prohibida', 'Solo los domingos'], 
+      questionText: '¿Qué es un Pipeline?', 
+      options: ['Una serie de pasos automatizados para llevar el software desde el control de versiones hasta producción', 'Una tubería', 'Un cable', 'Un canal'], 
       correctAnswer: 0,
-      explanation: 'El artículo 3 de la LOGP y el 19 del Reglamento Penitenciario configuran la higiene personal como un derecho y un deber del interno.'
+      explanation: 'En CI/CD, un pipeline define el flujo de trabajo de automatización.'
     },
     { 
-      questionText: 'Las comunicaciones con abogados:', 
-      options: ['Son confidenciales salvo orden judicial (y terrorismo)', 'Se graban siempre', 'Se escuchan', 'Se prohíben'], 
+      questionText: '¿Qué es la Infraestructura como Código (IaC)?', 
+      options: ['Gestionar y aprovisionar infraestructura a través de código en lugar de procesos manuales', 'Escribir código en servidores', 'Programar edificios', 'Códigos de barras'], 
       correctAnswer: 0,
-      explanation: 'El artículo 51.2 de la LOGP establece que las comunicaciones con abogados no podrán ser suspendidas ni intervenidas salvo por orden judicial y en supuestos de terrorismo.'
+      explanation: 'IaC permite gestionar la infraestructura mediante archivos de definición legibles por máquina.'
     },
     { 
-      questionText: 'Los internos extranjeros tienen derecho a comunicarse con:', 
-      options: ['Sus representantes diplomáticos o consulares', 'Nadie', 'Solo el Director', 'La ONU'], 
+      questionText: '¿Qué es GitOps?', 
+      options: ['Un conjunto de prácticas que utiliza Git para gestionar la infraestructura y las configuraciones', 'Operar Git', 'Un comando de Git', 'Un error de Git'], 
       correctAnswer: 0,
-      explanation: 'El artículo 51.4 de la LOGP reconoce el derecho de los internos extranjeros a comunicar con sus representantes diplomáticos o consulares.'
+      explanation: 'GitOps utiliza repositorios Git como fuente única de verdad para la infraestructura y las aplicaciones.'
     },
     { 
-      questionText: 'La participación de los internos se canaliza a través de:', 
-      options: ['Comisiones de internos', 'Sindicatos', 'Partidos', 'Huelgas'], 
+      questionText: '¿Qué es la Monitorización?', 
+      options: ['El proceso de recopilar, analizar y utilizar información para rastrear el rendimiento y la salud de las aplicaciones', 'Mirar la pantalla', 'Vigilar a los empleados', 'Grabar vídeos'], 
       correctAnswer: 0,
-      explanation: 'El artículo 22 de la LOGP fomenta la participación de los internos en la organización de actividades a través de Comisiones.'
+      explanation: 'Es crucial en DevOps para asegurar la fiabilidad y el rendimiento.'
     }
   ]
 };
 
 export const TEST_TOPIC_30: Test = {
   id: 'topic-30',
-  title: 'Tema 30: Personal Penitenciario',
+  title: 'Tema: Microservicios',
   questions: [
     { 
-      questionText: 'El Cuerpo Especial de Instituciones Penitenciarias es del grupo:', 
-      options: ['A1', 'A2', 'C1', 'C2'], 
-      correctAnswer: 1,
-      explanation: 'El Cuerpo Especial de Instituciones Penitenciarias se clasifica en el Subgrupo A2.'
-    },
-    { 
-      questionText: 'La seguridad exterior de los centros corresponde a:', 
-      options: ['Los funcionarios de prisiones', 'Las Fuerzas y Cuerpos de Seguridad del Estado', 'Seguridad privada', 'Los internos'], 
-      correctAnswer: 1,
-      explanation: 'El artículo 280 del Reglamento Penitenciario (y la LO 2/86) establece que la seguridad exterior corresponde a las Fuerzas y Cuerpos de Seguridad del Estado.'
-    },
-    { 
-      questionText: 'El Director del Centro es nombrado por:', 
-      options: ['El Subdelegado del Gobierno', 'El Secretario General de II.PP. (libre designación)', 'Los funcionarios', 'Oposición'], 
-      correctAnswer: 1,
-      explanation: 'El Director del Centro Penitenciario es un puesto de libre designación nombrado por el Secretario General de Instituciones Penitenciarias.'
-    },
-    { 
-      questionText: 'El Cuerpo de Ayudantes (C1) realiza funciones de:', 
-      options: ['Vigilancia y custodia interior', 'Tratamiento médico', 'Dirección', 'Cocina'], 
+      questionText: '¿Qué es la arquitectura de microservicios?', 
+      options: ['Un enfoque para desarrollar una aplicación como un conjunto de pequeños servicios', 'Un servicio pequeño', 'Un ordenador pequeño', 'Un programa corto'], 
       correctAnswer: 0,
-      explanation: 'El Cuerpo de Ayudantes de Instituciones Penitenciarias (C1) tiene encomendadas principalmente las tareas de vigilancia y custodia interior.'
+      explanation: 'Cada servicio se ejecuta en su propio proceso y se comunica con mecanismos ligeros (HTTP).'
     },
     { 
-      questionText: 'Los funcionarios tienen la condición de:', 
-      options: ['Agentes de la autoridad', 'Jueces', 'Militares', 'Civiles sin autoridad'], 
+      questionText: '¿Qué ventaja ofrecen los microservicios?', 
+      options: ['Escalabilidad, flexibilidad y despliegue independiente', 'Son más lentos', 'Son más difíciles de hacer', 'Requieren más hardware'], 
       correctAnswer: 0,
-      explanation: 'El artículo 80 de la LOGP establece que los funcionarios de Instituciones Penitenciarias tendrán la condición de agentes de la autoridad.'
+      explanation: 'Permiten escalar partes específicas de la aplicación y desplegar cambios sin afectar a todo el sistema.'
     },
     { 
-      questionText: 'El Consejo de Dirección es un órgano:', 
-      options: ['Colegiado de gobierno del centro', 'Unipersonal', 'Consultivo', 'Judicial'], 
+      questionText: '¿Qué es un contenedor?', 
+      options: ['Una unidad estándar de software que empaqueta el código y sus dependencias', 'Una caja', 'Un servidor', 'Un archivo zip'], 
       correctAnswer: 0,
-      explanation: 'El artículo 269 del Reglamento Penitenciario define al Consejo de Dirección como el órgano colegiado de gobierno del Centro Penitenciario.'
+      explanation: 'Los contenedores permiten que la aplicación se ejecute de forma rápida y fiable en diferentes entornos.'
     },
     { 
-      questionText: 'La Junta de Tratamiento se encarga de:', 
-      options: ['Establecer los programas de tratamiento y clasificación', 'La seguridad', 'La limpieza', 'La comida'], 
+      questionText: '¿Qué es la orquestación de contenedores?', 
+      options: ['La gestión automatizada de contenedores (despliegue, escalado, redes)', 'Tocar música', 'Crear contenedores', 'Borrar contenedores'], 
       correctAnswer: 0,
-      explanation: 'El artículo 272 del Reglamento Penitenciario atribuye a la Junta de Tratamiento las funciones relativas a la clasificación y tratamiento de los internos.'
+      explanation: 'Kubernetes es la herramienta de orquestación más popular.'
     },
     { 
-      questionText: 'El Jefe de Servicios coordina:', 
-      options: ['Los servicios de vigilancia', 'A los médicos', 'A los maestros', 'Al Director'], 
+      questionText: '¿Qué es API Gateway?', 
+      options: ['Un servidor que actúa como punto de entrada único para un sistema de microservicios', 'Una puerta', 'Un router', 'Un firewall'], 
       correctAnswer: 0,
-      explanation: 'El artículo 284 del Reglamento Penitenciario establece que el Jefe de Servicios coordina los servicios de vigilancia bajo la dirección del Subdirector de Seguridad.'
+      explanation: 'Gestiona las peticiones, el enrutamiento, la autenticación y otras tareas transversales.'
     },
     { 
-      questionText: 'El deber de residencia obliga a vivir:', 
-      options: ['Donde se preste servicio o se permita', 'En la prisión', 'En Madrid', 'Donde se quiera'], 
+      questionText: '¿Qué es el acoplamiento?', 
+      options: ['El grado de interdependencia entre módulos de software', 'Juntar cosas', 'Copiar código', 'Pegar código'], 
       correctAnswer: 0,
-      explanation: 'Los funcionarios tienen el deber de residir en el término municipal donde presten su función, o en otro distinto siempre que se garantice el cumplimiento del servicio (previa autorización).'
+      explanation: 'En microservicios se busca un bajo acoplamiento (loose coupling).'
     },
     { 
-      questionText: 'El uniforme es obligatorio:', 
-      options: ['Durante el servicio', 'En casa', 'Nunca', 'Solo en desfiles'], 
+      questionText: '¿Qué es la cohesión?', 
+      options: ['El grado en que los elementos de un módulo pertenecen juntos', 'Pegamento', 'Estar unidos', 'Ser amigos'], 
       correctAnswer: 0,
-      explanation: 'El artículo 325 del Reglamento Penitenciario establece la obligatoriedad del uso del uniforme durante la prestación del servicio.'
+      explanation: 'Se busca una alta cohesión dentro de cada microservicio.'
+    },
+    { 
+      questionText: '¿Qué es la escalabilidad horizontal?', 
+      options: ['Añadir más máquinas al conjunto de recursos', 'Hacer la máquina más grande', 'Hacer la pantalla más ancha', 'Comprar más discos'], 
+      correctAnswer: 0,
+      explanation: 'Es típica en arquitecturas de microservicios y nube.'
+    },
+    { 
+      questionText: '¿Qué es la tolerancia a fallos?', 
+      options: ['La capacidad de un sistema para continuar operando correctamente en caso de fallo de alguno de sus componentes', 'No tener fallos', 'Arreglar fallos', 'Ignorar fallos'], 
+      correctAnswer: 0,
+      explanation: 'Es esencial en sistemas distribuidos.'
+    },
+    { 
+      questionText: '¿Qué es Service Mesh?', 
+      options: ['Una capa de infraestructura dedicada para facilitar la comunicación entre servicios', 'Una red de servicios', 'Una malla de cables', 'Un servidor web'], 
+      correctAnswer: 0,
+      explanation: 'Gestiona el tráfico, la seguridad y la observabilidad entre microservicios (ej. Istio).'
     }
   ]
 };

@@ -104,6 +104,13 @@ const quickTestPlaceholder: Test = {
   totalQuestions: 10,
 };
 
+const general25TestPlaceholder: Test = {
+  id: 'test-all-25',
+  title: 'Test General: 25 Preguntas (Toda la base de datos)',
+  questions: [],
+  totalQuestions: 25,
+};
+
 const aiTestPlaceholder: Test = {
   id: 'test-ai',
   title: 'Test por IA (Generativo)',
@@ -134,6 +141,7 @@ export const TESTS_DATA: Test[] = [
   failedQuestionsTestPlaceholder,
   infiniteTestPlaceholder,
   comprehensiveTestPlaceholder,
+  general25TestPlaceholder,
   quickTestPlaceholder,
   ...ACTIVE_TESTS,
 ];

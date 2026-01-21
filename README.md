@@ -2,9 +2,9 @@
 <img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
 </div>
 
-# Opotest Penitenciarias
+# Opotest TAI
 
-Aplicación web diseñada para ayudar en la preparación de oposiciones para **Ayudantes de Instituciones Penitenciarias**. Practica con tests interactivos y mejora tus conocimientos.
+Aplicación web diseñada para ayudar en la preparación de oposiciones para **Cuerpo de Técnicos Auxiliares de Informática de la Administración del Estado**. Practica con tests interactivos y mejora tus conocimientos.
 
 ## 🚀 Comenzar
 
@@ -47,4 +47,4 @@ El proyecto está configurado para desplegarse en GitHub Pages.
 npm run deploy
 ```
 
-Visita la aplicación desplegada: [https://gonsaliyo7-alt.github.io/opotest_penitenciarias](https://gonsaliyo7-alt.github.io/opotest_penitenciarias)
+Visita la aplicación desplegada: [https://gonsaliyo7-alt.github.io/tai](https://gonsaliyo7-alt.github.io/tai)

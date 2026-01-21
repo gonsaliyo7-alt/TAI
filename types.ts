@@ -19,11 +19,20 @@ export interface TestResult {
   score: number;
   status: 'passed' | 'failed';
   totalQuestions?: number;
+  date?: string;
 }
 
 export interface TestResults {
   [key: string]: TestResult;
 }
+
+export interface TestAttempt extends TestResult {
+  id: string; // ID único para el intento
+  testId: string; // ID del test realizado
+  testTitle: string; // Título del test realizado
+}
+
+export type TestHistory = TestAttempt[];
 
 export interface UserTrophies {
   diamonds: number;

@@ -3,9 +3,9 @@ import type { Test } from '../../types';
 
 export const TEST_13: Test = {
   id: 'test-13',
-  title: 'Test 13: Función Pública II (Temas 11-15)',
+  title: 'Test 13: Bloque I - Función Pública y Procedimiento',
   questions: [
-    // Tema 11: La Administración Pública
+    // La Administración Pública
     { 
       questionText: 'La transferencia de titularidad de competencias de un órgano superior a uno inferior se denomina:', 
       options: ['Delegación de firma', 'Desconcentración', 'Encomienda de gestión', 'Suplencia'], 
@@ -19,7 +19,7 @@ export const TEST_13: Test = {
       explanation: 'El artículo 107 de la Constitución define al Consejo de Estado como el supremo órgano consultivo del Gobierno.'
     },
     
-    // Tema 12: Ley 40/2015
+    // Ley 40/2015
     { 
       questionText: 'Los consorcios son entidades de derecho público que surgen de la cooperación entre:', 
       options: ['Empresas privadas exclusivamente', 'Varias Administraciones Públicas o entidades integrantes del sector público', 'Partidos políticos', 'Sindicatos'], 
@@ -33,7 +33,7 @@ export const TEST_13: Test = {
       explanation: 'El artículo 38 de la Ley 40/2015 define la sede electrónica como aquella dirección electrónica, disponible para los ciudadanos a través de redes de telecomunicaciones, cuya titularidad corresponde a una Administración Pública.'
     },
     
-    // Tema 13: El personal al servicio AAPP
+    // El personal al servicio AAPP
     { 
       questionText: 'Las retribuciones de los funcionarios se clasifican en:', 
       options: ['Básicas y complementarias', 'Directas e indirectas', 'Fijas y variables', 'Ordinarias y extraordinarias'], 
@@ -47,7 +47,7 @@ export const TEST_13: Test = {
       explanation: 'El artículo 23 del TREBEP define los trienios como una cantidad por cada tres años de servicio.'
     },
     
-    // Tema 14: Situaciones administrativas
+    // Situaciones administrativas
     { 
       questionText: '¿En qué situación se declara a un funcionario que es nombrado miembro del Gobierno?', 
       options: ['Excedencia voluntaria', 'Servicios especiales', 'Servicio activo', 'Suspensión de funciones'], 
@@ -61,7 +61,7 @@ export const TEST_13: Test = {
       explanation: 'El artículo 89.4 del TREBEP establece que la excedencia por cuidado de familiares tendrá una duración no superior a tres años.'
     },
     
-    // Tema 15: Ley 39/2015
+    // Ley 39/2015
     { 
       questionText: 'Cuando una notificación en papel es infructuosa tras dos intentos, se procederá a:', 
       options: ['Archivar el expediente', 'Publicar el anuncio en el BOE', 'Llamar por teléfono', 'Enviar un correo ordinario'], 

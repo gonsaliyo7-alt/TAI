@@ -3,76 +3,76 @@ import type { Test } from '../../types';
 
 export const TEST_14: Test = {
   id: 'test-14',
-  title: 'Test 14: Presupuesto/Penal II (Temas 16-20)',
+  title: 'Test 14: Presupuesto y Contratación Pública',
   questions: [
     // Tema 16: Presupuesto
-    { 
-      questionText: '¿Qué principio presupuestario exige que todos los ingresos y gastos se incluyan en un único documento?', 
-      options: ['Principio de unidad', 'Principio de especialidad', 'Principio de universalidad', 'Principio de anualidad'], 
+    {
+      questionText: '¿Qué principio presupuestario exige que todos los ingresos y gastos se incluyan en un único documento?',
+      options: ['Principio de unidad', 'Principio de especialidad', 'Principio de universalidad', 'Principio de anualidad'],
       correctAnswer: 0,
       explanation: 'El principio de unidad presupuestaria exige que todos los ingresos y gastos del Estado se incluyan en un único documento para facilitar su control y aprobación.'
     },
-    { 
-      questionText: 'Los créditos ampliables son aquellos cuya cuantía:', 
-      options: ['No puede aumentarse', 'Puede incrementarse en función de la recaudación o reconocimiento de obligaciones específicas', 'Se puede transferir libremente', 'Es secreta'], 
+    {
+      questionText: 'Los créditos ampliables son aquellos cuya cuantía:',
+      options: ['No puede aumentarse', 'Puede incrementarse en función de la recaudación o reconocimiento de obligaciones específicas', 'Se puede transferir libremente', 'Es secreta'],
       correctAnswer: 1,
       explanation: 'Los créditos ampliables (art. 54 LGP) son aquellos que pueden incrementarse en función de la efectiva recaudación de los derechos afectados o de las obligaciones específicas que se reconozcan.'
     },
-    
-    // Tema 17: Interior
-    { 
-      questionText: 'En la estructura periférica del Estado, ¿quién ejerce el mando de las Fuerzas y Cuerpos de Seguridad del Estado en la provincia?', 
-      options: ['El Alcalde', 'El Subdelegado del Gobierno (bajo la dirección del Delegado)', 'El Juez Decano', 'El Presidente de la Diputación'], 
-      correctAnswer: 1,
-      explanation: 'El Subdelegado del Gobierno ejerce el mando de las Fuerzas y Cuerpos de Seguridad del Estado en la provincia, bajo la superior dirección del Delegado del Gobierno.'
-    },
-    { 
-      questionText: 'La Entidad Estatal Trabajo Penitenciario y Formación para el Empleo (TPFE) tiene personalidad jurídica:', 
-      options: ['Pública diferenciada', 'Privada', 'No tiene personalidad jurídica', 'Mixta'], 
-      correctAnswer: 0,
-      explanation: 'La TPFE es una Entidad Estatal de Derecho Público, con personalidad jurídica pública diferenciada, patrimonio y tesorería propios.'
-    },
-    
-    // Tema 18: Penal I
-    { 
-      questionText: 'La prohibición de la analogía en Derecho Penal se aplica:', 
-      options: ['Siempre', 'Cuando perjudica al reo (in malam partem)', 'Cuando le beneficia', 'Nunca'], 
-      correctAnswer: 1,
-      explanation: 'El principio de legalidad prohíbe la analogía "in malam partem" (en perjuicio del reo), es decir, aplicar una norma penal a un supuesto no previsto en ella que sea similar.'
-    },
-    { 
-      questionText: 'El principio de intervención mínima implica que el Derecho Penal es:', 
-      options: ['La primera opción', 'La ultima ratio (último recurso)', 'Irrelevante', 'Opcional'], 
-      correctAnswer: 1,
-      explanation: 'El principio de intervención mínima o "ultima ratio" significa que el Derecho Penal solo debe intervenir cuando fallan otros mecanismos de control social menos lesivos (administrativo, civil, etc.) y para proteger los bienes jurídicos más importantes.'
-    },
-    
-    // Tema 19: Penal Tiempo/Espacio
-    { 
-      questionText: 'Respecto al lugar de comisión del delito, el Código Penal español sigue la teoría de:', 
-      options: ['La actividad', 'El resultado', 'La ubicuidad (se considera cometido tanto donde se actúa como donde se produce el resultado)', 'La nacionalidad'], 
+
+    // Tema: Contratos del Sector Público (LCSP)
+    {
+      questionText: '¿Cuál es el plazo de duración máximo de un contrato de servicios, incluidas las prórrogas?',
+      options: ['3 años', '4 años', '5 años', '6 años'],
       correctAnswer: 2,
-      explanation: 'Aunque el Código Penal no lo establece explícitamente para todos los casos, la doctrina y jurisprudencia (Acuerdo TS 2005) se inclinan por la teoría de la ubicuidad para determinar la competencia territorial, considerando cometido el delito tanto donde se realiza la acción como donde se produce el resultado.'
+      explanation: 'Según el artículo 29 de la LCSP, la duración de los contratos de servicios no podrá exceder de 5 años, incluyendo las posibles prórrogas.'
     },
-    { 
-      questionText: 'El delito se considera cometido:', 
-      options: ['En el momento en que se ejecuta la acción u omisión', 'Cuando se produce el resultado', 'Cuando se descubre', 'Cuando se condena'], 
-      correctAnswer: 0,
-      explanation: 'El artículo 7 del Código Penal establece que los delitos se consideran cometidos en el momento en que el sujeto ejecuta la acción u omite el acto que estaba obligado a realizar (Teoría de la actividad).'
+    {
+      questionText: '¿Qué tipo de contrato es aquel que tiene por objeto la adquisición de productos o bienes muebles?',
+      options: ['Contrato de obras', 'Contrato de servicios', 'Contrato de suministro', 'Contrato de concesión'],
+      correctAnswer: 2,
+      explanation: 'El contrato de suministro tiene por objeto la adquisición, el arrendamiento financiero, o el arrendamiento, con o sin opción de compra, de productos o bienes muebles.'
     },
-    
-    // Tema 20: Omisión y Clasificación
-    { 
-      questionText: 'Los delitos leves solo se castigan cuando:', 
-      options: ['Han sido consumados (salvo excepciones)', 'Son intentados', 'Se piensan', 'Hay conspiración'], 
-      correctAnswer: 0,
-      explanation: 'El artículo 15 del Código Penal establece que los delitos leves sólo se castigarán cuando hayan sido consumados, excepto los intentados contra las personas o el patrimonio.'
+
+    // Tema: Procedimiento de Contratación
+    {
+      questionText: '¿Qué procedimiento de adjudicación permite la negociación de los términos del contrato con los licitadores?',
+      options: ['Procedimiento abierto', 'Procedimiento restringido', 'Procedimiento negociado', 'Asociación para la innovación'],
+      correctAnswer: 2,
+      explanation: 'En el procedimiento negociado la adjudicación recae en el licitador justificadamente elegido por el órgano de contratación, tras efectuar consultas con diversos candidatos y negociar las condiciones.'
     },
-    { 
-      questionText: 'El error sobre un hecho constitutivo de la infracción penal se denomina:', 
-      options: ['Error de prohibición', 'Error de tipo', 'Error de cálculo', 'Error judicial'], 
+    {
+      questionText: 'El recurso especial en materia de contratación es:',
+      options: ['Obligatorio', 'Potestativo y gratuito', 'Judicial', 'De pago'],
       correctAnswer: 1,
-      explanation: 'El artículo 14.1 del Código Penal define el error de tipo como el error invencible sobre un hecho constitutivo de la infracción penal, que excluye la responsabilidad criminal.'
+      explanation: 'El recurso especial en materia de contratación es de carácter potestativo y gratuito para el recurrente.'
+    },
+
+    // Tema: Ejecución Presupuestaria
+    {
+      questionText: 'La fase de "Compromiso" del gasto (Fase D) implica:',
+      options: ['El pago material', 'La autorización del gasto', 'El acuerdo de realización de gastos previamente autorizados por un importe determinado', 'La propuesta de pago'],
+      correctAnswer: 2,
+      explanation: 'El compromiso de gasto (D) es el acto por el que se acuerda la realización de gastos previamente autorizados, por un importe determinado o determinable.'
+    },
+    {
+      questionText: '¿Qué documento contable refleja la fase de Reconocimiento de la Obligación?',
+      options: ['Documento A', 'Documento D', 'Documento OK', 'Documento P'],
+      correctAnswer: 2,
+      explanation: 'El documento OK (o ADOK si se acumulan fases) refleja el reconocimiento de la obligación y la propuesta de pago.'
+    },
+
+    // Tema: Modificaciones Presupuestarias
+    {
+      questionText: 'La transferencia de crédito:',
+      options: ['Aumenta el presupuesto total', 'Disminuye el presupuesto total', 'No altera la cuantía total del presupuesto', 'Crea nuevos créditos'],
+      correctAnswer: 2,
+      explanation: 'La transferencia de crédito es una modificación cualitativa que traspasa dotaciones de un crédito a otro sin alterar la cuantía total del presupuesto.'
+    },
+    {
+      questionText: 'Los créditos extraordinarios se tramitan cuando:',
+      options: ['No existe crédito presupuestario para un gasto', 'El crédito es insuficiente', 'Sobra dinero', 'Se quiere ahorrar'],
+      correctAnswer: 0,
+      explanation: 'Se tramita un crédito extraordinario cuando ha de realizarse un gasto que no puede demorarse y no existe crédito presupuestario.'
     },
   ]
 };

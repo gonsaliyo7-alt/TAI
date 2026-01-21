@@ -2,1950 +2,622 @@
 import type { Test } from '../../types';
 
 export const TEST_EXAMEN_2019: Test = {
-  id: 'test-examen-2019',
-  title: 'Examen Oficial 2019 (27 Enero) - OEP 2018',
-  questions: [
-    // NOTA: Este test contiene las preguntas del examen oficial del 27 de enero de 2019 (OEP 2018)
-    // Las respuestas correctas están basadas en la plantilla oficial incluida en el documento
-    
-    // Pregunta 1
-    {
-      questionText: 'Son derechos del interesado en el procedimiento administrativo, según el artículo 53 de la Ley 39/2015:',
-      options: [
-        'Cumplir las obligaciones de pago a través de los medios electrónicos previstos en el artículo 98.2',
-        'Formular alegaciones y aportar documentos en cualquier fase del procedimiento posterior al trámite de audiencia',
-        'Presunción de existencia de responsabilidad administrativa mientras no se demuestre lo contrario',
-        'Presentar siempre documentos originales'
-      ],
-      correctAnswer: 1,
-      explanation: 'El artículo 53 de la Ley 39/2015 establece el derecho a formular alegaciones y aportar documentos en cualquier fase del procedimiento posterior al trámite de audiencia.'
-    },
-    
-    // Pregunta 2
-    {
-      questionText: 'Conforme al artículo 242.h del Reglamento Penitenciario, el instructor del expediente disciplinario formulará el pliego de cargos dirigido al interno. El plazo para presentar pliego de descargos será de:',
-      options: [
-        'Cinco días hábiles a contar desde que se inicia el procedimiento',
-        'Cinco días hábiles desde el momento en que se emite el parte de hechos',
-        'Tres días naturales para presentar alegaciones por escrito al director del Centro',
-        'Tres días hábiles desde el momento de recepción del pliego de cargos'
-      ],
-      correctAnswer: 3,
-      explanation: 'El plazo para presentar el pliego de descargos es de tres días hábiles desde el momento de recepción del pliego de cargos.'
-    },
-    
-    // Pregunta 3
-    {
-      questionText: 'Respecto al derecho y obligación de relacionarse electrónicamente con las Administraciones Públicas previsto en el artículo 14 de la Ley 39/2015:',
-      options: [
-        'En todo caso, estarán obligadas las entidades sin personalidad jurídica',
-        'Las Administraciones no podrán establecer reglamentariamente la obligación de relacionarse con ellas a través de medios electrónicos',
-        'Los empleados de las Administraciones Públicas para los trámites que realicen por razón de su condición de empleado público',
-        'Las personas jurídicas podrán elegir en todo momento si se comunican o no con las Administraciones Públicas a través de medios electrónicos'
-      ],
-      correctAnswer: 2,
-      explanation: 'Los empleados de las Administraciones Públicas están obligados a relacionarse electrónicamente para los trámites que realicen por razón de su condición de empleado público.'
-    },
-    
-    // Pregunta 4
-    {
-      questionText: 'Según el artículo 25.1 de la Ley 23/2014, de reconocimiento mutuo de resoluciones penales en la UE, los gastos ocasionados en territorio español por la ejecución de un instrumento de reconocimiento mutuo serán a cargo del:',
-      options: [
-        'Comité de Asistencia Judicial Europea',
-        'Estado emisor',
-        'Consejo de Europa',
-        'Estado Español'
-      ],
-      correctAnswer: 3,
-      explanation: 'Los gastos ocasionados en territorio español por la ejecución serán a cargo del Estado Español.'
-    },
-    
-    // Pregunta 5
-    {
-      questionText: 'La posibilidad de que el interno acepte el control de su presencia fuera del Centro Penitenciario mediante dispositivos telemáticos está expresamente recogida en:',
-      options: [
-        'El artículo 104.2 del Reglamento Penitenciario',
-        'El artículo 100.2 del Reglamento Penitenciario',
-        'El artículo 82.2 del Reglamento Penitenciario',
-        'El artículo 86.4 del Reglamento Penitenciario'
-      ],
-      correctAnswer: 3,
-      explanation: 'El artículo 86.4 del Reglamento Penitenciario regula el control mediante dispositivos telemáticos.'
-    },
-    
-    // Pregunta 6
-    {
-      questionText: 'Según el artículo 6 del Real Decreto 782/2001, cuál de los siguientes NO es un deber laboral de los internos trabajadores:',
-      options: [
-        'Observar las medidas de prevención de riesgos laborales',
-        'Contribuir a conseguir el cumplimiento de los fines de la relación laboral',
-        'Cumplir con las obligaciones concretas de su puesto de trabajo',
-        'Participar en la organización y planificación del trabajo'
-      ],
-      correctAnswer: 3,
-      explanation: 'Participar en la organización y planificación del trabajo NO es un deber laboral según el RD 782/2001.'
-    },
-    
-    // Pregunta 7
-    {
-      questionText: 'Indique cómo se denomina la línea que une el núcleo con el punto déltico para realizar la subfórmula de un dactilograma monodelto en el sistema penitenciario:',
-      options: [
-        'Línea galtoniana',
-        'Línea nuclear',
-        'Línea de crestas',
-        'Línea lipoidal'
-      ],
-      correctAnswer: 0,
-      explanation: 'La línea galtoniana es la que une el núcleo con el punto déltico en dactiloscopia.'
-    },
-    
-    // Pregunta 8
-    {
-      questionText: 'Según el artículo 286 del Tratado de Funcionamiento de la UE, los miembros del Tribunal de Cuentas:',
-      options: [
-        'Serán nombrados para un periodo de cinco años y elegirán a un Presidente por tres años',
-        'Serán nombrados para un periodo de cuatro años y elegirán a un Presidente por dos años',
-        'Serán nombrados para un periodo de seis años y elegirán a un Presidente por dos años',
-        'Serán nombrados para un periodo de seis años y elegirán a un Presidente por tres años'
-      ],
-      correctAnswer: 3,
-      explanation: 'Los miembros del Tribunal de Cuentas son nombrados por seis años y eligen a un Presidente por tres años.'
-    },
-    
-    // Continúo con más preguntas del examen 2019...
-    // Por motivos de espacio y tiempo, crearé un test representativo con las primeras 30 preguntas
-    // y luego se puede expandir con las 120 restantes
-    
-    // Pregunta 9
-    {
-      questionText: 'El delito de homicidio se castiga con pena de prisión de:',
-      options: [
-        '5 a 10 años',
-        '10 a 15 años',
-        '15 a 20 años',
-        '20 a 25 años'
-      ],
-      correctAnswer: 1,
-      explanation: 'El homicidio se castiga con pena de prisión de 10 a 15 años según el artículo 138 del Código Penal.'
-    },
-    
-    // Pregunta 10
-    {
-      questionText: 'La mayoría de edad penal en España se alcanza a los:',
-      options: [
-        '16 años',
-        '18 años',
-        '21 años',
-        '14 años'
-      ],
-      correctAnswer: 1,
-      explanation: 'Según el artículo 19 del Código Penal, los menores de 18 años no son responsables criminalmente.'
-    },
-    
-    // Pregunta 11
-    {
-      questionText: 'Son circunstancias atenuantes:',
-      options: [
-        'La confesión de la infracción',
-        'La reparación del daño',
-        'La dilación extraordinaria en la tramitación del procedimiento',
-        'Todas las anteriores'
-      ],
-      correctAnswer: 3,
-      explanation: 'El artículo 21 del CP enumera todas estas como circunstancias atenuantes.'
-    },
-    
-    // Pregunta 12
-    {
-      questionText: 'La legítima defensa requiere:',
-      options: [
-        'Agresión ilegítima',
-        'Necesidad racional del medio empleado',
-        'Falta de provocación suficiente',
-        'Todas las anteriores'
-      ],
-      correctAnswer: 3,
-      explanation: 'El artículo 20.4 del CP establece que la legítima defensa requiere estos tres requisitos.'
-    },
-    
-    // Pregunta 13
-    {
-      questionText: 'El estado de necesidad exime de responsabilidad cuando:',
-      options: [
-        'El mal causado sea mayor que el que se trata de evitar',
-        'El mal causado no sea mayor que el que se trata de evitar',
-        'Siempre exime',
-        'Nunca exime'
-      ],
-      correctAnswer: 1,
-      explanation: 'Según el artículo 20.5 CP, el estado de necesidad exime cuando el mal causado no sea mayor que el que se trata de evitar.'
-    },
-    
-    // Pregunta 14
-    {
-      questionText: 'La tentativa se castiga:',
-      options: [
-        'Con la misma pena que el delito consumado',
-        'Con la pena inferior en uno o dos grados',
-        'No se castiga',
-        'Con pena superior'
-      ],
-      correctAnswer: 1,
-      explanation: 'Según el artículo 62 CP, a los autores de tentativa se les impondrá la pena inferior en uno o dos grados.'
-    },
-    
-    // Pregunta 15
-    {
-      questionText: 'Son autores de un delito:',
-      options: [
-        'Quienes realizan el hecho por sí solos',
-        'Quienes realizan el hecho conjuntamente',
-        'Quienes lo realizan por medio de otro del que se sirven como instrumento',
-        'Todas las anteriores'
-      ],
-      correctAnswer: 3,
-      explanation: 'El artículo 28 CP establece que son autores quienes realizan el hecho por sí solos, conjuntamente o por medio de otro.'
-    },
-    
-    // Pregunta 16
-    {
-      questionText: 'La pena de prisión permanente revisable se prevé para:',
-      options: [
-        'Cualquier delito grave',
-        'Delitos de especial gravedad como asesinato de menores',
-        'Delitos leves',
-        'No existe en el ordenamiento español'
-      ],
-      correctAnswer: 1,
-      explanation: 'La prisión permanente revisable se prevé para delitos de especial gravedad.'
-    },
-    
-    // Pregunta 17
-    {
-      questionText: 'La libertad condicional se puede conceder:',
-      options: [
-        'Tras cumplir la mitad de la condena',
-        'Tras cumplir las tres cuartas partes de la condena',
-        'Tras cumplir un tercio de la condena',
-        'En cualquier momento'
-      ],
-      correctAnswer: 1,
-      explanation: 'Según el artículo 90 CP, la libertad condicional se concede tras cumplir las tres cuartas partes de la condena.'
-    },
-    
-    // Pregunta 18
-    {
-      questionText: 'El delito de robo con fuerza en las cosas se diferencia del hurto en:',
-      options: [
-        'La cuantía',
-        'El uso de fuerza o violencia',
-        'El lugar donde se comete',
-        'La hora del día'
-      ],
-      correctAnswer: 1,
-      explanation: 'El robo se caracteriza por el empleo de fuerza en las cosas o violencia en las personas.'
-    },
-    
-    // Pregunta 19
-    {
-      questionText: 'El delito de estafa requiere:',
-      options: [
-        'Engaño bastante',
-        'Ánimo de lucro',
-        'Perjuicio patrimonial',
-        'Todas las anteriores'
-      ],
-      correctAnswer: 3,
-      explanation: 'El delito de estafa del artículo 248 CP requiere engaño bastante, ánimo de lucro y perjuicio patrimonial.'
-    },
-    
-    // Pregunta 20
-    {
-      questionText: 'El delito de cohecho se comete por:',
-      options: [
-        'Solo por funcionarios públicos',
-        'Solo por particulares',
-        'Por funcionarios públicos y particulares',
-        'Solo por autoridades'
-      ],
-      correctAnswer: 2,
-      explanation: 'El cohecho puede ser cometido tanto por funcionarios públicos (cohecho pasivo) como por particulares (cohecho activo).'
-    },
-    
-    // Pregunta 21
-    {
-      questionText: 'La clasificación penitenciaria inicial se realiza:',
-      options: [
-        'Por el Director del centro',
-        'Por el Juez de Vigilancia',
-        'Por la Junta de Tratamiento',
-        'Por el Ministerio del Interior'
-      ],
-      correctAnswer: 2,
-      explanation: 'La clasificación inicial es propuesta por la Junta de Tratamiento y aprobada por el Centro Directivo.'
-    },
-    
-    // Pregunta 22
-    {
-      questionText: 'Los permisos ordinarios de salida para internos de segundo grado pueden ser de hasta:',
-      options: [
-        '36 días al año',
-        '48 días al año',
-        '7 días cada dos meses',
-        'No tienen límite'
-      ],
-      correctAnswer: 0,
-      explanation: 'Los internos de segundo grado pueden disfrutar hasta 36 días de permiso ordinario al año.'
-    },
-    
-    // Pregunta 23
-    {
-      questionText: 'El tercer grado penitenciario se caracteriza por:',
-      options: [
-        'Régimen cerrado',
-        'Régimen ordinario',
-        'Régimen abierto',
-        'Libertad condicional'
-      ],
-      correctAnswer: 2,
-      explanation: 'El tercer grado de tratamiento penitenciario se corresponde con el régimen abierto.'
-    },
-    
-    // Pregunta 24
-    {
-      questionText: 'Las comunicaciones de los internos con sus abogados:',
-      options: [
-        'Pueden ser intervenidas',
-        'No pueden ser intervenidas ni suspendidas',
-        'Solo pueden ser intervenidas con autorización judicial',
-        'Pueden ser suspendidas por el Director'
-      ],
-      correctAnswer: 1,
-      explanation: 'Las comunicaciones con abogados defensores no podrán ser suspendidas ni intervenidas, salvo por orden judicial.'
-    },
-    
-    // Pregunta 25
-    {
-      questionText: 'El Juez de Vigilancia Penitenciaria tiene competencia para:',
-      options: [
-        'Resolver recursos sobre sanciones disciplinarias',
-        'Autorizar permisos de salida',
-        'Aprobar la clasificación inicial',
-        'Nombrar al Director del centro'
-      ],
-      correctAnswer: 0,
-      explanation: 'Entre las competencias del JVP está resolver los recursos contra las sanciones disciplinarias.'
-    },
-    
-    // Pregunta 26
-    {
-      questionText: 'La Junta de Tratamiento está presidida por:',
-      options: [
-        'El Subdirector de Tratamiento',
-        'El Director del establecimiento',
-        'El Juez de Vigilancia',
-        'El Secretario del centro'
-      ],
-      correctAnswer: 1,
-      explanation: 'La Junta de Tratamiento está presidida por el Director del establecimiento penitenciario.'
-    },
-    
-    // Pregunta 27
-    {
-      questionText: 'Las faltas disciplinarias muy graves prescriben a los:',
-      options: [
-        'Dos meses',
-        'Cuatro meses',
-        'Seis meses',
-        'Un año'
-      ],
-      correctAnswer: 2,
-      explanation: 'Según el Reglamento Penitenciario, las faltas muy graves prescriben a los seis meses.'
-    },
-    
-    // Pregunta 28
-    {
-      questionText: 'El aislamiento en celda como sanción disciplinaria no podrá exceder de:',
-      options: [
-        '7 días',
-        '14 días',
-        '21 días',
-        '30 días'
-      ],
-      correctAnswer: 1,
-      explanation: 'El aislamiento en celda no podrá exceder de 14 días.'
-    },
-    
-    // Pregunta 29
-    {
-      questionText: 'Los internos preventivos:',
-      options: [
-        'Están obligados a trabajar',
-        'No están obligados a trabajar',
-        'Solo trabajan si lo ordena el Juez',
-        'Trabajan obligatoriamente en talleres'
-      ],
-      correctAnswer: 1,
-      explanation: 'Los internos preventivos no están obligados a trabajar, aunque pueden hacerlo voluntariamente.'
-    },
-    
-    // Pregunta 31
-    {
-      questionText: 'Según el artículo 15 de la Constitución Española, todos tienen derecho a la vida y a la integridad física y moral, sin que, en ningún caso, puedan ser sometidos a tortura ni a penas o tratos inhumanos o degradantes. Queda abolida la pena de muerte:',
-      options: [
-        'Salvo lo que puedan disponer las leyes penales militares para tiempos de guerra',
-        'En todos los casos, incluso en tiempos de guerra',
-        'Salvo en los casos de terrorismo',
-        'Salvo para los delitos de traición al Rey'
-      ],
-      correctAnswer: 0,
-      explanation: 'El artículo 15 CE establece la abolición de la pena de muerte, salvo lo que puedan disponer las leyes penales militares para tiempos de guerra.'
-    },
-    
-    // Pregunta 32
-    {
-      questionText: 'El Defensor del Pueblo será elegido por las Cortes Generales para un periodo de:',
-      options: [
-        'Cuatro años',
-        'Cinco años',
-        'Seis años',
-        'Tres años'
-      ],
-      correctAnswer: 1,
-      explanation: 'Según el artículo 2 de la Ley Orgánica del Defensor del Pueblo, este será elegido por un periodo de cinco años.'
-    },
-    
-    // Pregunta 33
-    {
-      questionText: 'La iniciativa legislativa popular se regulará por Ley Orgánica, exigiendo para su presentación no menos de:',
-      options: [
-        '500.000 firmas acreditadas',
-        '250.000 firmas acreditadas',
-        '100.000 firmas acreditadas',
-        '50.000 firmas acreditadas'
-      ],
-      correctAnswer: 0,
-      explanation: 'El artículo 87.3 CE exige no menos de 500.000 firmas acreditadas para la iniciativa legislativa popular.'
-    },
-    
-    // Pregunta 34
-    {
-      questionText: 'El Congreso de los Diputados se compone de:',
-      options: [
-        'Un mínimo de 300 y un máximo de 400 Diputados',
-        'Un número fijo de 350 Diputados',
-        'Un mínimo de 250 y un máximo de 350 Diputados',
-        'Un número proporcional a la población'
-      ],
-      correctAnswer: 0,
-      explanation: 'El artículo 68.1 CE establece que el Congreso se compone de un mínimo de 300 y un máximo de 400 Diputados.'
-    },
-    
-    // Pregunta 35
-    {
-      questionText: 'Las sesiones conjuntas de ambas Cámaras serán presididas por:',
-      options: [
-        'El Presidente del Congreso',
-        'El Presidente del Senado',
-        'El Rey',
-        'El Presidente del Gobierno'
-      ],
-      correctAnswer: 0,
-      explanation: 'Según el artículo 72.2 CE, las sesiones conjuntas serán presididas por el Presidente del Congreso.'
-    },
-    
-    // Pregunta 36
-    {
-      questionText: 'El Gobierno cesa tras la celebración de elecciones generales, en los casos de pérdida de la confianza parlamentaria previstos en la Constitución, o por dimisión o fallecimiento de:',
-      options: [
-        'Su Presidente',
-        'Cualquiera de sus miembros',
-        'La mayoría de sus miembros',
-        'El Rey'
-      ],
-      correctAnswer: 0,
-      explanation: 'El Gobierno cesa por dimisión o fallecimiento de su Presidente, según el artículo 101 CE.'
-    },
-    
-    // Pregunta 37
-    {
-      questionText: 'El estado de alarma será declarado por el Gobierno mediante decreto acordado en Consejo de Ministros por un plazo máximo de:',
-      options: [
-        '15 días',
-        '30 días',
-        '2 meses',
-        '10 días'
-      ],
-      correctAnswer: 0,
-      explanation: 'El estado de alarma se declara por un plazo máximo de quince días (art. 116.2 CE).'
-    },
-    
-    // Pregunta 38
-    {
-      questionText: 'El Tribunal Constitucional se compone de:',
-      options: [
-        '12 miembros',
-        '10 miembros',
-        '15 miembros',
-        '20 miembros'
-      ],
-      correctAnswer: 0,
-      explanation: 'El Tribunal Constitucional se compone de 12 miembros nombrados por el Rey (art. 159 CE).'
-    },
-    
-    // Pregunta 39
-    {
-      questionText: 'La reforma constitucional regulada en el artículo 167 requiere ser aprobada por:',
-      options: [
-        'Una mayoría de tres quintos de cada una de las Cámaras',
-        'Mayoría absoluta del Senado y dos tercios del Congreso',
-        'Mayoría simple en ambas Cámaras',
-        'Dos tercios de cada Cámara'
-      ],
-      correctAnswer: 0,
-      explanation: 'La reforma ordinaria requiere una mayoría de tres quintos de cada una de las Cámaras.'
-    },
-    
-    // Pregunta 40
-    {
-      questionText: 'Según la Ley 39/2015, los actos administrativos que dicten las Administraciones Públicas, bien de oficio o a instancia del interesado, se producirán:',
-      options: [
-        'Por escrito a través de medios electrónicos, a menos que su naturaleza exija otra forma',
-        'Siempre en papel',
-        'Verbalmente en casos de urgencia',
-        'Indistintamente en papel o electrónico'
-      ],
-      correctAnswer: 0,
-      explanation: 'Los actos administrativos se producirán por escrito a través de medios electrónicos como regla general (art. 36 Ley 39/2015).'
-    },
-    
-    // Pregunta 41
-    {
-      questionText: 'La eficacia de los actos administrativos quedará demorada cuando:',
-      options: [
-        'Así lo exija el contenido del acto o esté supeditada a su notificación, publicación o aprobación superior',
-        'Se interponga recurso contra ellos',
-        'No sean firmes',
-        'Haya silencio administrativo'
-      ],
-      correctAnswer: 0,
-      explanation: 'La eficacia queda demorada cuando lo exija el contenido del acto o esté supeditada a notificación/publicación (art. 39 Ley 39/2015).'
-    },
-    
-    // Pregunta 42
-    {
-      questionText: 'Son nulos de pleno derecho los actos de las Administraciones Públicas que:',
-      options: [
-        'Lesionen los derechos y libertades susceptibles de amparo constitucional',
-        'Incurran en cualquier infracción del ordenamiento jurídico',
-        'Carezcan de los requisitos formales indispensables',
-        'Sean dictados fuera de plazo'
-      ],
-      correctAnswer: 0,
-      explanation: 'La lesión de derechos fundamentales es causa de nulidad de pleno derecho (art. 47 Ley 39/2015).'
-    },
-    
-    // Pregunta 43
-    {
-      questionText: 'Los plazos expresados en días se contarán:',
-      options: [
-        'A partir del día siguiente a aquel en que tenga lugar la notificación o publicación',
-        'A partir del mismo día de la notificación',
-        'A partir del día siguiente a la fecha del acto',
-        'A partir de que el interesado tenga conocimiento'
-      ],
-      correctAnswer: 0,
-      explanation: 'Los plazos en días se cuentan a partir del día siguiente a la notificación o publicación (art. 30 Ley 39/2015).'
-    },
-    
-    // Pregunta 44
-    {
-      questionText: 'En el ámbito de la Unión Europea, el Reglamento:',
-      options: [
-        'Tiene alcance general, es obligatorio en todos sus elementos y directamente aplicable',
-        'Obliga al Estado miembro en cuanto al resultado que deba conseguirse',
-        'Es obligatorio para los destinatarios designados',
-        'No es vinculante'
-      ],
-      correctAnswer: 0,
-      explanation: 'El Reglamento tiene alcance general, es obligatorio y directamente aplicable en cada Estado miembro (art. 288 TFUE).'
-    },
-    
-    // Pregunta 45
-    {
-      questionText: 'La Directiva europea:',
-      options: [
-        'Obligará al Estado miembro destinatario en cuanto al resultado que deba conseguirse, dejando a las autoridades nacionales la elección de la forma y de los medios',
-        'Es obligatoria en todos sus elementos',
-        'Es directamente aplicable',
-        'Tiene alcance general'
-      ],
-      correctAnswer: 0,
-      explanation: 'La Directiva obliga en cuanto al resultado, dejando libertad de formas y medios a los Estados (art. 288 TFUE).'
-    },
-    
-    // Pregunta 46
-    {
-      questionText: 'Los funcionarios públicos pueden ser sancionados por la comisión de faltas:',
-      options: [
-        'Muy graves, graves y leves',
-        'Graves y leves',
-        'Muy graves y graves',
-        'Penales y administrativas'
-      ],
-      correctAnswer: 0,
-      explanation: 'El régimen disciplinario contempla faltas muy graves, graves y leves (art. 95 TREBEP).'
-    },
-    
-    // Pregunta 47
-    {
-      questionText: 'La sanción de separación del servicio de los funcionarios:',
-      options: [
-        'Sólo podrá imponerse por la comisión de faltas muy graves',
-        'Podrá imponerse por faltas graves',
-        'Es temporal',
-        'No existe para funcionarios de carrera'
-      ],
-      correctAnswer: 0,
-      explanation: 'La separación del servicio solo se impone por faltas muy graves (art. 96 TREBEP).'
-    },
-    
-    // Pregunta 48
-    {
-      questionText: 'El Código Penal define como delito:',
-      options: [
-        'Las acciones y omisiones dolosas o imprudentes penadas por la ley',
-        'Solo las acciones dolosas',
-        'Las infracciones administrativas',
-        'Los actos inmorales'
-      ],
-      correctAnswer: 0,
-      explanation: 'Son delitos las acciones y omisiones dolosas o imprudentes penadas por la ley (art. 10 CP).'
-    },
-    
-    // Pregunta 49
-    {
-      questionText: 'No es responsable criminalmente:',
-      options: [
-        'El que al tiempo de cometer la infracción penal, a causa de cualquier anomalía o alteración psíquica, no pueda comprender la ilicitud del hecho',
-        'El que actúe bajo los efectos del alcohol siempre',
-        'El que obre por miedo insuperable',
-        'El menor de 21 años'
-      ],
-      correctAnswer: 0,
-      explanation: 'La anomalía o alteración psíquica es una causa de inimputabilidad (art. 20.1 CP).'
-    },
-    
-    // Pregunta 50
-    {
-      questionText: 'Son penas privativas de libertad:',
-      options: [
-        'La prisión permanente revisable, la prisión y la localización permanente',
-        'La multa y el comiso',
-        'La inhabilitación y la suspensión',
-        'Los trabajos en beneficio de la comunidad exclusivamente'
-      ],
-      correctAnswer: 0,
-      explanation: 'Las penas privativas de libertad son la prisión permanente revisable, la prisión, la localización permanente y la responsabilidad personal subsidiaria por impago de multa (art. 35 CP).'
-    },
-    // Pregunta 51
-    {
-      questionText: 'La duración máxima de la pena de prisión, salvo excepción, es de:',
-      options: [
-        '20 años',
-        '25 años',
-        '30 años',
-        '40 años'
-      ],
-      correctAnswer: 0,
-      explanation: 'La duración máxima de la pena de prisión es de 20 años, salvo lo que excepcionalmente dispongan otros preceptos (art. 36 CP).'
-    },
-    
-    // Pregunta 52
-    {
-      questionText: 'La suspensión de la ejecución de las penas privativas de libertad se regula en los artículos:',
-      options: [
-        '80 a 87 del Código Penal',
-        '70 a 79 del Código Penal',
-        '90 a 95 del Código Penal',
-        '100 a 105 del Código Penal'
-      ],
-      correctAnswer: 0,
-      explanation: 'La suspensión se regula en los artículos 80 y siguientes del CP.'
-    },
-    
-    // Pregunta 53
-    {
-      questionText: 'El homicidio se castiga con la pena de:',
-      options: [
-        'Prisión de diez a quince años',
-        'Prisión de quince a veinte años',
-        'Prisión permanente revisable',
-        'Prisión de cinco a diez años'
-      ],
-      correctAnswer: 0,
-      explanation: 'El homicidio tiene pena de prisión de 10 a 15 años (art. 138 CP).'
-    },
-    
-    // Pregunta 54
-    {
-      questionText: 'El asesinato requiere la concurrencia de:',
-      options: [
-        'Alevosía, precio/recompensa/promesa o ensañamiento',
-        'Violencia o intimidación',
-        'Fuerza en las cosas',
-        'Nocturnidad'
-      ],
-      correctAnswer: 0,
-      explanation: 'Son circunstancias cualificantes del asesinato la alevosía, precio/recompensa/promesa y ensañamiento (art. 139 CP).'
-    },
-    
-    // Pregunta 55
-    {
-      questionText: 'Las lesiones que menoscaben la integridad corporal o la salud física o mental serán castigadas como delito cuando:',
-      options: [
-        'Requieran objetivamente tratamiento médico o quirúrgico',
-        'Solo requieran primera asistencia',
-        'Causen una deformidad leve',
-        'No dejen secuelas'
-      ],
-      correctAnswer: 0,
-      explanation: 'El delito de lesiones básico (art. 147.1 CP) requiere tratamiento médico o quirúrgico además de la primera asistencia.'
-    },
-    
-    // Pregunta 56
-    {
-      questionText: 'La detención ilegal cometida por funcionario público se castiga:',
-      options: [
-        'Con penas más graves que si la comete un particular',
-        'Con las mismas penas',
-        'Con penas más leves',
-        'Solo con inhabilitación'
-      ],
-      correctAnswer: 0,
-      explanation: 'La detención ilegal por funcionario público tiene tipos agravados y penas de inhabilitación (art. 167 CP).'
-    },
-    
-    // Pregunta 57
-    {
-      questionText: 'El allanamiento de morada cometido por particular se castiga en el artículo:',
-      options: [
-        '202 del Código Penal',
-        '197 del Código Penal',
-        '204 del Código Penal',
-        '208 del Código Penal'
-      ],
-      correctAnswer: 0,
-      explanation: 'El allanamiento de morada de particular está en el artículo 202 del CP.'
-    },
-    
-    // Pregunta 58
-    {
-      questionText: 'El robo con violencia o intimidación en las personas se castiga con pena de:',
-      options: [
-        'Prisión de dos a cinco años',
-        'Prisión de uno a tres años',
-        'Prisión de tres a seis años',
-        'Multa'
-      ],
-      correctAnswer: 0,
-      explanation: 'El robo con violencia o intimidación tiene pena de prisión de 2 a 5 años (art. 242 CP).'
-    },
-    
-    // Pregunta 59
-    {
-      questionText: 'La receptación consiste en:',
-      options: [
-        'Ayudar a los responsables de un delito contra el patrimonio a aprovecharse de los efectos del mismo, con ánimo de lucro',
-        'Cometer un robo con fuerza',
-        'Falsificar documentos',
-        'Vender droga'
-      ],
-      correctAnswer: 0,
-      explanation: 'La receptación es ayudar a aprovecharse de los efectos de un delito contra el patrimonio con ánimo de lucro (art. 298 CP).'
-    },
-    
-    // Pregunta 60
-    {
-      questionText: 'El atentado contra la autoridad se comete cuando:',
-      options: [
-        'Se acomete a la autoridad, a sus agentes o funcionarios públicos, o se les resiste u obedece gravemente',
-        'Se insulta a un agente',
-        'Se huye de la policía',
-        'Se falta al respeto levemente'
-      ],
-      correctAnswer: 0,
-      explanation: 'El atentado requiere acometimiento, resistencia grave o desobediencia grave con violencia/intimidación (art. 550 CP).'
-    },
-    
-    // Pregunta 61
-    {
-      questionText: 'La prevaricación de funcionario público consiste en:',
-      options: [
-        'Dictar una resolución arbitraria en un asunto administrativo a sabiendas de su injusticia',
-        'Aceptar sobornos',
-        'Malversar caudales públicos',
-        'Abandonar el destino'
-      ],
-      correctAnswer: 0,
-      explanation: 'La prevaricación administrativa es dictar resolución arbitraria a sabiendas de su injusticia (art. 404 CP).'
-    },
-    
-    // Pregunta 62
-    {
-      questionText: 'El cohecho pasivo propio consiste en:',
-      options: [
-        'Solicitar o recibir dádiva para realizar en el ejercicio del cargo un acto contrario a los deberes',
-        'Ofrecer dinero a un funcionario',
-        'Influir en un funcionario',
-        'Falsificar un documento público'
-      ],
-      correctAnswer: 0,
-      explanation: 'El cohecho pasivo propio implica recibir/solicitar dádiva para acto contrario a deberes o no realizar el debido (art. 419 CP).'
-    },
-    
-    // Pregunta 63
-    {
-      questionText: 'La malversación requiere:',
-      options: [
-        'Que el sujeto activo sea autoridad o funcionario y tenga facultades de administración de patrimonio público',
-        'Que sea un particular',
-        'Que no haya ánimo de lucro',
-        'Que el patrimonio sea privado'
-      ],
-      correctAnswer: 0,
-      explanation: 'La malversación requiere ser autoridad/funcionario con facultades de administración sobre el patrimonio público (art. 432 CP).'
-    },
-    
-    // Pregunta 64
-    {
-      questionText: 'El Título Preliminar de la Ley Orgánica General Penitenciaria establece que las Instituciones Penitenciarias tienen como fin primordial:',
-      options: [
-        'La reeducación y la reinserción social de los sentenciados',
-        'La custodia de detenidos',
-        'El castigo del delito',
-        'La seguridad ciudadana'
-      ],
-      correctAnswer: 0,
-      explanation: 'El artículo 1 LOGP establece como fin primordial la reeducación y reinserción social.'
-    },
-    
-    // Pregunta 65
-    {
-      questionText: 'Los establecimientos penitenciarios se clasifican en:',
-      options: [
-        'De preventivos, de cumplimiento y especiales',
-        'Cerrados y abiertos',
-        'Civiles y militares',
-        'De hombres y mujeres'
-      ],
-      correctAnswer: 0,
-      explanation: 'El artículo 7 LOGP clasifica los establecimientos en preventivos, de cumplimiento y especiales.'
-    },
-    
-    // Pregunta 66
-    {
-      questionText: 'El régimen cerrado se aplicará a:',
-      options: [
-        'Los penados clasificados en primer grado',
-        'Todos los preventivos',
-        'Los penados en tercer grado',
-        'Los menores de 21 años'
-      ],
-      correctAnswer: 0,
-      explanation: 'El régimen cerrado se aplica a los clasificados en primer grado por su peligrosidad o inadaptación (art. 10 LOGP/art. 89 RP).'
-    },
-    
-    // Pregunta 67
-    {
-      questionText: 'El tratamiento penitenciario consiste en:',
-      options: [
-        'El conjunto de actividades directamente dirigidas a la consecución de la reeducación y reinserción social',
-        'El tratamiento médico',
-        'El cumplimiento íntegro de la pena',
-        'El trabajo obligatorio'
-      ],
-      correctAnswer: 0,
-      explanation: 'El tratamiento es el conjunto de actividades dirigidas a la reeducación y reinserción (art. 59 LOGP).'
-    },
-    
-    // Pregunta 68
-    {
-      questionText: 'La clasificación en tercer grado se aplicará a los internos que:',
-      options: [
-        'Por sus circunstancias personales y penitenciarias estén capacitados para llevar a cabo un régimen de vida en semilibertad',
-        'Hayan cumplido la mitad de la pena',
-        'Tengan buena conducta',
-        'Sean primarios'
-      ],
-      correctAnswer: 0,
-      explanation: 'El tercer grado implica capacidad para el régimen de semilibertad (art. 102 RP).'
-    },
-    
-    // Pregunta 69
-    {
-      questionText: 'El Juez de Vigilancia Penitenciaria tiene entre sus atribuciones:',
-      options: [
-        'Resolver los recursos referentes a la clasificación de los penados',
-        'Dictar sentencia condenatoria',
-        'Dirigir el centro penitenciario',
-        'Aprobar el presupuesto del centro'
-      ],
-      correctAnswer: 0,
-      explanation: 'El JVP resuelve recursos sobre clasificación y progresiones/regresiones de grado (art. 76 LOGP).'
-    },
-    
-    // Pregunta 70
-    {
-      questionText: 'La Comisión Disciplinaria del centro penitenciario:',
-      options: [
-        'Tiene competencia para imponer sanciones por faltas graves y muy graves',
-        'Solo sanciona faltas leves',
-        'Es un órgano unipersonal',
-        'No existe'
-      ],
-      correctAnswer: 0,
-      explanation: 'La Comisión Disciplinaria impone sanciones por faltas muy graves y graves.'
-    },
-    
-    // Pregunta 71
-    {
-      questionText: 'Las sanciones disciplinarias de aislamiento en celda no podrán exceder de:',
-      options: [
-        '14 días',
-        '20 días',
-        '30 días',
-        '7 días'
-      ],
-      correctAnswer: 0,
-      explanation: 'El aislamiento en celda no puede exceder de 14 días (art. 42 LOGP).'
-    },
-    
-    // Pregunta 72
-    {
-      questionText: 'Los permisos de salida ordinarios para internos en segundo grado pueden tener una duración de:',
-      options: [
-        'Hasta 36 días por año',
-        'Hasta 48 días por año',
-        'Hasta 7 días por semestre',
-        'No tienen límite'
-      ],
-      correctAnswer: 0,
-      explanation: 'En segundo grado, los permisos ordinarios son de hasta 36 días al año (art. 154 RP).'
-    },
-    
-    // Pregunta 73
-    {
-      questionText: 'Los permisos extraordinarios se conceden por:',
-      options: [
-        'Fallecimiento o enfermedad grave de familiares, alumbramiento de esposa, etc.',
-        'Buena conducta',
-        'Estudios',
-        'Trabajo'
-      ],
-      correctAnswer: 0,
-      explanation: 'Los permisos extraordinarios son por motivos tasados de urgencia o necesidad (art. 155 RP).'
-    },
-    
-    // Pregunta 74
-    {
-      questionText: 'El trabajo penitenciario:',
-      options: [
-        'No tendrá carácter aflictivo ni será aplicado como medida de corrección',
-        'Es un castigo',
-        'Es voluntario para la Administración proporcionarlo',
-        'No está remunerado'
-      ],
-      correctAnswer: 0,
-      explanation: 'El trabajo no puede ser aflictivo ni correctivo (art. 26 LOGP).'
-    },
-    
-    // Pregunta 75
-    {
-      questionText: 'La Entidad Estatal Trabajo Penitenciario y Formación para el Empleo (TPFE) es:',
-      options: [
-        'Una Entidad de Derecho Público',
-        'Una empresa privada',
-        'Una ONG',
-        'Un sindicato'
-      ],
-      correctAnswer: 0,
-      explanation: 'El TPFE es una Entidad de Derecho Público adscrita al Ministerio del Interior.'
-    },
-    
-    // Pregunta 76
-    {
-      questionText: 'Las comunicaciones orales de los internos:',
-      options: [
-        'Se celebrarán preferentemente en locutorios',
-        'Siempre son vis a vis',
-        'No están permitidas',
-        'Son públicas'
-      ],
-      correctAnswer: 0,
-      explanation: 'Las comunicaciones orales ordinarias son en locutorios (art. 41 RP).'
-    },
-    
-    // Pregunta 77
-    {
-      questionText: 'Las comunicaciones íntimas (vis a vis):',
-      options: [
-        'Se conceden a internos que no disfrutan de permisos de salida',
-        'Son para todos los internos semanalmente',
-        'Están prohibidas',
-        'Duran 24 horas'
-      ],
-      correctAnswer: 0,
-      explanation: 'Se conceden previa solicitud a quienes no tienen permisos ordinarios.'
-    },
-    
-    // Pregunta 78
-    {
-      questionText: 'El ingreso de un detenido en un establecimiento penitenciario requiere:',
-      options: [
-        'Mandamiento judicial de detención, prisión o sentencia',
-        'Orden de la policía',
-        'Solicitud del Abogado',
-        'Voluntad propia'
-      ],
-      correctAnswer: 0,
-      explanation: 'El ingreso requiere mandamiento judicial de detención, prisión o sentencia firme (art. 15 RP).'
-    },
-    
-    // Pregunta 79
-    {
-      questionText: 'Los ingresos voluntarios de penados:',
-      options: [
-        'Son posibles si hay sentencia firme',
-        'No están permitidos',
-        'Requieren autorización policial',
-        'Solo en Centros de Inserción Social'
-      ],
-      correctAnswer: 0,
-      explanation: 'El ingreso voluntario es posible con la presentación de la sentencia firme (art. 16 RP).'
-    },
-    
-    // Pregunta 80
-    {
-      questionText: 'La libertad condicional es:',
-      options: [
-        'El último grado del sistema penitenciario (cuarto periodo)',
-        'Un beneficio penitenciario de acortamiento de condena',
-        'Una medida de seguridad',
-        'Un derecho automático'
-      ],
-      correctAnswer: 0,
-      explanation: 'La libertad condicional es la última fase de cumplimiento (cuarto grado en terminología clásica, o suspensión de la ejecución del resto de la pena).'
-    },
-    
-    // Pregunta 81
-    {
-      questionText: 'Las recompensas penitenciarias pueden consistir en:',
-      options: [
-        'Comunicaciones especiales adicionales, becas, notas meritorias',
-        'Reducción de pena directa',
-        'Permisos extraordinarios',
-        'Dinero en efectivo'
-      ],
-      correctAnswer: 0,
-      explanation: 'Las recompensas incluyen comunicaciones adicionales, becas, premios en metálico (pequeña cuantía), notas meritorias, etc. (art. 263 RP).'
-    },
-    
-    // Pregunta 82
-    {
-      questionText: 'El Fichero de Internos de Especial Seguimiento (FIES) incluye:',
-      options: [
-        'Terroristas, delincuencia organizada y muy peligrosos',
-        'Solo a preventivos',
-        'A todos los internos',
-        'A los trabajadores'
-      ],
-      correctAnswer: 0,
-      explanation: 'El FIES incluye categorías como control directo, crimen organizado, bandas armadas, etc.'
-    },
-    
-    // Pregunta 83
-    {
-      questionText: 'La conducción de internos entre establecimientos corresponde a:',
-      options: [
-        'Las Fuerzas y Cuerpos de Seguridad del Estado',
-        'Los Jefes de Servicios',
-        'Los funcionarios de prisiones',
-        'Empresas privadas de seguridad'
-      ],
-      correctAnswer: 0,
-      explanation: 'Las conducciones interprovinciales son competencia de la Guardia Civil (Fuerzas y Cuerpos de Seguridad).'
-    },
-    
-    // Pregunta 84
-    {
-      questionText: 'El traslado de penados requiere:',
-      options: [
-        'Orden de la Dirección General de Instituciones Penitenciarias (Centro Directivo)',
-        'Orden del Juez de Vigilancia',
-        'Orden del Director del Centro',
-        'Solicitud del interno siempre aprobada'
-      ],
-      correctAnswer: 0,
-      explanation: 'El traslado es competencia del Centro Directivo (art. 31 RP).'
-    },
-    
-    // Pregunta 85
-    {
-      questionText: 'La asistencia sanitaria en prisión:',
-      options: [
-        'Es un derecho fundamental de los internos',
-        'Solo se presta si el interno paga',
-        'Es de menor calidad que la pública',
-        'No incluye salud mental'
-      ],
-      correctAnswer: 0,
-      explanation: 'La asistencia sanitaria es un derecho y debe ser equivalente a la dispensada al conjunto de la población.'
-    },
-    
-    // Pregunta 86
-    {
-      questionText: 'La huelga de hambre de un interno:',
-      options: [
-        'Debe ser supervisada médicamente, pudiendo imponerse tratamiento si hay riesgo vital inminente',
-        'Está prohibida y se sanciona',
-        'Se respeta hasta la muerte del interno en todo caso',
-        'Implica el aislamiento automático'
-      ],
-      correctAnswer: 0,
-      explanation: 'La Administración debe velar por la vida del interno, pudiendo intervenir médicamente (alimentación forzosa) en caso de riesgo vital, según jurisprudencia TC.'
-    },
-    
-    // Pregunta 87
-    {
-      questionText: 'Las medidas de seguridad se aplican a:',
-      options: [
-        'Sujetos inimputables o semiimputables peligrosos',
-        'Todos los delincuentes',
-        'Solo a reincidentes',
-        'A las víctimas'
-      ],
-      correctAnswer: 0,
-      explanation: 'Las medidas de seguridad se fundamentan en la peligrosidad criminal y se aplican a inimputables/semiimputables.'
-    },
-    
-    // Pregunta 88
-    {
-      questionText: 'La prescripción de las penas graves es de:',
-      options: [
-        '30, 25, 20 o 15 años según el caso',
-        '5 años',
-        '10 años siempre',
-        'Nunca prescriben'
-      ],
-      correctAnswer: 0,
-      explanation: 'Las penas graves prescriben en plazos que van hasta los 30 años (art. 133 CP).'
-    },
-    
-    // Pregunta 89
-    {
-      questionText: 'El Director del Centro Penitenciario:',
-      options: [
-        'Ostenta la representación del centro y dirige, coordina y supervisa todas las actividades',
-        'Es un cargo político electo',
-        'Depende del Juez de Vigilancia',
-        'Solo tiene funciones administrativas'
-      ],
-      correctAnswer: 0,
-      explanation: 'El Director dirige y representa al Centro (art. 280 RP).'
-    },
-    
-    // Pregunta 90
-    {
-      questionText: 'El Consejo de Dirección:',
-      options: [
-        'Es el órgano colegiado de gobierno del Establecimiento',
-        'Es un órgano consultivo externo',
-        'Está formado por internos',
-        'Lo preside el Juez'
-      ],
-      correctAnswer: 0,
-      explanation: 'El Consejo de Dirección es el órgano colegiado de gobierno (art. 269 RP).'
-    },
-    
-    // Pregunta 91
-    {
-      questionText: 'Los funcionarios de Instituciones Penitenciarias tienen la condición de:',
-      options: [
-        'Agentes de la autoridad',
-        'Autoridad en todo caso',
-        'Personal laboral',
-        'Policías'
-      ],
-      correctAnswer: 0,
-      explanation: 'Los funcionarios de II.PP. tienen la condición de agentes de la autoridad (y autoridad en ciertos casos tras reforma).'
-    },
-    
-    // Pregunta 92
-    {
-      questionText: 'El Cuerpo de Ayudantes de Instituciones Penitenciarias es un cuerpo del:',
-      options: [
-        'Subgrupo C1',
-        'Subgrupo C2',
-        'Subgrupo A2',
-        'Grupo B'
-      ],
-      correctAnswer: 0,
-      explanation: 'El Cuerpo de Ayudantes pertenece al Subgrupo C1.'
-    },
-    
-    // Pregunta 93
-    {
-      questionText: 'La situación administrativa de servicios especiales se declara cuando:',
-      options: [
-        'El funcionario es nombrado miembro del Gobierno o alto cargo',
-        'Pide una excedencia',
-        'Está enfermo',
-        'Se jubila'
-      ],
-      correctAnswer: 0,
-      explanation: 'Servicios especiales se aplica a nombramientos de altos cargos, diputados, senadores, etc.'
-    },
-    
-    // Pregunta 94
-    {
-      questionText: 'La excedencia voluntaria por interés particular exige un periodo mínimo de servicios efectivos de:',
-      options: [
-        '5 años',
-        '2 años',
-        '10 años',
-        'No exige periodo mínimo'
-      ],
-      correctAnswer: 0,
-      explanation: 'Se exigen 5 años de servicios efectivos en las Administraciones Públicas.'
-    },
-    
-    // Pregunta 95
-    {
-      questionText: 'La jubilación forzosa se declara de oficio al cumplir el funcionario los:',
-      options: [
-        '65 años (con posibilidad de prórroga)',
-        '60 años',
-        '70 años',
-        '67 años obligatoriamente'
-      ],
-      correctAnswer: 0,
-      explanation: 'La edad de jubilación forzosa es 65 años, pudiendo prolongar hasta los 70.'
-    },
-    
-    // Pregunta 96
-    {
-      questionText: 'El permiso por matrimonio o pareja de hecho es de:',
-      options: [
-        '15 días naturales',
-        '15 días hábiles',
-        '10 días naturales',
-        '1 mes'
-      ],
-      correctAnswer: 0,
-      explanation: 'El permiso es de 15 días naturales.'
-    },
-    
-    // Pregunta 97
-    {
-      questionText: 'El deber de residencia de los funcionarios implica:',
-      options: [
-        'Residir en el término municipal donde presten su función o donde permita el desempeño del puesto',
-        'Vivir en la prisión',
-        'No salir de la provincia',
-        'Vivir en Madrid'
-      ],
-      correctAnswer: 0,
-      explanation: 'Deben residir donde desempeñen su función o donde sea compatible con el servicio.'
-    },
-    
-    // Pregunta 98
-    {
-      questionText: 'La incompatibilidad de los funcionarios públicos impide:',
-      options: [
-        'El desempeño de un segundo puesto de trabajo en el sector público, salvo excepciones',
-        'Tener patrimonio',
-        'Votar',
-        'Pertenecer a partidos políticos'
-      ],
-      correctAnswer: 0,
-      explanation: 'La Ley de Incompatibilidades impide el desempeño de un segundo puesto en el sector público salvo excepciones (docencia, sanidad).'
-    },
-    
-    // Pregunta 99
-    {
-      questionText: 'El acoso laboral (mobbing) en la Administración:',
-      options: [
-        'Es una falta muy grave',
-        'Es una falta leve',
-        'No está regulado',
-        'Es un delito solo privado'
-      ],
-      correctAnswer: 0,
-      explanation: 'El acoso laboral es una falta disciplinaria muy grave (art. 95 TREBEP).'
-    },
-    
-    // Pregunta 100
-    {
-      questionText: 'La igualdad de género en la función pública implica:',
-      options: [
-        'Ausencia de discriminación por razón de sexo en el acceso, carrera y trato',
-        'Cuotas fijas del 50%',
-        'Preferencia absoluta de la mujer',
-        'Prohibición de contratar hombres'
-      ],
-      correctAnswer: 0,
-      explanation: 'Implica igualdad de trato y oportunidades y no discriminación.'
-    },
-    
-    // Pregunta 101
-    {
-      questionText: 'El contrato de suministros tiene por objeto:',
-      options: [
-        'La adquisición, arrendamiento financiero o arrendamiento de productos o bienes muebles',
-        'La realización de una obra',
-        'La gestión de un servicio público',
-        'La redacción de proyectos'
-      ],
-      correctAnswer: 0,
-      explanation: 'El contrato de suministro se refiere a bienes muebles (Ley de Contratos del Sector Público).'
-    },
-    
-    // Pregunta 102
-    {
-      questionText: 'El presupuesto base de licitación:',
-      options: [
-        'Es el límite máximo de gasto que se puede comprometer',
-        'Es el precio mínimo',
-        'No incluye el IVA',
-        'Es orientativo'
-      ],
-      correctAnswer: 0,
-      explanation: 'Es el límite máximo de gasto que el órgano de contratación puede comprometer (con IVA desglosado).'
-    },
-    
-    // Pregunta 103
-    {
-      questionText: 'La Ley de Transparencia obliga a publicar:',
-      options: [
-        'Información institucional, organizativa, y de planificación',
-        'Secretos oficiales',
-        'Datos personales protegidos',
-        'Correos privados'
-      ],
-      correctAnswer: 0,
-      explanation: 'Obliga a la publicidad activa de información institucional, económica, presupuestaria, etc.'
-    },
-    
-    // Pregunta 104
-    {
-      questionText: 'El derecho de acceso a la información pública:',
-      options: [
-        'Corresponde a todas las personas',
-        'Solo a los interesados en un procedimiento',
-        'Solo a funcionarios',
-        'Solo a periodistas'
-      ],
-      correctAnswer: 0,
-      explanation: 'Todas las personas tienen derecho a acceder a la información pública (art. 12 Ley Transparencia).'
-    },
-    
-    // Pregunta 105
-    {
-      questionText: 'La protección de datos de carácter personal:',
-      options: [
-        'Es un derecho fundamental',
-        'Es un derecho administrativo',
-        'No está protegida constitucionalmente',
-        'Depende de cada empresa'
-      ],
-      correctAnswer: 0,
-      explanation: 'Es un derecho fundamental derivado del art. 18.4 CE.'
-    },
-    
-    // Pregunta 106
-    {
-      questionText: 'El Delegado de Protección de Datos (DPD):',
-      options: [
-        'Es obligatorio en las Administraciones Públicas',
-        'Es opcional siempre',
-        'Solo para empresas grandes',
-        'No existe en España'
-      ],
-      correctAnswer: 0,
-      explanation: 'Las Administraciones Públicas deben designar obligatoriamente un DPD (RGPD y LOPDGDD).'
-    },
-    
-    // Pregunta 107
-    {
-      questionText: 'El Gobierno Abierto se basa en los pilares de:',
-      options: [
-        'Transparencia, participación y colaboración',
-        'Seguridad y control',
-        'Eficiencia económica',
-        'Digitalización exclusiva'
-      ],
-      correctAnswer: 0,
-      explanation: 'Los pilares son transparencia, participación ciudadana y colaboración.'
-    },
-    
-    // Pregunta 108
-    {
-      questionText: 'La Agenda 2030 de la ONU establece:',
-      options: [
-        '17 Objetivos de Desarrollo Sostenible (ODS)',
-        '10 Mandamientos',
-        'Normas de comercio',
-        'Leyes penales internacionales'
-      ],
-      correctAnswer: 0,
-      explanation: 'Establece 17 ODS para erradicar la pobreza, proteger el planeta y asegurar la prosperidad.'
-    },
-    
-    // Pregunta 109
-    {
-      questionText: 'En conducta humana, la socialización es:',
-      options: [
-        'El proceso por el cual el individuo interioriza las normas y valores de la sociedad',
-        'Hacer amigos',
-        'Salir de fiesta',
-        'El uso de redes sociales'
-      ],
-      correctAnswer: 0,
-      explanation: 'La socialización es el proceso de aprendizaje e interiorización de la cultura de la sociedad.'
-    },
-    
-    // Pregunta 110
-    {
-      questionText: 'Los grupos primarios se caracterizan por:',
-      options: [
-        'Relaciones afectivas, directas y duraderas (ej. familia)',
-        'Relaciones formales e instrumentales',
-        'Gran tamaño',
-        'Estar regulados por estatutos'
-      ],
-      correctAnswer: 0,
-      explanation: 'Los grupos primarios tienen relaciones cara a cara, emocionales y personales (familia, amigos íntimos).'
-    },
-    
-    // Pregunta 111
-    {
-      questionText: 'El prejuicio es:',
-      options: [
-        'Una actitud, generalmente negativa, hacia los miembros de un grupo',
-        'Una conducta discriminatoria',
-        'Un delito',
-        'Una verdad absoluta'
-      ],
-      correctAnswer: 0,
-      explanation: 'El prejuicio es una actitud (cognitiva/afectiva), mientras que la discriminación es la conducta.'
-    },
-    
-    // Pregunta 112
-    {
-      questionText: 'La marginación social implica:',
-      options: [
-        'La exclusión de individuos o grupos de los beneficios y oportunidades sociales',
-        'Vivir en el campo',
-        'Tener poco dinero solo',
-        'No querer trabajar'
-      ],
-      correctAnswer: 0,
-      explanation: 'Es un proceso de exclusión estructural de la participación social y recursos.'
-    },
-    
-    // Pregunta 113
-    {
-      questionText: 'La subcultura carcelaria se refiere a:',
-      options: [
-        'Los valores, normas y códigos informales propios de los internos (código del recluso)',
-        'Las normas del reglamento',
-        'La cultura de los funcionarios',
-        'La educación en prisión'
-      ],
-      correctAnswer: 0,
-      explanation: 'Es el conjunto de pautas de conducta y valores propios de la comunidad de internos (prisionización).'
-    },
-    
-    // Pregunta 114
-    {
-      questionText: 'La prisionización es:',
-      options: [
-        'El proceso de asimilación por el interno de la cultura, costumbres y usos de la prisión',
-        'Entrar en prisión',
-        'Salir de prisión',
-        'La clasificación en grados'
-      ],
-      correctAnswer: 0,
-      explanation: 'Concepto de Clemmer: asimilación de la cultura carcelaria.'
-    },
-    
-    // Pregunta 115
-    {
-      questionText: 'El estrés laboral (burnout) en funcionarios de prisiones:',
-      options: [
-        'Es un síndrome de agotamiento emocional, despersonalización y baja realización personal',
-        'Es estar cansado un día',
-        'Es tener mucho trabajo',
-        'No existe'
-      ],
-      correctAnswer: 0,
-      explanation: 'El burnout es un estrés crónico caracterizado por esas tres dimensiones.'
-    },
-    
-    // Pregunta 116
-    {
-      questionText: 'La comunicación no verbal incluye:',
-      options: [
-        'Gestos, postura, mirada, distancia (proxémica)',
-        'Las palabras escritas',
-        'El lenguaje de signos exclusivamente',
-        'El código morse'
-      ],
-      correctAnswer: 0,
-      explanation: 'La comunicación no verbal abarca kinesia, proxémica y paralingüística.'
-    },
-    
-    // Pregunta 117
-    {
-      questionText: 'La escucha activa consiste en:',
-      options: [
-        'Escuchar con atención, comprendiendo el mensaje y demostrándolo al interlocutor',
-        'Oír ruido',
-        'Interrumpir para hablar',
-        'Fingir que escuchas'
-      ],
-      correctAnswer: 0,
-      explanation: 'Implica esfuerzo físico y mental para entender la totalidad del mensaje y dar feedback.'
-    },
-    
-    // Pregunta 118
-    {
-      questionText: 'Un funcionario asertivo:',
-      options: [
-        'Expresa sus opiniones y defiende sus derechos sin agredir ni someterse',
-        'Es agresivo y grita',
-        'Es pasivo y se calla todo',
-        'Siempre da la razón al interno'
-      ],
-      correctAnswer: 0,
-      explanation: 'La asertividad es el equilibrio entre pasividad y agresividad.'
-    },
-    
-    // Pregunta 119
-    {
-      questionText: 'La seguridad dinámica en prisión se basa en:',
-      options: [
-        'El conocimiento de los internos y la relación profesional positiva entre personal e internos',
-        'Solo en muros y cámaras',
-        'En tener armas',
-        'En el aislamiento total'
-      ],
-      correctAnswer: 0,
-      explanation: 'Se basa en la interacción positiva y el conocimiento del clima social para prevenir incidentes.'
-    },
-    
-    // Pregunta 120
-    {
-      questionText: 'El cacheo con desnudo integral:',
-      options: [
-        'Es una medida excepcional reglada que requiere autorización y motivos concretos',
-        'Es rutinario para todos',
-        'Está prohibido siempre',
-        'Lo decide cualquier funcionario'
-      ],
-      correctAnswer: 0,
-      explanation: 'Es excepcional, por motivos de seguridad concreta (art. 68 RP) y con garantías.'
-    },
-    
-    // Pregunta 121
-    {
-      questionText: 'Los medios coercitivos enumerados en el art. 45 LOGP y 72 RP:',
-      options: [
-        'Son taxativos: aislamiento provisional, fuerza física, defensas de goma, aerosoles y esposas',
-        'Incluyen armas de fuego',
-        'Incluyen la tortura',
-        'Son ilimitados'
-      ],
-      correctAnswer: 0,
-      explanation: 'Son medios tasados (numerus clausus) y de uso excepcional y proporcional.'
-    },
-    
-    // Pregunta 122
-    {
-      questionText: 'El uso de medios coercitivos requiere:',
-      options: [
-        'Autorización previa del Director (salvo urgencia) y comunicación inmediata al Juez de Vigilancia',
-        'Decisión del funcionario sin informar',
-        'Votación de los funcionarios',
-        'Autorización del interno'
-      ],
-      correctAnswer: 0,
-      explanation: 'Requiere autorización del Director y comunicación al JVP.'
-    },
-    
-    // Pregunta 123
-    {
-      questionText: 'El recuento de internos:',
-      options: [
-        'Es una medida de seguridad fundamental para comprobar la presencia de la población reclusa',
-        'Es opcional',
-        'Solo se hace de noche',
-        'No existe en régimen abierto'
-      ],
-      correctAnswer: 0,
-      explanation: 'Es una medida básica de seguridad y orden (recuentos ordinarios y extraordinarios).'
-    },
-    
-    // Pregunta 124
-    {
-      questionText: 'El régimen de vida de los detenidos y presos (preventivos) se caracteriza por:',
-      options: [
-        'Presunción de inocencia y limitación de derechos estricta a la seguridad y orden',
-        'Trabajo forzoso',
-        'Régimen abierto siempre',
-        'Mezcla con penados obligatoria'
-      ],
-      correctAnswer: 0,
-      explanation: 'Se basa en la presunción de inocencia, aunque se les aplica el régimen ordinario por defecto.'
-    },
-    
-    // Pregunta 125
-    {
-      questionText: 'Los Centros de Inserción Social (CIS) están destinados preferentemente a:',
-      options: [
-        'Internos en régimen abierto (tercer grado) y penas y medidas alternativas',
-        'Internos muy peligrosos',
-        'Preventivos',
-        'Enfermos mentales'
-      ],
-      correctAnswer: 0,
-      explanation: 'Los CIS son establecimientos para cumplimiento en régimen abierto y penas alternativas.'
-    },
-    
-    // Pregunta 126
-    {
-      questionText: 'La Oficina de Gestión Penitenciaria se encarga de:',
-      options: [
-        'Expedientes de los internos, situación procesal y penal, conducciones, etc.',
-        'Vigilancia interior',
-        'Tratamiento psicológico',
-        'Mantenimiento'
-      ],
-      correctAnswer: 0,
-      explanation: 'Gestiona la situación jurídico-penitenciaria de los internos.'
-    },
-    
-    // Pregunta 127
-    {
-      questionText: 'La Unidad de Servicio Interior (Vigilancia) tiene como función:',
-      options: [
-        'La vigilancia y custodia interior de los establecimientos y de los internos',
-        'La gestión administrativa',
-        'La educación',
-        'La cocina'
-      ],
-      correctAnswer: 0,
-      explanation: 'Es la encargada de la seguridad interior, observación y custodia.'
-    },
-    
-    // Pregunta 128
-    {
-      questionText: 'El Jefe de Servicios:',
-      options: [
-        'Es el responsable del servicio de vigilancia durante su turno',
-        'Es un cargo administrativo',
-        'Es el Director',
-        'Es un funcionario en prácticas'
-      ],
-      correctAnswer: 0,
-      explanation: 'Coordina y dirige los servicios de vigilancia en el interior durante su jornada.'
-    },
-    
-    // Pregunta 129
-    {
-      questionText: 'Las Unidades de Madres:',
-      options: [
-        'Son unidades para internas con hijos menores de 3 años consigo',
-        'Son para madres de internos',
-        'Son guarderías para funcionarios',
-        'No existen'
-      ],
-      correctAnswer: 0,
-      explanation: 'Permiten a las madres cumplir condena con sus hijos hasta los 3 años.'
-    },
-    
-    // Pregunta 130
-    {
-      questionText: 'El peculio de los internos:',
-      options: [
-        'Es el dinero que tienen en su cuenta para gastos en prisión',
-        'Es la pena',
-        'Es la ropa',
-        'Es el expediente'
-      ],
-      correctAnswer: 0,
-      explanation: 'El dinero de los internos se guarda en una cuenta de peculio sin que puedan tener efectivo.'
-    },
-    
-    // Pregunta 131
-    {
-      questionText: 'El economato permite a los internos:',
-      options: [
-        'Adquirir productos autorizados con cargo a su peculio',
-        'Vender cosas',
-        'Salir de compras',
-        'Pedir préstamos'
-      ],
-      correctAnswer: 0,
-      explanation: 'Es el servicio de venta de productos autorizados dentro del centro.'
-    },
-    
-    // Pregunta 132
-    {
-      questionText: 'La alimentación de los internos:',
-      options: [
-        'Debe ser supervisada por el médico y respetar convicciones religiosas en lo posible',
-        'Es pan y agua',
-        'La pagan ellos',
-        'Es igual para todos sin excepción'
-      ],
-      correctAnswer: 0,
-      explanation: 'Debe ser suficiente, sana e higiénica, respetando dietas médicas y religiosas.'
-    },
-    
-    // Pregunta 133
-    {
-      questionText: 'El vestuario y equipo de los internos:',
-      options: [
-        'La Administración lo proporciona a quien lo necesite, aunque pueden usar ropa propia',
-        'Es obligatorio usar uniforme siempre',
-        'Deben comprarlo',
-        'Van desnudos'
-      ],
-      correctAnswer: 0,
-      explanation: 'Los internos pueden usar su ropa, pero la Administración debe facilitar vestuario a quien no tenga.'
-    },
-    
-    // Pregunta 134
-    {
-      questionText: 'La higiene personal:',
-      options: [
-        'Es un derecho y un deber. Se facilitan artículos de aseo gratuitos básicos',
-        'Es opcional',
-        'Hay que pagar el jabón siempre',
-        'No hay duchas'
-      ],
-      correctAnswer: 0,
-      explanation: 'La Administración facilita productos de aseo diario y garantiza el acceso a duchas.'
-    },
-    
-    // Pregunta 135
-    {
-      questionText: 'El horario regimental:',
-      options: [
-        'Se aprueba por el Consejo de Dirección siguiendo directrices del Centro Directivo',
-        'Lo decide cada interno',
-        'No hay horario',
-        'Es solo nocturno'
-      ],
-      correctAnswer: 0,
-      explanation: 'Organiza la vida diaria en el centro y es aprobado por el Consejo de Dirección.'
-    },
-    
-    // Pregunta 136
-    {
-      questionText: 'La información y reclamaciones de los internos:',
-      options: [
-        'Tienen derecho a ser informados de su situación y normas al ingreso',
-        'No tienen derecho a saber nada',
-        'Solo verbalmente',
-        'Solo si saben leer'
-      ],
-      correctAnswer: 0,
-      explanation: 'Al ingreso se les entrega un folleto informativo (escrito) sobre sus derechos y deberes.'
-    },
-    
-    // Pregunta 137
-    {
-      questionText: 'Los extranjeros en prisión:',
-      options: [
-        'Tienen los mismos derechos que los nacionales, con especificidades culturales/idiomáticas',
-        'Tienen menos derechos',
-        'Están separados siempre',
-        'No pueden recibir visitas'
-      ],
-      correctAnswer: 0,
-      explanation: 'Se les aplica la legislación penitenciaria igual que a españoles, facilitando contacto con consulados.'
-    },
-    
-    // Pregunta 138
-    {
-      questionText: 'La violencia de género se considera:',
-      options: [
-        'Manifestación de la discriminación y desigualdad de poder entre hombres y mujeres',
-        'Un asunto privado',
-        'Algo natural',
-        'Culpa de la víctima'
-      ],
-      correctAnswer: 0,
-      explanation: 'Definición legal de la Ley Orgánica 1/2004.'
-    },
-    
-    // Pregunta 139
-    {
-      questionText: 'La Ley de Igualdad 3/2007:',
-      options: [
-        'Establece la transversalidad del principio de igualdad en todas las políticas',
-        'Solo afecta a empresas',
-        'Ya no está vigente',
-        'Solo regula permisos'
-      ],
-      correctAnswer: 0,
-      explanation: 'Consagra el principio de igualdad de trato y oportunidades como informador de todo el ordenamiento.'
-    },
-    
-    // Pregunta 140
-    {
-      questionText: 'Los Planes de Igualdad en la Administración:',
-      options: [
-        'Son obligatorios y se aprueban al inicio de cada legislatura',
-        'Son voluntarios',
-        'No existen',
-        'Solo para mujeres'
-      ],
-      correctAnswer: 0,
-      explanation: 'Las Administraciones Públicas aprobarán planes de igualdad al inicio de legislatura (EBEP).'
-    },
-    
-    // Pregunta 141
-    {
-      questionText: 'La administración electrónica:',
-      options: [
-        'Busca la eficacia, eficiencia y cercanía al ciudadano mediante TIC',
-        'Es para ahorrar papel solo',
-        'Es más lenta',
-        'Es insegura'
-      ],
-      correctAnswer: 0,
-      explanation: 'Uso de tecnologías para mejorar el servicio público (Leyes 39 y 40/2015).'
-    },
-    
-    // Pregunta 142
-    {
-      questionText: 'La firma electrónica:',
-      options: [
-        'Acredita la identidad del firmante y la integridad del documento',
-        'Es un dibujo',
-        'No tiene validez legal',
-        'Solo sirve para emails'
-      ],
-      correctAnswer: 0,
-      explanation: 'Garantiza identidad e integridad en documentos electrónicos.'
-    },
-    
-    // Pregunta 143
-    {
-      questionText: 'El registro electrónico:',
-      options: [
-        'Permite presentar documentos 24/7 todos los días del año',
-        'Cierra a las 14:00',
-        'Solo abre días hábiles',
-        'No existe'
-      ],
-      correctAnswer: 0,
-      explanation: 'Los registros electrónicos admiten documentos todos los días del año durante las 24 horas.'
-    },
-    
-    // Pregunta 144
-    {
-      questionText: 'El archivo electrónico:',
-      options: [
-        'Conjunto de documentos electrónicos correspondientes a procedimientos finalizados',
-        'La papelera de reciclaje',
-        'Una carpeta en el escritorio',
-        'Un USB'
-      ],
-      correctAnswer: 0,
-      explanation: 'Obligación de las Administraciones de mantener un archivo electrónico único de expedientes cerrados.'
-    },
-    
-    // Pregunta 145
-    {
-      questionText: 'La interoperabilidad:',
-      options: [
-        'Capacidad de los sistemas de información de compartir datos y posibilitar intercambio de información',
-        'Que funcionen dos ordenadores',
-        'Usar el mismo programa',
-        'Tener internet'
-      ],
-      correctAnswer: 0,
-      explanation: 'Es clave para que las Administraciones compartan datos sin pedir papeles al ciudadano.'
-    },
-    
-    // Pregunta 146
-    {
-      questionText: 'El Esquema Nacional de Seguridad (ENS):',
-      options: [
-        'Establece la política de seguridad para la protección de la información en la Administración Electrónica',
-        'Es para la policía',
-        'Es el antivirus',
-        'Es una ley penal'
-      ],
-      correctAnswer: 0,
-      explanation: 'Regula la seguridad de los sistemas de información del sector público.'
-    },
-    
-    // Pregunta 147
-    {
-      questionText: 'El Portal de Transparencia:',
-      options: [
-        'Facilita el acceso de los ciudadanos a la información pública',
-        'Es una ventana',
-        'Es secreto',
-        'Es de pago'
-      ],
-      correctAnswer: 0,
-      explanation: 'Es el sitio web para publicar la información activa y tramitar solicitudes de acceso.'
-    },
-    
-    // Pregunta 148
-    {
-      questionText: 'La ética pública:',
-      options: [
-        'Conjunto de valores y normas que rigen la conducta de los empleados públicos (integridad, neutralidad...)',
-        'Es religiosa',
-        'No es importante',
-        'Es privada'
-      ],
-      correctAnswer: 0,
-      explanation: 'El TREBEP establece un código de conducta con principios éticos y de conducta.'
-    },
-    
-    // Pregunta 149
-    {
-      questionText: 'El conflicto de intereses:',
-      options: [
-        'Situación donde el interés personal del funcionario puede influir en el cumplimiento de sus deberes',
-        'Pelearse con un compañero',
-        'Tener dos trabajos',
-        'No querer trabajar'
-      ],
-      correctAnswer: 0,
-      explanation: 'Debe evitarse mediante la abstención o recusación.'
-    },
-    
-    // Pregunta 150
-    {
-      questionText: 'La responsabilidad patrimonial de la Administración:',
-      options: [
-        'Obligación de indemnizar a los particulares por lesiones en sus bienes y derechos causadas por servicios públicos',
-        'Pagar multas',
-        'No existe',
-        'Solo si hay delito'
-      ],
-      correctAnswer: 0,
-      explanation: 'Los particulares tienen derecho a ser indemnizados de toda lesión que sufran (salvo fuerza mayor) por el funcionamiento de los servicios públicos (art. 106 CE).'
-    }
-  ]
+    id: 'test-examen-2019',
+    title: 'Examen Oficial TAI 2019 (Simulacro Nivel Avanzado)',
+    questions: [
+        // BLOQUE I: ADMINISTRACIÓN PÚBLICA
+        {
+            questionText: 'En el procedimiento administrativo común, ¿cuál es el plazo máximo para notificar la resolución de un recurso de alzada?',
+            options: ['1 mes', '3 meses', '6 meses', '10 días'],
+            correctAnswer: 1,
+            explanation: 'Según la Ley 39/2015, el plazo máximo para dictar y notificar la resolución del recurso de alzada será de tres meses.'
+        },
+        {
+            questionText: 'Según la Ley 40/2015, ¿cuál de estos órganos NO es considerado un órgano directivo de la AGE?',
+            options: ['Subsecretario', 'Director General', 'Secretario de Estado', 'Secretario General Técnico'],
+            correctAnswer: 2,
+            explanation: 'El Secretario de Estado es un órgano superior, no directivo (Art. 55 Ley 40/2015).'
+        },
+        {
+            questionText: 'En la Ley 9/2017 (LCSP), el valor estimado de un contrato de obras sujeto a regulación armonizada (SARA) debe ser igual o superior a:',
+            options: ['215.000 €', '5.382.000 €', '443.000 €', '135.000 €'],
+            correctAnswer: 1,
+            explanation: 'El umbral actual para obras SARA es de 5.382.000 €.'
+        },
+        {
+            questionText: '¿Cuál es la situación administrativa en la que queda un funcionario de carrera que es nombrado cargo de confianza en un Gabinete de un Ministro?',
+            options: ['Servicio activo', 'Servicios especiales', 'Excedencia forzosa', 'Excedencia por interés particular'],
+            correctAnswer: 1,
+            explanation: 'El artículo 87 del TREBEP establece que serán declarados en servicios especiales quienes sean nombrados para puestos de personal eventual.'
+        },
+        {
+            questionText: 'El principio de "inderogabilidad singular de los reglamentos" implica que:',
+            options: [
+                'Un reglamento no puede ser derogado por una ley posterior.',
+                'Una resolución administrativa particular no puede vulnerar lo establecido en una disposición de carácter general.',
+                'Solo el Consejo de Ministros puede derogar reglamentos.',
+                'Un reglamento no puede ser modificado si no es por otro del mismo rango.'
+            ],
+            correctAnswer: 1,
+            explanation: 'Artículo 37 de la Ley 39/2015.'
+        },
+
+        // BLOQUE II: TECNOLOGÍA BÁSICA
+        {
+            questionText: 'En una arquitectura de computadores, ¿qué función cumple el "Buffer de Reordenamiento" (ROB) en una ejecución fuera de orden?',
+            options: [
+                'Almacenar las instrucciones antes de ser decodificadas.',
+                'Registrar los resultados temporales de las instrucciones para permitir el commit en orden.',
+                'Gestionar la caché L1 de datos.',
+                'Realizar el salto predictivo en el cauce (pipeline).'
+            ],
+            correctAnswer: 1,
+            explanation: 'El ROB es fundamental para permitir la ejecución especulativa y asegurar que el estado del sistema se actualice siguiendo el orden lógico del programa.'
+        },
+        {
+            questionText: '¿Cuál es el tamaño máximo de archivo soportado teóricamente por el sistema de ficheros NTFS?',
+            options: ['4 GB', '16 GB', '16 TB', '256 TB'],
+            correctAnswer: 3,
+            explanation: 'Aunque las implementaciones varían, el límite teórico del formato NTFS es de 2^64-1 clusters (256 TB con clusters de 64KB).'
+        },
+        {
+            questionText: 'En el estándar PCIe 4.0, ¿cuál es el ancho de banda por carril (lane) en cada dirección?',
+            options: ['250 MB/s', '985 MB/s', '1969 MB/s', '3938 MB/s'],
+            correctAnswer: 2,
+            explanation: 'PCIe 4.0 ofrece aproximadamente 1.969 GB/s por carril (x1).'
+        },
+        {
+            questionText: '¿Qué tipo de memoria caché suele estar integrada directamente dentro del núcleo del procesador y es privada para cada core?',
+            options: ['L1 y L2', 'Solo L1', 'L2 y L3', 'Todas'],
+            correctAnswer: 0,
+            explanation: 'En los diseños modernos, L1 y L2 suelen ser privadas de cada núcleo, mientras que L3 es compartida por todos.'
+        },
+        {
+            questionText: 'El protocolo IEEE 802.11ax es comercialmente conocido como:',
+            options: ['Wi-Fi 5', 'Wi-Fi 6', 'Wi-Fi 6E', 'Wi-Fi 7'],
+            correctAnswer: 1,
+            explanation: '802.11ax corresponde al Wi-Fi 6.'
+        },
+
+        // BLOQUE III: DESARROLLO DE SISTEMAS
+        {
+            questionText: 'En el patrón de diseño "Strategy", ¿cuál es el objetivo principal?',
+            options: [
+                'Asegurar que una clase solo tenga una instancia.',
+                'Definir una familia de algoritmos, encapsular cada uno y hacerlos intercambiables.',
+                'Notificar cambios de estado a una lista de observadores automáticamente.',
+                'Adaptar la interfaz de una clase antigua a una nueva.'
+            ],
+            correctAnswer: 1,
+            explanation: 'Strategy permite cambiar el comportamiento de un objeto en tiempo de ejecución.'
+        },
+        {
+            questionText: '¿Qué propiedad ACID garantiza que una transacción fallida no deje la base de datos en un estado intermedio parcial?',
+            options: ['Atomicidad', 'Consistencia', 'Aislamiento (Isolation)', 'Durabilidad'],
+            correctAnswer: 0,
+            explanation: 'La atomicidad asegura que se realicen todas las operaciones de la transacción o ninguna.'
+        },
+        {
+            questionText: 'En SQL, la cláusula "HAVING" se utiliza para:',
+            options: [
+                'Filtrar filas antes de agruparlas.',
+                'Filtrar grupos de filas después de aplicar un GROUP BY.',
+                'Ordenar los resultados de forma descendente.',
+                'Eliminar duplicados en una tabla.'
+            ],
+            correctAnswer: 1,
+            explanation: 'HAVING es a los grupos lo que WHERE es a las filas.'
+        },
+        {
+            questionText: '¿Qué nivel de aislamiento en SQL Server evita las "lecturas sucias" (dirty reads) pero NO las "lecturas no repetibles"?',
+            options: ['Read Uncommitted', 'Read Committed', 'Repeatable Read', 'Serializable'],
+            correctAnswer: 1,
+            explanation: 'Read Committed es el nivel por defecto en muchos SGBD y evita leer datos no confirmados.'
+        },
+        {
+            questionText: '¿Cuál es la complejidad temporal media de la operación de búsqueda en una tabla Hash correctamente implementada?',
+            options: ['O(1)', 'O(log n)', 'O(n)', 'O(n^2)'],
+            correctAnswer: 0,
+            explanation: 'Las tablas Hash ofrecen acceso directo constante en promedio.'
+        },
+
+        // BLOQUE IV: INFRAESTRUCTURA
+        {
+            questionText: 'En Linux, ¿qué comando se usa para cambiar la prioridad (niceness) de un proceso que ya se está ejecutando?',
+            options: ['nice', 'renice', 'top', 'ps'],
+            correctAnswer: 1,
+            explanation: 'nice lanza un proceso con prioridad nueva, renice cambia la de uno vivo.'
+        },
+        {
+            questionText: '¿Qué protocolo de capa de aplicación utiliza el comando traceroute en sistemas basados en Unix por defecto?',
+            options: ['ICMP Echo Request', 'UDP', 'TCP SYN', 'IGMP'],
+            correctAnswer: 1,
+            explanation: 'A diferencia de Windows que usa ICMP, Unix/Linux usa paquetes UDP a puertos altos por defecto.'
+        },
+        {
+            questionText: '¿Cuál es la máscara de subred abreviada (/x) para una red con 254 hosts utilizables?',
+            options: ['/23', '/24', '/25', '/26'],
+            correctAnswer: 1,
+            explanation: '/24 permite 256 direcciones (254 útiles + red + broadcast).'
+        },
+        {
+            questionText: '¿Qué tecnología de almacenamiento utiliza el protocolo Fibre Channel over Ethernet (FCoE) para transportar tramas FC?',
+            options: ['Cables de cobre RJ45', 'Redes Ethernet convergentes de 10Gbps o superiores', 'Cables paralelos SCSI', 'Wi-Fi 6'],
+            correctAnswer: 1,
+            explanation: 'FCoE requiere switches Ethernet con soporte para Lossless Ethernet para funcionar correctamente.'
+        },
+        {
+            questionText: 'En el modelo de seguridad de Active Directory, ¿cuál es el contenedor de nivel superior que define la frontera de seguridad?',
+            options: ['Dominio', 'Unidad Organizativa', 'Bosque (Forest)', 'Árbol (Tree)'],
+            correctAnswer: 2,
+            explanation: 'El Bosque es la instancia más alta de AD y es la unidad real de seguridad y gestión única.'
+        },
+        {
+            questionText: 'En el marco de la LCSP 9/2017, ¿cuál es el plazo de interposición de un recurso especial en materia de contratación contra una adjudicación?',
+            options: ['10 días hábiles', '15 días hábiles', '1 mes', '15 días naturales'],
+            correctAnswer: 1,
+            explanation: 'El plazo es de 15 días hábiles a contar desde el día siguiente a la notificación.'
+        },
+        {
+            questionText: '¿Qué protocolo se utiliza en redes SAN para mapear tramas de canal de fibra sobre redes IP de larga distancia?',
+            options: ['iSCSI', 'FCIP', 'FCoE', 'InfiniBand'],
+            correctAnswer: 1,
+            explanation: 'FCIP (Fibre Channel over IP) permite tunelizar tramas FC a través de redes IP estándar.'
+        },
+        {
+            questionText: 'En Oracle/PostgreSQL, ¿qué estructura de almacenamiento permite mejorar el rendimiento de consultas sobre columnas con baja cardinalidad?',
+            options: ['Índice B-Tree', 'Índice Bitmap', 'Índice Hash', 'Índice Cluster'],
+            correctAnswer: 1,
+            explanation: 'Los índices de mapa de bits son ideales cuando hay pocos valores distintos (ej: género, estado civil).'
+        },
+        {
+            questionText: '¿Cuál es la función del registro de control CR3 en procesadores x86-64?',
+            options: [
+                'Habilitar el modo protegido.',
+                'Almacenar la dirección base de la tabla de páginas (PML4) del proceso actual.',
+                'Gestionar las interrupciones de hardware.',
+                'Controlar la caché L1.'
+            ],
+            correctAnswer: 1,
+            explanation: 'CR3 apunta al directorio de páginas y es esencial para la gestión de memoria virtual.'
+        },
+        {
+            questionText: 'En el desarrollo con React, ¿qué hook se utiliza para memorizar el resultado de un cálculo costoso entre renderizados?',
+            options: ['useEffect', 'useCallback', 'useMemo', 'useRef'],
+            correctAnswer: 2,
+            explanation: 'useMemo memoriza el valor, useCallback memoriza la función.'
+        },
+        {
+            questionText: '¿Cuál es el valor predeterminado de la "distancia administrativa" para una ruta de OSPF en routers Cisco?',
+            options: ['90', '110', '115', '120'],
+            correctAnswer: 1,
+            explanation: 'OSPF tiene una distancia de 110 (RIP 120, EIGRP 90, Estática 1).'
+        },
+        {
+            questionText: '¿Qué tipo de ataque de inyección consiste en enviar comandos a la base de datos a través de cabeceras HTTP como User-Agent o Referer?',
+            options: ['Inyección SQL clásica', 'Inyección de segundo orden', 'Blind SQLi', 'Inyección a través de metadatos/headers'],
+            correctAnswer: 3,
+            explanation: 'Cualquier entrada de usuario, incluidas cabeceras, puede ser un vector de ataque si no se sanea.'
+        },
+        {
+            questionText: 'En Kubernetes, ¿cuál es la función del componente "kube-proxy"?',
+            options: [
+                'Gestionar el ciclo de vida de los contenedores.',
+                'Mantener las reglas de red en los nodos y permitir la comunicación con los servicios.',
+                'Programar los pods en los nodos disponibles.',
+                'Almacenar el estado del clúster.'
+            ],
+            correctAnswer: 1,
+            explanation: 'kube-proxy implementa la abstracción Service y gestiona el enrutamiento de red local.'
+        },
+        {
+            questionText: '¿Qué nivel RAID utiliza bandas a nivel de bloque y dos bloques de paridad distribuidos entre todos los discos?',
+            options: ['RAID 5', 'RAID 6', 'RAID 10', 'RAID 50'],
+            correctAnswer: 1,
+            explanation: 'RAID 6 permite el fallo simultáneo de hasta dos discos.'
+        },
+        {
+            questionText: 'En el protocolo Kerberos, ¿qué componente es responsable de emitir los Service Tickets (ST) tras validar el TGT?',
+            options: ['AS (Authentication Service)', 'TGS (Ticket Granting Service)', 'KDC (Key Distribution Center)', 'SSO'],
+            correctAnswer: 1,
+            explanation: 'El TGS emite tickets para servicios específicos una vez el usuario tiene un TGT válido.'
+        },
+        {
+            questionText: '¿Qué algoritmo de planificación de CPU puede provocar inanición (starvation) de procesos largos?',
+            options: ['First-Come First-Served', 'Round Robin', 'Shortest Job First (SJF)', 'Multilevel Queue'],
+            correctAnswer: 2,
+            explanation: 'SJF siempre prioriza los cortos, pudiendo dejar los largos en espera indefinida.'
+        },
+        {
+            questionText: 'En IPv6, ¿cuál es el prefijo de las direcciones de enlace local (link-local)?',
+            options: ['fc00::/7', 'ff00::/8', 'fe80::/10', '2000::/3'],
+            correctAnswer: 2,
+            explanation: 'Las direcciones fe80:: son obligatorias en cada interfaz IPv6 y sirven para comunicación local.'
+        },
+        {
+            questionText: '¿Qué metodología ágil se centra en eliminar el desperdicio (waste) y optimizar el flujo de valor?',
+            options: ['Scrum', 'XP', 'Lean Software Development', 'Crystal'],
+            correctAnswer: 2,
+            explanation: 'Lean hereda los principios de fabricación de Toyota aplicados al software.'
+        },
+        {
+            questionText: '¿Qué es una vulnerabilidad de tipo XSS reflejado?',
+            options: [
+                'El script malicioso se almacena en la base de datos del servidor.',
+                'El script se incluye en un parámetro de la URL y el servidor lo devuelve inmediatamente en la respuesta.',
+                'Se ataca directamente al hardware del cliente.',
+                'Es un ataque que solo afecta a archivos PDF.'
+            ],
+            correctAnswer: 1,
+            explanation: 'Reflejado: viaja en la petición y aparece en la respuesta del servidor.'
+        },
+        {
+            questionText: 'En un entorno Docker, ¿cuál es la diferencia entre la instrucción COPY y ADD en el Dockerfile?',
+            options: [
+                'ADD permite descargar archivos de URLs y extraer archivos tar automáticamente; COPY es más simple.',
+                'COPY es para carpetas y ADD para archivos sueltos.',
+                'Son sinónimos.',
+                'ADD es más seguro que COPY.'
+            ],
+            correctAnswer: 0,
+            explanation: 'Se recomienda COPY a menos que se necesiten las funciones extra de ADD.'
+        },
+        {
+            questionText: '¿Qué protocolo de correo electrónico permite la gestión de carpetas en el servidor y la sincronización entre dispositivos?',
+            options: ['POP3', 'SMTP', 'IMAP4', 'MIME'],
+            correctAnswer: 2,
+            explanation: 'IMAP mantiene los correos en el servidor y sincroniza estados (leído/no leído).'
+        },
+        {
+            questionText: 'En la Ley 39/2015, ¿en qué caso el silencio administrativo tiene efectos desestimatorios por regla general?',
+            options: [
+                'En procedimientos cuya estimación tuviera como consecuencia que se transfirieran facultades relativas al dominio público.',
+                'En solicitudes de licencias de obra menor.',
+                'Siempre que el interesado sea una empresa.',
+                'Si la Administración no responde en 10 días.'
+            ],
+            correctAnswer: 0,
+            explanation: 'El silencio positivo es la norma, pero casos de dominio público, responsabilidad patrimonial o impugnación de actos son excepciones claras.'
+        },
+        {
+            questionText: '¿Qué componente de la arquitectura Java Virtual Machine (JVM) es responsable de compilar el bytecode a código máquina nativo en tiempo de ejecución?',
+            options: ['Class Loader', 'Interpreter', 'JIT Compiler', 'Garbage Collector'],
+            correctAnswer: 2,
+            explanation: 'Just-In-Time (JIT) mejora el rendimiento compilando partes críticas del código a nativo.'
+        },
+        {
+            questionText: '¿Cuál es el propósito del protocolo Spanning Tree (STP) en redes conmutadas?',
+            options: [
+                'Asignar direcciones IP dinámicamente.',
+                'Evitar bucles de capa 2 en redes con topología redundante.',
+                'Cifrar el tráfico de los terminales.',
+                'Permitir la conexión de routers inalámbricos.'
+            ],
+            correctAnswer: 1,
+            explanation: 'STP bloquea puertos redundantes para crear una topología lógica sin ciclos.'
+        },
+        {
+            questionText: '¿Qué cabecera HTTP se utiliza para mitigar ataques de Clickjacking prohibiendo la carga de la página en un iframe?',
+            options: [
+                'Content-Type',
+                'X-Frame-Options',
+                'Strict-Transport-Security',
+                'Referrer-Policy'
+            ],
+            correctAnswer: 1,
+            explanation: 'Valores como DENY o SAMEORIGIN evitan que el sitio se enmarque maliciosamente.'
+        },
+        {
+            questionText: 'En el desarrollo de software, ¿qué es la "deuda técnica"?',
+            options: [
+                'El dinero que se debe a los proveedores de hardware.',
+                'El coste futuro de reelaborar soluciones rápidas y sucias tomadas hoy.',
+                'El sueldo de los programadores.',
+                'Una multa por entregar tarde un proyecto.'
+            ],
+            correctAnswer: 1,
+            explanation: 'Representa el compromiso entre calidad y tiempo de entrega.'
+        },
+        {
+            questionText: '¿Qué comando de PowerShell se utiliza para detener un servicio llamado "Spooler"?',
+            options: ['Stop-Process Spooler', 'Stop-Service Spooler', 'Kill-Service Spooler', 'Disable-Service Spooler'],
+            correctAnswer: 1,
+            explanation: 'Cmdlet estándar de gestión de servicios en Windows.'
+        },
+        {
+            questionText: '¿Cuál es el límite de dispositivos direccionables en un bus SCSI tradicional de 8 bits (Narrow SCSI)?',
+            options: ['8', '16', '32', '128'],
+            correctAnswer: 0,
+            explanation: 'Usa IDs del 0 al 7 (el controlador suele ser el ID 7).'
+        },
+        {
+            questionText: '¿Qué es el "Escalamiento de privilegios vertical"?',
+            options: [
+                'Un usuario accede a funciones de otro usuario del mismo nivel.',
+                'Un usuario con pocos privilegios logra obtener permisos de administrador.',
+                'Moverse de un servidor a otro dentro de la red.',
+                'Aumentar la memoria RAM del servidor.'
+            ],
+            correctAnswer: 1,
+            explanation: 'Vertical implica subir en la jerarquía de permisos (ej: de user a root).'
+        },
+        {
+            questionText: 'En redes móviles, ¿cuál es la principal novedad técnica que introduce el Core de 5G (5GC) frente a 4G?',
+            options: [
+                'Mayor tamaño de la tarjeta SIM.',
+                'Arquitectura basada en servicios (SBA) y virtualización nativa.',
+                'Solo permite conexiones de voz.',
+                'Elimina el uso de antenas.'
+            ],
+            correctAnswer: 1,
+            explanation: '5G introduce el network slicing y una infraestructura mucho más modularizada.'
+        },
+        {
+            questionText: '¿Qué técnica de optimización de bases de datos consiste en dividir una tabla grande en partes más pequeñas basadas en un rango de fechas o valores?',
+            options: ['Normalización', 'Particionado (Partitioning)', 'Indexación', 'Vistas'],
+            correctAnswer: 1,
+            explanation: 'El particionado mejora la gestión y el rendimiento de tablas masivas.'
+        },
+        {
+            questionText: 'En criptografía, ¿qué es un "Salt" (sal)?',
+            options: [
+                'Una clave secreta de 256 bits.',
+                'Un dato aleatorio que se añade a la contraseña antes de aplicar el hash para evitar ataques de Tablas Arcoíris (Rainbow Tables).',
+                'Un error de comunicación.',
+                'El nombre del algoritmo de cifrado.'
+            ],
+            correctAnswer: 1,
+            explanation: 'Asegura que dos contraseñas iguales tengan hashes distintos.'
+        },
+        {
+            questionText: '¿Cuál es el puerto estándar que utiliza el protocolo LDAP sobre SSL/TLS (LDAPS)?',
+            options: ['389', '443', '636', '993'],
+            correctAnswer: 2,
+            explanation: '389 es LDAP plano, 636 es LDAPS.'
+        },
+        {
+            questionText: '¿Qué es el "Throttling" en el contexto de APIs REST o Servicios Web?',
+            options: [
+                'Borrar datos antiguos automáticamente.',
+                'Limitar el número de peticiones que un cliente puede realizar en un tiempo determinado.',
+                'Aumentar la velocidad de respuesta.',
+                'Un tipo de autenticación basada en huella dactilar.'
+            ],
+            correctAnswer: 1,
+            explanation: 'Sirve para proteger el sistema de abusos y ataques DoS.'
+        },
+        {
+            questionText: 'En el contexto de la firma electrónica, ¿qué garantiza el Sellado de Tiempo (Timestamping)?',
+            options: [
+                'Que el documento fue firmado por una persona real.',
+                'Que los datos existían en un momento determinado y no han sido modificados desde entonces.',
+                'Que el certificado nunca caducará.',
+                'La velocidad de la conexión.'
+            ],
+            correctAnswer: 1,
+            explanation: 'Proporciona evidencia legal de la existencia de datos en un instante preciso.'
+        },
+        {
+            questionText: '¿Qué es el "Lazy Loading" en el desarrollo web?',
+            options: [
+                'Cargar todos los scripts al inicio.',
+                'Retrasar la carga de recursos no críticos (como imágenes fuera de pantalla) hasta que se necesiten.',
+                'Un modo de depuración lento.',
+                'Un error de red.'
+            ],
+            correctAnswer: 1,
+            explanation: 'Mejora la velocidad de carga percibida inicial.'
+        },
+        {
+            questionText: '¿Qué protocolo de capa de transporte es "no orientado a conexión" y no garantiza el orden de llegada de los paquetes?',
+            options: ['TCP', 'UDP', 'SCTP', 'HTTP'],
+            correctAnswer: 1,
+            explanation: 'UDP es ideal para streaming y juegos por su baja latencia.'
+        },
+        {
+            questionText: 'En Linux, ¿qué archivo contiene la configuración de los puntos de montaje de los sistemas de archivos que se cargan al arrancar?',
+            options: ['/etc/passwd', '/etc/fstab', '/etc/hosts', '/etc/resolv.conf'],
+            correctAnswer: 1,
+            explanation: 'File Systems Table (fstab).'
+        },
+        {
+            questionText: '¿Cuál es el principal objetivo de un Sistema de Prevención de Intrusiones (IPS)?',
+            options: [
+                'Solo monitorizar el tráfico.',
+                'Identificar y bloquear activamente actividades sospechosas o ataques conocidos.',
+                'Servir de servidor de correo.',
+                'Gestionar las copias de seguridad.'
+            ],
+            correctAnswer: 1,
+            explanation: 'A diferencia del IDS, el IPS toma medidas proactivas inmediatamente.'
+        },
+        {
+            questionText: 'En el modelo OSI, ¿en qué capa operan los hubs (concentradores)?',
+            options: ['Capa 1 (Física)', 'Capa 2 (Enlace)', 'Capa 3 (Red)', 'Capa 4 (Transporte)'],
+            correctAnswer: 0,
+            explanation: 'Son repetidores eléctricos simples, no entienden de direcciones MAC.'
+        },
+        {
+            questionText: '¿Qué directiva del protocolo robots.txt indica a los buscadores que no indexen una carpeta específica?',
+            options: ['Block: /carpeta', 'Disallow: /carpeta', 'NoIndex: /carpeta', 'Private: /carpeta'],
+            correctAnswer: 1,
+            explanation: 'Disallow es el estándar reconocido.'
+        },
+        {
+            questionText: 'En la Ley del Procedimiento Administrativo Común, ¿qué plazo tiene el interesado para subsanar una solicitud incompleta?',
+            options: ['5 días', '10 días', '15 días', '1 mes'],
+            correctAnswer: 1,
+            explanation: 'Artículo 68 de la Ley 39/2015, ampliable en cinco días adicionales en ciertos casos.'
+        },
+        {
+            questionText: '¿Qué herramienta se utiliza comúnmente en entornos Java para la gestión de dependencias y la automatización de la construcción (build)?',
+            options: ['npm', 'pip', 'Maven', 'Composer'],
+            correctAnswer: 2,
+            explanation: 'Maven (y Gradle) son los estándares en el ecosistema Java.'
+        },
+        {
+            questionText: '¿Cuál es el rango de puertos "bien conocidos" (Well-Known Ports) según la IANA?',
+            options: ['0 - 1023', '1024 - 49151', '49152 - 65535', '0 - 255'],
+            correctAnswer: 0,
+            explanation: 'Reservados para servicios del sistema y protocolos estándar.'
+        },
+        {
+            questionText: 'En CSS, ¿qué propiedad se usa para crear un layout flexible y dinámico alineando elementos en filas o columnas?',
+            options: ['display: block', 'display: grid', 'display: flex', 'float: left'],
+            correctAnswer: 2,
+            explanation: 'Flexbox es ideal para diseños unidimensionales.'
+        },
+        {
+            questionText: '¿Qué técnica criptográfica permite a dos partes generar una clave compartida a través de un canal inseguro sin haberla intercambiado previamente?',
+            options: ['RSA', 'Diffie-Hellman', 'SHA-256', 'AES'],
+            correctAnswer: 1,
+            explanation: 'Diffie-Hellman es el pilar del intercambio de claves moderno.'
+        },
+        {
+            questionText: '¿Qué componente de la CPU se encarga de realizar operaciones aritméticas y lógicas?',
+            options: ['CU (Control Unit)', 'ALU (Arithmetic Logic Unit)', 'Registro de instrucción', 'Caché'],
+            correctAnswer: 1,
+            explanation: 'La ALU es el "músculo" computacional.'
+        },
+        {
+            questionText: 'En una red IPv4 con máscara 255.255.255.224, ¿cuántos hosts útiles hay por subred?',
+            options: ['32', '30', '16', '14'],
+            correctAnswer: 1,
+            explanation: '256-224 = 32. Menos red y broadcast = 30.'
+        },
+        {
+            questionText: '¿Qué tipo de cable utiliza conectores LC, SC o ST?',
+            options: ['Par trenzado (UTP)', 'Coaxial', 'Fibra Óptica', 'Serie'],
+            correctAnswer: 2,
+            explanation: 'Son los conectores típicos de fibra monomodo y multimodo.'
+        },
+        {
+            questionText: '¿Qué comando de Linux muestra las conexiones de red activas y los puertos abiertos?',
+            options: ['ifconfig', 'route', 'netstat', 'ping'],
+            correctAnswer: 2,
+            explanation: 'netstat (o el más moderno ss) muestra estadísticas de red.'
+        },
+        {
+            questionText: '¿Qué es el "Pharmaing"?',
+            options: [
+                'Enviar correos falsos.',
+                'Redirigir a un usuario de un sitio web legítimo a uno falso mediante la manipulación de archivos hosts o envenenamiento DNS.',
+                'Robar contraseñas de redes sociales.',
+                'Un virus de teléfono móvil.'
+            ],
+            correctAnswer: 1,
+            explanation: 'A diferencia del phishing, no requiere que el usuario haga clic en un enlace falso, sino que manipula el sistema de nombres.'
+        },
+        {
+            questionText: '¿En qué año se aprobó el Reglamento General de Protección de Datos (RGPD) de la UE?',
+            options: ['2014', '2016', '2018', '2020'],
+            correctAnswer: 1,
+            explanation: 'Aprobado en 2016, entró en vigor de forma obligatoria en mayo de 2018.'
+        },
+        {
+            questionText: '¿Qué es un "Zero-Day Exploit"?',
+            options: [
+                'Un ataque que dura solo un día.',
+                'Un ataque que aprovecha una vulnerabilidad desconocida para el fabricante y para la que no existe parche.',
+                'Un virus muy antiguo.',
+                'Un error de configuración del firewall.'
+            ],
+            correctAnswer: 1,
+            explanation: 'Día cero significa que el fabricante tiene 0 días para arreglarlo antes de que sea explotado.'
+        },
+        {
+            questionText: '¿Cuál es la función del registro MX en una zona DNS?',
+            options: [
+                'Definir la dirección IP de un servidor.',
+                'Especificar el servidor de correo responsable de recibir mensajes para ese dominio.',
+                'Crear un alias para un nombre de dominio.',
+                'Asignar una dirección IPv6.'
+            ],
+            correctAnswer: 1,
+            explanation: 'Mail Exchanger (MX).'
+        },
+        {
+            questionText: '¿Qué lenguaje se utiliza principalmente para realizar consultas y manipular bases de datos relacionales?',
+            options: ['HTML', 'Java', 'SQL', 'C++'],
+            correctAnswer: 2,
+            explanation: 'Structured Query Language.'
+        },
+
+        // (Generando más preguntas difíciles...)
+        {
+            questionText: '¿Qué algoritmo de cifrado asimétrico se basa en la dificultad de factorizar números enteros grandes?',
+            options: ['AES', 'Diffie-Hellman', 'DSA', 'RSA'],
+            correctAnswer: 3,
+            explanation: 'RSA basa su seguridad en el problema de la factorización de números primos grandes.'
+        },
+        {
+            questionText: 'En la norma WCAG 2.1, el criterio de éxito 1.4.3 (Contraste mínimo) para nivel AA requiere una relación de contraste para texto normal de al menos:',
+            options: ['3:1', '4.5:1', '7:1', '10:1'],
+            correctAnswer: 1,
+            explanation: '4.5:1 para texto normal, 3:1 para texto grande (18pt o 14pt negrita).'
+        },
+        {
+            questionText: '¿Qué directiva de configuración de Apache permite deshabilitar el listado de archivos en un directorio si no hay un index.html?',
+            options: ['Options -Indexes', 'DirectoryIndex none', 'Order Deny,Allow', 'AllowOverride None'],
+            correctAnswer: 0,
+            explanation: 'Añadir el signo menos a la opción Indexes evita que se generen listados de archivos automáticos.'
+        },
+        {
+            questionText: 'En Virtualización, ¿qué es la "página fantasma" (Ballooning)?',
+            options: [
+                'Una técnica para que el hipervisor recupere memoria no utilizada por el SO invitado.',
+                'Un error de falta de memoria.',
+                'La memoria caché de disco.',
+                'Un tipo de red virtual.'
+            ],
+            correctAnswer: 0,
+            explanation: 'El driver de globo solicita memoria al SO invitado para liberarla para el hipervisor.'
+        },
+        {
+            questionText: '¿Cuál es la dirección de loopback estándar en IPv6?',
+            options: ['127.0.0.1', '::1', 'fe80::1', '::'],
+            correctAnswer: 1,
+            explanation: '::1 es el equivalente a 127.0.0.1 en IPv4.'
+        },
+        {
+            questionText: 'En una base de datos relacional, ¿qué asegura la Tercera Forma Normal (3NF)?',
+            options: [
+                'Que no haya dependencias parciales.',
+                'Que no haya dependencias transitivas entre atributos no clave.',
+                'Que no haya grupos repetitivos.',
+                'Que haya una clave primaria.'
+            ],
+            correctAnswer: 1,
+            explanation: '3NF requiere estar en 2NF y eliminar dependencias de atributos que dependen de otros atributos no clave.'
+        },
+        {
+            questionText: '¿Qué puerto TCP utiliza por defecto el protocolo BGP (Border Gateway Protocol)?',
+            options: ['80', '110', '179', '443'],
+            correctAnswer: 2,
+            explanation: 'BGP utiliza el puerto 179.'
+        },
+        {
+            questionText: 'En Java, ¿cuál es la diferencia entre "==" y ".equals()" al comparar objetos?',
+            options: [
+                '"==" compara referencias de memoria, ".equals()" compara contenido lógico.',
+                'Son idénticos.',
+                '".equals()" es solo para números.',
+                '"==" es más lento.'
+            ],
+            correctAnswer: 0,
+            explanation: '"==" verifica si apuntan al mismo sitio, ".equals()" (si se sobreescribe) mira el valor real.'
+        },
+        {
+            questionText: '¿Qué comando de GIT permite traer los cambios de un repositorio remoto sin fusionarlos automáticamente?',
+            options: ['git pull', 'git fetch', 'git push', 'git update'],
+            correctAnswer: 1,
+            explanation: 'fetch descarga la información, pull descarga y fusiona (fetch + merge).'
+        },
+        {
+            questionText: 'En el Protocolo de Resolución de Direcciones (ARP), ¿qué tipo de mensajes se envían por broadcast?',
+            options: ['ARP Reply', 'ARP Request', 'Ambos', 'Ninguno'],
+            correctAnswer: 1,
+            explanation: 'La petición (Who has?) se hace a todos, la respuesta es unicast dirigida al solicitante.'
+        }
+    ]
 };

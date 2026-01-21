@@ -3,76 +3,76 @@ import type { Test } from '../../types';
 
 export const TEST_17: Test = {
   id: 'test-17',
-  title: 'Test 17: Dº Penitenciario V (31-35)',
+  title: 'Test 17: Servidores de Aplicaciones y Web',
   questions: [
-    // Tema 31: Establecimientos
-    { 
-      questionText: 'Las Unidades de Madres están destinadas a:', 
-      options: ['Internas embarazadas', 'Internas con hijos menores de 3 años consigo', 'Visitas familiares', 'Madres de funcionarios'], 
+    // Tema: Servidores Web
+    {
+      questionText: '¿Cuál es el archivo de configuración principal de Apache?',
+      options: ['apache.conf', 'httpd.conf', 'web.xml', 'server.xml'],
       correctAnswer: 1,
-      explanation: 'El artículo 178 del Reglamento Penitenciario regula las Unidades de Madres para internas con hijos menores de tres años consigo.'
+      explanation: 'httpd.conf es el archivo principal de configuración del servidor HTTP Apache.'
     },
-    { 
-      questionText: '¿Pueden existir departamentos mixtos para hombres y mujeres?', 
-      options: ['No, la separación es absoluta', 'Sí, excepcionalmente para actividades o tratamiento específico', 'Sí, en todas las prisiones', 'Solo en régimen abierto'], 
+    {
+      questionText: '¿Qué servidor web es conocido por su arquitectura orientada a eventos y alto rendimiento?',
+      options: ['Apache', 'Nginx', 'IIS', 'Tomcat'],
       correctAnswer: 1,
-      explanation: 'El artículo 168 del Reglamento Penitenciario permite excepcionalmente la existencia de departamentos mixtos para la ejecución de programas específicos de tratamiento o actividades comunes.'
+      explanation: 'Nginx es conocido por su alto rendimiento, estabilidad y bajo consumo de recursos, usando una arquitectura asíncrona.'
     },
-    
-    // Tema 32: Ingreso
-    { 
-      questionText: 'En caso de presentación voluntaria sin orden judicial, el Director:', 
-      options: ['No puede admitirlo', 'Lo admite y recaba la orden judicial en 24 horas', 'Lo detiene', 'Llama a su familia'], 
+
+    // Tema: Servidores de Aplicaciones
+    {
+      questionText: 'Apache Tomcat es un contenedor de:',
+      options: ['EJB', 'Servlets y JSP', 'ActiveX', '.NET'],
       correctAnswer: 1,
-      explanation: 'El artículo 16 del Reglamento Penitenciario establece que en caso de presentación voluntaria, el Director recabará de la autoridad judicial el correspondiente mandamiento, procediéndose a la excarcelación si no se recibe en el plazo de 24 horas.'
+      explanation: 'Tomcat implementa las especificaciones de Jakarta Servlet, Jakarta Server Pages (JSP) y otras.'
     },
-    { 
-      questionText: 'La separación interior de los reclusos debe tener en cuenta:', 
-      options: ['El sexo, la edad y los antecedentes delictivos', 'La raza', 'La religión', 'La altura'], 
+    {
+      questionText: '¿Qué servidor de aplicaciones es de código abierto y desarrollado por Red Hat (ahora IBM)?',
+      options: ['WebLogic', 'WebSphere', 'WildFly (JBoss)', 'GlassFish'],
+      correctAnswer: 2,
+      explanation: 'WildFly (anteriormente JBoss AS) es un servidor de aplicaciones Java EE de código abierto.'
+    },
+
+    // Tema: Protocolo HTTP
+    {
+      questionText: '¿Qué método HTTP es idempotente y se usa para solicitar un recurso?',
+      options: ['POST', 'GET', 'DELETE', 'PATCH'],
+      correctAnswer: 1,
+      explanation: 'GET es idempotente (múltiples llamadas tienen el mismo efecto que una) y se usa para recuperar datos.'
+    },
+    {
+      questionText: 'El código de estado 500 indica:',
+      options: ['Not Found', 'Internal Server Error', 'Bad Request', 'Unauthorized'],
+      correctAnswer: 1,
+      explanation: '500 Internal Server Error es un error genérico del servidor.'
+    },
+
+    // Tema: Arquitectura
+    {
+      questionText: 'En una arquitectura de 3 capas, la capa de presentación suele ejecutarse en:',
+      options: ['El servidor de base de datos', 'El navegador web (cliente)', 'El servidor de aplicaciones', 'El firewall'],
+      correctAnswer: 1,
+      explanation: 'La capa de presentación (frontend) se ejecuta típicamente en el cliente (navegador).'
+    },
+    {
+      questionText: '¿Qué es el MVC?',
+      options: ['Modelo Vista Controlador', 'Máquina Virtual Central', 'Método de Validación Completa', 'Modelo de Verificación de Código'],
       correctAnswer: 0,
-      explanation: 'El artículo 16 de la LOGP establece los criterios de separación interior: hombres/mujeres, detenidos/presos/penados, jóvenes/adultos, enfermos/sanos, y primarios/reincidentes (antecedentes).'
+      explanation: 'MVC es un patrón de arquitectura de software que separa los datos, la interfaz de usuario y la lógica de control.'
     },
-    
-    // Tema 33: Clasificación
-    { 
-      questionText: 'La regresión de grado procede cuando:', 
-      options: ['El interno evoluciona positivamente', 'Se produce una evolución negativa en el pronóstico de integración', 'Lleva mucho tiempo en el mismo grado', 'Lo pide la familia'], 
+
+    // Tema: Seguridad Web
+    {
+      questionText: '¿Qué es SSL/TLS?',
+      options: ['Un lenguaje de programación', 'Protocolos criptográficos para comunicaciones seguras por red', 'Un servidor web', 'Una base de datos'],
       correctAnswer: 1,
-      explanation: 'El artículo 106 del Reglamento Penitenciario establece que procederá la regresión de grado cuando se aprecie una evolución negativa en el pronóstico de integración social y en la personalidad o conducta del interno.'
+      explanation: 'SSL (Secure Sockets Layer) y su sucesor TLS (Transport Layer Security) proporcionan seguridad en las comunicaciones.'
     },
-    { 
-      questionText: 'La Central Penitenciaria de Observación (CPO) se encarga de:', 
-      options: ['Vigilar con cámaras', 'Realizar labores de observación y clasificación de internos complejos', 'Cocinar', 'Limpiar'], 
-      correctAnswer: 1,
-      explanation: 'La Central Penitenciaria de Observación es un órgano técnico encargado de completar la labor de los Equipos Técnicos de los establecimientos en tareas de observación, clasificación y tratamiento, especialmente en casos complejos.'
-    },
-    
-    // Tema 34: Régimen Ordinario
-    { 
-      questionText: 'El horario general del centro es aprobado por:', 
-      options: ['El Director', 'El Consejo de Dirección', 'La Junta de Tratamiento', 'El Juez'], 
-      correctAnswer: 1,
-      explanation: 'El artículo 273 del Reglamento Penitenciario atribuye al Consejo de Dirección la competencia para aprobar el horario general del Centro.'
-    },
-    { 
-      questionText: 'El número de paquetes que un interno puede recibir en régimen ordinario es habitualmente:', 
-      options: ['Uno al año', 'Dos al mes', 'Diario', 'Sin límite'], 
-      correctAnswer: 1,
-      explanation: 'El artículo 51 del Reglamento Penitenciario establece que el Consejo de Dirección determinará el número de paquetes, que habitualmente es de dos al mes en régimen ordinario.'
-    },
-    
-    // Tema 35: Régimen Abierto
-    { 
-      questionText: 'Los internos en tercer grado pueden ser asignados a Unidades Dependientes, que son:', 
-      options: ['Instalaciones ubicadas fuera del recinto penitenciario, gestionadas por entidades públicas o privadas', 'Celdas de castigo', 'Hospitales', 'Comisarías'], 
+    {
+      questionText: '¿Qué es OWASP?',
+      options: ['Open Web Application Security Project', 'Online Web Access Service Provider', 'Open World Application Standard Protocol', 'Only Web App Security Policy'],
       correctAnswer: 0,
-      explanation: 'El artículo 165 del Reglamento Penitenciario define las Unidades Dependientes como instalaciones residenciales ubicadas fuera del recinto penitenciario, gestionadas por entidades públicas o privadas mediante convenio.'
-    },
-    { 
-      questionText: 'El artículo 100.2 del Reglamento Penitenciario permite:', 
-      options: ['La libertad total', 'Aplicar aspectos de un grado a internos clasificados en otro (principio de flexibilidad)', 'No trabajar', 'Salir sin permiso'], 
-      correctAnswer: 1,
-      explanation: 'El artículo 100.2 del RP consagra el principio de flexibilidad, permitiendo al Equipo Técnico proponer un modelo de ejecución en el que se combinen aspectos característicos de cada uno de los grados de clasificación.'
+      explanation: 'OWASP es una fundación sin fines de lucro que trabaja para mejorar la seguridad del software.'
     },
   ]
 };

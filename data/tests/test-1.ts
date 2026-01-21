@@ -3,76 +3,76 @@ import type { Test } from '../../types';
 
 export const TEST_1: Test = {
   id: 'test-1',
-  title: 'Test 1: Organización del Estado (Temas 1-5)',
+  title: 'Test 1: Organización y Funcionamiento de la Administración',
   questions: [
-    // Tema 1: Constitución Española
-    { 
-      questionText: 'Según el artículo 1 de la Constitución, ¿qué forma política adopta el Estado español?', 
-      options: ['República Federal', 'Monarquía Parlamentaria', 'Estado Social y Democrático', 'Monarquía Constitucional'], 
-      correctAnswer: 1,
-      explanation: 'El artículo 1.3 de la Constitución Española establece literalmente que "La forma política del Estado español es la Monarquía parlamentaria".'
-    },
-    { 
-      questionText: '¿Cuál de los siguientes NO es un valor superior del ordenamiento jurídico español?', 
-      options: ['La libertad', 'La justicia', 'La igualdad', 'La solidaridad'], 
-      correctAnswer: 3,
-      explanation: 'El artículo 1.1 de la Constitución cita como valores superiores la libertad, la justicia, la igualdad y el pluralismo político. La solidaridad es un principio constitucional (art. 2), pero no se enumera como valor superior en el art. 1.1.'
-    },
-    
-    // Tema 2: Derechos y deberes
-    { 
-      questionText: '¿Qué recurso cabe interponer ante el Tribunal Constitucional por violación de los derechos fundamentales reconocidos en los artículos 14 a 29?', 
-      options: ['Recurso de inconstitucionalidad', 'Cuestión de inconstitucionalidad', 'Recurso de amparo', 'Recurso de reforma'], 
+    // Tema: Constitución y Derechos Digitales
+    {
+      questionText: '¿Qué artículo de la Constitución Española garantiza el secreto de las comunicaciones?',
+      options: ['Artículo 18.1', 'Artículo 18.2', 'Artículo 18.3', 'Artículo 18.4'],
       correctAnswer: 2,
-      explanation: 'El artículo 53.2 de la Constitución prevé el recurso de amparo ante el Tribunal Constitucional para la tutela de las libertades y derechos reconocidos en el artículo 14 y la Sección primera del Capítulo segundo (arts. 15 a 29), así como la objeción de conciencia (art. 30).'
+      explanation: 'El artículo 18.3 garantiza el secreto de las comunicaciones y, en especial, de las postales, telegráficas y telefónicas, salvo resolución judicial.'
     },
-    { 
-      questionText: 'El Defensor del Pueblo es designado por las Cortes Generales por un periodo de:', 
-      options: ['4 años', '5 años', '6 años', '3 años'], 
-      correctAnswer: 1,
-      explanation: 'El artículo 54 de la Constitución establece que el Defensor del Pueblo es designado por las Cortes Generales por un periodo de cinco años.'
-    },
-    
-    // Tema 3: La Corona
-    { 
-      questionText: '¿A quién corresponde proponer el candidato a Presidente del Gobierno según la Constitución?', 
-      options: ['Al Rey, previa consulta con los representantes de los grupos políticos', 'Al Presidente del Congreso', 'Al Consejo de Estado', 'Al Gobierno saliente'], 
+    {
+      questionText: 'El artículo 18.4 de la Constitución establece que la ley limitará el uso de la informática para garantizar:',
+      options: ['El honor y la intimidad personal y familiar', 'La seguridad nacional', 'El desarrollo económico', 'La propiedad intelectual'],
       correctAnswer: 0,
-      explanation: 'El artículo 99.1 de la Constitución establece que el Rey, previa consulta con los representantes designados por los grupos políticos con representación parlamentaria, y a través del Presidente del Congreso, propondrá un candidato a la Presidencia del Gobierno.'
+      explanation: 'El artículo 18.4 establece que la ley limitará el uso de la informática para garantizar el honor y la intimidad personal y familiar de los ciudadanos y el pleno ejercicio de sus derechos.'
     },
-    { 
-      questionText: 'Los actos del Rey serán refrendados por el Presidente del Gobierno y, en su caso, por los Ministros competentes. De los actos del Rey serán responsables:', 
-      options: ['El propio Rey', 'Las personas que los refrenden', 'El Tribunal Supremo', 'Nadie, son actos simbólicos'], 
+
+    // Tema: Administración Electrónica
+    {
+      questionText: 'Según la Ley 40/2015, el Esquema Nacional de Interoperabilidad (ENI) tiene por objeto:',
+      options: ['Comprender el conjunto de criterios y recomendaciones en materia de seguridad', 'Comprender el conjunto de criterios y recomendaciones que deberán ser tenidos en cuenta por las Administraciones Públicas para la toma de decisiones tecnológicas', 'Regular el DNI electrónico', 'Crear la sede electrónica'],
       correctAnswer: 1,
-      explanation: 'El artículo 64 de la Constitución establece que los actos del Rey serán refrendados y de ellos serán responsables las personas que los refrenden. La persona del Rey es inviolable y no está sujeta a responsabilidad.'
+      explanation: 'El ENI comprende el conjunto de criterios y recomendaciones en materia de seguridad, conservación y normalización de la información, de los formatos y de las aplicaciones que deberán ser tenidos en cuenta por las Administraciones Públicas para la toma de decisiones tecnológicas que garanticen la interoperabilidad.'
     },
-    
-    // Tema 4: Cortes Generales y Poder Judicial
-    { 
-      questionText: 'Las Cortes Generales están formadas por:', 
-      options: ['El Congreso de los Diputados exclusivamente', 'El Congreso de los Diputados y el Senado', 'El Gobierno y el Parlamento', 'El Rey y las Cámaras'], 
+    {
+      questionText: 'La sede electrónica es aquella dirección electrónica disponible para los ciudadanos cuya titularidad corresponde a:',
+      options: ['Una empresa privada', 'Una Administración Pública', 'Cualquier ciudadano', 'Un proveedor de servicios de internet'],
       correctAnswer: 1,
-      explanation: 'El artículo 66.1 de la Constitución establece que las Cortes Generales representan al pueblo español y están formadas por el Congreso de los Diputados y el Senado.'
+      explanation: 'El artículo 38 de la Ley 40/2015 define la sede electrónica como aquella dirección electrónica, disponible para los ciudadanos a través de redes de telecomunicaciones, cuya titularidad corresponde a una Administración Pública.'
     },
-    { 
-      questionText: 'El Consejo General del Poder Judicial es el órgano de gobierno de:', 
-      options: ['Los Jueces y Magistrados', 'Los Fiscales', 'El Tribunal Constitucional', 'El Ministerio de Justicia'], 
-      correctAnswer: 0,
-      explanation: 'El artículo 122.2 de la Constitución establece que el Consejo General del Poder Judicial es el órgano de gobierno del mismo (del Poder Judicial), es decir, de los Jueces y Magistrados.'
-    },
-    
-    // Tema 5: Gobierno y Tribunal Constitucional
-    { 
-      questionText: 'El Gobierno responde solidariamente de su gestión política ante:', 
-      options: ['El Rey', 'El Congreso de los Diputados', 'El Senado', 'El Tribunal Supremo'], 
+
+    // Tema: Protección de Datos
+    {
+      questionText: '¿Quién es la autoridad de control independiente en materia de protección de datos en España?',
+      options: ['El Ministerio del Interior', 'La Agencia Española de Protección de Datos (AEPD)', 'El Defensor del Pueblo', 'El Consejo de Estado'],
       correctAnswer: 1,
-      explanation: 'El artículo 108 de la Constitución establece que el Gobierno responde solidariamente en su gestión política ante el Congreso de los Diputados.'
+      explanation: 'La Agencia Española de Protección de Datos (AEPD) es la autoridad administrativa independiente de ámbito estatal encargada de velar por el cumplimiento de la normativa sobre protección de datos.'
     },
-    { 
-      questionText: 'Los miembros del Tribunal Constitucional son nombrados por un periodo de:', 
-      options: ['4 años', '5 años', '9 años', '12 años'], 
+    {
+      questionText: 'El Delegado de Protección de Datos (DPD) es obligatorio en:',
+      options: ['Todas las empresas', 'Solo en empresas de más de 250 empleados', 'Las autoridades y organismos públicos', 'Nadie'],
       correctAnswer: 2,
-      explanation: 'El artículo 159.3 de la Constitución establece que los miembros del Tribunal Constitucional serán designados por un período de nueve años y se renovarán por terceras partes cada tres.'
+      explanation: 'El RGPD y la LOPDGDD establecen la obligatoriedad de designar un DPD en las autoridades y organismos públicos.'
+    },
+
+    // Tema: Transparencia y Buen Gobierno
+    {
+      questionText: 'La Ley 19/2013 regula:',
+      options: ['La transparencia, el acceso a la información pública y el buen gobierno', 'El procedimiento administrativo común', 'El régimen jurídico del sector público', 'La protección de datos'],
+      correctAnswer: 0,
+      explanation: 'La Ley 19/2013 tiene por objeto ampliar y reforzar la transparencia de la actividad pública, regular y garantizar el derecho de acceso a la información relativa a aquella actividad y establecer las obligaciones de buen gobierno.'
+    },
+    {
+      questionText: 'El Portal de Transparencia de la Administración General del Estado facilitará el acceso a:',
+      options: ['Toda la información de la Administración', 'La información cuyo conocimiento sea relevante para garantizar la transparencia de su actividad', 'Solo la información económica', 'Solo la información organizativa'],
+      correctAnswer: 1,
+      explanation: 'El Portal de Transparencia facilitará el acceso de los ciudadanos a toda la información a la que se refiere la Ley de Transparencia.'
+    },
+
+    // Tema: Igualdad
+    {
+      questionText: 'La Ley Orgánica 3/2007 es para:',
+      options: ['La igualdad efectiva de mujeres y hombres', 'La protección integral contra la violencia de género', 'La conciliación de la vida familiar y laboral', 'La igualdad de trato y no discriminación'],
+      correctAnswer: 0,
+      explanation: 'La Ley Orgánica 3/2007, de 22 de marzo, es para la igualdad efectiva de mujeres y hombres.'
+    },
+    {
+      questionText: 'El principio de presencia equilibrada se refiere a que las personas de cada sexo no superen el 60% ni sean menos del:',
+      options: ['20%', '30%', '40%', '50%'],
+      correctAnswer: 2,
+      explanation: 'La Ley de Igualdad define la presencia equilibrada como aquella en la que las personas de cada sexo no superen el 60% ni sean menos del 40%.'
     }
   ]
 };

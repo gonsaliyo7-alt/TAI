@@ -3,670 +3,670 @@ import type { Test } from '../../types';
 
 export const TEST_TOPIC_31: Test = {
   id: 'topic-31',
-  title: 'Tema 31: Establecimientos',
+  title: 'Tema: Administración de Sistemas Operativos',
   questions: [
-    { 
-      questionText: 'Los Centros de Inserción Social son establecimientos de régimen:', 
-      options: ['Cerrado', 'Abierto', 'Ordinario', 'Preventivo'], 
+    {
+      questionText: 'En un sistema Linux, ¿qué archivo contiene la información sobre los usuarios del sistema?',
+      options: ['/etc/pass', '/etc/shadow', '/etc/passwd', '/etc/users'],
+      correctAnswer: 2,
+      explanation: 'El archivo /etc/passwd contiene la información básica de las cuentas de usuario. Las contraseñas cifradas suelen estar en /etc/shadow.'
+    },
+    {
+      questionText: '¿Qué comando de Windows se utiliza para mostrar la configuración IP detallada?',
+      options: ['ifconfig', 'ipconfig /all', 'ping', 'tracert'],
       correctAnswer: 1,
-      explanation: 'El artículo 163 del Reglamento Penitenciario define los Centros de Inserción Social como establecimientos de régimen abierto.'
+      explanation: 'El comando "ipconfig /all" muestra toda la información de configuración de la red, incluyendo dirección IP, máscara, puerta de enlace y DNS.'
     },
-    { 
-      questionText: 'Las Unidades Psiquiátricas Penitenciarias son establecimientos:', 
-      options: ['De cumplimiento', 'Especiales', 'De preventivos', 'De ocio'], 
+    {
+      questionText: 'En Linux, ¿qué permiso octal corresponde a lectura y ejecución para el propietario?',
+      options: ['5', '6', '7', '3'],
+      correctAnswer: 0,
+      explanation: 'Lectura es 4, Escritura es 2, Ejecución es 1. Lectura (4) + Ejecución (1) = 5.'
+    },
+    {
+      questionText: '¿Qué es el Registro de Windows?',
+      options: ['Una base de datos jerárquica que almacena la configuración del sistema', 'Un log de eventos', 'La carpeta de Archivos de Programa', 'El administrador de tareas'],
+      correctAnswer: 0,
+      explanation: 'El Registro es una base de datos centralizada y jerárquica utilizada en Windows para almacenar información necesaria para configurar el sistema.'
+    },
+    {
+      questionText: '¿Qué sistema de archivos es el predeterminado en las versiones modernas de Windows?',
+      options: ['FAT32', 'EXT4', 'NTFS', 'HFS+'],
+      correctAnswer: 2,
+      explanation: 'NTFS (New Technology File System) es el sistema de archivos estándar de Windows NT, incluyendo sus versiones posteriores como Windows 10 y 11.'
+    },
+    {
+      questionText: '¿Qué comando se usa en Linux para cambiar el propietario de un archivo?',
+      options: ['chmod', 'chown', 'chgrp', 'umask'],
       correctAnswer: 1,
-      explanation: 'El artículo 11 de la LOGP clasifica los establecimientos en: de preventivos, de cumplimiento y especiales (entre los que se incluyen los psiquiátricos).'
+      explanation: 'El comando "chown" (change owner) se utiliza para cambiar el propietario de un archivo o directorio.'
     },
-    { 
-      questionText: 'El aforo de las celdas, según la LOGP, debe ser preferentemente:', 
-      options: ['Individual', 'Doble', 'Cuádruple', 'Colectivo'], 
-      correctAnswer: 0,
-      explanation: 'El artículo 19 de la LOGP establece el principio celular, disponiendo que cada interno se alojará en una celda individual.'
+    {
+      questionText: '¿Qué es Active Directory?',
+      options: ['Un antivirus', 'Un servicio de directorio para redes Windows', 'Un protocolo de correo', 'Un navegador web'],
+      correctAnswer: 1,
+      explanation: 'Active Directory (AD) es un servicio de directorio desarrollado por Microsoft para redes de dominio Windows.'
     },
-    { 
-      questionText: 'Los establecimientos de preventivos sirven para:', 
-      options: ['La retención y custodia de detenidos y presos', 'Cumplir penas largas', 'Tratamiento', 'Vacaciones'], 
-      correctAnswer: 0,
-      explanation: 'El artículo 8 de la LOGP establece que los establecimientos de preventivos están destinados a la retención y custodia de detenidos y presos.'
+    {
+      questionText: 'En Linux, ¿qué hace el comando "grep"?',
+      options: ['Borra archivos', 'Busca patrones de texto dentro de archivos', 'Copia archivos', 'Mueve archivos'],
+      correctAnswer: 1,
+      explanation: '"grep" es una utilidad de línea de comandos para buscar conjuntos de datos de texto plano que coincidan con una expresión regular.'
     },
-    { 
-      questionText: 'Los Centros Penitenciarios pueden ser:', 
-      options: ['Preventivos, Cumplimiento y Especiales', 'Rojos y Azules', 'Grandes y Pequeños', 'Nacionales y Locales'], 
-      correctAnswer: 0,
-      explanation: 'El artículo 7 de la LOGP clasifica los establecimientos penitenciarios en tres tipos: de preventivos, de cumplimiento de penas y especiales.'
+    {
+      questionText: '¿Qué es PowerShell?',
+      options: ['Un programa de dibujo', 'Una interfaz de línea de comandos y lenguaje de scripting de Microsoft', 'Un juego', 'Un editor de texto'],
+      correctAnswer: 1,
+      explanation: 'PowerShell es un marco de automatización de tareas y gestión de configuración de Microsoft, que consiste en un shell de línea de comandos y un lenguaje de scripting.'
     },
-    { 
-      questionText: 'Los Departamentos de Régimen Cerrado se ubican en:', 
-      options: ['Centros de cumplimiento (o preventivos)', 'Hoteles', 'Comisarías', 'Juzgados'], 
-      correctAnswer: 0,
-      explanation: 'El artículo 10 de la LOGP establece que los departamentos de régimen cerrado pueden ubicarse en los centros de cumplimiento (y también en preventivos según el RP).'
-    },
-    { 
-      questionText: 'Las Unidades de Madres son para:', 
-      options: ['Madres con hijos menores de 3 años', 'Embarazadas solo', 'Madres solas', 'Visitas'], 
-      correctAnswer: 0,
-      explanation: 'El artículo 178 del Reglamento Penitenciario regula las Unidades de Madres para internas con hijos menores de tres años consigo.'
-    },
-    { 
-      questionText: 'Los Departamentos Mixtos:', 
-      options: ['Pueden existir excepcionalmente', 'Están prohibidos', 'Son la norma', 'No existen'], 
-      correctAnswer: 0,
-      explanation: 'El artículo 173 del Reglamento Penitenciario permite excepcionalmente la existencia de departamentos mixtos para la ejecución de programas específicos.'
-    },
-    { 
-      questionText: 'El patio es un elemento:', 
-      options: ['Obligatorio en cada departamento', 'Opcional', 'Prohibido', 'Decorativo'], 
-      correctAnswer: 0,
-      explanation: 'El artículo 13 de la LOGP establece que los establecimientos deberán contar con patios para la permanencia de los internos al aire libre.'
-    },
-    { 
-      questionText: 'La seguridad interior corresponde a:', 
-      options: ['Funcionarios de II.PP.', 'Guardia Civil', 'Policía Local', 'Ejército'], 
-      correctAnswer: 0,
-      explanation: 'El artículo 280 del Reglamento Penitenciario establece que la seguridad interior corresponde a los funcionarios de Instituciones Penitenciarias.'
+    {
+      questionText: '¿Qué es un proceso "zombie" en Unix/Linux?',
+      options: ['Un proceso que consume mucha CPU', 'Un proceso que ha completado su ejecución pero aún tiene una entrada en la tabla de procesos', 'Un virus', 'Un proceso del sistema'],
+      correctAnswer: 1,
+      explanation: 'Un proceso zombie es aquel que ha terminado su ejecución pero su padre aún no ha leído su estado de salida, por lo que permanece en la tabla de procesos.'
     }
   ]
 };
 
 export const TEST_TOPIC_32: Test = {
   id: 'topic-32',
-  title: 'Tema 32: Ingreso y Libertad',
+  title: 'Tema: Redes y Modelo OSI',
   questions: [
-    { 
-      questionText: 'Tras el ingreso, el interno pasa al departamento de:', 
-      options: ['Aislamiento', 'Ingresos', 'Enfermería', 'Talleres'], 
+    {
+      questionText: '¿Cuántas capas tiene el modelo OSI?',
+      options: ['4', '5', '6', '7'],
       correctAnswer: 1,
-      explanation: 'El artículo 15 del Reglamento Penitenciario establece que el interno ingresado pasará al Departamento de Ingresos.'
+      explanation: 'El modelo OSI (Open Systems Interconnection) tiene 7 capas: Física, Enlace, Red, Transporte, Sesión, Presentación y Aplicación.'
     },
-    { 
-      questionText: 'El plazo máximo para que el médico reconozca al interno tras su ingreso es:', 
-      options: ['24 horas', '48 horas', '72 horas', '1 semana'], 
-      correctAnswer: 0,
-      explanation: 'El artículo 20 del Reglamento Penitenciario establece que el interno será reconocido por el médico dentro de las 24 horas siguientes a su ingreso.'
+    {
+      questionText: '¿En qué capa del modelo OSI funciona un Router?',
+      options: ['Capa 1 (Física)', 'Capa 2 (Enlace)', 'Capa 3 (Red)', 'Capa 4 (Transporte)'],
+      correctAnswer: 2,
+      explanation: 'Los routers operan principalmente en la Capa 3 (Red), utilizando direcciones IP para encaminar paquetes.'
     },
-    { 
-      questionText: 'La libertad definitiva debe ser aprobada por:', 
-      options: ['El Director (conforme a la liquidación de condena aprobada por el Tribunal)', 'El Funcionario', 'El Abogado', 'El Médico'], 
-      correctAnswer: 0,
-      explanation: 'El artículo 22 del Reglamento Penitenciario establece que la libertad definitiva de los penados será acordada por el Director del establecimiento, de conformidad con la liquidación de condena aprobada por el Tribunal Sentenciador.'
+    {
+      questionText: '¿Qué protocolo se utiliza para la resolución de direcciones MAC a partir de direcciones IP?',
+      options: ['DNS', 'DHCP', 'ARP', 'RARP'],
+      correctAnswer: 2,
+      explanation: 'ARP (Address Resolution Protocol) se utiliza para encontrar la dirección física (MAC) asociada a una dirección IP conocida.'
     },
-    { 
-      questionText: 'El ingreso requiere mandamiento de:', 
-      options: ['Autoridad Judicial', 'Policía', 'Abogado', 'Alcalde'], 
-      correctAnswer: 0,
-      explanation: 'El artículo 15 del Reglamento Penitenciario establece que el ingreso de un detenido, preso o penado requerirá mandamiento de la Autoridad Judicial (o presentación voluntaria/detención policial en supuestos específicos).'
+    {
+      questionText: '¿Cuál es la PDU (Unidad de Datos de Protocolo) de la capa de Transporte?',
+      options: ['Bit', 'Trama', 'Paquete', 'Segmento'],
+      correctAnswer: 3,
+      explanation: 'En la capa de Transporte, la unidad de datos se denomina Segmento (TCP) o Datagrama (UDP).'
     },
-    { 
-      questionText: 'En caso de presentación voluntaria:', 
-      options: ['Se admite y se comunica al Juez (plazo 24h para orden)', 'Se rechaza', 'Se detiene', 'Se ignora'], 
-      correctAnswer: 0,
-      explanation: 'El artículo 16 del Reglamento Penitenciario regula la presentación voluntaria, debiendo comunicarse a la autoridad judicial, quien deberá ordenar el ingreso o libertad en 24 horas.'
+    {
+      questionText: '¿Qué puerto utiliza por defecto el protocolo HTTPS?',
+      options: ['80', '8080', '443', '21'],
+      correctAnswer: 2,
+      explanation: 'HTTPS (Hypertext Transfer Protocol Secure) utiliza por defecto el puerto 443.'
     },
-    { 
-      questionText: 'Al ingresar se abre un:', 
-      options: ['Expediente personal', 'Blog', 'Juicio', 'Negocio'], 
-      correctAnswer: 0,
-      explanation: 'El artículo 15 del Reglamento Penitenciario establece la apertura de un expediente personal relativo a la situación procesal y penitenciaria de cada interno.'
+    {
+      questionText: '¿Qué es una dirección IP privada de clase C?',
+      options: ['10.0.0.1', '172.16.0.1', '192.168.1.1', '8.8.8.8'],
+      correctAnswer: 2,
+      explanation: 'El rango 192.168.0.0 a 192.168.255.255 está reservado para redes privadas de Clase C.'
     },
-    { 
-      questionText: 'Los objetos de valor se:', 
-      options: ['Retiran y guardan a buen recaudo (o entregan a familia)', 'Tiran', 'Venden', 'Regalan'], 
-      correctAnswer: 0,
-      explanation: 'El artículo 315 del Reglamento Penitenciario establece que los objetos de valor serán retirados y custodiados por la Administración o entregados a la persona que el interno designe.'
+    {
+      questionText: '¿Qué protocolo se utiliza para enviar correos electrónicos?',
+      options: ['POP3', 'IMAP', 'SMTP', 'HTTP'],
+      correctAnswer: 2,
+      explanation: 'SMTP (Simple Mail Transfer Protocol) es el protocolo estándar para el envío de correo electrónico.'
     },
-    { 
-      questionText: 'El interno tiene derecho a realizar una llamada al ingresar:', 
-      options: ['Sí', 'No', 'Solo si paga', 'A la policía'], 
-      correctAnswer: 0,
-      explanation: 'El artículo 41.3 del Reglamento Penitenciario reconoce el derecho del interno a comunicar su ingreso a su familia y abogado.'
+    {
+      questionText: '¿Qué dispositivo trabaja en la Capa 2 (Enlace) y utiliza direcciones MAC para filtrar tráfico?',
+      options: ['Hub', 'Switch', 'Router', 'Repeater'],
+      correctAnswer: 1,
+      explanation: 'Un Switch (conmutador) opera en la capa de enlace de datos y utiliza direcciones MAC para enviar tramas al puerto correcto.'
     },
-    { 
-      questionText: 'La libertad por cumplimiento se notifica al:', 
-      options: ['Tribunal Sentenciador', 'Rey', 'Vecino', 'Portero'], 
+    {
+      questionText: '¿Qué es el DNS?',
+      options: ['Domain Name System', 'Data Network Service', 'Digital Name Server', 'Dynamic Network System'],
       correctAnswer: 0,
-      explanation: 'El artículo 22 del Reglamento Penitenciario establece que la excarcelación se notificará al Tribunal Sentenciador.'
+      explanation: 'DNS (Domain Name System) es el sistema que traduce nombres de dominio legibles por humanos a direcciones IP numéricas.'
     },
-    { 
-      questionText: 'La excarcelación de un preventivo la ordena:', 
-      options: ['La Autoridad Judicial a cuya disposición esté', 'El Director', 'El Ministro', 'La Policía'], 
+    {
+      questionText: '¿Qué es una VLAN?',
+      options: ['Una red de área local virtual', 'Una red muy larga', 'Una red de vídeo', 'Una red de voz'],
       correctAnswer: 0,
-      explanation: 'El artículo 21 del Reglamento Penitenciario establece que la libertad de los detenidos y presos será ordenada por la Autoridad Judicial de quien dependan.'
+      explanation: 'Una VLAN (Virtual LAN) es una red de área local lógica que agrupa dispositivos independientemente de su ubicación física.'
     }
   ]
 };
 
 export const TEST_TOPIC_33: Test = {
   id: 'topic-33',
-  title: 'Tema 33: Clasificación',
+  title: 'Tema: Seguridad Informática',
   questions: [
-    { 
-      questionText: 'La Junta de Tratamiento debe revisar la clasificación de los penados cada:', 
-      options: ['3 meses máx (grados 1º y 2º) o 6 meses', '6 meses máx', '1 año', 'Nunca'], 
+    {
+      questionText: '¿Qué es la tríada CIA en seguridad de la información?',
+      options: ['Confidencialidad, Integridad, Disponibilidad', 'Control, Inteligencia, Autenticación', 'Certificación, Identidad, Acceso', 'Complejidad, Integración, Análisis'],
+      correctAnswer: 0,
+      explanation: 'La tríada CIA (Confidentiality, Integrity, Availability) son los tres pilares fundamentales de la seguridad de la información.'
+    },
+    {
+      questionText: '¿Qué tipo de ataque intenta adivinar una contraseña probando todas las combinaciones posibles?',
+      options: ['Ataque de diccionario', 'Ataque de fuerza bruta', 'Phishing', 'SQL Injection'],
       correctAnswer: 1,
-      explanation: 'El artículo 105 del Reglamento Penitenciario establece que la clasificación se revisará cada seis meses como máximo.'
+      explanation: 'Un ataque de fuerza bruta consiste en probar sistemáticamente todas las posibles combinaciones de caracteres hasta encontrar la contraseña correcta.'
     },
-    { 
-      questionText: 'El principio de flexibilidad (art 100.2 RP) necesita aprobación del:', 
-      options: ['Director', 'Juez de Vigilancia Penitenciaria', 'Ministro', 'Jefe de Servicios'], 
+    {
+      questionText: '¿Qué es un ataque DDoS?',
+      options: ['Distributed Denial of Service', 'Direct Data on Server', 'Dynamic Domain System', 'Double Data Security'],
+      correctAnswer: 0,
+      explanation: 'Un ataque DDoS (Denegación de Servicio Distribuido) intenta hacer que un servicio no esté disponible abrumándolo con tráfico desde múltiples fuentes.'
+    },
+    {
+      questionText: '¿Qué es el ENS?',
+      options: ['Esquema Nacional de Seguridad', 'Estándar Nacional de Software', 'Entidad Nacional de Sistemas', 'Equipo Nacional de Soporte'],
+      correctAnswer: 0,
+      explanation: 'El Esquema Nacional de Seguridad (ENS) establece los principios y requisitos de seguridad para la protección de la información en el sector público español.'
+    },
+    {
+      questionText: '¿Qué es un certificado digital?',
+      options: ['Un documento en papel', 'Un fichero informático que asocia unos datos de identidad a una persona física, organismo o empresa', 'Una contraseña', 'Un antivirus'],
       correctAnswer: 1,
-      explanation: 'El artículo 100.2 del Reglamento Penitenciario establece que la aplicación del principio de flexibilidad requerirá la aprobación del Juez de Vigilancia.'
+      explanation: 'Un certificado digital es un documento electrónico que vincula una clave pública con la identidad de su propietario, firmado por una Autoridad de Certificación.'
     },
-    { 
-      questionText: 'Los preventivos:', 
-      options: ['Se clasifican en primer grado', 'No se clasifican', 'Se clasifican en segundo grado', 'Se clasifican en tercer grado'], 
+    {
+      questionText: '¿Qué es el malware?',
+      options: ['Hardware defectuoso', 'Software malicioso', 'Un tipo de red', 'Un sistema operativo'],
       correctAnswer: 1,
-      explanation: 'El artículo 10 del Reglamento Penitenciario establece que los detenidos y presos (preventivos) no serán objeto de clasificación.'
+      explanation: 'Malware (malicious software) es cualquier software diseñado intencionalmente para causar daño a un ordenador, servidor, cliente o red informática.'
     },
-    { 
-      questionText: 'El tercer grado corresponde al régimen:', 
-      options: ['Abierto', 'Ordinario', 'Cerrado', 'Preventivo'], 
-      correctAnswer: 0,
-      explanation: 'El artículo 72 de la LOGP vincula el tercer grado de tratamiento con el régimen abierto.'
+    {
+      questionText: '¿Qué es la ingeniería social en seguridad?',
+      options: ['Construir edificios seguros', 'Manipular a las personas para que revelen información confidencial', 'Programar en redes sociales', 'Diseñar redes seguras'],
+      correctAnswer: 1,
+      explanation: 'La ingeniería social es el arte de manipular a las personas para que eludan los sistemas de seguridad o revelen información confidencial.'
     },
-    { 
-      questionText: 'El primer grado corresponde al régimen:', 
-      options: ['Cerrado', 'Abierto', 'Ordinario', 'Libertad'], 
+    {
+      questionText: '¿Qué es un Firewall de capa de aplicación (WAF)?',
+      options: ['Un cortafuegos que protege aplicaciones web filtrando y monitoreando el tráfico HTTP', 'Un antivirus', 'Un router', 'Un switch'],
       correctAnswer: 0,
-      explanation: 'El artículo 72 de la LOGP vincula el primer grado de tratamiento con el régimen cerrado.'
+      explanation: 'Un WAF (Web Application Firewall) protege las aplicaciones web de ataques como SQL injection, XSS, etc.'
     },
-    { 
-      questionText: 'La clasificación inicial se hace en un plazo de:', 
-      options: ['2 meses desde recepción testimonio sentencia', '6 meses', '1 mes', '15 días'], 
+    {
+      questionText: '¿Qué significa VPN?',
+      options: ['Virtual Private Network', 'Very Private Network', 'Visual Public Network', 'Virtual Public Node'],
       correctAnswer: 0,
-      explanation: 'El artículo 103 del Reglamento Penitenciario establece que la propuesta de clasificación inicial se formulará en el plazo máximo de dos meses desde la recepción del testimonio de la sentencia.'
+      explanation: 'VPN (Virtual Private Network) es una tecnología de red que crea una conexión segura y cifrada sobre una red menos segura, como Internet.'
     },
-    { 
-      questionText: 'El periodo de seguridad impide el tercer grado hasta cumplir la mitad de la condena en penas superiores a:', 
-      options: ['5 años', '3 años', '1 año', '10 años'], 
-      correctAnswer: 0,
-      explanation: 'El artículo 36.2 del Código Penal establece el periodo de seguridad para penas de prisión superiores a cinco años.'
-    },
-    { 
-      questionText: 'La regresión de grado la acuerda:', 
-      options: ['La Secretaría General (tras propuesta Junta)', 'El Director', 'El Juez', 'El Funcionario'], 
-      correctAnswer: 0,
-      explanation: 'El artículo 106 del Reglamento Penitenciario establece que la resolución sobre regresión de grado corresponde al Centro Directivo.'
-    },
-    { 
-      questionText: 'La Central Penitenciaria de Observación asesora sobre:', 
-      options: ['Clasificación y tratamiento', 'Seguridad', 'Obras', 'Comida'], 
-      correctAnswer: 0,
-      explanation: 'El artículo 70 de la LOGP atribuye a la Central Penitenciaria de Observación funciones de asesoramiento en materia de observación, clasificación y tratamiento.'
-    },
-    { 
-      questionText: '¿Es recurrible la clasificación?', 
-      options: ['Sí, ante el JVP', 'No', 'Solo ante el Director', 'Ante el Rey'], 
-      correctAnswer: 0,
-      explanation: 'El artículo 76 de la LOGP establece que los internos pueden recurrir su clasificación ante el Juez de Vigilancia Penitenciaria.'
+    {
+      questionText: '¿Qué es la autenticación de doble factor (2FA)?',
+      options: ['Usar dos contraseñas iguales', 'Un método que requiere dos formas diferentes de identificación para acceder', 'Entrar dos veces', 'Tener dos cuentas'],
+      correctAnswer: 1,
+      explanation: '2FA añade una capa extra de seguridad al requerir no solo la contraseña y el nombre de usuario, sino también algo que solo el usuario tiene (ej. código SMS).'
     }
   ]
 };
 
 export const TEST_TOPIC_34: Test = {
   id: 'topic-34',
-  title: 'Tema 34: Régimen Ordinario',
+  title: 'Tema: Internet y Servicios',
   questions: [
-    { 
-      questionText: 'El régimen ordinario se aplica a:', 
-      options: ['Penados de 2º grado, preventivos y penados sin clasificar', 'Solo 3º grado', 'Solo 1º grado', 'Menores'], 
-      correctAnswer: 0,
-      explanation: 'El artículo 76 del Reglamento Penitenciario establece que el régimen ordinario se aplicará a los penados clasificados en segundo grado, a los penados sin clasificar y a los detenidos y presos.'
-    },
-    { 
-      questionText: 'Los cacheos con desnudo integral deben ser autorizados por:', 
-      options: ['El funcionario', 'El Jefe de Servicios (y comunicados al Director)', 'El Juez', 'El Médico'], 
+    {
+      questionText: '¿Qué protocolo se utiliza para la transferencia de archivos?',
+      options: ['HTTP', 'FTP', 'SMTP', 'DNS'],
       correctAnswer: 1,
-      explanation: 'El artículo 68 del Reglamento Penitenciario establece que el cacheo con desnudo integral deberá ser autorizado por el Jefe de Servicios y comunicado al Director.'
+      explanation: 'FTP (File Transfer Protocol) es el protocolo estándar para la transferencia de archivos entre cliente y servidor.'
     },
-    { 
-      questionText: 'Las puertas de las celdas durante el día permanecerán:', 
-      options: ['Siempre cerradas', 'Abiertas o cerradas según el horario y actividades', 'Entornadas', 'Bloqueadas'], 
+    {
+      questionText: '¿Qué es la World Wide Web (WWW)?',
+      options: ['Internet', 'Un sistema de distribución de documentos de hipertexto accesibles vía Internet', 'Un navegador', 'Un buscador'],
       correctAnswer: 1,
-      explanation: 'El artículo 77 del Reglamento Penitenciario regula la apertura y cierre de celdas, permitiendo que permanezcan abiertas o cerradas en función de las actividades y necesidades del servicio.'
+      explanation: 'La WWW es un sistema de información donde los documentos y otros recursos web se identifican mediante URLs y son accesibles a través de Internet.'
     },
-    { 
-      questionText: 'El recuento ordinario se hace:', 
-      options: ['Al levantarse, acostarse y relevos', 'Solo de noche', 'Una vez', 'Nunca'], 
+    {
+      questionText: '¿Qué es HTML?',
+      options: ['HyperText Markup Language', 'High Tech Modern Language', 'Hyper Transfer Main Link', 'Home Tool Markup Language'],
       correctAnswer: 0,
-      explanation: 'El artículo 78 del Reglamento Penitenciario establece que los recuentos ordinarios se efectuarán al levantarse, al acostarse y en los relevos de servicio.'
+      explanation: 'HTML es el lenguaje de marcado estándar para crear páginas web.'
     },
-    { 
-      questionText: 'Las visitas de familiares en locutorios duran:', 
-      options: ['20 minutos', '40 minutos al menos', '1 hora', '2 horas'], 
+    {
+      questionText: '¿Qué es una URL?',
+      options: ['Uniform Resource Locator', 'Universal Resource Link', 'Unified Real Location', 'Ultra Rapid Link'],
       correctAnswer: 0,
-      explanation: 'El artículo 42 del Reglamento Penitenciario establece una duración mínima de 20 minutos para las comunicaciones orales, aunque suelen acumularse.'
+      explanation: 'URL (Localizador Uniforme de Recursos) es la dirección única que identifica un recurso en Internet.'
     },
-    { 
-      questionText: 'Los vis a vis íntimos se conceden:', 
-      options: ['Al menos una vez al mes', 'Diariamente', 'Anualmente', 'Nunca'], 
-      correctAnswer: 0,
-      explanation: 'El artículo 45 del Reglamento Penitenciario establece que se concederá una comunicación íntima al mes como mínimo.'
-    },
-    { 
-      questionText: 'Los internos pueden recibir paquetes:', 
-      options: ['Libremente', 'Con las limitaciones reglamentarias (número y peso)', 'Prohibido', 'Solo comida'], 
+    {
+      questionText: '¿Qué es una Cookie en el contexto web?',
+      options: ['Una galleta', 'Un pequeño archivo de texto que un sitio web guarda en el navegador del usuario', 'Un virus', 'Un programa'],
       correctAnswer: 1,
-      explanation: 'El artículo 50 del Reglamento Penitenciario regula la recepción de paquetes, estableciendo limitaciones en cuanto a número, peso y contenido.'
+      explanation: 'Las cookies se utilizan para recordar información sobre el usuario, como preferencias o estado de sesión.'
     },
-    { 
-      questionText: 'El horario es aprobado por:', 
-      options: ['Consejo de Dirección', 'Junta de Tratamiento', 'Director', 'Juez'], 
+    {
+      questionText: '¿Qué es el Cloud Computing?',
+      options: ['Computación en la nube', 'Computación en casa', 'Computación bajo tierra', 'Computación sin cables'],
       correctAnswer: 0,
-      explanation: 'El artículo 277 del Reglamento Penitenciario atribuye al Consejo de Dirección la competencia para aprobar los horarios del Centro.'
+      explanation: 'Cloud Computing es la entrega de servicios informáticos (servidores, almacenamiento, bases de datos, etc.) a través de Internet.'
     },
-    { 
-      questionText: 'Los medios coercitivos se usan:', 
-      options: ['Como castigo', 'Para restablecer la normalidad, evitar fugas o daños', 'Por diversión', 'Siempre'], 
+    {
+      questionText: '¿Qué modelo de servicio en la nube ofrece infraestructura como servicio?',
+      options: ['SaaS', 'PaaS', 'IaaS', 'DaaS'],
+      correctAnswer: 2,
+      explanation: 'IaaS (Infrastructure as a Service) proporciona recursos informáticos virtualizados a través de Internet.'
+    },
+    {
+      questionText: '¿Qué es el IoT?',
+      options: ['Internet of Things (Internet de las Cosas)', 'Input of Text', 'Internal office Technology', 'International open Trade'],
+      correctAnswer: 0,
+      explanation: 'IoT se refiere a la red de objetos físicos ("cosas") que llevan incorporados sensores, software y otras tecnologías para conectar e intercambiar datos.'
+    },
+    {
+      questionText: '¿Qué es el Big Data?',
+      options: ['Un disco duro grande', 'Conjuntos de datos tan grandes y complejos que requieren aplicaciones informáticas no tradicionales para su procesamiento', 'Una base de datos pequeña', 'Un virus grande'],
       correctAnswer: 1,
-      explanation: 'El artículo 45 de la LOGP y el 72 del RP establecen que los medios coercitivos solo se usarán para restablecer la normalidad, evitar fugas o daños, y nunca como sanción.'
+      explanation: 'Big Data hace referencia a cantidades masivas de datos que pueden ser analizados para obtener información valiosa.'
     },
-    { 
-      questionText: 'El uso de esposas es un medio:', 
-      options: ['Coercitivo', 'Disciplinario', 'De tratamiento', 'Educativo'], 
-      correctAnswer: 0,
-      explanation: 'El artículo 72 del Reglamento Penitenciario enumera las esposas entre los medios coercitivos autorizados.'
+    {
+      questionText: '¿Qué es la Web 2.0?',
+      options: ['La segunda versión de Internet', 'La web social y colaborativa', 'Una web más rápida', 'Una web de pago'],
+      correctAnswer: 1,
+      explanation: 'La Web 2.0 se refiere a los sitios web que enfatizan el contenido generado por el usuario, la usabilidad y la interoperabilidad (ej. redes sociales, wikis).'
     }
   ]
 };
 
 export const TEST_TOPIC_35: Test = {
   id: 'topic-35',
-  title: 'Tema 35: Régimen Abierto',
+  title: 'Tema: Desarrollo de Aplicaciones',
   questions: [
-    { 
-      questionText: 'El objetivo del régimen abierto es:', 
-      options: ['El castigo', 'Potenciar las capacidades de inserción social en semilibertad', 'La vigilancia extrema', 'El trabajo forzado'], 
+    {
+      questionText: '¿Qué es el ciclo de vida del software?',
+      options: ['El tiempo que dura un programa', 'Las fases por las que pasa el software desde su concepción hasta su retirada', 'La vida del programador', 'El tiempo de compilación'],
       correctAnswer: 1,
-      explanation: 'El artículo 80 del Reglamento Penitenciario establece que el régimen abierto tiene por objeto potenciar las capacidades de inserción social de los penados en situación de semilibertad.'
+      explanation: 'El ciclo de vida del desarrollo de software (SDLC) describe las etapas de planificación, creación, prueba y despliegue de un sistema de información.'
     },
-    { 
-      questionText: 'La modalidad de vida en régimen abierto que permite no pernoctar en el centro es:', 
-      options: ['Control telemático (art 86.4)', 'Tercer grado pleno', 'Restringido', 'Ninguna'], 
+    {
+      questionText: '¿Qué es el control de versiones?',
+      options: ['Un antivirus', 'Un sistema que registra los cambios en un archivo o conjunto de archivos a lo largo del tiempo', 'Un control parental', 'Un sistema de copias de seguridad'],
+      correctAnswer: 1,
+      explanation: 'El control de versiones (como Git) permite gestionar los cambios en el código fuente y coordinar el trabajo de varios desarrolladores.'
+    },
+    {
+      questionText: '¿Qué es Git?',
+      options: ['Un lenguaje de programación', 'Un sistema de control de versiones distribuido', 'Un editor de texto', 'Un sistema operativo'],
+      correctAnswer: 1,
+      explanation: 'Git es el sistema de control de versiones más utilizado en el desarrollo de software moderno.'
+    },
+    {
+      questionText: '¿Qué es un Bug?',
+      options: ['Un insecto', 'Un error o fallo en un programa informático', 'Una característica nueva', 'Un virus'],
+      correctAnswer: 1,
+      explanation: 'Un bug es un error en el software que produce un resultado incorrecto o inesperado.'
+    },
+    {
+      questionText: '¿Qué es la programación estructurada?',
+      options: ['Programar con estructuras', 'Un paradigma de programación orientado a mejorar la claridad y calidad del código', 'Programar rápido', 'Programar sin errores'],
+      correctAnswer: 1,
+      explanation: 'La programación estructurada utiliza subrutinas, estructuras de bloques, bucles y condicionales para mejorar la legibilidad.'
+    },
+    {
+      questionText: '¿Qué es una API?',
+      options: ['Application Programming Interface', 'Application Public Internet', 'Advanced Program Input', 'Automated Process Integration'],
       correctAnswer: 0,
-      explanation: 'El artículo 86.4 del Reglamento Penitenciario regula la modalidad de cumplimiento mediante control telemático, sin necesidad de pernoctar en el centro.'
+      explanation: 'Una API (Interfaz de Programación de Aplicaciones) permite que dos aplicaciones se comuniquen entre sí.'
     },
-    { 
-      questionText: 'Las salidas de fin de semana son propias del régimen:', 
-      options: ['Cerrado', 'Ordinario', 'Abierto', 'Preventivo'], 
-      correctAnswer: 2,
-      explanation: 'El artículo 87 del Reglamento Penitenciario regula las salidas de fin de semana como características del régimen abierto.'
+    {
+      questionText: '¿Qué es el código fuente?',
+      options: ['El código binario', 'El conjunto de instrucciones escritas por un programador en un lenguaje de programación', 'El código de barras', 'El código postal'],
+      correctAnswer: 1,
+      explanation: 'El código fuente es el texto legible por humanos que compone un programa informático antes de ser compilado o interpretado.'
     },
-    { 
-      questionText: 'El régimen abierto se aplica a internos en:', 
-      options: ['Tercer grado', 'Segundo grado', 'Primer grado', 'Preventivos'], 
+    {
+      questionText: '¿Qué es un algoritmo?',
+      options: ['Un logaritmo', 'Un conjunto ordenado de operaciones sistemáticas que permite hacer un cálculo y hallar la solución de un tipo de problemas', 'Un programa', 'Un ordenador'],
+      correctAnswer: 1,
+      explanation: 'Un algoritmo es una secuencia de pasos lógicos para resolver un problema.'
+    },
+    {
+      questionText: '¿Qué es la depuración (debugging)?',
+      options: ['Limpiar el ordenador', 'El proceso de identificar y corregir errores en el código', 'Borrar archivos', 'Instalar programas'],
+      correctAnswer: 1,
+      explanation: 'La depuración es el proceso metódico de encontrar y reducir defectos o errores en un programa informático.'
+    },
+    {
+      questionText: '¿Qué es el Open Source?',
+      options: ['Software de código abierto', 'Software gratis', 'Software pirata', 'Software cerrado'],
       correctAnswer: 0,
-      explanation: 'El artículo 80 del Reglamento Penitenciario vincula el régimen abierto a los penados clasificados en tercer grado.'
-    },
-    { 
-      questionText: 'Un CIS es un:', 
-      options: ['Centro de Inserción Social', 'Centro de Internamiento Severo', 'Club', 'Cine'], 
-      correctAnswer: 0,
-      explanation: 'CIS son las siglas de Centro de Inserción Social, establecimiento destinado al cumplimiento de penas en régimen abierto.'
-    },
-    { 
-      questionText: 'El artículo 82 RP define:', 
-      options: ['El régimen abierto restringido', 'El ordinario', 'El cerrado', 'La libertad'], 
-      correctAnswer: 0,
-      explanation: 'El artículo 82 del Reglamento Penitenciario regula la modalidad de régimen abierto restringido para aquellos internos que no puedan salir a trabajar al exterior.'
-    },
-    { 
-      questionText: 'Las salidas de fin de semana comienzan:', 
-      options: ['El viernes tarde', 'El sábado', 'El domingo', 'El lunes'], 
-      correctAnswer: 0,
-      explanation: 'El artículo 87 del Reglamento Penitenciario establece que las salidas de fin de semana se iniciarán, como regla general, a partir de las dieciséis horas del viernes.'
-    },
-    { 
-      questionText: 'Para acceder a tercer grado es necesario:', 
-      options: ['Haber satisfecho la responsabilidad civil (o compromiso/garantías)', 'Ser alto', 'Ser rico', 'Saber inglés'], 
-      correctAnswer: 0,
-      explanation: 'El artículo 72.5 de la LOGP exige la satisfacción de la responsabilidad civil derivada del delito para la progresión a tercer grado.'
-    },
-    { 
-      questionText: 'El régimen abierto busca:', 
-      options: ['La autodisciplina y confianza', 'El miedo', 'La fuga', 'El dolor'], 
-      correctAnswer: 0,
-      explanation: 'El artículo 80 del Reglamento Penitenciario establece que el tratamiento en régimen abierto se basará en la ausencia de controles rígidos, apelando a la autodisciplina y confianza.'
-    },
-    { 
-      questionText: '¿Pueden ir al régimen abierto los preventivos?', 
-      options: ['No', 'Sí', 'A veces', 'Si pagan'], 
-      correctAnswer: 0,
-      explanation: 'No, el régimen abierto es una modalidad de cumplimiento de pena reservada a penados clasificados en tercer grado. Los preventivos están en régimen ordinario (o cerrado).'
+      explanation: 'El software de código abierto es aquel cuyo código fuente se publica bajo una licencia que permite su uso, modificación y distribución.'
     }
   ]
 };
 
 export const TEST_TOPIC_36: Test = {
   id: 'topic-36',
-  title: 'Tema 36: Régimen Cerrado',
+  title: 'Tema: Bases de Datos Relacionales',
   questions: [
-    { 
-      questionText: 'Se aplica régimen cerrado por:', 
-      options: ['Peligrosidad extrema o inadaptación manifiesta', 'Delitos leves', 'No tener familia', 'Solicitud propia'], 
-      correctAnswer: 0,
-      explanation: 'El artículo 10 de la LOGP establece que el régimen cerrado se aplicará a los internos calificados de peligrosidad extrema o inadaptación manifiesta a los regímenes ordinario y abierto.'
-    },
-    { 
-      questionText: 'La revisión de la clasificación en primer grado se hace cada:', 
-      options: ['6 meses', '3 meses', '1 mes', '1 año'], 
+    {
+      questionText: '¿Qué es una clave primaria (Primary Key)?',
+      options: ['Una clave para abrir la base de datos', 'Un campo que identifica de forma única cada registro en una tabla', 'Una clave secreta', 'La primera columna'],
       correctAnswer: 1,
-      explanation: 'El artículo 92 del Reglamento Penitenciario establece que la revisión de la clasificación en primer grado se efectuará cada tres meses.'
+      explanation: 'La clave primaria es un identificador único para cada fila de una tabla de base de datos.'
     },
-    { 
-      questionText: 'Las actividades en régimen cerrado son:', 
-      options: ['Inexistentes', 'Prioritariamente culturales, deportivas y ocupacionales, en grupos reducidos', 'Solo laborales', 'Al aire libre siempre'], 
+    {
+      questionText: '¿Qué es una consulta (Query)?',
+      options: ['Una pregunta al profesor', 'Una petición de información a la base de datos', 'Un error', 'Un dato'],
       correctAnswer: 1,
-      explanation: 'El artículo 90 del Reglamento Penitenciario establece que se programarán actividades culturales, deportivas y ocupacionales, realizándose en grupos reducidos.'
+      explanation: 'Una consulta es una solicitud precisa para recuperar información de una base de datos.'
     },
-    { 
-      questionText: 'Las horas de salida al patio en régimen cerrado son:', 
-      options: ['Mínimo 4 horas (o 3)', 'Mínimo 8 horas', 'Mínimo 1 hora', 'Libres'], 
-      correctAnswer: 0,
-      explanation: 'El artículo 93 del Reglamento Penitenciario establece un mínimo de 4 horas de patio (3 horas en departamentos especiales según art. 94).'
+    {
+      questionText: '¿Qué es una tabla en una base de datos relacional?',
+      options: ['Un mueble', 'Una estructura de datos organizada en filas y columnas', 'Un gráfico', 'Un informe'],
+      correctAnswer: 1,
+      explanation: 'Las tablas son los objetos principales donde se almacena la información en una base de datos relacional.'
     },
-    { 
-      questionText: 'El número de internos en actividades conjuntas en régimen cerrado se limita a:', 
-      options: ['5', '10', '20', '50'], 
-      correctAnswer: 0,
-      explanation: 'El artículo 93 del Reglamento Penitenciario limita a cinco el número de internos que pueden realizar actividades en común en departamentos especiales.'
+    {
+      questionText: '¿Qué es la integridad referencial?',
+      options: ['Que los datos sean honestos', 'Un sistema de reglas que garantiza que las relaciones entre registros de tablas relacionadas sean válidas', 'Que no haya virus', 'Que la base de datos sea rápida'],
+      correctAnswer: 1,
+      explanation: 'La integridad referencial asegura que no existan referencias a registros que no existen.'
     },
-    { 
-      questionText: 'El régimen cerrado se aplica en:', 
-      options: ['Departamentos especiales o módulos cerrados', 'Celdas normales', 'En la calle', 'En hospitales'], 
-      correctAnswer: 0,
-      explanation: 'El artículo 91 del Reglamento Penitenciario establece que el régimen cerrado se cumplirá en Centros o Módulos de Régimen Cerrado o en Departamentos Especiales.'
+    {
+      questionText: '¿Qué es un índice en una base de datos?',
+      options: ['El índice del libro', 'Una estructura de datos que mejora la velocidad de las operaciones de recuperación de datos', 'Una lista de tablas', 'Un error'],
+      correctAnswer: 1,
+      explanation: 'Los índices se utilizan para encontrar filas con valores específicos de una columna rápidamente.'
     },
-    { 
-      questionText: 'El artículo 10 LOGP regula:', 
-      options: ['Los departamentos de régimen cerrado', 'El régimen abierto', 'La libertad', 'El trabajo'], 
-      correctAnswer: 0,
-      explanation: 'El artículo 10 de la LOGP regula los establecimientos de régimen cerrado.'
+    {
+      questionText: '¿Qué sentencia SQL se usa para insertar datos?',
+      options: ['ADD', 'INSERT INTO', 'PUT', 'UPDATE'],
+      correctAnswer: 1,
+      explanation: 'INSERT INTO es la sentencia estándar SQL para añadir nuevos registros a una tabla.'
     },
-    { 
-      questionText: 'La clasificación en primer grado requiere:', 
-      options: ['Resolución motivada', 'Sorteo', 'Petición', 'Nada'], 
-      correctAnswer: 0,
-      explanation: 'El artículo 95 del Reglamento Penitenciario exige que el acuerdo de clasificación en primer grado sea motivado.'
+    {
+      questionText: '¿Qué sentencia SQL se usa para modificar datos existentes?',
+      options: ['MODIFY', 'CHANGE', 'UPDATE', 'ALTER'],
+      correctAnswer: 2,
+      explanation: 'UPDATE es la sentencia utilizada para modificar los registros existentes en una tabla.'
     },
-    { 
-      questionText: 'Los cacheos en régimen cerrado son:', 
-      options: ['Más frecuentes (diarios celdas)', 'Menos frecuentes', 'Iguales', 'No se hacen'], 
+    {
+      questionText: '¿Qué es una vista (View)?',
+      options: ['Una tabla virtual basada en el conjunto de resultados de una consulta SQL', 'Una foto', 'Una ventana', 'Un informe impreso'],
       correctAnswer: 0,
-      explanation: 'El artículo 93 del Reglamento Penitenciario establece que en los departamentos especiales el registro de celdas será diario.'
+      explanation: 'Una vista es una consulta almacenada que se presenta como una tabla virtual.'
     },
-    { 
-      questionText: '¿Es recurrible la aplicación del régimen cerrado?', 
-      options: ['Sí, al JVP', 'No', 'Solo al Director', 'A la prensa'], 
+    {
+      questionText: '¿Qué es un SGBD?',
+      options: ['Sistema Gestor de Bases de Datos', 'Sistema General de Búsqueda de Datos', 'Servidor Grande de Base de Datos', 'Software Gratuito de Base de Datos'],
       correctAnswer: 0,
-      explanation: 'Sí, como cualquier resolución de clasificación o aplicación de régimen, es recurrible ante el Juez de Vigilancia Penitenciaria (Art. 76 LOGP).'
+      explanation: 'SGBD (o DBMS en inglés) es el software que interactúa con los usuarios finales, las aplicaciones y la base de datos para capturar y analizar los datos.'
+    },
+    {
+      questionText: '¿Qué es el modelo Entidad-Relación?',
+      options: ['Un modelo de datos conceptual de alto nivel', 'Un programa', 'Una relación personal', 'Un tipo de ordenador'],
+      correctAnswer: 0,
+      explanation: 'El modelo E-R se utiliza para representar datos y sus relaciones en el diseño de bases de datos.'
     }
   ]
 };
 
 export const TEST_TOPIC_37: Test = {
   id: 'topic-37',
-  title: 'Tema 37: Permisos',
+  title: 'Tema: Accesibilidad y Usabilidad',
   questions: [
-    { 
-      questionText: 'La duración máxima de los permisos ordinarios en 3º grado es de:', 
-      options: ['36 días', '48 días', '18 días', '7 días'], 
-      correctAnswer: 1,
-      explanation: 'El artículo 154 del Reglamento Penitenciario establece que los internos clasificados en tercer grado podrán disfrutar de hasta 48 días de permisos ordinarios al año.'
-    },
-    { 
-      questionText: 'Los permisos de hasta 2 días (en 2º grado) los concede:', 
-      options: ['El Director', 'El Juez de Vigilancia', 'El Ministerio', 'La Junta'], 
-      correctAnswer: 1,
-      explanation: 'El artículo 156 del Reglamento Penitenciario establece que los permisos de salida, incluso los de hasta dos días, requieren autorización del Juez de Vigilancia Penitenciaria.'
-    },
-    { 
-      questionText: '¿Se puede conceder un permiso a un preventivo?', 
-      options: ['No', 'Sí, con autorización de la Autoridad Judicial a cuya disposición esté', 'Sí, lo da el Director', 'Sí, la Policía'], 
-      correctAnswer: 1,
-      explanation: 'El artículo 47 de la LOGP permite conceder permisos a los preventivos con autorización de la Autoridad Judicial a cuya disposición se encuentren.'
-    },
-    { 
-      questionText: 'Los permisos ordinarios en 2º grado son de máximo:', 
-      options: ['36 días al año', '48 días', '12 días', '6 días'], 
+    {
+      questionText: '¿Qué significan las siglas WAI?',
+      options: ['Web Accessibility Initiative', 'World Artificial Intelligence', 'Wide Area Internet', 'Web Application Interface'],
       correctAnswer: 0,
-      explanation: 'El artículo 154 del Reglamento Penitenciario establece que los internos clasificados en segundo grado podrán disfrutar de hasta 36 días de permisos ordinarios al año.'
+      explanation: 'WAI (Iniciativa de Accesibilidad Web) es una rama del W3C que desarrolla estándares de accesibilidad.'
     },
-    { 
-      questionText: 'Para disfrutar permiso ordinario se requiere haber cumplido:', 
-      options: ['1/4 de la condena', '1/2 condena', '3/4 condena', '1/3 condena'], 
+    {
+      questionText: '¿Qué es la usabilidad?',
+      options: ['La capacidad de un producto para ser usado por usuarios específicos para lograr objetivos específicos con efectividad, eficiencia y satisfacción', 'Que funcione rápido', 'Que sea bonito', 'Que sea barato'],
       correctAnswer: 0,
-      explanation: 'El artículo 154 del Reglamento Penitenciario exige haber cumplido la cuarta parte de la condena para poder disfrutar de permisos ordinarios.'
+      explanation: 'Definición estándar de usabilidad (ISO 9241-11).'
     },
-    { 
-      questionText: 'Los permisos extraordinarios se dan por:', 
-      options: ['Motivos muy graves (muerte familiar, nacimiento...)', 'Vacaciones', 'Buen comportamiento', 'Estudios'], 
+    {
+      questionText: '¿Qué es el diseño universal?',
+      options: ['Diseño para todos, sin necesidad de adaptación', 'Diseño para el universo', 'Diseño solo para expertos', 'Diseño gráfico'],
       correctAnswer: 0,
-      explanation: 'El artículo 155 del Reglamento Penitenciario regula los permisos extraordinarios para casos de fallecimiento o enfermedad grave de familiares, nacimiento de hijos, etc.'
+      explanation: 'El diseño universal busca crear productos y entornos que puedan ser utilizados por todas las personas, en la mayor medida posible.'
     },
-    { 
-      questionText: 'La duración de los permisos extraordinarios es:', 
-      options: ['El tiempo necesario (hasta límites)', '7 días fijos', '1 mes', '3 días'], 
+    {
+      questionText: '¿Qué es un lector de pantalla?',
+      options: ['Un software que identifica e interpreta lo que se muestra en pantalla (para ciegos)', 'Un limpiador de monitor', 'Unas gafas', 'Una lupa'],
       correctAnswer: 0,
-      explanation: 'El artículo 155 del Reglamento Penitenciario establece que la duración será la necesaria según las circunstancias, con los límites establecidos.'
+      explanation: 'Los lectores de pantalla son tecnologías de asistencia fundamentales para personas con discapacidad visual.'
     },
-    { 
-      questionText: '¿Quién autoriza los permisos ordinarios de más de 2 días en 2º grado?', 
-      options: ['El JVP', 'El Director', 'La Junta', 'El Centro Directivo'], 
+    {
+      questionText: '¿Qué es el atributo "alt" en una imagen HTML?',
+      options: ['Texto alternativo que describe la imagen', 'Altura de la imagen', 'Alteración de la imagen', 'Alerta'],
       correctAnswer: 0,
-      explanation: 'El artículo 156 del Reglamento Penitenciario atribuye al Juez de Vigilancia Penitenciaria la competencia para autorizar los permisos de salida.'
+      explanation: 'El atributo alt proporciona una descripción textual de la imagen, esencial para la accesibilidad.'
     },
-    { 
-      questionText: 'Durante el permiso, el interno:', 
-      options: ['Sigue cumpliendo condena', 'Interrumpe la condena', 'Está libre', 'No cuenta'], 
+    {
+      questionText: '¿Qué nivel de contraste es recomendable para la accesibilidad?',
+      options: ['Alto contraste entre texto y fondo', 'Bajo contraste', 'Ningún contraste', 'Colores brillantes'],
       correctAnswer: 0,
-      explanation: 'El permiso de salida es una institución penitenciaria que no interrumpe el cumplimiento de la condena, sino que forma parte del tratamiento.'
+      explanation: 'Un alto contraste facilita la lectura para personas con baja visión o dificultades visuales.'
     },
-    { 
-      questionText: 'El mal comportamiento durante un permiso puede motivar:', 
-      options: ['Su suspensión o revocación', 'Un premio', 'Nada', 'El traslado'], 
+    {
+      questionText: '¿Qué es la navegación por teclado?',
+      options: ['Poder usar el sitio web solo con el teclado (sin ratón)', 'Escribir rápido', 'Usar un teclado musical', 'Navegar en barco'],
       correctAnswer: 0,
-      explanation: 'El artículo 158 del Reglamento Penitenciario permite suspender o revocar los permisos cuando el interno incumpla las condiciones establecidas.'
+      explanation: 'La accesibilidad requiere que todas las funcionalidades sean operables a través del teclado.'
+    },
+    {
+      questionText: '¿Qué es la jerarquía de encabezados (H1, H2...)?',
+      options: ['Estructura lógica del contenido', 'Tamaño de letra', 'Decoración', 'Nada importante'],
+      correctAnswer: 0,
+      explanation: 'El uso correcto de encabezados permite a los usuarios (y lectores de pantalla) entender la estructura de la página.'
+    },
+    {
+      questionText: '¿Qué es el W3C?',
+      options: ['World Wide Web Consortium', 'World Wrestling Championship', 'Web 3 Connection', 'Wide Web Center'],
+      correctAnswer: 0,
+      explanation: 'El W3C es la comunidad internacional que desarrolla estándares abiertos para asegurar el crecimiento de la Web.'
+    },
+    {
+      questionText: '¿Qué es un test de usabilidad?',
+      options: ['Observar a usuarios reales intentando completar tareas en el sitio', 'Un examen escrito', 'Probar si el servidor funciona', 'Mirar el código'],
+      correctAnswer: 0,
+      explanation: 'Los tests de usabilidad evalúan un producto probándolo con usuarios representativos.'
     }
   ]
 };
 
 export const TEST_TOPIC_38: Test = {
   id: 'topic-38',
-  title: 'Tema 38: Libertad Condicional',
+  title: 'Tema: Hardware y Arquitectura',
   questions: [
-    { 
-      questionText: 'La libertad condicional se considera:', 
-      options: ['Una gracia', 'El último grado de cumplimiento de la condena (suspensión)', 'Una amnistía', 'Un indulto'], 
+    {
+      questionText: '¿Qué es la CPU?',
+      options: ['Central Processing Unit', 'Central Power Unit', 'Computer Personal Unit', 'Control Panel Unit'],
+      correctAnswer: 0,
+      explanation: 'La CPU es la unidad central de procesamiento, el "cerebro" del ordenador.'
+    },
+    {
+      questionText: '¿Qué es la memoria RAM?',
+      options: ['Random Access Memory', 'Read Access Memory', 'Rapid Access Memory', 'Real Access Memory'],
+      correctAnswer: 0,
+      explanation: 'La RAM es la memoria de acceso aleatorio, volátil, utilizada para almacenar datos temporales.'
+    },
+    {
+      questionText: '¿Qué es un bus de datos?',
+      options: ['Un sistema de transporte público', 'Un sistema que transfiere datos entre componentes de un ordenador', 'Un cable de red', 'Un tipo de memoria'],
       correctAnswer: 1,
-      explanation: 'El artículo 90 del Código Penal configura la libertad condicional como el último grado de cumplimiento de la pena privativa de libertad.'
+      explanation: 'El bus de datos es el camino de comunicación por el cual se transfieren los datos.'
     },
-    { 
-      questionText: 'Para la libertad condicional ordinaria se requiere haber cumplido:', 
-      options: ['1/2 condena', '2/3 condena', '3/4 partes de la condena', '1/4 condena'], 
-      correctAnswer: 2,
-      explanation: 'El artículo 90 del Código Penal exige haber cumplido las tres cuartas partes de la condena para acceder a la libertad condicional ordinaria.'
-    },
-    { 
-      questionText: '¿Quién concede la libertad condicional?', 
-      options: ['El Juez de Vigilancia Penitenciaria', 'El Director', 'La Junta de Tratamiento', 'El Rey'], 
+    {
+      questionText: '¿Qué es la BIOS?',
+      options: ['Basic Input/Output System', 'Binary Input Output System', 'Basic Internal Operating System', 'Bus Input Output System'],
       correctAnswer: 0,
-      explanation: 'El artículo 76 de la LOGP atribuye al Juez de Vigilancia Penitenciaria la competencia para acordar la libertad condicional.'
+      explanation: 'La BIOS es el firmware que inicializa el hardware durante el proceso de arranque.'
     },
-    { 
-      questionText: 'La libertad condicional se puede adelantar a los 2/3 de condena por:', 
-      options: ['Desarrollo continuo de actividades laborales, culturales o deportivas y pronóstico favorable', 'Edad', 'Enfermedad', 'Azar'], 
+    {
+      questionText: '¿Qué es un periférico de entrada?',
+      options: ['Un dispositivo para introducir datos (ej. teclado)', 'Un dispositivo para mostrar datos (ej. monitor)', 'Un cable', 'Un procesador'],
       correctAnswer: 0,
-      explanation: 'El artículo 90.2 del Código Penal permite adelantar la libertad condicional a los dos tercios cuando el penado haya desarrollado continuadamente actividades laborales, culturales u ocupacionales y exista pronóstico individualizado y favorable de reinserción social.'
+      explanation: 'Los periféricos de entrada permiten al usuario introducir información en el ordenador.'
     },
-    { 
-      questionText: 'La libertad condicional para septuagenarios o enfermos muy graves:', 
-      options: ['No requiere cumplir 3/4', 'Requiere cumplir 3/4', 'No existe', 'Requiere pago'], 
+    {
+      questionText: '¿Qué es la ALU?',
+      options: ['Arithmetic Logic Unit', 'Advanced Logic Unit', 'Automatic Learning Unit', 'Access Link Unit'],
       correctAnswer: 0,
-      explanation: 'El artículo 91 del Código Penal permite conceder la libertad condicional a septuagenarios o enfermos muy graves con padecimientos incurables sin el requisito de haber cumplido las tres cuartas partes.'
+      explanation: 'La Unidad Aritmético Lógica (ALU) realiza operaciones aritméticas y lógicas en la CPU.'
     },
-    { 
-      questionText: 'La revocación de la libertad condicional conlleva:', 
-      options: ['Reingreso en prisión', 'Multa', 'Nada', 'Amonestación'], 
+    {
+      questionText: '¿Qué es un SSD?',
+      options: ['Solid State Drive', 'Super Speed Drive', 'Solid System Disk', 'Simple Storage Device'],
       correctAnswer: 0,
-      explanation: 'El artículo 93 del Código Penal establece que la revocación de la libertad condicional conlleva el reingreso en prisión para cumplir el tiempo de condena que reste.'
+      explanation: 'Un SSD es una unidad de estado sólido, un dispositivo de almacenamiento más rápido que los discos duros tradicionales.'
     },
-    { 
-      questionText: 'El periodo de libertad condicional dura:', 
-      options: ['Lo que falte de condena', '1 año fijo', '5 años', 'Toda la vida'], 
+    {
+      questionText: '¿Qué es la memoria caché?',
+      options: ['Una memoria rápida y pequeña integrada en la CPU', 'La memoria RAM', 'El disco duro', 'Un USB'],
       correctAnswer: 0,
-      explanation: 'La libertad condicional se extiende por el tiempo que reste de condena hasta su cumplimiento total.'
+      explanation: 'La caché almacena datos usados frecuentemente para un acceso rápido por parte de la CPU.'
     },
-    { 
-      questionText: 'Es requisito estar clasificado en:', 
-      options: ['Tercer grado', 'Segundo grado', 'Primer grado', 'Ninguno'], 
+    {
+      questionText: '¿Qué es la placa base (Motherboard)?',
+      options: ['El circuito impreso principal que conecta todos los componentes', 'La caja del ordenador', 'El teclado', 'La pantalla'],
       correctAnswer: 0,
-      explanation: 'El artículo 90 del Código Penal exige estar clasificado en tercer grado de tratamiento penitenciario para acceder a la libertad condicional.'
+      explanation: 'La placa base es el componente central que permite la comunicación entre la CPU, RAM, almacenamiento y periféricos.'
     },
-    { 
-      questionText: 'La buena conducta es requisito para:', 
-      options: ['La libertad condicional', 'Ingresar', 'Comer', 'Dormir'], 
+    {
+      questionText: '¿Qué es la GPU?',
+      options: ['Graphics Processing Unit', 'General Processing Unit', 'Global Power Unit', 'Gaming Processing Unit'],
       correctAnswer: 0,
-      explanation: 'El artículo 90 del Código Penal establece como requisito haber observado buena conducta para acceder a la libertad condicional.'
-    },
-    { 
-      questionText: 'El JVP puede imponer reglas de conducta:', 
-      options: ['Sí', 'No', 'Solo si quiere el interno', 'Nunca'], 
-      correctAnswer: 0,
-      explanation: 'El artículo 90 del Código Penal permite al Juez de Vigilancia imponer reglas de conducta durante el periodo de libertad condicional.'
+      explanation: 'La GPU es la unidad de procesamiento gráfico, especializada en el procesamiento de imágenes y vídeo.'
     }
   ]
 };
 
 export const TEST_TOPIC_39: Test = {
   id: 'topic-39',
-  title: 'Tema 39: Asistencia Social',
+  title: 'Tema: Sistemas de Ficheros',
   questions: [
-    { 
-      questionText: 'La acción social penitenciaria se dirige a:', 
-      options: ['La reincorporación social del interno y soporte familiar', 'Vigilar', 'Castigar', 'Juzgar'], 
+    {
+      questionText: '¿Qué es un sistema de archivos?',
+      options: ['El método y estructura de datos que un sistema operativo utiliza para seguir la pista de los archivos en un disco', 'Un archivador físico', 'Una carpeta', 'Un programa'],
       correctAnswer: 0,
-      explanation: 'El artículo 62 de la LOGP establece que la asistencia social penitenciaria se dirige a la reincorporación social del interno y al soporte de su familia.'
+      explanation: 'El sistema de archivos controla cómo se almacenan y recuperan los datos.'
     },
-    { 
-      questionText: 'El Trabajo Social es parte del:', 
-      options: ['Equipo Técnico', 'Servicio de vigilancia', 'Servicio de limpieza', 'Sindicato'], 
+    {
+      questionText: '¿Qué sistema de archivos usa Linux habitualmente?',
+      options: ['EXT4', 'NTFS', 'FAT32', 'APFS'],
       correctAnswer: 0,
-      explanation: 'El artículo 273 del Reglamento Penitenciario incluye a los trabajadores sociales como miembros del Equipo Técnico.'
+      explanation: 'EXT4 es el sistema de archivos journaling más común en distribuciones Linux modernas.'
     },
-    { 
-      questionText: '¿Existen ayudas para el transporte de familiares para visitas?', 
-      options: ['No', 'Sí, pueden existir ayudas de la Comisión de Asistencia Social u ONGs', 'Están prohibidas', 'Solo en Navidad'], 
-      correctAnswer: 1,
-      explanation: 'Existen programas de ayuda al transporte de familiares gestionados por la Comisión de Asistencia Social Penitenciaria y organizaciones colaboradoras.'
-    },
-    { 
-      questionText: 'La Comisión de Asistencia Social Penitenciaria es un órgano:', 
-      options: ['Colegiado', 'Unipersonal', 'Judicial', 'Privado'], 
+    {
+      questionText: '¿Qué es la fragmentación de disco?',
+      options: ['Cuando los archivos se dividen en pedazos dispersos por el disco', 'Cuando el disco se rompe', 'Cuando se borran archivos', 'Cuando se llena el disco'],
       correctAnswer: 0,
-      explanation: 'La Comisión de Asistencia Social Penitenciaria es un órgano colegiado que coordina la acción social penitenciaria.'
+      explanation: 'La fragmentación ocurre cuando el sistema de archivos no puede asignar espacio contiguo para almacenar un archivo completo.'
     },
-    { 
-      questionText: 'El subsidio de excarcelación se gestiona ante:', 
-      options: ['El SEPE', 'La Prisión', 'El Juez', 'El Ayuntamiento'], 
+    {
+      questionText: '¿Qué es un inodo en Unix/Linux?',
+      options: ['Una estructura de datos que almacena información sobre un archivo (metadatos)', 'Un nodo de internet', 'Un usuario', 'Un comando'],
       correctAnswer: 0,
-      explanation: 'El subsidio de excarcelación se gestiona ante el Servicio Público de Empleo Estatal (SEPE), siendo una prestación para liberados de prisión.'
+      explanation: 'El inodo contiene metadatos como permisos, propietario, tamaño y ubicación de los bloques de datos.'
     },
-    { 
-      questionText: 'La asistencia social atiende a:', 
-      options: ['Internos, liberados condicionales y familiares', 'Solo funcionarios', 'Solo víctimas', 'Turistas'], 
+    {
+      questionText: '¿Qué es FAT32?',
+      options: ['Un sistema de archivos antiguo pero muy compatible', 'Un virus', 'Un programa de compresión', 'Un tipo de memoria'],
       correctAnswer: 0,
-      explanation: 'El artículo 62 de la LOGP establece que la asistencia social se extiende a internos, liberados condicionales y familiares de ambos.'
+      explanation: 'FAT32 es un sistema de archivos ampliamente compatible con diferentes sistemas operativos y dispositivos.'
     },
-    { 
-      questionText: 'Las ONGs pueden entrar en prisión:', 
-      options: ['Sí, para programas autorizados', 'No, nunca', 'Libremente', 'Solo a rezar'], 
+    {
+      questionText: '¿Qué es el montaje (mounting) de un sistema de archivos?',
+      options: ['Hacer accesible el sistema de archivos en un punto del árbol de directorios', 'Instalar el disco físico', 'Formatear el disco', 'Copiar archivos'],
       correctAnswer: 0,
-      explanation: 'El artículo 62 de la LOGP permite la colaboración de entidades y asociaciones en la asistencia social penitenciaria, previa autorización.'
+      explanation: 'Montar es el proceso de hacer que un sistema de archivos esté disponible para su uso por el sistema operativo.'
     },
-    { 
-      questionText: 'El programa de preparación para la libertad es:', 
-      options: ['Prioritario', 'Irrelevante', 'Prohibido', 'Opcional'], 
+    {
+      questionText: '¿Qué es un enlace simbólico (symlink)?',
+      options: ['Un archivo que apunta a otro archivo o directorio', 'Un virus', 'Un error de disco', 'Un archivo oculto'],
       correctAnswer: 0,
-      explanation: 'El artículo 177 del Reglamento Penitenciario establece como prioritarios los programas de preparación para la libertad.'
+      explanation: 'Un enlace simbólico es un tipo especial de archivo que contiene una referencia a otro archivo o directorio.'
     },
-    { 
-      questionText: 'Los problemas de documentación (DNI) los gestiona:', 
-      options: ['Trabajo Social / Oficinas', 'El médico', 'El interno solo', 'Nadie'], 
+    {
+      questionText: '¿Qué es el journaling en un sistema de archivos?',
+      options: ['Un registro de cambios que ayuda a la recuperación ante fallos', 'Un diario personal', 'Un periódico', 'Un tipo de archivo'],
       correctAnswer: 0,
-      explanation: 'Los trabajadores sociales y las oficinas de gestión penitenciaria gestionan los trámites de documentación de los internos.'
+      explanation: 'El journaling mantiene un registro de los cambios que se van a realizar, lo que mejora la integridad y recuperación.'
     },
-    { 
-      questionText: 'La acogida a la salida de prisión puede hacerse en:', 
-      options: ['Pisos de acogida', 'La calle', 'La comisaría', 'El juzgado'], 
+    {
+      questionText: '¿Qué es NTFS?',
+      options: ['New Technology File System', 'New Type File System', 'Network Transfer File System', 'No Technology File System'],
       correctAnswer: 0,
-      explanation: 'Existen recursos de acogida como pisos y centros gestionados por entidades colaboradoras para facilitar la reinserción social.'
+      explanation: 'NTFS es el sistema de archivos propietario de Microsoft introducido con Windows NT.'
+    },
+    {
+      questionText: '¿Qué es la ruta absoluta?',
+      options: ['La ruta completa desde el directorio raíz', 'Una ruta relativa', 'Una ruta corta', 'Una ruta incorrecta'],
+      correctAnswer: 0,
+      explanation: 'Una ruta absoluta especifica la ubicación de un archivo o directorio comenzando desde la raíz del sistema de archivos.'
     }
   ]
 };
 
 export const TEST_TOPIC_40: Test = {
   id: 'topic-40',
-  title: 'Tema 40: Trabajo Penitenciario',
+  title: 'Tema: Virtualización y Nube',
   questions: [
-    { 
-      questionText: 'El trabajo penitenciario es un derecho y un deber, pero NO puede ser:', 
-      options: ['Remunerado', 'Productivo', 'Aflictivo (castigo)', 'Formativo'], 
-      correctAnswer: 2,
-      explanation: 'El artículo 25 de la LOGP establece que el trabajo no tendrá carácter aflictivo, es decir, no puede ser un castigo.'
-    },
-    { 
-      questionText: '¿Tienen derecho los internos trabajadores a vacaciones?', 
-      options: ['No', 'Sí, 30 días naturales', 'Solo si son buenos', 'Depende del Director'], 
-      correctAnswer: 1,
-      explanation: 'El artículo 27 de la LOGP reconoce el derecho de los internos trabajadores a 30 días naturales de vacaciones retribuidas.'
-    },
-    { 
-      questionText: 'La organización del trabajo productivo corresponde a:', 
-      options: ['La TPFE (Trabajo Penitenciario y Formación para el Empleo)', 'La Policía', 'El Juez', 'Los internos'], 
+    {
+      questionText: '¿Qué es un hipervisor?',
+      options: ['Software que crea y ejecuta máquinas virtuales', 'Un monitor grande', 'Un superordenador', 'Un virus'],
       correctAnswer: 0,
-      explanation: 'El Organismo Autónomo Trabajo Penitenciario y Formación para el Empleo (TPFE) es el encargado de organizar el trabajo productivo en prisiones.'
+      explanation: 'El hipervisor (o monitor de máquina virtual) es el software que permite la virtualización.'
     },
-    { 
-      questionText: 'El trabajo productivo se retribuye:', 
-      options: ['Conforme al rendimiento y horario (referencia SMI)', 'Con tabaco', 'No se paga', 'Con permisos'], 
+    {
+      questionText: '¿Qué es SaaS?',
+      options: ['Software as a Service', 'System as a Service', 'Storage as a Service', 'Security as a Service'],
       correctAnswer: 0,
-      explanation: 'El artículo 27 de la LOGP establece que el trabajo será remunerado conforme al rendimiento, tomando como referencia el Salario Mínimo Interprofesional.'
+      explanation: 'SaaS es un modelo de distribución de software donde las aplicaciones se alojan en la nube y se accede a ellas vía Internet.'
     },
-    { 
-      questionText: 'Los internos trabajadores cotizan a:', 
-      options: ['La Seguridad Social', 'Nadie', 'Un fondo privado', 'Al Director'], 
+    {
+      questionText: '¿Qué es Docker?',
+      options: ['Una plataforma de contenedores', 'Un barco', 'Un sistema operativo', 'Un lenguaje'],
       correctAnswer: 0,
-      explanation: 'El artículo 28 de la LOGP establece que los internos trabajadores estarán incluidos en el Régimen General de la Seguridad Social.'
+      explanation: 'Docker es una plataforma abierta para desarrollar, enviar y ejecutar aplicaciones dentro de contenedores.'
     },
-    { 
-      questionText: 'El trabajo es:', 
-      options: ['Voluntario en su acceso', 'Obligatorio forzoso', 'Esclavitud', 'Juego'], 
+    {
+      questionText: '¿Qué es Kubernetes?',
+      options: ['Un sistema de orquestación de contenedores', 'Un juego', 'Un sistema operativo', 'Una base de datos'],
       correctAnswer: 0,
-      explanation: 'El artículo 26 de la LOGP configura el trabajo como un derecho y un deber, pero su acceso es voluntario, no pudiendo imponerse coactivamente.'
+      explanation: 'Kubernetes es un sistema de código abierto para automatizar el despliegue, el escalado y la gestión de aplicaciones en contenedores.'
     },
-    { 
-      questionText: 'La relación laboral especial penitenciaria se regula por:', 
-      options: ['RD 782/2001', 'Estatuto de los Trabajadores general', 'Código Penal', 'Ley de Vagos'], 
+    {
+      questionText: '¿Qué es una máquina virtual (VM)?',
+      options: ['Una emulación de un sistema informático', 'Un robot', 'Un ordenador falso', 'Un juego de realidad virtual'],
       correctAnswer: 0,
-      explanation: 'El Real Decreto 782/2001 regula la relación laboral de carácter especial de los penados que realicen actividades laborales en talleres penitenciarios.'
+      explanation: 'Una VM es un archivo informático que se comporta como un ordenador real.'
     },
-    { 
-      questionText: 'El despido disciplinario en prisión:', 
-      options: ['Es posible', 'No existe', 'Es imposible', 'Es premio'], 
+    {
+      questionText: '¿Qué es la nube híbrida?',
+      options: ['Una combinación de nube pública y privada', 'Una nube que llueve', 'Una nube solo para híbridos', 'Una nube lenta'],
       correctAnswer: 0,
-      explanation: 'El RD 782/2001 prevé la posibilidad de despido disciplinario en la relación laboral especial penitenciaria por incumplimientos graves.'
+      explanation: 'La nube híbrida combina infraestructura local (o nube privada) con nube pública.'
     },
-    { 
-      questionText: 'Los trabajos ocupacionales (no productivos):', 
-      options: ['No son remunerados (pueden tener estímulos)', 'Son pagados como salario', 'Cotizan', 'Son delito'], 
+    {
+      questionText: '¿Qué es AWS?',
+      options: ['Amazon Web Services', 'Advanced Web System', 'Apple Web Service', 'Automated Web Server'],
       correctAnswer: 0,
-      explanation: 'Los trabajos ocupacionales no tienen carácter productivo ni remuneración salarial, aunque pueden conllevar estímulos o compensaciones.'
+      explanation: 'AWS es la plataforma de servicios en la nube de Amazon.'
     },
-    { 
-      questionText: 'La formación profesional es:', 
-      options: ['Fundamental para la reinserción', 'Pérdida de tiempo', 'Castigo', 'Ocio'], 
+    {
+      questionText: '¿Qué es Azure?',
+      options: ['La plataforma de nube de Microsoft', 'Un color', 'Un sistema operativo', 'Un antivirus'],
       correctAnswer: 0,
-      explanation: 'El artículo 59 de la LOGP establece la formación profesional como elemento fundamental del tratamiento penitenciario orientado a la reinserción social.'
+      explanation: 'Azure es el servicio de computación en la nube creado por Microsoft.'
+    },
+    {
+      questionText: '¿Qué es la virtualización de escritorio (VDI)?',
+      options: ['Virtual Desktop Infrastructure', 'Very Direct Interface', 'Virtual Disk Image', 'Video Display Interface'],
+      correctAnswer: 0,
+      explanation: 'VDI permite alojar entornos de escritorio en un servidor centralizado y acceder a ellos de forma remota.'
+    },
+    {
+      questionText: '¿Qué es un Snapshot en virtualización?',
+      options: ['Una instantánea del estado de una máquina virtual en un momento dado', 'Una foto', 'Un error', 'Un virus'],
+      correctAnswer: 0,
+      explanation: 'Un snapshot captura el estado, datos y configuración de la máquina virtual en un momento específico.'
     }
   ]
 };

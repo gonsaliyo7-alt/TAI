@@ -54,11 +54,11 @@ const TestView: React.FC<TestViewProps> = ({ test, onComplete, onExit }) => {
       const newQuestion = await aiService.generateQuestion();
       setAiQuestions(prev => [...prev, newQuestion]);
       setAnswers(prev => [...prev, null]);
-    } catch (err) {
+    } catch (err: any) {
       console.error(err);
-      setAiError("Error generando pregunta. Verifica tu API Key o intenta de nuevo.");
+      setAiError(err.message || "Error inesperado generando la pregunta.");
       // If error is due to missing key (e.g. cleared), show input
-      if (!aiService.hasKey()) {
+      if (!aiService.hasKey() || err.message?.includes("API Key")) {
         setShowKeyInput(true);
       }
     } finally {
@@ -252,36 +252,36 @@ const TestView: React.FC<TestViewProps> = ({ test, onComplete, onExit }) => {
   if (!currentQuestion) return null;
 
   return (
-    <div className={`flex flex-col ${isSurvival && lives === 1 ? 'animate-pulse bg-red-50 p-2 rounded-xl' : ''}`}>
+    <div className={`flex flex-col transition-colors duration-300 ${isSurvival && lives === 1 ? 'animate-pulse bg-red-50 dark:bg-red-900/10 p-2 rounded-xl' : ''}`}>
       <div className="flex flex-col-reverse sm:flex-row justify-between items-start sm:items-center mb-6 gap-4">
         <div>
-          <h2 className="text-2xl font-bold text-slate-700 flex items-center gap-2">
+          <h2 className="text-2xl font-bold text-slate-700 dark:text-white flex items-center gap-2">
             {test.title}
-            {isInfinite && <span className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full border border-purple-200">Modo Infinito</span>}
-            {isAI && <span className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full border border-purple-200 flex items-center gap-1">✨ IA Generativa</span>}
+            {isInfinite && <span className="bg-purple-100 dark:bg-purple-900/40 text-purple-800 dark:text-purple-300 text-xs px-2 py-1 rounded-full border border-purple-200 dark:border-purple-800">Modo Infinito</span>}
+            {isAI && <span className="bg-purple-100 dark:bg-purple-900/40 text-purple-800 dark:text-purple-300 text-xs px-2 py-1 rounded-full border border-purple-200 dark:border-purple-800 flex items-center gap-1">✨ IA Generativa</span>}
           </h2>
 
           {isSurvival ? (
             <div className="flex items-center gap-2 mt-2">
-              <span className="text-slate-600 font-semibold">Vidas:</span>
+              <span className="text-slate-600 dark:text-slate-400 font-semibold">Vidas:</span>
               <div className="flex gap-1">
                 {[...Array(3)].map((_, i) => (
-                  <span key={i} className={`text-2xl transition-all duration-500 ${i < lives ? 'text-red-500 scale-100' : 'text-gray-300 scale-75 grayscale'}`}>
+                  <span key={i} className={`text-2xl transition-all duration-500 ${i < lives ? 'text-red-500 scale-100' : 'text-gray-300 dark:text-slate-700 scale-75 grayscale'}`}>
                     ❤️
                   </span>
                 ))}
               </div>
-              <span className="ml-4 text-sm font-mono bg-slate-800 text-white px-2 py-1 rounded">Racha: {answers.filter((a, i) => a !== null && activeQuestions[i] && a === activeQuestions[i].correctAnswer).length}</span>
+              <span className="ml-4 text-sm font-mono bg-slate-800 dark:bg-slate-700 text-white px-2 py-1 rounded">Racha: {answers.filter((a, i) => a !== null && activeQuestions[i] && a === activeQuestions[i].correctAnswer).length}</span>
             </div>
           ) : (
-            <p className="text-slate-500 mt-1">
+            <p className="text-slate-500 dark:text-slate-400 mt-1">
               {isAI ? `Pregunta Generada #${currentQuestionIndex + 1}` : `Pregunta ${currentQuestionIndex + 1} ${isInfinite ? '' : `de ${activeQuestions.length}`}`}
             </p>
           )}
         </div>
         <button
           onClick={onExit}
-          className="self-end sm:self-auto bg-white hover:bg-red-50 text-red-600 hover:text-red-700 border border-red-200 px-3 py-2 rounded-lg text-sm font-semibold flex items-center gap-2 transition-colors shadow-sm cursor-pointer"
+          className="self-end sm:self-auto bg-white dark:bg-slate-800 hover:bg-red-50 dark:hover:bg-red-900/20 text-red-600 dark:text-red-400 hover:text-red-700 border border-red-200 dark:border-red-900/50 px-3 py-2 rounded-lg text-sm font-semibold flex items-center gap-2 transition-colors shadow-sm cursor-pointer"
         >
           <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
@@ -291,61 +291,61 @@ const TestView: React.FC<TestViewProps> = ({ test, onComplete, onExit }) => {
       </div>
 
       {!isSurvival && !isAI && (
-        <div className="w-full bg-gray-200 rounded-full h-2.5 mb-6">
-          <div className="bg-blue-600 h-2.5 rounded-full transition-all duration-300" style={{ width: `${progressPercentage}%` }}></div>
+        <div className="w-full bg-gray-200 dark:bg-slate-700 rounded-full h-2.5 mb-6">
+          <div className="bg-blue-600 h-2.5 rounded-full transition-all duration-300 shadow-[0_0_10px_rgba(37,99,235,0.5)]" style={{ width: `${progressPercentage}%` }}></div>
         </div>
       )}
 
       {isSurvival && (
-        <div className="w-full bg-gray-200 rounded-full h-1 mb-6">
-          <div className="bg-red-500 h-1 rounded-full transition-all duration-300" style={{ width: `${(currentQuestionIndex / 100) * 100}%` }}></div>
+        <div className="w-full bg-gray-200 dark:bg-slate-700 rounded-full h-1 mb-6">
+          <div className="bg-red-500 h-1 rounded-full transition-all duration-300 shadow-[0_0_10px_rgba(239,68,68,0.5)]" style={{ width: `${(currentQuestionIndex / 100) * 100}%` }}></div>
         </div>
       )}
 
       {currentScenario && (
-        <div className="bg-blue-50 border-l-4 border-blue-500 p-6 mb-6 text-slate-700 rounded-r shadow-sm">
-          <h3 className="font-bold text-lg mb-2 text-blue-800 flex items-center gap-2">
+        <div className="bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 dark:border-blue-400 p-6 mb-6 text-slate-700 dark:text-slate-300 rounded-r shadow-sm">
+          <h3 className="font-bold text-lg mb-2 text-blue-800 dark:text-blue-300 flex items-center gap-2">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
               <path fillRule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clipRule="evenodd" />
             </svg>
             Supuesto de Hecho
           </h3>
-          <p className="whitespace-pre-line leading-relaxed text-justify">{currentScenario}</p>
+          <p className="whitespace-pre-line leading-relaxed text-justify italic">{currentScenario}</p>
         </div>
       )}
 
-      <div className={`bg-slate-50 p-6 rounded-lg shadow-inner border ${isAI ? 'border-purple-200' : 'border-slate-100'} relative overflow-hidden`}>
+      <div className={`bg-slate-50 dark:bg-slate-800 p-6 rounded-lg shadow-inner border transition-colors ${isAI ? 'border-purple-200 dark:border-purple-800' : 'border-slate-100 dark:border-slate-700'} relative overflow-hidden`}>
         {gameOver && (
-          <div className="absolute inset-0 bg-red-100/80 z-10 flex items-center justify-center flex-col animate-fade-in">
-            <span className="text-6xl">💀</span>
-            <h3 className="text-3xl font-bold text-red-800 mt-4">¡Fin del Juego!</h3>
-            <p className="text-red-700">Has perdido tus 3 vidas.</p>
+          <div className="absolute inset-0 bg-red-100/80 dark:bg-red-900/80 z-10 flex items-center justify-center flex-col animate-fade-in backdrop-blur-sm">
+            <span className="text-6xl animate-bounce">💀</span>
+            <h3 className="text-3xl font-bold text-red-800 dark:text-white mt-4">¡Fin del Juego!</h3>
+            <p className="text-red-700 dark:text-red-300 text-lg">Has perdido tus 3 vidas.</p>
           </div>
         )}
-        <h3 className="text-lg font-semibold mb-4 text-slate-800">{currentQuestion.questionText}</h3>
+        <h3 className="text-xl font-semibold mb-6 text-slate-800 dark:text-white leading-snug">{currentQuestion.questionText}</h3>
         <div className="space-y-3">
           {currentQuestion.options.map((option, index) => {
             const isSelected = answers[currentQuestionIndex] === index;
             const isCorrect = index === currentQuestion.correctAnswer;
 
-            let containerClass = "w-full text-left p-4 rounded-lg border-2 transition-all duration-200 flex items-center justify-between ";
-            let badgeClass = "flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-full mr-3 font-bold text-sm ";
+            let containerClass = "w-full text-left p-4 rounded-xl border-2 transition-all duration-300 flex items-center justify-between group shadow-sm ";
+            let badgeClass = "flex-shrink-0 w-9 h-9 flex items-center justify-center rounded-lg mr-4 font-bold text-lg transition-colors ";
 
             if (!isAnswered) {
               // Estado normal: no respondida
-              containerClass += "bg-white border-slate-200 hover:bg-slate-100 hover:border-slate-300 cursor-pointer";
-              badgeClass += "bg-slate-200 text-slate-600";
+              containerClass += "bg-white dark:bg-slate-700 border-slate-200 dark:border-slate-600 hover:bg-blue-50 dark:hover:bg-slate-600 hover:border-blue-400 dark:hover:border-blue-500 cursor-pointer";
+              badgeClass += "bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 group-hover:bg-blue-100 dark:group-hover:bg-blue-900/50 group-hover:text-blue-600 dark:group-hover:text-blue-400";
             } else {
               // Estado respondida: feedback inmediato
               if (isCorrect) {
-                containerClass += "bg-green-50 border-green-500 shadow-sm";
+                containerClass += "bg-green-50 dark:bg-green-900/30 border-green-500 dark:border-green-600 shadow-md transform scale-[1.01]";
                 badgeClass += "bg-green-500 text-white";
               } else if (isSelected) {
-                containerClass += "bg-red-50 border-red-500 shadow-sm";
+                containerClass += "bg-red-50 dark:bg-red-900/30 border-red-500 dark:border-red-600 shadow-md";
                 badgeClass += "bg-red-500 text-white";
               } else {
-                containerClass += "bg-white border-slate-100 opacity-50";
-                badgeClass += "bg-slate-100 text-slate-400";
+                containerClass += "bg-white dark:bg-slate-700 border-slate-100 dark:border-slate-800 opacity-40";
+                badgeClass += "bg-slate-100 dark:bg-slate-800 text-slate-400";
               }
             }
 
@@ -360,15 +360,15 @@ const TestView: React.FC<TestViewProps> = ({ test, onComplete, onExit }) => {
                   <span className={badgeClass}>
                     {String.fromCharCode(65 + index)}
                   </span>
-                  <span className={isAnswered && isCorrect ? "font-medium text-green-800" : (isAnswered && isSelected ? "font-medium text-red-800" : "text-slate-700")}>
+                  <span className={`text-lg transition-colors ${isAnswered && isCorrect ? "font-bold text-green-800 dark:text-green-300" : (isAnswered && isSelected ? "font-bold text-red-800 dark:text-red-300" : "text-slate-700 dark:text-slate-200")}`}>
                     {option}
                   </span>
                 </div>
                 {isAnswered && isCorrect && (
-                  <svg className="w-6 h-6 text-green-600 flex-shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
+                  <div className="bg-green-500 text-white rounded-full p-1 shadow-sm"><svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7"></path></svg></div>
                 )}
                 {isAnswered && isSelected && !isCorrect && (
-                  <svg className="w-6 h-6 text-red-500 flex-shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                  <div className="bg-red-500 text-white rounded-full p-1 shadow-sm"><svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M6 18L18 6M6 6l12 12"></path></svg></div>
                 )}
               </button>
             )
@@ -376,25 +376,25 @@ const TestView: React.FC<TestViewProps> = ({ test, onComplete, onExit }) => {
         </div>
 
         {isAnswered && currentQuestion.explanation && (
-          <div className={`mt-6 p-4 rounded-lg border-l-4 ${answers[currentQuestionIndex] === currentQuestion.correctAnswer ? 'bg-green-50 border-green-500 text-green-800' : 'bg-blue-50 border-blue-500 text-blue-800'} animate-fade-in`}>
-            <h4 className="font-bold mb-2 flex items-center gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+          <div className={`mt-8 p-6 rounded-xl border-l-8 shadow-md animate-fade-in ${answers[currentQuestionIndex] === currentQuestion.correctAnswer ? 'bg-green-50 dark:bg-green-900/20 border-green-500 text-green-800 dark:text-green-300' : 'bg-blue-50 dark:bg-blue-900/20 border-blue-500 text-blue-800 dark:text-blue-300'}`}>
+            <h4 className="font-bold text-lg mb-2 flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
               </svg>
-              Explicación
+              Explicación del Concepto
             </h4>
-            <p className="text-sm leading-relaxed whitespace-pre-line">
+            <div className="text-base leading-relaxed whitespace-pre-line font-medium italic opacity-90">
               {currentQuestion.explanation}
-            </p>
+            </div>
           </div>
         )}
       </div>
 
-      <div className="flex justify-between items-center mt-8 gap-2 flex-wrap sm:flex-nowrap">
+      <div className="flex justify-between items-center mt-10 gap-2 flex-wrap sm:flex-nowrap">
         <button
           onClick={handlePrev}
           disabled={currentQuestionIndex === 0 || gameOver || isGenerating}
-          className="order-1 flex items-center gap-2 bg-white hover:bg-slate-50 text-slate-700 font-bold py-2 px-5 rounded-lg border border-slate-300 shadow-sm disabled:opacity-50 disabled:cursor-not-allowed disabled:shadow-none"
+          className="order-1 flex items-center gap-2 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 font-bold py-3 px-6 rounded-xl border border-slate-300 dark:border-slate-600 shadow-sm disabled:opacity-30 disabled:cursor-not-allowed transition-all"
         >
           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
             <path fillRule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clipRule="evenodd" />
@@ -405,7 +405,7 @@ const TestView: React.FC<TestViewProps> = ({ test, onComplete, onExit }) => {
         {(isInfinite || isAI) && (
           <button
             onClick={handleFinishInfinite}
-            className="order-3 sm:order-2 bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-5 rounded-lg shadow-md flex items-center gap-2 flex-grow sm:flex-grow-0 justify-center"
+            className="order-3 sm:order-2 bg-purple-600 hover:bg-purple-700 dark:bg-purple-700 dark:hover:bg-purple-600 text-white font-bold py-3 px-6 rounded-xl shadow-lg flex items-center gap-2 flex-grow sm:flex-grow-0 justify-center transform hover:scale-105 active:scale-95 transition-all"
           >
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -418,7 +418,7 @@ const TestView: React.FC<TestViewProps> = ({ test, onComplete, onExit }) => {
           <button
             onClick={isInfinite ? handleFinishInfinite : handleSubmit}
             disabled={!isInfinite && answers.some(a => a === null)}
-            className="order-2 sm:order-3 bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-6 rounded-lg shadow-md transform transition hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+            className="order-2 sm:order-3 bg-green-500 dark:bg-green-600 hover:bg-green-600 dark:hover:bg-green-500 text-white font-bold py-3 px-8 rounded-xl shadow-lg transform transition hover:scale-110 active:scale-95 disabled:opacity-30 disabled:cursor-not-allowed disabled:transform-none"
           >
             Finalizar Test
           </button>
@@ -426,7 +426,7 @@ const TestView: React.FC<TestViewProps> = ({ test, onComplete, onExit }) => {
           <button
             onClick={handleNext}
             disabled={gameOver || isGenerating || (!isAnswered && !isAI)} // En modo normal obligamos a responder, en IA no necesariamente pero es mejor
-            className={`order-2 sm:order-3 flex items-center gap-2 font-bold py-2 px-5 rounded-lg shadow-md disabled:opacity-50 ${isAI ? 'bg-purple-600 hover:bg-purple-700 text-white' : 'bg-blue-600 hover:bg-blue-700 text-white'}`}
+            className={`order-2 sm:order-3 flex items-center gap-2 font-bold py-3 px-8 rounded-xl shadow-lg disabled:opacity-30 self-stretch sm:self-auto justify-center transform hover:scale-105 active:scale-95 transition-all ${isAI ? 'bg-purple-600 dark:bg-purple-700 hover:bg-purple-700 dark:hover:bg-purple-600 text-white' : 'bg-blue-600 dark:bg-blue-700 hover:bg-blue-700 dark:hover:bg-blue-600 text-white'}`}
           >
             {isAI && isGenerating ? 'Generando...' : 'Siguiente'}
             {!isGenerating && (

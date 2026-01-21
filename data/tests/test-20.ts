@@ -3,76 +3,71 @@ import type { Test } from '../../types';
 
 export const TEST_20: Test = {
   id: 'test-20',
-  title: 'Test 20: JVP/Conducta II (46-50)',
+  title: 'Test 20: Seguridad y Protección de Datos',
   questions: [
-    // Tema 46: JVP
-    { 
-      questionText: 'Para sancionar con aislamiento en celda superior a 14 días se requiere:', 
-      options: ['Aprobación del Director', 'Aprobación del Juez de Vigilancia', 'Aprobación del Ministro', 'Visto bueno del médico'], 
+    {
+      questionText: '¿Qué ley regula la protección de datos personales en España?',
+      options: ['LOPDGDD', 'LSSI', 'LPI', 'LGT'],
       correctAnswer: 1,
-      explanation: 'El artículo 42 de la LOGP establece que el aislamiento en celda no podrá exceder de 14 días. Si se imponen sanciones acumuladas que superen este límite, se requerirá la aprobación del Juez de Vigilancia.'
+      explanation: 'La Ley Orgánica 3/2018 de Protección de Datos Personales y garantía de los derechos digitales (LOPDGDD).'
     },
-    { 
-      questionText: 'La competencia territorial del JVP se determina por:', 
-      options: ['El lugar del delito', 'El lugar donde radica el establecimiento penitenciario', 'El domicilio del interno', 'Madrid siempre'], 
-      correctAnswer: 1,
-      explanation: 'La competencia territorial de los Jueces de Vigilancia Penitenciaria viene determinada por el lugar donde radica el establecimiento penitenciario donde el interno cumple condena.'
-    },
-    
-    // Tema 47: Recursos
-    { 
-      questionText: 'El plazo para interponer recurso de reforma contra autos del JVP es de:', 
-      options: ['3 días', '5 días', '10 días', '15 días'], 
+    {
+      questionText: '¿Qué es el RGPD?',
+      options: ['Reglamento General de Protección de Datos', 'Registro General de Protección de Datos', 'Regla General de Privacidad de Datos', 'Red Global de Protección de Datos'],
       correctAnswer: 0,
-      explanation: 'Según la Ley de Enjuiciamiento Criminal, el recurso de reforma contra los autos de los jueces de instrucción (y por remisión, JVP) se interpondrá en el plazo de tres días.'
+      explanation: 'El Reglamento General de Protección de Datos es la normativa europea de privacidad.'
     },
-    { 
-      questionText: '¿Están legitimados los internos para acudir al Defensor del Pueblo?', 
-      options: ['No, están presos', 'Sí, libremente y sin censura', 'Solo con permiso del Director', 'Solo a través de abogado'], 
+
+    {
+      questionText: '¿Qué es un ataque de Phishing?',
+      options: ['Pescar peces', 'Suplantación de identidad por correo electrónico para robar credenciales', 'Un virus', 'Un error de software'],
       correctAnswer: 1,
-      explanation: 'La Ley Orgánica del Defensor del Pueblo garantiza que toda persona podrá dirigirse al Defensor del Pueblo. La correspondencia con él no podrá ser objeto de censura.'
+      explanation: 'El phishing es una técnica de ingeniería social para engañar a los usuarios y obtener información confidencial.'
     },
-    
-    // Tema 48: Conducta
-    { 
-      questionText: 'En el condicionamiento operante, el refuerzo positivo busca:', 
-      options: ['Disminuir una conducta', 'Aumentar la probabilidad de repetición de una conducta', 'Castigar', 'Ignorar'], 
-      correctAnswer: 1,
-      explanation: 'En la teoría del condicionamiento operante (Skinner), el refuerzo positivo consiste en presentar un estímulo agradable tras una conducta para aumentar la probabilidad de que ésta se repita.'
+    {
+      questionText: '¿Qué es la criptografía simétrica?',
+      options: ['Usa la misma clave para cifrar y descifrar', 'Usa dos claves diferentes', 'No usa claves', 'Es insegura'],
+      correctAnswer: 0,
+      explanation: 'En la criptografía simétrica, el emisor y el receptor comparten una única clave secreta.'
     },
-    { 
-      questionText: 'La Pirámide de Maslow jerarquiza:', 
-      options: ['Los delitos', 'Las necesidades humanas', 'Los grados penitenciarios', 'Las leyes'], 
+
+    {
+      questionText: '¿Qué es un Hash?',
+      options: ['Una función unidireccional que convierte datos en una cadena de longitud fija', 'Una clave', 'Un virus', 'Un archivo'],
       correctAnswer: 1,
-      explanation: 'La pirámide de Maslow es una teoría psicológica que jerarquiza las necesidades humanas, desde las fisiológicas (base) hasta la autorrealización (cúspide).'
+      explanation: 'Un hash es una huella digital de los datos; si los datos cambian, el hash cambia. Es irreversible.'
     },
-    
-    // Tema 49: Subcultura
-    { 
-      questionText: 'Una norma básica del código subcultural recluso ("código del preso") es:', 
-      options: ['Colaborar con los funcionarios', 'No "chivarse" o delatar a otros internos', 'Pagar impuestos', 'Ser puntual'], 
+    {
+      questionText: '¿Qué es la autenticación multifactor (MFA)?',
+      options: ['Usar solo contraseña', 'Usar dos o más métodos de verificación (algo que sabes, tienes o eres)', 'Usar dos contraseñas', 'No autenticar'],
       correctAnswer: 1,
-      explanation: 'El "código del preso" incluye normas no escritas como no delatar a otros internos ("no chivarse"), desconfiar de los funcionarios y mantener la solidaridad entre reclusos.'
+      explanation: 'MFA aumenta la seguridad requiriendo múltiples formas de identificación.'
     },
-    { 
-      questionText: 'La aculturación en prisión se refiere a:', 
-      options: ['Aprender cultura general', 'El proceso de pérdida de la cultura propia y asimilación de la carcelaria', 'Hacer cursos', 'Leer libros'], 
+
+    {
+      questionText: '¿Qué es un Troyano?',
+      options: ['Un virus que se replica', 'Un malware que se disfraza de software legítimo', 'Un antivirus', 'Un firewall'],
       correctAnswer: 1,
-      explanation: 'La prisionización o aculturación en prisión implica la asimilación por parte del interno de los valores, normas y pautas de conducta propios de la subcultura carcelaria.'
+      explanation: 'Un troyano parece útil o inofensivo pero contiene código malicioso oculto.'
     },
-    
-    // Tema 50: Habilidades
-    { 
-      questionText: 'La comunicación no verbal incluye:', 
-      options: ['Solo las palabras escritas', 'Gestos, postura, mirada y tono de voz', 'El correo electrónico', 'El teléfono'], 
-      correctAnswer: 1,
-      explanation: 'La comunicación no verbal abarca todos los elementos de la comunicación que no son palabras, como el lenguaje corporal (gestos, postura), la expresión facial, el contacto visual y el paralenguaje (tono, volumen).'
+    {
+      questionText: '¿Qué es la ISO 27001?',
+      options: ['Un estándar internacional para la gestión de la seguridad de la información', 'Un estándar de calidad', 'Un estándar ambiental', 'Un software'],
+      correctAnswer: 0,
+      explanation: 'ISO/IEC 27001 es la norma internacional para los Sistemas de Gestión de Seguridad de la Información (SGSI).'
     },
-    { 
-      questionText: 'La empatía se diferencia de la simpatía en que:', 
-      options: ['Es lo mismo', 'La empatía implica comprender emocionalmente al otro sin necesariamente compartir su opinión o afecto', 'La empatía es reírse con el otro', 'La simpatía es mala'], 
-      correctAnswer: 1,
-      explanation: 'La empatía es la capacidad de ponerse en el lugar del otro y comprender sus sentimientos y perspectivas, mientras que la simpatía implica una afinidad o inclinación afectiva hacia alguien.'
+
+    {
+      questionText: '¿Qué es un ataque XSS (Cross-Site Scripting)?',
+      options: ['Inyección de scripts maliciosos en sitios web confiables', 'Ataque al servidor', 'Robo de hardware', 'Ataque de fuerza bruta'],
+      correctAnswer: 0,
+      explanation: 'XSS permite a los atacantes inyectar scripts en páginas web vistas por otros usuarios.'
+    },
+    {
+      questionText: '¿Qué es la confidencialidad?',
+      options: ['Garantizar que la información solo sea accesible por personas autorizadas', 'Que los datos sean correctos', 'Que el sistema funcione', 'Que sea rápido'],
+      correctAnswer: 0,
+      explanation: 'La confidencialidad es uno de los pilares de la seguridad (junto con integridad y disponibilidad).'
     },
   ]
 };

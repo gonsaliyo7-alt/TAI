@@ -1,31 +1,26 @@
 
 export const RANKS = [
-    // Tropa y Marinería
-    { name: 'Soldado', minXP: 0, icon: '🔰' },
-    { name: 'Soldado de Primera', minXP: 1000, icon: '🏅' },
-    { name: 'Cabo', minXP: 3000, icon: '🎖️' },
-    { name: 'Cabo Primero', minXP: 6000, icon: '🎖️' },
-    { name: 'Cabo Mayor', minXP: 10000, icon: '🎖️' },
+    // Niveles C2 (Auxiliar)
+    { name: 'Auxiliar de Informática (C2)', minXP: 0, icon: '📄' },
+    { name: 'Auxiliar Consolidado', minXP: 1000, icon: '📑' },
 
-    // Suboficiales
-    { name: 'Sargento', minXP: 15000, icon: '⚔️' },
-    { name: 'Sargento Primero', minXP: 22000, icon: '⚔️' },
-    { name: 'Brigada', minXP: 30000, icon: '⚔️' },
-    { name: 'Subteniente', minXP: 40000, icon: '⭐' },
-    { name: 'Suboficial Mayor', minXP: 55000, icon: '⭐' },
+    // Niveles C1 (TAI)
+    { name: 'Técnico Auxiliar (C1)', minXP: 3000, icon: '💻' },
+    { name: 'Técnico Especialista', minXP: 8000, icon: '🖥️' },
+    { name: 'Técnico de Gestión IT', minXP: 15000, icon: '⚙️' },
 
-    // Oficiales
-    { name: 'Alférez', minXP: 75000, icon: '⭐' },
-    { name: 'Teniente', minXP: 100000, icon: '⭐⭐' },
-    { name: 'Capitán', minXP: 130000, icon: '⭐⭐⭐' },
-    { name: 'Comandante', minXP: 170000, icon: '🌟' },
-    { name: 'Teniente Coronel', minXP: 220000, icon: '🌟🌟' },
-    { name: 'Coronel', minXP: 280000, icon: '🌟🌟🌟' },
+    // Niveles A2 (Gestión)
+    { name: 'Gestión de Sistemas (A2)', minXP: 30000, icon: '📊' },
+    { name: 'Analista Programador', minXP: 50000, icon: '🧬' },
+    { name: 'Jefe de Sección IT', minXP: 80000, icon: '🏢' },
 
-    // Oficiales Generales
-    { name: 'General de Brigada', minXP: 350000, icon: '⚔️🌟' },
-    { name: 'General de División', minXP: 450000, icon: '⚔️🌟🌟' },
-    { name: 'Teniente General', minXP: 600000, icon: '⚔️🌟🌟🌟' },
-    { name: 'General de Ejército', minXP: 800000, icon: '🦅' },
-    { name: 'Capitán General', minXP: 1000000, icon: '👑🦅' }
+    // Niveles A1 (Superior)
+    { name: 'Ingeniero Superior (A1)', minXP: 120000, icon: '🚀' },
+    { name: 'Director de Sistemas', minXP: 200000, icon: '🛡️' },
+    { name: 'Subdirector General TIC', minXP: 350000, icon: '🌐' },
+    { name: 'Director TIC Ministerial', minXP: 550000, icon: '🏛️' },
+
+    // Élite
+    { name: 'Secretario de Estado Digital', minXP: 850000, icon: '💎' },
+    { name: 'Ministro de Transformación Digital', minXP: 1200000, icon: '👑' }
 ];

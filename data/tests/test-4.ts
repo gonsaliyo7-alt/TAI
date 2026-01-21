@@ -3,7 +3,7 @@ import type { Test } from '../../types';
 
 export const TEST_4: Test = {
   id: 'test-4',
-  title: 'Test 4: Presupuesto y Dº Penal I (Temas 16-20)',
+  title: 'Test 4: Políticas Públicas y Transparencia',
   questions: [
     // Tema 16: El Presupuesto del Estado
     { 
@@ -19,60 +19,60 @@ export const TEST_4: Test = {
       explanation: 'El artículo 134.4 de la Constitución dispone que si la Ley de Presupuestos no se aprobara antes del primer día del ejercicio económico correspondiente, se considerarán automáticamente prorrogados los Presupuestos del ejercicio anterior hasta la aprobación de los nuevos.'
     },
     
-    // Tema 17: Ministerio del Interior
+    // Tema: Igualdad de Género
     { 
-      questionText: 'La Secretaría General de Instituciones Penitenciarias tiene rango de:', 
-      options: ['Dirección General', 'Subsecretaría', 'Secretaría de Estado', 'Vicepresidencia'], 
+      questionText: 'La Ley Orgánica 3/2007 es para:', 
+      options: ['La protección de datos', 'La igualdad efectiva de mujeres y hombres', 'La transparencia', 'El presupuesto'], 
       correctAnswer: 1,
-      explanation: 'Según la estructura orgánica básica del Ministerio del Interior, la Secretaría General de Instituciones Penitenciarias tiene rango de Subsecretaría.'
+      explanation: 'La Ley Orgánica 3/2007, de 22 de marzo, es para la igualdad efectiva de mujeres y hombres.'
     },
     { 
-      questionText: '¿De quién depende la Entidad de Derecho Público Trabajo Penitenciario y Formación para el Empleo?', 
-      options: ['Del Ministerio de Trabajo', 'De la Secretaría General de Instituciones Penitenciarias', 'Del Ministerio de Educación', 'De las Comunidades Autónomas'], 
-      correctAnswer: 1,
-      explanation: 'La Entidad Estatal Trabajo Penitenciario y Formación para el Empleo (TPFE) está adscrita al Ministerio del Interior a través de la Secretaría General de Instituciones Penitenciarias.'
-    },
-    
-    // Tema 18: Concepto y principios Dº Penal
-    { 
-      questionText: 'El principio "non bis in idem" significa que:', 
-      options: ['No se puede castigar dos veces el mismo hecho si hay identidad de sujeto, hecho y fundamento', 'Siempre hay que imponer dos penas', 'La pena debe ser doble si hay reincidencia', 'No se puede juzgar a dos personas a la vez'], 
-      correctAnswer: 0,
-      explanation: 'El principio "non bis in idem" impide sancionar dos veces el mismo hecho cuando concurra la triple identidad de sujeto, hecho y fundamento.'
-    },
-    { 
-      questionText: '¿Cuál es la fuente principal del Derecho Penal?', 
-      options: ['La costumbre', 'Los principios generales del derecho', 'La Ley Orgánica', 'La jurisprudencia'], 
+      questionText: 'El principio de presencia equilibrada se refiere a que las personas de cada sexo no superen el 60% ni sean menos del:', 
+      options: ['20%', '30%', '40%', '50%'], 
       correctAnswer: 2,
-      explanation: 'En Derecho Penal rige el principio de legalidad. Las leyes penales que impongan penas privativas de libertad deben tener rango de Ley Orgánica (art. 81 CE), siendo esta la fuente principal.'
+      explanation: 'La Ley de Igualdad define la presencia equilibrada como aquella en la que las personas de cada sexo no superen el 60% ni sean menos del 40%.'
     },
     
-    // Tema 19: Ley Penal tiempo/espacio y Acción
+    // Tema: Transparencia
     { 
-      questionText: 'Las leyes penales tienen efecto retroactivo cuando:', 
-      options: ['Son sancionadoras', 'Favorecen al reo', 'El delito es muy grave', 'Nunca'], 
-      correctAnswer: 1,
-      explanation: 'El artículo 2.2 del Código Penal establece que tendrán efecto retroactivo aquellas leyes penales que favorezcan al reo, aunque al entrar en vigor hubiera recaído sentencia firme y el sujeto estuviese cumpliendo condena.'
+      questionText: 'La Ley 19/2013 regula:', 
+      options: ['La transparencia, el acceso a la información pública y el buen gobierno', 'El procedimiento administrativo', 'Los contratos', 'El presupuesto'], 
+      correctAnswer: 0,
+      explanation: 'La Ley 19/2013 tiene por objeto ampliar y reforzar la transparencia de la actividad pública, regular y garantizar el derecho de acceso a la información y establecer las obligaciones de buen gobierno.'
     },
     { 
-      questionText: 'En la teoría del delito, la "tipicidad" significa que:', 
-      options: ['La acción debe estar descrita en la ley como delito', 'La acción es contraria a derecho', 'El autor es culpable', 'La acción es habitual'], 
-      correctAnswer: 0,
-      explanation: 'La tipicidad es la adecuación del acto humano voluntario ejecutado por el sujeto a la figura descrita por la ley como delito (el tipo penal).'
+      questionText: 'El derecho de acceso a la información pública puede ser limitado por:', 
+      options: ['La seguridad nacional', 'La defensa', 'La protección de datos personales', 'Todas las anteriores'], 
+      correctAnswer: 3,
+      explanation: 'El derecho de acceso está sujeto a límites como la seguridad nacional, la defensa, las relaciones exteriores, la seguridad pública y la protección de datos, entre otros.'
     },
     
-    // Tema 20: Omisión y Clasificación
+    // Tema: Protección de Datos
     { 
-      questionText: 'En los delitos de omisión impropia (comisión por omisión), se requiere que el sujeto tenga:', 
-      options: ['Antecedentes penales', 'Posición de garante', 'Intención de dañar', 'Armas'], 
+      questionText: '¿Qué es un dato de carácter personal?', 
+      options: ['Cualquier información numérica', 'Cualquier información concerniente a personas físicas identificadas o identificables', 'Solo el DNI', 'Solo el nombre'], 
       correctAnswer: 1,
-      explanation: 'El artículo 11 del Código Penal establece que para la comisión por omisión se requiere que el omitente tenga un deber jurídico de actuar ("posición de garante"), ya sea por ley, contrato o actuar precedente.'
+      explanation: 'Se considera dato personal cualquier información numérica, alfabética, gráfica, fotográfica, acústica o de cualquier otro tipo concerniente a personas físicas identificadas o identificables.'
     },
     { 
-      questionText: 'Según el Código Penal, los delitos se clasifican en:', 
-      options: ['Graves, menos graves y leves', 'Mayores y menores', 'Crímenes y delitos', 'Dolosos e imprudentes'], 
-      correctAnswer: 0,
-      explanation: 'El artículo 13 del Código Penal clasifica los delitos en graves, menos graves y leves, en función de la naturaleza y duración de la pena que llevan aparejada.'
+      questionText: 'El consentimiento para el tratamiento de datos debe ser:', 
+      options: ['Tácito', 'Inequívoco', 'Presunto', 'Obligatorio'], 
+      correctAnswer: 1,
+      explanation: 'El RGPD exige que el consentimiento sea libre, específico, informado e inequívoco.'
+    },
+    
+    // Tema: Discapacidad
+    { 
+      questionText: 'La reserva de plazas para personas con discapacidad en la oferta de empleo público es del:', 
+      options: ['2%', '5%', '7%', '10%'], 
+      correctAnswer: 2,
+      explanation: 'En las ofertas de empleo público se reservará un cupo no inferior al 7% de las vacantes para ser cubiertas por personas con discapacidad.'
+    },
+    { 
+      questionText: '¿Qué ley regula los derechos de las personas con discapacidad?', 
+      options: ['Ley General de Sanidad', 'Texto Refundido de la Ley General de derechos de las personas con discapacidad y de su inclusión social', 'Código Civil', 'Estatuto de los Trabajadores'], 
+      correctAnswer: 1,
+      explanation: 'Es el Real Decreto Legislativo 1/2013, de 29 de noviembre.'
     },
   ]
 };

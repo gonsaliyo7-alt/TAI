@@ -39,15 +39,15 @@ export class AIService {
 
         // Initialize model if not already done
         if (!this.model) {
-            // Using Gemini 2.5 Flash Lite
-            this.model = this.genAI.getGenerativeModel({ model: "gemini-2.5-flash-lite" });
+            // Using Gemini 2.0 Flash Lite
+            this.model = this.genAI.getGenerativeModel({ model: "gemini-2.0-flash-lite-preview-02-05" });
         }
 
-        const prompt = `Eres un experto en oposiciones de España. Crea una pregunta de examen tipo test sobre el temario de Ayudante de Instituciones Penitenciarias.
+        const prompt = `Eres un experto en oposiciones de España. Crea una pregunta de examen tipo test sobre el temario del Cuerpo de Técnicos Auxiliares de Informática de la Administración del Estado.
 
 FORMATO REQUERIDO (responde SOLO con este JSON):
 {
-  "questionText": "¿Pregunta sobre legislación penitenciaria, derecho penal o función pública?",
+  "questionText": "¿Pregunta sobre informática, tecnología de sistemas, desarrollo o legislación administrativa?",
   "options": ["Primera opción", "Segunda opción", "Tercera opción", "Cuarta opción"],
   "correctAnswer": 0,
   "explanation": "Explicación clara de por qué es correcta, citando artículos si procede"
@@ -85,16 +85,22 @@ IMPORTANTE: Responde ÚNICAMENTE con el JSON, sin texto antes ni después.`;
 
             return questionData as Question;
         } catch (error: any) {
-            console.error("Error:", error);
+            console.error("AI Service Error:", error);
 
-            if (error.message?.includes('API key')) {
-                throw new Error("API Key inválida. Verifica que sea correcta.");
-            } else if (error.message?.includes('quota')) {
-                throw new Error("Límite excedido. Espera unos minutos.");
+            const msg = error.message?.toLowerCase() || "";
+
+            if (msg.includes('api key not found') || msg.includes('invalid api key') || msg.includes('api_key_invalid')) {
+                throw new Error("⚠️ API KEY INVÁLIDA: La clave introducida no es correcta o ha sido revocada. Por favor, asegúrate de pegarla exactamente como aparece en Google AI Studio.");
+            } else if (msg.includes('quota') || msg.includes('429')) {
+                throw new Error("⏳ LÍMITE EXCEDIDO: Has superado el límite de preguntas gratuitas por minuto. Espera 60 segundos antes de intentar generar otra.");
+            } else if (msg.includes('overloaded') || msg.includes('demand') || msg.includes('503')) {
+                throw new Error("🔥 ALTA DEMANDA: Los servidores de Google están saturados en este momento. Reintenta en unos instantes.");
+            } else if (msg.includes('permission') || msg.includes('403')) {
+                throw new Error("🚫 PERMISO DENEGADO: Tu API Key no tiene permisos para usar este modelo o tu región no está soportada.");
             } else if (error instanceof SyntaxError) {
-                throw new Error("Error al procesar respuesta. Intenta de nuevo.");
+                throw new Error("🧩 ERROR DE FORMATO: La IA generó una respuesta pero no pudimos procesar el JSON. Reintenta generar otra.");
             } else {
-                throw new Error(error.message || "Error desconocido");
+                throw new Error(`❌ ERROR TÉCNICO: ${error.message || "Error desconocido en la comunicación con la IA"}`);
             }
         }
     }

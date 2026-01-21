@@ -3,7 +3,7 @@ import type { Test } from '../../types';
 
 export const TEST_EXAMEN_2021: Test = {
   id: 'test-examen-2021',
-  title: 'Examen Oficial 2021 (14 Noviembre)',
+  title: 'Examen Oficial TAI 2021 (Simulacro)',
   questions: [
     // Pregunta 1
     {
@@ -17,1902 +17,1900 @@ export const TEST_EXAMEN_2021: Test = {
       correctAnswer: 1,
       explanation: 'El artículo 1.3 de la Constitución Española establece que "La forma política del Estado español es la Monarquía parlamentaria".'
     },
-    
+
     // Pregunta 2
     {
-      questionText: 'El derecho a la vida y a la integridad física y moral está reconocido en el artículo:',
+      questionText: '¿Qué ley regula el Procedimiento Administrativo Común de las Administraciones Públicas?',
       options: [
-        'Artículo 14 CE',
-        'Artículo 15 CE',
-        'Artículo 16 CE',
-        'Artículo 17 CE'
+        'Ley 40/2015',
+        'Ley 39/2015',
+        'Ley 30/1992',
+        'Ley 9/2017'
       ],
       correctAnswer: 1,
-      explanation: 'El artículo 15 de la Constitución reconoce el derecho a la vida y a la integridad física y moral, sin que nadie pueda ser sometido a tortura ni a penas o tratos inhumanos o degradantes.'
+      explanation: 'La Ley 39/2015, de 1 de octubre, regula el Procedimiento Administrativo Común.'
     },
-    
+
     // Pregunta 3
     {
-      questionText: 'Según el artículo 25.2 CE, las penas privativas de libertad estarán orientadas hacia:',
+      questionText: 'En el modelo OSI, ¿qué capa se encarga del enrutamiento de paquetes?',
       options: [
-        'El castigo del delincuente',
-        'La reeducación y reinserción social',
-        'La protección de la sociedad',
-        'La prevención del delito'
+        'Capa de Enlace',
+        'Capa de Red',
+        'Capa de Transporte',
+        'Capa de Sesión'
       ],
       correctAnswer: 1,
-      explanation: 'El artículo 25.2 CE establece que "las penas privativas de libertad y las medidas de seguridad estarán orientadas hacia la reeducación y reinserción social".'
+      explanation: 'La Capa de Red (Capa 3) es responsable del enrutamiento y direccionamiento lógico.'
     },
-    
+
     // Pregunta 4
     {
-      questionText: '¿Cuál es el plazo máximo de detención preventiva según la Constitución?',
+      questionText: '¿Qué comando de Linux muestra el uso de disco por directorios?',
       options: [
-        '24 horas',
-        '48 horas',
-        '72 horas',
-        '96 horas'
+        'df',
+        'du',
+        'ls',
+        'ps'
       ],
-      correctAnswer: 2,
-      explanation: 'El artículo 17.2 CE establece que la detención preventiva no podrá durar más de 72 horas.'
+      correctAnswer: 1,
+      explanation: '"du" (disk usage) estima el uso de espacio en disco de archivos y directorios.'
     },
-    
+
     // Pregunta 5
     {
-      questionText: 'El Defensor del Pueblo es nombrado por:',
+      questionText: '¿Qué es un diagrama de Gantt?',
       options: [
-        'El Rey',
-        'El Gobierno',
-        'Las Cortes Generales',
-        'El Congreso de los Diputados'
+        'Un diagrama de flujo de datos',
+        'Una herramienta gráfica para la planificación y gestión de proyectos',
+        'Un diagrama de clases',
+        'Un diagrama de red'
       ],
-      correctAnswer: 2,
-      explanation: 'Según el artículo 54 CE, el Defensor del Pueblo es el alto comisionado de las Cortes Generales, designado por éstas.'
+      correctAnswer: 1,
+      explanation: 'El diagrama de Gantt muestra la dedicación de tiempo prevista para diferentes tareas a lo largo del tiempo.'
     },
-    
+
     // Pregunta 6
     {
-      questionText: 'El artículo 137 CE establece que el Estado se organiza territorialmente en:',
+      questionText: 'En Java, ¿qué palabra clave se usa para evitar que una clase sea heredada?',
       options: [
-        'Municipios y provincias',
-        'Comunidades Autónomas',
-        'Municipios, provincias y Comunidades Autónomas',
-        'Regiones y nacionalidades'
+        'static',
+        'final',
+        'abstract',
+        'private'
       ],
-      correctAnswer: 2,
-      explanation: 'El artículo 137 CE dispone que "El Estado se organiza territorialmente en municipios, en provincias y en las Comunidades Autónomas que se constituyan".'
+      correctAnswer: 1,
+      explanation: 'Una clase declarada como "final" no puede tener subclases.'
     },
-    
+
     // Pregunta 7
     {
-      questionText: 'Según la LOGP, ¿cuál es el fin primordial de las Instituciones Penitenciarias?',
+      questionText: '¿Qué es el phishing?',
       options: [
-        'El castigo de los delincuentes',
-        'La reeducación y la reinserción social',
-        'La protección de la sociedad',
-        'La prevención del delito'
+        'Un virus',
+        'Una técnica de ingeniería social para robar credenciales',
+        'Un firewall',
+        'Un antivirus'
       ],
       correctAnswer: 1,
-      explanation: 'El artículo 1 de la LOGP establece que "Las Instituciones Penitenciarias tienen como fin primordial la reeducación y la reinserción social de los sentenciados a penas y medidas penales privativas de libertad".'
+      explanation: 'El phishing intenta engañar al usuario para que revele información confidencial.'
     },
-    
+
     // Pregunta 8
     {
-      questionText: 'La actividad penitenciaria se ejercerá respetando:',
+      questionText: '¿Qué es SQL?',
       options: [
-        'La personalidad humana de los recluidos',
-        'Los derechos e intereses jurídicos no afectados por la condena',
-        'Sin establecer diferencia por razón de raza, opiniones políticas o creencias religiosas',
-        'Todas las anteriores son correctas'
+        'Structured Question Language',
+        'Structured Query Language',
+        'Simple Query Language',
+        'System Query Logic'
       ],
-      correctAnswer: 3,
-      explanation: 'El artículo 3 de la LOGP establece todos estos principios que deben respetarse en la actividad penitenciaria.'
+      correctAnswer: 1,
+      explanation: 'SQL es el lenguaje estándar para bases de datos relacionales.'
     },
-    
+
     // Pregunta 9
     {
-      questionText: 'Los establecimientos de cumplimiento son aquellos en los que se ejecutan:',
+      questionText: '¿Qué es la memoria RAM?',
       options: [
-        'Las penas de arresto de fin de semana',
-        'Las penas privativas de libertad',
-        'Las medidas de seguridad',
-        'Las penas de trabajos en beneficio de la comunidad'
+        'Memoria de solo lectura',
+        'Memoria de acceso aleatorio',
+        'Memoria de almacenamiento masivo',
+        'Memoria virtual'
       ],
       correctAnswer: 1,
-      explanation: 'Según el artículo 7 de la LOGP, los establecimientos de cumplimiento son aquellos en los que se ejecutan las penas privativas de libertad.'
+      explanation: 'RAM (Random Access Memory) es la memoria principal volátil del ordenador.'
     },
-    
+
     // Pregunta 10
     {
-      questionText: 'El régimen cerrado se aplicará a los internos:',
+      questionText: '¿Qué es un algoritmo?',
       options: [
-        'Clasificados en primer grado',
-        'Clasificados en segundo grado',
-        'Clasificados en tercer grado',
-        'En situación de libertad condicional'
-      ],
-      correctAnswer: 0,
-      explanation: 'El régimen cerrado se aplica a los internos clasificados en primer grado de tratamiento penitenciario.'
-    },
-    
-    // Pregunta 11 - Basada en el archivo TXT
-    {
-      questionText: 'La salida de internos para consulta o ingreso en centros hospitalarios no penitenciarios será acordada por:',
-      options: [
-        'El Director del centro penitenciario',
-        'El Juez de Vigilancia Penitenciaria',
-        'La Junta de Tratamiento',
-        'El centro directivo'
-      ],
-      correctAnswer: 3,
-      explanation: 'Según el Reglamento Penitenciario, la salida de internos para consulta o ingreso en centros hospitalarios no penitenciarios será acordada por el centro directivo.'
-    },
-    
-    // Pregunta 12 - Basada en el archivo TXT
-    {
-      questionText: 'Según el artículo 24.3 del Reglamento Penitenciario, ¿qué establece sobre los derechos de los internos?',
-      options: [
-        'Tienen derecho a comunicaciones ilimitadas',
-        'Pueden recibir paquetes sin restricciones',
-        'Se refiere a las limitaciones de derechos',
-        'Establece el régimen de visitas'
-      ],
-      correctAnswer: 2,
-      explanation: 'El artículo 24.3 del Reglamento Penitenciario establece las limitaciones de derechos de los internos.'
-    },
-    
-    // Pregunta 13 - Basada en el archivo TXT (R.D. 840/2011)
-    {
-      questionText: 'Según el artículo 13.4 del R.D. 840/2011, el ingreso en arresto de fin de semana tendrá lugar:',
-      options: [
-        'El viernes a las 18 horas',
-        'El viernes a las 21 horas',
-        'El sábado entre las 9 y las 10 horas',
-        'El sábado a las 12 horas'
-      ],
-      correctAnswer: 2,
-      explanation: 'El artículo 13.4 establece que el ingreso tendrá lugar el sábado o día festivo inmediatamente anterior entre las 9 y las 10 horas y la permanencia será ininterrumpida hasta las 21 horas del domingo.'
-    },
-    
-    // Pregunta 14 - Basada en el archivo TXT
-    {
-      questionText: 'Según el artículo 90.2 de la CE, el Senado puede oponer su veto o introducir enmiendas en el plazo de:',
-      options: [
-        'Un mes',
-        'Dos meses',
-        'Tres meses',
-        'Quince días'
+        'Un lenguaje de programación',
+        'Una secuencia ordenada de pasos para resolver un problema',
+        'Un componente hardware',
+        'Un error de software'
       ],
       correctAnswer: 1,
-      explanation: 'El artículo 90.2 CE establece que el Senado, en el plazo de dos meses a partir del día de la recepción del texto, puede mediante mensaje motivado oponer su veto o introducir enmiendas al mismo.'
+      explanation: 'Un algoritmo es un conjunto finito de instrucciones o pasos que sirven para ejecutar una tarea o resolver un problema.'
     },
-    
-    // Pregunta 15 - Basada en el archivo TXT
+
+    // Pregunta 11
     {
-      questionText: 'Según el artículo 4 del Reglamento Penitenciario, los internos tienen derecho a:',
+      questionText: '¿Qué es el BOE?',
       options: [
-        'Que la Administración vele por sus vidas e integridad',
-        'Preservar su dignidad e intimidad',
-        'Un trabajo remunerado dentro de las disponibilidades',
-        'Todas las anteriores son correctas'
+        'Boletín Oficial del Estado',
+        'Boletín Oficial de España',
+        'Base Oficial del Estado',
+        'Boletín de Ordenamiento Estatal'
       ],
-      correctAnswer: 3,
-      explanation: 'El artículo 4 del RP establece todos estos derechos para los internos, incluyendo el derecho a que se vele por su vida, integridad, dignidad, intimidad y trabajo remunerado.'
+      correctAnswer: 0,
+      explanation: 'El BOE es el diario oficial del Estado español.'
     },
-    
+
+    // Pregunta 12
+    {
+      questionText: '¿Qué es la accesibilidad web?',
+      options: [
+        'Que la web sea rápida',
+        'Que la web pueda ser usada por personas con discapacidad',
+        'Que la web sea bonita',
+        'Que la web sea barata'
+      ],
+      correctAnswer: 1,
+      explanation: 'La accesibilidad web busca que todas las personas, independientemente de sus capacidades, puedan usar la web.'
+    },
+
+    // Pregunta 13
+    {
+      questionText: '¿Qué es un sistema operativo?',
+      options: [
+        'El hardware del ordenador',
+        'El software que gestiona los recursos del hardware y provee servicios a los programas',
+        'Un procesador de textos',
+        'Un navegador web'
+      ],
+      correctAnswer: 1,
+      explanation: 'El SO es el software fundamental que controla el ordenador.'
+    },
+
+    // Pregunta 14
+    {
+      questionText: '¿Qué es la nube (Cloud Computing)?',
+      options: [
+        'El clima',
+        'El suministro de servicios informáticos a través de Internet',
+        'Una red local',
+        'Un disco duro externo'
+      ],
+      correctAnswer: 1,
+      explanation: 'Cloud Computing permite acceder a recursos informáticos bajo demanda a través de la red.'
+    },
+
+    // Pregunta 15
+    {
+      questionText: '¿Qué es un backup?',
+      options: [
+        'Un virus',
+        'Una copia de seguridad de los datos',
+        'Un usuario',
+        'Un programa'
+      ],
+      correctAnswer: 1,
+      explanation: 'Un backup es una copia de los datos para poder recuperarlos en caso de pérdida.'
+    },
+
     // Pregunta 16
     {
-      questionText: 'Las Comunidades Autónomas podrán asumir competencias en materia de:',
+      questionText: '¿Qué es el HTML?',
       options: [
-        'Puertos comerciales',
-        'Aeropuertos internacionales',
-        'Puertos deportivos',
-        'Todas las anteriores'
-      ],
-      correctAnswer: 2,
-      explanation: 'Según la Constitución, las CCAA pueden asumir competencias sobre puertos de refugio, puertos y aeropuertos deportivos y, en general, los que no desarrollen actividades comerciales.'
-    },
-    
-    // Pregunta 17 - Basada en el archivo TXT
-    {
-      questionText: '¿Cuántos ejes de actuación tiene el III Plan para la igualdad de género en la AGE aprobado en diciembre de 2020?',
-      options: [
-        'Cuatro ejes',
-        'Cinco ejes',
-        'Seis ejes',
-        'Siete ejes'
-      ],
-      correctAnswer: 2,
-      explanation: 'El III Plan se articula en seis ejes de actuación donde se desarrollan medidas de carácter transversal (68 medidas).'
-    },
-    
-    // Pregunta 18 - Basada en el archivo TXT
-    {
-      questionText: 'Según la Ley de Voluntariado, NO se considera un ámbito de actuación del voluntariado:',
-      options: [
-        'Voluntariado institucional',
-        'Voluntariado social',
-        'Voluntariado ambiental',
-        'Voluntariado educativo'
-      ],
-      correctAnswer: 0,
-      explanation: 'El artículo 6 de la Ley de Voluntariado enumera diversos ámbitos, pero no incluye el "voluntariado institucional". Sí incluye voluntariado internacional de cooperación para el desarrollo.'
-    },
-    
-    // Pregunta 19 - Basada en el archivo TXT
-    {
-      questionText: 'Según el artículo 22.8 del Código Penal, hay reincidencia cuando:',
-      options: [
-        'El culpable comete cualquier delito',
-        'El culpable ha sido condenado ejecutoriamente por un delito del mismo título y naturaleza',
-        'El culpable ha sido condenado por tres delitos',
-        'El culpable reincide en el plazo de un año'
+        'Un lenguaje de programación',
+        'Un lenguaje de marcado para crear páginas web',
+        'Un protocolo de red',
+        'Un sistema operativo'
       ],
       correctAnswer: 1,
-      explanation: 'Hay reincidencia cuando, al delinquir, el culpable haya sido condenado ejecutoriamente por un delito comprendido en el mismo título del Código, siempre que sea de la misma naturaleza.'
+      explanation: 'HTML (HyperText Markup Language) es el estándar para crear páginas web.'
     },
-    
+
+    // Pregunta 17
+    {
+      questionText: '¿Qué es el CSS?',
+      options: [
+        'Un lenguaje para definir el estilo y diseño de documentos HTML',
+        'Un lenguaje de base de datos',
+        'Un sistema de seguridad',
+        'Un tipo de ordenador'
+      ],
+      correctAnswer: 0,
+      explanation: 'CSS (Cascading Style Sheets) se usa para estilizar páginas web.'
+    },
+
+    // Pregunta 18
+    {
+      questionText: '¿Qué es un virus informático?',
+      options: [
+        'Un programa que se replica y puede dañar el sistema',
+        'Un error de hardware',
+        'Un componente del ordenador',
+        'Un tipo de red'
+      ],
+      correctAnswer: 0,
+      explanation: 'Un virus es un tipo de malware que se propaga insertando copias de sí mismo en otros programas o documentos.'
+    },
+
+    // Pregunta 19
+    {
+      questionText: '¿Qué es la CPU?',
+      options: [
+        'La unidad central de procesamiento',
+        'La pantalla',
+        'El teclado',
+        'El ratón'
+      ],
+      correctAnswer: 0,
+      explanation: 'La CPU es el componente principal que procesa las instrucciones del ordenador.'
+    },
+
     // Pregunta 20
     {
-      questionText: 'Quedará exento de pena por cohecho el particular que denuncie el hecho antes de la apertura del procedimiento, siempre que no hayan transcurrido más de:',
+      questionText: '¿Qué es un byte?',
       options: [
-        'Un mes',
-        'Dos meses',
-        'Tres meses',
-        'Seis meses'
+        '8 bits',
+        '10 bits',
+        '4 bits',
+        '16 bits'
       ],
-      correctAnswer: 1,
-      explanation: 'Quedará exento de pena el particular que denunciare el hecho a la autoridad antes de la apertura del procedimiento, siempre que no haya transcurrido más de dos meses desde la fecha de los hechos.'
+      correctAnswer: 0,
+      explanation: 'Un byte es una unidad de información digital compuesta por 8 bits.'
     },
-    
+
     // Pregunta 21
     {
-      questionText: 'En materia de Conducta Humana, ¿cuál de las siguientes afirmaciones es correcta?',
+      questionText: '¿Qué es el software libre?',
       options: [
-        'La personalidad es innata y no se modifica',
-        'El comportamiento humano es resultado de la interacción entre factores biológicos y ambientales',
-        'Los rasgos de personalidad son independientes del entorno',
-        'La conducta delictiva es exclusivamente genética'
+        'Software que respeta la libertad de los usuarios (usar, estudiar, compartir y mejorar)',
+        'Software gratis',
+        'Software pirata',
+        'Software sin copyright'
       ],
-      correctAnswer: 1,
-      explanation: 'El comportamiento humano es resultado de la interacción entre factores biológicos, psicológicos y ambientales.'
+      correctAnswer: 0,
+      explanation: 'El software libre se define por las 4 libertades esenciales.'
     },
-    
-    // Pregunta 22 - Basada en el archivo TXT
+
+    // Pregunta 22
     {
-      questionText: 'Según el artículo 75 del Reglamento Penitenciario, los internos no tendrán otras limitaciones regimentales que:',
+      questionText: '¿Qué es un dominio en Internet?',
       options: [
-        'Las que decida el Director',
-        'Las exigidas por el aseguramiento de su persona y la seguridad del establecimiento',
-        'Las que establezca el Juez de Vigilancia',
-        'Las que determine la Junta de Tratamiento'
+        'Un nombre fácil de recordar asociado a una dirección IP física',
+        'Un ordenador',
+        'Una red',
+        'Un programa'
       ],
-      correctAnswer: 1,
-      explanation: 'Los internos no tendrán otras limitaciones regimentales que las exigidas por el aseguramiento de su persona y por la seguridad y el buen orden de los Establecimientos, así como las que aconseje su tratamiento.'
+      correctAnswer: 0,
+      explanation: 'El sistema de nombres de dominio (DNS) traduce nombres legibles a direcciones IP.'
     },
-    
-    // Pregunta 23 - Basada en el archivo TXT
+
+    // Pregunta 23
     {
-      questionText: 'Según el artículo 117 del RP, los internos de segundo grado con perfil de baja peligrosidad podrán:',
+      questionText: '¿Qué es el correo electrónico?',
       options: [
-        'Salir libremente del centro',
-        'Acudir regularmente a una institución exterior para programas especializados',
-        'Trabajar fuera sin control',
-        'Recibir permisos ilimitados'
+        'Un servicio de red que permite enviar y recibir mensajes',
+        'Una carta física',
+        'Un chat',
+        'Una red social'
       ],
-      correctAnswer: 1,
-      explanation: 'Los internos clasificados en segundo grado de baja peligrosidad podrán acudir regularmente a una institución exterior para la realización de un programa concreto de atención especializada.'
+      correctAnswer: 0,
+      explanation: 'El correo electrónico es un método de intercambio de mensajes digitales.'
     },
-    
-    // Pregunta 24 - Basada en el archivo TXT
+
+    // Pregunta 24
     {
-      questionText: 'Según el artículo 205 del Código Penal, es calumnia:',
+      questionText: '¿Qué es un navegador web?',
       options: [
-        'La imputación de un hecho falso',
-        'La imputación de un delito hecha con conocimiento de su falsedad',
-        'Cualquier insulto',
-        'La difamación por internet'
+        'Una aplicación para acceder a la World Wide Web',
+        'Un buscador',
+        'Una página web',
+        'Un servidor'
       ],
-      correctAnswer: 1,
-      explanation: 'Es calumnia la imputación de un delito hecha con conocimiento de su falsedad o temerario desprecio hacia la verdad.'
+      correctAnswer: 0,
+      explanation: 'El navegador (browser) permite visualizar documentos y sitios web.'
     },
-    
+
     // Pregunta 25
     {
-      questionText: 'Según el artículo 10 de la LOGP, se aplicarán las normas de régimen cerrado a detenidos y presos cuando:',
+      questionText: '¿Qué es un buscador?',
       options: [
-        'Lo solicite el interno',
-        'Sean extremadamente peligrosos o manifiestamente inadaptados',
-        'Hayan cometido delitos graves',
-        'Lo ordene el Juez'
+        'Un sistema informático que busca archivos en servidores web',
+        'Un navegador',
+        'Un virus',
+        'Un archivo'
       ],
-      correctAnswer: 1,
-      explanation: 'Conforme al artículo 10 LOGP, se aplicarán las normas de régimen cerrado a detenidos y presos cuando se trate de internos extremadamente peligrosos o manifiestamente inadaptados al régimen ordinario.'
+      correctAnswer: 0,
+      explanation: 'Los buscadores (como Google) indexan y permiten buscar información en la web.'
     },
-    
-    // Pregunta 26 - Basada en el archivo TXT
+
+    // Pregunta 26
     {
-      questionText: 'Según el artículo 92.2 del RP, procederá la propuesta de reasignación de modalidad en departamentos especiales cuando el interno muestre:',
+      questionText: '¿Qué es la fibra óptica?',
       options: [
-        'Una evolución negativa',
-        'Una evolución positiva',
-        'Indiferencia',
-        'Agresividad'
+        'Un medio de transmisión de datos mediante pulsos de luz',
+        'Un cable de cobre',
+        'Una red inalámbrica',
+        'Un satélite'
       ],
-      correctAnswer: 1,
-      explanation: 'Procederá la propuesta de reasignación cuando muestren una evolución positiva, ponderando factores como interés por la participación, cancelación de sanciones y adecuada relación con los demás.'
+      correctAnswer: 0,
+      explanation: 'La fibra óptica permite transmitir datos a grandes distancias y altas velocidades.'
     },
-    
+
     // Pregunta 27
     {
-      questionText: 'El artículo 115 del Reglamento Penitenciario regula:',
+      questionText: '¿Qué es el Wi-Fi?',
       options: [
-        'Los permisos de salida',
-        'Los grupos en comunidad terapéutica',
-        'Las sanciones disciplinarias',
-        'El régimen de visitas'
+        'Una tecnología de red inalámbrica',
+        'Un cable',
+        'Un ordenador',
+        'Un teléfono'
       ],
-      correctAnswer: 1,
-      explanation: 'El artículo 115 del RP regula los grupos en comunidad terapéutica como modalidad de tratamiento especializado.'
+      correctAnswer: 0,
+      explanation: 'Wi-Fi permite la conexión de dispositivos electrónicos de forma inalámbrica.'
     },
-    
-    // Continúo con más preguntas para completar un test robusto...
-    
+
     // Pregunta 28
     {
-      questionText: 'El principio de legalidad penal implica que:',
+      questionText: '¿Qué es el Bluetooth?',
       options: [
-        'Nadie puede ser condenado sin juicio',
-        'No hay delito ni pena sin ley anterior',
-        'Todos son iguales ante la ley',
-        'La ley penal es retroactiva'
+        'Una especificación industrial para Redes Inalámbricas de Área Personal (WPAN)',
+        'Un diente azul',
+        'Un tipo de Wi-Fi',
+        'Un cable'
       ],
-      correctAnswer: 1,
-      explanation: 'El principio de legalidad penal establece que no hay delito ni pena sin ley anterior que lo establezca (nullum crimen, nulla poena sine lege).'
+      correctAnswer: 0,
+      explanation: 'Bluetooth permite la transmisión de voz y datos entre dispositivos mediante radiofrecuencia.'
     },
-    
+
     // Pregunta 29
     {
-      questionText: 'La prescripción del delito de homicidio es de:',
+      questionText: '¿Qué es un PDF?',
       options: [
-        '5 años',
-        '10 años',
-        '15 años',
-        '20 años'
+        'Portable Document Format',
+        'Personal Data File',
+        'Public Document File',
+        'Print Data Format'
       ],
-      correctAnswer: 2,
-      explanation: 'Según el artículo 131 del Código Penal, los delitos castigados con pena de prisión de más de 10 años prescriben a los 15 años.'
+      correctAnswer: 0,
+      explanation: 'PDF es un formato de almacenamiento para documentos digitales independiente de plataformas.'
     },
-    
+
     // Pregunta 30
     {
-      questionText: 'La mayoría de edad penal en España se alcanza a los:',
+      questionText: '¿Qué es un archivo ZIP?',
       options: [
-        '16 años',
-        '18 años',
-        '21 años',
-        '14 años'
+        'Un formato de compresión de datos sin pérdida',
+        'Un virus',
+        'Una imagen',
+        'Un vídeo'
       ],
-      correctAnswer: 1,
-      explanation: 'Según el artículo 19 del Código Penal, los menores de dieciocho años no serán responsables criminalmente con arreglo a este Código.'
+      correctAnswer: 0,
+      explanation: 'ZIP es un formato de archivo que soporta la compresión de datos.'
     },
-    
+
     // Pregunta 31
     {
-      questionText: 'Son circunstancias atenuantes:',
+      questionText: '¿Qué es la resolución de pantalla?',
       options: [
-        'La confesión de la infracción',
-        'La reparación del daño',
-        'La dilación extraordinaria en la tramitación del procedimiento',
-        'Todas las anteriores'
+        'El número de píxeles que pueden ser mostrados en la pantalla',
+        'El tamaño de la pantalla',
+        'El brillo',
+        'El color'
       ],
-      correctAnswer: 3,
-      explanation: 'El artículo 21 del CP enumera todas estas como circunstancias atenuantes de la responsabilidad criminal.'
+      correctAnswer: 0,
+      explanation: 'La resolución se expresa en ancho x alto (ej. 1920x1080).'
     },
-    
+
     // Pregunta 32
     {
-      questionText: 'La legítima defensa requiere:',
+      questionText: '¿Qué es un píxel?',
       options: [
-        'Agresión ilegítima',
-        'Necesidad racional del medio empleado',
-        'Falta de provocación suficiente',
-        'Todas las anteriores'
+        'La unidad más pequeña y diminuta de una imagen digital',
+        'Un punto',
+        'Una línea',
+        'Un color'
       ],
-      correctAnswer: 3,
-      explanation: 'El artículo 20.4 del CP establece que la legítima defensa requiere estos tres requisitos.'
+      correctAnswer: 0,
+      explanation: 'El píxel es el elemento base de una imagen digital.'
     },
-    
+
     // Pregunta 33
     {
-      questionText: 'El estado de necesidad exime de responsabilidad cuando:',
+      questionText: '¿Qué es un bit?',
       options: [
-        'El mal causado sea mayor que el que se trata de evitar',
-        'El mal causado no sea mayor que el que se trata de evitar',
-        'Siempre exime',
-        'Nunca exime'
+        'La unidad mínima de información (0 o 1)',
+        'Un byte',
+        'Un carácter',
+        'Un número'
       ],
-      correctAnswer: 1,
-      explanation: 'Según el artículo 20.5 CP, el estado de necesidad exime cuando el mal causado no sea mayor que el que se trata de evitar.'
+      correctAnswer: 0,
+      explanation: 'El bit es la unidad básica de información en computación.'
     },
-    
+
     // Pregunta 34
     {
-      questionText: 'La tentativa se castiga:',
+      questionText: '¿Qué es el código binario?',
       options: [
-        'Con la misma pena que el delito consumado',
-        'Con la pena inferior en uno o dos grados',
-        'No se castiga',
-        'Con pena superior'
+        'Un sistema de representación de textos, imágenes o vídeos',
+        'Un sistema numérico de dos dígitos (0 y 1)',
+        'Un lenguaje de programación',
+        'Un virus'
       ],
       correctAnswer: 1,
-      explanation: 'Según el artículo 62 CP, a los autores de tentativa se les impondrá la pena inferior en uno o dos grados a la señalada por la ley para el delito consumado.'
+      explanation: 'El código binario es el lenguaje fundamental de los ordenadores.'
     },
-    
+
     // Pregunta 35
     {
-      questionText: 'Son autores de un delito:',
+      questionText: '¿Qué es un algoritmo de ordenación?',
       options: [
-        'Quienes realizan el hecho por sí solos',
-        'Quienes realizan el hecho conjuntamente',
-        'Quienes lo realizan por medio de otro del que se sirven como instrumento',
-        'Todas las anteriores'
+        'Un algoritmo que pone elementos de una lista en una secuencia dada',
+        'Un algoritmo para limpiar',
+        'Un algoritmo para buscar',
+        'Un algoritmo para sumar'
       ],
-      correctAnswer: 3,
-      explanation: 'El artículo 28 CP establece que son autores quienes realizan el hecho por sí solos, conjuntamente o por medio de otro.'
+      correctAnswer: 0,
+      explanation: 'Ejemplos son Bubble Sort, Quick Sort, Merge Sort.'
     },
-    
+
     // Pregunta 36
     {
-      questionText: 'La pena de prisión permanente revisable se prevé para:',
+      questionText: '¿Qué es la recursividad?',
       options: [
-        'Cualquier delito grave',
-        'Delitos de especial gravedad como asesinato de menores',
-        'Delitos leves',
-        'No existe en el ordenamiento español'
+        'Cuando una función se llama a sí misma',
+        'Repetir algo muchas veces',
+        'Un bucle for',
+        'Un error'
       ],
-      correctAnswer: 1,
-      explanation: 'La prisión permanente revisable se prevé para delitos de especial gravedad como el asesinato de menores de 16 años o personas especialmente vulnerables.'
+      correctAnswer: 0,
+      explanation: 'La recursividad es una técnica de programación donde una función se invoca a sí misma.'
     },
-    
+
     // Pregunta 37
     {
-      questionText: 'La libertad condicional se puede conceder:',
+      questionText: '¿Qué es una variable?',
       options: [
-        'Tras cumplir la mitad de la condena',
-        'Tras cumplir las tres cuartas partes de la condena',
-        'Tras cumplir un tercio de la condena',
-        'En cualquier momento'
+        'Un espacio de memoria reservado para almacenar un valor que puede cambiar',
+        'Un número fijo',
+        'Una constante',
+        'Un tipo de dato'
       ],
-      correctAnswer: 1,
-      explanation: 'Según el artículo 90 CP, la libertad condicional se concede tras cumplir las tres cuartas partes de la condena, cumpliendo ciertos requisitos.'
+      correctAnswer: 0,
+      explanation: 'Las variables se utilizan para guardar datos durante la ejecución de un programa.'
     },
-    
+
     // Pregunta 38
     {
-      questionText: 'El delito de robo con fuerza en las cosas se diferencia del hurto en:',
+      questionText: '¿Qué es una constante?',
       options: [
-        'La cuantía',
-        'El uso de fuerza o violencia',
-        'El lugar donde se comete',
-        'La hora del día'
+        'Un valor que no puede ser alterado durante la ejecución del programa',
+        'Una variable',
+        'Un bucle',
+        'Una función'
       ],
-      correctAnswer: 1,
-      explanation: 'El robo se caracteriza por el empleo de fuerza en las cosas o violencia o intimidación en las personas, mientras que el hurto es sin estos elementos.'
+      correctAnswer: 0,
+      explanation: 'Las constantes mantienen su valor inalterable.'
     },
-    
+
     // Pregunta 39
     {
-      questionText: 'El delito de estafa requiere:',
+      questionText: '¿Qué es un bucle (loop)?',
       options: [
-        'Engaño bastante',
-        'Ánimo de lucro',
-        'Perjuicio patrimonial',
-        'Todas las anteriores'
+        'Una secuencia de instrucciones que se repite hasta que se cumple una condición',
+        'Un error',
+        'Una variable',
+        'Una función'
       ],
-      correctAnswer: 3,
-      explanation: 'El delito de estafa del artículo 248 CP requiere engaño bastante, ánimo de lucro y producción de perjuicio patrimonial.'
+      correctAnswer: 0,
+      explanation: 'Los bucles (for, while) permiten repetir código.'
     },
-    
+
     // Pregunta 40
     {
-      questionText: 'El delito de cohecho se comete por:',
+      questionText: '¿Qué es un array (matriz)?',
       options: [
-        'Solo por funcionarios públicos',
-        'Solo por particulares',
-        'Por funcionarios públicos y particulares',
-        'Solo por autoridades'
+        'Una estructura de datos que almacena una colección de elementos',
+        'Una variable simple',
+        'Una función',
+        'Un bucle'
       ],
-      correctAnswer: 2,
-      explanation: 'El cohecho puede ser cometido tanto por funcionarios públicos (cohecho pasivo) como por particulares (cohecho activo).'
+      correctAnswer: 0,
+      explanation: 'Los arrays permiten almacenar múltiples valores bajo un mismo nombre.'
     },
-    
+
     // Pregunta 41
     {
-      questionText: 'La clasificación penitenciaria inicial se realiza:',
+      questionText: '¿Qué es una función?',
       options: [
-        'Por el Director del centro',
-        'Por el Juez de Vigilancia',
-        'Por la Junta de Tratamiento',
-        'Por el Ministerio del Interior'
+        'Un bloque de código que realiza una tarea específica',
+        'Una variable',
+        'Un bucle',
+        'Un error'
       ],
-      correctAnswer: 2,
-      explanation: 'La clasificación inicial es propuesta por la Junta de Tratamiento y aprobada por el Centro Directivo.'
+      correctAnswer: 0,
+      explanation: 'Las funciones permiten reutilizar código y modularizar programas.'
     },
-    
+
     // Pregunta 42
     {
-      questionText: 'Los permisos ordinarios de salida para internos de segundo grado pueden ser de hasta:',
+      questionText: '¿Qué es la programación orientada a objetos (POO)?',
       options: [
-        '36 días al año',
-        '48 días al año',
-        '7 días cada dos meses',
-        'No tienen límite'
+        'Un paradigma de programación basado en el concepto de "objetos"',
+        'Programar con objetos físicos',
+        'Programar rápido',
+        'Programar sin errores'
       ],
       correctAnswer: 0,
-      explanation: 'Los internos de segundo grado pueden disfrutar hasta 36 días de permiso ordinario al año, distribuidos en salidas de hasta 7 días.'
+      explanation: 'La POO organiza el software en objetos que contienen datos y métodos.'
     },
-    
+
     // Pregunta 43
     {
-      questionText: 'El tercer grado penitenciario se caracteriza por:',
+      questionText: '¿Qué es una clase en POO?',
       options: [
-        'Régimen cerrado',
-        'Régimen ordinario',
-        'Régimen abierto',
-        'Libertad condicional'
+        'Una plantilla para crear objetos',
+        'Un objeto',
+        'Una variable',
+        'Una función'
       ],
-      correctAnswer: 2,
-      explanation: 'El tercer grado de tratamiento penitenciario se corresponde con el régimen abierto.'
+      correctAnswer: 0,
+      explanation: 'La clase define las propiedades y comportamientos de los objetos.'
     },
-    
+
     // Pregunta 44
     {
-      questionText: 'Las comunicaciones de los internos con sus abogados:',
+      questionText: '¿Qué es un objeto en POO?',
       options: [
-        'Pueden ser intervenidas',
-        'No pueden ser intervenidas ni suspendidas',
-        'Solo pueden ser intervenidas con autorización judicial',
-        'Pueden ser suspendidas por el Director'
+        'Una instancia de una clase',
+        'Una clase',
+        'Una variable',
+        'Una función'
       ],
-      correctAnswer: 1,
-      explanation: 'Las comunicaciones con abogados defensores no podrán ser suspendidas ni intervenidas, salvo por orden de la autoridad judicial.'
+      correctAnswer: 0,
+      explanation: 'El objeto es la entidad concreta creada a partir de la clase.'
     },
-    
+
     // Pregunta 45
     {
-      questionText: 'El Juez de Vigilancia Penitenciaria tiene competencia para:',
+      questionText: '¿Qué es la herencia en POO?',
       options: [
-        'Resolver recursos sobre sanciones disciplinarias',
-        'Autorizar permisos de salida',
-        'Aprobar la clasificación inicial',
-        'Nombrar al Director del centro'
+        'Mecanismo por el cual una clase adquiere las propiedades y métodos de otra',
+        'Recibir dinero',
+        'Copiar código',
+        'Tener hijos'
       ],
       correctAnswer: 0,
-      explanation: 'Entre las competencias del JVP está resolver los recursos contra las sanciones disciplinarias impuestas a los internos.'
+      explanation: 'La herencia permite la reutilización de código y la jerarquía de clases.'
     },
-    
+
     // Pregunta 46
     {
-      questionText: 'La Junta de Tratamiento está presidida por:',
+      questionText: '¿Qué es el polimorfismo en POO?',
       options: [
-        'El Subdirector de Tratamiento',
-        'El Director del establecimiento',
-        'El Juez de Vigilancia',
-        'El Secretario del centro'
+        'La capacidad de un objeto de tomar muchas formas',
+        'Tener muchas formas',
+        'Cambiar de forma',
+        'Ser invisible'
       ],
-      correctAnswer: 1,
-      explanation: 'La Junta de Tratamiento está presidida por el Director del establecimiento penitenciario.'
+      correctAnswer: 0,
+      explanation: 'Permite que objetos de diferentes clases respondan al mismo mensaje de manera distinta.'
     },
-    
+
     // Pregunta 47
     {
-      questionText: 'Las faltas disciplinarias muy graves prescriben a los:',
+      questionText: '¿Qué es el encapsulamiento en POO?',
       options: [
-        'Dos meses',
-        'Cuatro meses',
-        'Seis meses',
-        'Un año'
+        'Ocultar los detalles internos de un objeto',
+        'Meter en una cápsula',
+        'Proteger el código',
+        'Cerrar el archivo'
       ],
-      correctAnswer: 2,
-      explanation: 'Según el Reglamento Penitenciario, las faltas muy graves prescriben a los seis meses.'
+      correctAnswer: 0,
+      explanation: 'El encapsulamiento restringe el acceso directo a algunos componentes del objeto.'
     },
-    
+
     // Pregunta 48
     {
-      questionText: 'El aislamiento en celda como sanción disciplinaria no podrá exceder de:',
+      questionText: '¿Qué es una base de datos?',
       options: [
-        '7 días',
-        '14 días',
-        '21 días',
-        '30 días'
+        'Una colección organizada de datos',
+        'Un archivo de texto',
+        'Una hoja de cálculo',
+        'Una carpeta'
       ],
-      correctAnswer: 1,
-      explanation: 'El aislamiento en celda no podrá exceder de 14 días.'
+      correctAnswer: 0,
+      explanation: 'Las bases de datos permiten almacenar y recuperar información de forma eficiente.'
     },
-    
+
     // Pregunta 49
     {
-      questionText: 'Los internos preventivos:',
+      questionText: '¿Qué es un SGBD?',
       options: [
-        'Están obligados a trabajar',
-        'No están obligados a trabajar',
-        'Solo trabajan si lo ordena el Juez',
-        'Trabajan obligatoriamente en talleres'
+        'Sistema Gestor de Bases de Datos',
+        'Sistema General de Búsqueda de Datos',
+        'Servidor Grande de Base de Datos',
+        'Software Gratuito de Base de Datos'
       ],
-      correctAnswer: 1,
-      explanation: 'Los internos preventivos no están obligados a trabajar, aunque pueden hacerlo voluntariamente.'
+      correctAnswer: 0,
+      explanation: 'El SGBD es el software que gestiona la base de datos.'
     },
-    
+
     // Pregunta 50
     {
-      questionText: 'El Programa de Intervención con Agresores de Violencia de Género (PRIA) se aplica a:',
+      questionText: '¿Qué es una tabla en una base de datos relacional?',
       options: [
-        'Todos los internos',
-        'Internos condenados por delitos de violencia de género',
-        'Solo a internos en tercer grado',
-        'Solo a internos en primer grado'
+        'Una estructura de datos organizada en filas y columnas',
+        'Un mueble',
+        'Un gráfico',
+        'Un informe'
       ],
-      correctAnswer: 1,
-      explanation: 'El PRIA es un programa específico para internos condenados por delitos relacionados con la violencia de género.'
+      correctAnswer: 0,
+      explanation: 'Las tablas almacenan los datos en bases de datos relacionales.'
     },
-    
+
     // Pregunta 51
     {
-      questionText: 'El recurso de apelación contra resoluciones del Juez de Vigilancia Penitenciaria en materia de clasificación tendrá efecto:',
+      questionText: '¿Qué es una clave primaria (Primary Key)?',
       options: [
-        'Devolutivo',
-        'Suspensivo en todos los casos',
-        'Suspensivo cuando se refiera a clasificación de penados por delitos graves',
-        'No tiene efecto'
+        'Un campo que identifica de forma única cada registro en una tabla',
+        'Una clave para abrir la base de datos',
+        'Una clave secreta',
+        'La primera columna'
       ],
-      correctAnswer: 2,
-      explanation: 'Cuando la resolución se refiera a materia de clasificación de penados y pueda dar lugar a la excarcelación del interno, siempre que se trate de condenados por delitos graves, el recurso tendrá efecto suspensivo.'
+      correctAnswer: 0,
+      explanation: 'La clave primaria garantiza la unicidad de cada fila.'
     },
-    
+
     // Pregunta 52
     {
-      questionText: 'En Derecho Penal Especial, el delito de robo con violencia o intimidación se castiga con:',
+      questionText: '¿Qué es una clave foránea (Foreign Key)?',
       options: [
-        'Pena de prisión de 1 a 3 años',
-        'Pena de prisión de 2 a 5 años',
-        'Pena de prisión de 2 a 6 años',
-        'Pena de prisión de 3 a 7 años'
+        'Un campo que referencia a la clave primaria de otra tabla',
+        'Una clave de otro país',
+        'Una clave secreta',
+        'Un índice'
       ],
-      correctAnswer: 1,
-      explanation: 'El robo con violencia o intimidación se castiga con pena de prisión de 2 a 5 años según el Código Penal.'
+      correctAnswer: 0,
+      explanation: 'La clave foránea establece relaciones entre tablas.'
     },
-    
+
     // Pregunta 53
     {
-      questionText: 'Según el TREBEP, contra los actos firmes en vía administrativa podrá interponerse:',
+      questionText: '¿Qué es SQL Injection?',
       options: [
-        'Recurso de alzada',
-        'Recurso extraordinario de revisión',
-        'Recurso de reposición',
-        'Recurso contencioso-administrativo'
+        'Una técnica de ataque a bases de datos',
+        'Una vacuna',
+        'Un tipo de base de datos',
+        'Un comando SQL'
       ],
-      correctAnswer: 1,
-      explanation: 'Contra los actos firmes en vía administrativa podrá interponerse el recurso extraordinario de revisión ante el órgano administrativo que los dictó.'
+      correctAnswer: 0,
+      explanation: 'Consiste en insertar código SQL malicioso en las consultas.'
     },
-    
+
     // Continúo añadiendo más preguntas hasta llegar a 150...
-    
+
     // Pregunta 54
     {
-      questionText: 'El delito de homicidio se castiga con pena de prisión de:',
+      questionText: '¿Qué es el modelo Entidad-Relación?',
       options: [
-        '5 a 10 años',
-        '10 a 15 años',
-        '15 a 20 años',
-        '20 a 25 años'
+        'Un modelo de datos conceptual',
+        'Un programa',
+        'Una relación personal',
+        'Un tipo de ordenador'
       ],
-      correctAnswer: 1,
-      explanation: 'El homicidio se castiga con pena de prisión de 10 a 15 años según el artículo 138 del Código Penal.'
+      correctAnswer: 0,
+      explanation: 'Se utiliza para diseñar bases de datos.'
     },
-    
+
     // Pregunta 55
     {
-      questionText: 'La circunstancia mixta de parentesco puede ser:',
+      questionText: '¿Qué es la normalización?',
       options: [
-        'Solo atenuante',
-        'Solo agravante',
-        'Atenuante o agravante según los casos',
-        'Ni atenuante ni agravante'
+        'El proceso de organizar los datos para reducir la redundancia',
+        'Hacer las cosas normales',
+        'Borrar datos',
+        'Copiar datos'
       ],
-      correctAnswer: 2,
-      explanation: 'El parentesco es una circunstancia mixta que puede ser atenuante o agravante según los casos y la naturaleza del delito.'
+      correctAnswer: 0,
+      explanation: 'La normalización mejora la integridad de los datos y reduce el espacio.'
     },
-    
+
     // Pregunta 56
     {
-      questionText: 'Según el Reglamento Penitenciario, las comunicaciones telefónicas de los internos:',
+      questionText: '¿Qué es una transacción?',
       options: [
-        'Están prohibidas',
-        'Son ilimitadas',
-        'Pueden ser autorizadas y controladas',
-        'Solo se permiten en casos excepcionales'
+        'Una secuencia de operaciones tratadas como una unidad',
+        'Una compra',
+        'Un error',
+        'Un dato'
       ],
-      correctAnswer: 2,
-      explanation: 'Las comunicaciones telefónicas pueden ser autorizadas por el Director y controladas conforme al Reglamento Penitenciario.'
+      correctAnswer: 0,
+      explanation: 'Las transacciones deben cumplir las propiedades ACID.'
     },
-    
+
     // Pregunta 57
     {
-      questionText: 'El delito de asesinato se diferencia del homicidio por:',
+      questionText: '¿Qué es ACID?',
       options: [
-        'La cuantía de la pena',
-        'La concurrencia de circunstancias específicas',
-        'El lugar de comisión',
-        'La edad del autor'
+        'Atomicidad, Consistencia, Aislamiento, Durabilidad',
+        'Ácido',
+        'Un tipo de base de datos',
+        'Un lenguaje'
       ],
-      correctAnswer: 1,
-      explanation: 'El asesinato se diferencia del homicidio por la concurrencia de alevosía, ensañamiento, precio o recompensa.'
+      correctAnswer: 0,
+      explanation: 'Son las propiedades que garantizan la fiabilidad de las transacciones.'
     },
-    
+
     // Pregunta 58
     {
-      questionText: 'Las lesiones del artículo 147 del Código Penal requieren:',
+      questionText: '¿Qué es un índice?',
       options: [
-        'Tratamiento médico o quirúrgico',
-        'Hospitalización',
-        'Incapacidad permanente',
-        'Deformidad'
+        'Una estructura de datos que mejora la velocidad de recuperación',
+        'El dedo índice',
+        'Una tabla',
+        'Un error'
       ],
       correctAnswer: 0,
-      explanation: 'Las lesiones básicas del artículo 147 CP son las que requieren objetivamente para su sanidad, además de una primera asistencia facultativa, tratamiento médico o quirúrgico.'
+      explanation: 'Los índices aceleran las consultas pero pueden ralentizar las escrituras.'
     },
-    
+
     // Pregunta 59
     {
-      questionText: 'Según la Ley 39/2015, cada Administración Pública determinará:',
+      questionText: '¿Qué es una vista (View)?',
       options: [
-        'Los órganos con competencias de expedición de copias auténticas',
-        'Los plazos de prescripción',
-        'Las sanciones administrativas',
-        'Los recursos disponibles'
+        'Una tabla virtual basada en el resultado de una consulta',
+        'Una ventana',
+        'Una foto',
+        'Un informe'
       ],
       correctAnswer: 0,
-      explanation: 'Cada Administración Pública determinará los órganos que tengan atribuidas las competencias de expedición de copias auténticas de los documentos públicos administrativos.'
+      explanation: 'Las vistas simplifican consultas complejas y mejoran la seguridad.'
     },
-    
+
     // Pregunta 60
     {
-      questionText: 'Cuando las Administraciones Públicas expidan copias auténticas electrónicas:',
+      questionText: '¿Qué es un Trigger?',
       options: [
-        'No requieren indicación especial',
-        'Deben llevar sello físico',
-        'Deberá quedar expresamente indicado en el documento',
-        'Solo son válidas en papel'
+        'Un procedimiento que se ejecuta automáticamente ante un evento',
+        'Un botón',
+        'Un error',
+        'Un índice'
       ],
-      correctAnswer: 2,
-      explanation: 'Cuando se expidan copias auténticas electrónicas, deberá quedar expresamente así indicado en el documento de la copia.'
+      correctAnswer: 0,
+      explanation: 'Los triggers se usan para mantener la integridad o auditar cambios.'
     },
-    
+
     // Pregunta 61
     {
-      questionText: 'Según la Ley 47/2003, los estados de ingresos de los presupuestos se estructurarán siguiendo las clasificaciones:',
+      questionText: '¿Qué es un Stored Procedure?',
       options: [
-        'Orgánica y funcional',
-        'Orgánica y económica',
-        'Funcional y económica',
-        'Territorial y económica'
+        'Código SQL guardado en la base de datos',
+        'Un archivo',
+        'Una tabla',
+        'Un backup'
       ],
-      correctAnswer: 1,
-      explanation: 'Los estados de ingresos se estructurarán siguiendo las clasificaciones orgánica y económica.'
+      correctAnswer: 0,
+      explanation: 'Permiten reutilizar lógica de negocio en la base de datos.'
     },
-    
+
     // Pregunta 62
     {
-      questionText: 'Según el artículo 75.2 del Reglamento Penitenciario, el Director podrá acordar medidas de protección personal cuando:',
+      questionText: '¿Qué es NoSQL?',
       options: [
-        'Fuere preciso para salvaguardar la vida o integridad física del recluso',
-        'El interno lo solicite',
-        'Lo ordene el Juez',
-        'Haya riesgo de fuga'
+        'Bases de datos no relacionales',
+        'No SQL',
+        'Nueva SQL',
+        'Nunca SQL'
       ],
       correctAnswer: 0,
-      explanation: 'El Director podrá acordar mediante resolución motivada medidas que impliquen limitaciones regimentales cuando fuere preciso para salvaguardar la vida o integridad física del recluso.'
+      explanation: 'NoSQL se refiere a sistemas de bases de datos que no usan el modelo relacional tradicional.'
     },
-    
+
     // Pregunta 63
     {
-      questionText: 'En el organigrama del Ministerio del Interior, dependen de la Secretaría de Estado de Seguridad:',
+      questionText: '¿Qué es MongoDB?',
       options: [
-        'La Dirección General de la Policía y la Guardia Civil',
-        'Solo la Dirección General de la Policía',
-        'Solo la Dirección General de la Guardia Civil',
-        'La Secretaría General de Instituciones Penitenciarias'
+        'Una base de datos NoSQL orientada a documentos',
+        'Una base de datos relacional',
+        'Un lenguaje',
+        'Un servidor'
       ],
       correctAnswer: 0,
-      explanation: 'De la Secretaría de Estado de Seguridad dependen la Dirección General de la Policía y la Dirección General de la Guardia Civil, entre otras.'
+      explanation: 'MongoDB almacena datos en documentos tipo JSON.'
     },
-    
+
     // Pregunta 64
     {
-      questionText: 'Según la Ley 50/1981, el mandato del Fiscal General del Estado:',
+      questionText: '¿Qué es Redis?',
       options: [
-        'Puede ser renovado siempre',
-        'No puede ser renovado nunca',
-        'No podrá ser renovado, excepto si hubiera ostentado el cargo menos de dos años',
-        'Puede renovarse una sola vez'
+        'Un almacén de estructura de datos en memoria',
+        'Una base de datos relacional',
+        'Un color',
+        'Un sistema operativo'
       ],
-      correctAnswer: 2,
-      explanation: 'El mandato del Fiscal General del Estado no podrá ser renovado, excepto en los supuestos en que el titular hubiera ostentado el cargo durante un periodo inferior a dos años.'
+      correctAnswer: 0,
+      explanation: 'Redis se usa a menudo como caché o broker de mensajes.'
     },
-    
+
     // Pregunta 65
     {
-      questionText: 'Según el artículo 153 de la Constitución, el Tribunal de Cuentas ejerce control:',
+      questionText: '¿Qué es el Big Data?',
       options: [
-        'Legislativo',
-        'Ejecutivo',
-        'Judicial',
-        'Económico y presupuestario'
+        'Conjuntos de datos grandes y complejos',
+        'Un disco duro grande',
+        'Una base de datos pequeña',
+        'Un virus'
       ],
-      correctAnswer: 3,
-      explanation: 'El Tribunal de Cuentas ejerce el control económico y presupuestario del Estado y del sector público.'
+      correctAnswer: 0,
+      explanation: 'Big Data requiere tecnologías especiales para su procesamiento.'
     },
-    
+
     // Pregunta 66
     {
-      questionText: 'Según la Ley 39/2015, en los procedimientos iniciados a solicitud del interesado, el silencio administrativo es:',
+      questionText: '¿Qué es Hadoop?',
       options: [
-        'Positivo como regla general',
-        'Negativo como regla general',
-        'No existe silencio administrativo',
-        'Depende del órgano'
+        'Un framework para procesar grandes conjuntos de datos',
+        'Un juego',
+        'Un virus',
+        'Un sistema operativo'
       ],
       correctAnswer: 0,
-      explanation: 'Como regla general, el silencio administrativo tiene carácter estimatorio en los procedimientos iniciados a solicitud del interesado, salvo excepciones legales.'
+      explanation: 'Hadoop permite el procesamiento distribuido de grandes volúmenes de datos.'
     },
-    
+
     // Pregunta 67
     {
-      questionText: 'El Comité Ejecutivo del Banco Central Europeo está compuesto por:',
+      questionText: '¿Qué es MapReduce?',
       options: [
-        'El presidente, el vicepresidente y otros cuatro miembros',
-        'El presidente y seis miembros',
-        'El presidente, el vicepresidente y otros seis miembros',
-        'Solo el presidente y el vicepresidente'
+        'Un modelo de programación para procesar grandes conjuntos de datos',
+        'Un mapa',
+        'Una reducción',
+        'Un error'
       ],
       correctAnswer: 0,
-      explanation: 'El Comité Ejecutivo está compuesto por el presidente, el vicepresidente y otros cuatro miembros, con mandato de ocho años no renovable.'
+      explanation: 'MapReduce divide la tarea en sub-tareas (Map) y luego combina los resultados (Reduce).'
     },
-    
+
     // Pregunta 68
     {
-      questionText: 'Según el artículo 129.1 del Reglamento Penitenciario, los internos pueden disponer de ordenadores personales cuando:',
+      questionText: '¿Qué es Spark?',
       options: [
-        'Siempre',
-        'Nunca',
-        'Cuando razones educativas o culturales lo hagan necesario',
-        'Solo en tercer grado'
+        'Un motor de análisis unificado para procesamiento de datos a gran escala',
+        'Una chispa',
+        'Un coche',
+        'Un perro'
       ],
-      correctAnswer: 2,
-      explanation: 'Cuando razones de carácter educativo o cultural lo hagan necesario o aconsejable para el desarrollo de los programas de tratamiento.'
+      correctAnswer: 0,
+      explanation: 'Apache Spark es conocido por su velocidad en el procesamiento de datos.'
     },
-    
+
     // Pregunta 69
     {
-      questionText: 'El condicionamiento operante o instrumental fue desarrollado principalmente por:',
+      questionText: '¿Qué es la Minería de Datos?',
       options: [
-        'Pavlov',
-        'Skinner',
-        'Freud',
-        'Watson'
+        'El proceso de descubrir patrones en grandes conjuntos de datos',
+        'Buscar oro',
+        'Robar datos',
+        'Borrar datos'
       ],
-      correctAnswer: 1,
-      explanation: 'El condicionamiento operante o instrumental fue desarrollado principalmente por B.F. Skinner.'
+      correctAnswer: 0,
+      explanation: 'Utiliza métodos de inteligencia artificial, aprendizaje automático y estadística.'
     },
-    
+
     // Pregunta 70
     {
-      questionText: 'Según el artículo 102.5 del Reglamento Penitenciario, se clasificarán en primer grado a los internos:',
+      questionText: '¿Qué es el Aprendizaje Automático (Machine Learning)?',
       options: [
-        'Primarios',
-        'Reincidentes',
-        'Calificados de peligrosidad extrema o inadaptación manifiesta',
-        'Todos los condenados por delitos graves'
+        'Una rama de la IA que permite a las máquinas aprender de los datos',
+        'Aprender a conducir',
+        'Un robot',
+        'Un juego'
       ],
-      correctAnswer: 2,
-      explanation: 'Se clasificarán en primer grado a los internos calificados de peligrosidad extrema o inadaptación manifiesta y grave a las normas generales de convivencia ordenada.'
+      correctAnswer: 0,
+      explanation: 'Permite a los ordenadores aprender sin ser programados explícitamente.'
     },
-    
+
     // Añado más preguntas para completar hasta 150...
-    
+
     // Pregunta 71-150: Continuaré con preguntas sobre los diferentes temas del temario
-    
+
     // Por brevedad, añadiré preguntas representativas de cada bloque temático
-    
+
     // Pregunta 71
     {
-      questionText: 'La Ley Orgánica del Poder Judicial establece que la justicia emana:',
+      questionText: '¿Qué es una Red Neuronal?',
       options: [
-        'Del Rey',
-        'Del Gobierno',
-        'Del pueblo',
-        'De las Cortes Generales'
+        'Un modelo computacional inspirado en el cerebro humano',
+        'Una red de cables',
+        'Internet',
+        'Un virus'
       ],
-      correctAnswer: 2,
-      explanation: 'Según la Constitución y la LOPJ, la justicia emana del pueblo y se administra en nombre del Rey por Jueces y Magistrados.'
+      correctAnswer: 0,
+      explanation: 'Las redes neuronales son la base del aprendizaje profundo (Deep Learning).'
     },
-    
+
     // Pregunta 72
     {
-      questionText: 'Según el TREBEP, los funcionarios públicos se clasifican en:',
+      questionText: '¿Qué es el Deep Learning?',
       options: [
-        'Funcionarios de carrera y funcionarios interinos',
-        'Funcionarios de carrera, interinos y eventuales',
-        'Solo funcionarios de carrera',
-        'Funcionarios A, B y C'
+        'Aprendizaje profundo',
+        'Aprendizaje superficial',
+        'Aprendizaje rápido',
+        'Aprendizaje lento'
       ],
       correctAnswer: 0,
-      explanation: 'Los funcionarios públicos se clasifican en funcionarios de carrera y funcionarios interinos.'
+      explanation: 'Es un subcampo del Machine Learning basado en redes neuronales profundas.'
     },
-    
+
     // Pregunta 73
     {
-      questionText: 'El derecho de reunión requiere comunicación previa:',
+      questionText: '¿Qué es la Inteligencia Artificial?',
       options: [
-        'Siempre',
-        'Nunca',
-        'Solo cuando se celebre en lugares de tránsito público',
-        'Solo cuando participen más de 100 personas'
+        'La simulación de procesos de inteligencia humana por parte de máquinas',
+        'Un robot',
+        'Un ordenador',
+        'Un juego'
       ],
-      correctAnswer: 2,
-      explanation: 'El derecho de reunión no requiere autorización previa, pero sí comunicación cuando se celebre en lugares de tránsito público.'
+      correctAnswer: 0,
+      explanation: 'Incluye el aprendizaje, el razonamiento y la autocorrección.'
     },
-    
+
     // Pregunta 74
     {
-      questionText: 'La Comisión de Transparencia y Buen Gobierno se reúne:',
+      questionText: '¿Qué es un sistema experto?',
       options: [
-        'Al menos una vez al año con representantes de CCAA',
-        'Mensualmente',
-        'Trimestralmente',
-        'Solo cuando sea convocada'
+        'Un sistema informático que emula la capacidad de toma de decisiones de un experto humano',
+        'Un experto',
+        'Un profesor',
+        'Un libro'
       ],
       correctAnswer: 0,
-      explanation: 'Al menos una vez al año, la Comisión de Transparencia y Buen Gobierno convocará a los representantes de los organismos similares de las CCAA.'
+      explanation: 'Utilizan una base de conocimiento y reglas de inferencia.'
     },
-    
+
     // Pregunta 75
     {
-      questionText: 'El Código Penal español entró en vigor en:',
+      questionText: '¿Qué es el Test de Turing?',
       options: [
-        '1995',
-        '1996',
-        '1978',
-        '2000'
+        'Una prueba para determinar si una máquina puede exhibir un comportamiento inteligente',
+        'Un examen',
+        'Un coche',
+        'Una carrera'
       ],
       correctAnswer: 0,
-      explanation: 'El actual Código Penal (LO 10/1995) entró en vigor el 24 de mayo de 1996, aunque fue aprobado en 1995.'
+      explanation: 'Propuesto por Alan Turing en 1950.'
     },
-    
+
     // Pregunta 76
     {
-      questionText: 'Según el Reglamento Penitenciario, la Junta de Tratamiento elaborará un programa individualizado para:',
+      questionText: '¿Qué es la Realidad Virtual?',
       options: [
-        'Todos los internos',
-        'Los liberados condicionales adscritos al Centro',
-        'Solo los internos de primer grado',
-        'Solo los internos de tercer grado'
+        'Una experiencia simulada que puede ser similar o completamente diferente al mundo real',
+        'La realidad',
+        'Un sueño',
+        'Una película'
       ],
-      correctAnswer: 1,
-      explanation: 'La Junta de Tratamiento elaborará un programa individualizado para el seguimiento de los liberados condicionales que se adscriban al Centro penitenciario.'
+      correctAnswer: 0,
+      explanation: 'Se utiliza en entretenimiento, educación y entrenamiento.'
     },
-    
+
     // Pregunta 77
     {
-      questionText: 'La prescripción de las penas se interrumpe:',
+      questionText: '¿Qué es la Realidad Aumentada?',
       options: [
-        'Por la comisión de un nuevo delito',
-        'Por el inicio de la ejecución',
-        'Por la fuga del penado',
-        'Todas las anteriores'
+        'Una experiencia interactiva de un entorno del mundo real donde los objetos se "aumentan" con información perceptual generada por computadora',
+        'La realidad',
+        'Un sueño',
+        'Una película'
       ],
-      correctAnswer: 3,
-      explanation: 'La prescripción de las penas se interrumpe por el inicio de la ejecución, la fuga del penado o la comisión de un nuevo delito.'
+      correctAnswer: 0,
+      explanation: 'Ejemplo: Pokémon GO.'
     },
-    
+
     // Pregunta 78
     {
-      questionText: 'El error de prohibición vencible:',
+      questionText: '¿Qué es el Internet de las Cosas (IoT)?',
       options: [
-        'Exime de responsabilidad',
-        'Atenúa la responsabilidad',
-        'Agrava la responsabilidad',
-        'No tiene efectos'
+        'La interconexión de dispositivos físicos a través de Internet',
+        'Internet',
+        'Una cosa',
+        'Un cable'
       ],
-      correctAnswer: 1,
-      explanation: 'El error de prohibición vencible atenúa la responsabilidad criminal.'
+      correctAnswer: 0,
+      explanation: 'Permite que los objetos recopilen y compartan datos.'
     },
-    
+
     // Pregunta 79
     {
-      questionText: 'La embriaguez plena puede ser:',
+      questionText: '¿Qué es la Computación Cuántica?',
       options: [
-        'Eximente o atenuante',
-        'Solo eximente',
-        'Solo atenuante',
-        'Agravante'
+        'El uso de fenómenos de la mecánica cuántica para realizar computación',
+        'Un ordenador rápido',
+        'Un ordenador pequeño',
+        'Un ordenador viejo'
       ],
       correctAnswer: 0,
-      explanation: 'La embriaguez plena puede ser eximente (si es no buscada) o atenuante (si es buscada) según el artículo 20 y 21 del CP.'
+      explanation: 'Utiliza qubits en lugar de bits.'
     },
-    
+
     // Pregunta 80
     {
-      questionText: 'El delito continuado requiere:',
+      questionText: '¿Qué es un Qubit?',
       options: [
-        'Pluralidad de acciones',
-        'Unidad de propósito',
-        'Aprovechamiento de idéntica ocasión',
-        'Todas las anteriores'
+        'La unidad básica de información en la computación cuántica',
+        'Un bit',
+        'Un byte',
+        'Un cubo'
       ],
-      correctAnswer: 3,
-      explanation: 'El delito continuado requiere pluralidad de acciones u omisiones, unidad de propósito y aprovechamiento de idéntica ocasión.'
+      correctAnswer: 0,
+      explanation: 'Puede representar 0, 1 o ambos simultáneamente (superposición).'
     },
-    
+
     // Pregunta 81
     {
-      questionText: 'Según la Ley 39/2015, los actos administrativos son nulos de pleno derecho cuando:',
+      questionText: '¿Qué es la Ciberseguridad?',
       options: [
-        'Lesionen derechos fundamentales',
-        'Sean dictados por órgano incompetente',
-        'Carezcan de motivación',
-        'Todas las anteriores'
+        'La práctica de proteger sistemas, redes y programas de ataques digitales',
+        'Un antivirus',
+        'Un policía',
+        'Un candado'
       ],
       correctAnswer: 0,
-      explanation: 'Son nulos de pleno derecho los actos que lesionen los derechos y libertades susceptibles de amparo constitucional, entre otros supuestos.'
+      explanation: 'Es esencial para proteger la información.'
     },
-    
+
     // Pregunta 82
     {
-      questionText: 'El régimen disciplinario de los internos se regula en:',
+      questionText: '¿Qué es un Malware?',
       options: [
-        'La LOGP',
-        'El Reglamento Penitenciario',
-        'El Código Penal',
-        'La Constitución'
+        'Software malicioso',
+        'Software bueno',
+        'Hardware',
+        'Un usuario'
       ],
-      correctAnswer: 1,
-      explanation: 'El régimen disciplinario de los internos se regula detalladamente en el Reglamento Penitenciario.'
+      correctAnswer: 0,
+      explanation: 'Incluye virus, gusanos, troyanos, ransomware, etc.'
     },
-    
+
     // Pregunta 83
     {
-      questionText: 'El delito de prevaricación administrativa requiere:',
+      questionText: '¿Qué es un Ransomware?',
       options: [
-        'Que el autor sea autoridad o funcionario',
-        'Que dicte resolución arbitraria',
-        'Que sea en asunto administrativo',
-        'Todas las anteriores'
+        'Malware que cifra los archivos y pide un rescate',
+        'Un antivirus',
+        'Un juego',
+        'Un programa de dibujo'
       ],
-      correctAnswer: 3,
-      explanation: 'El delito de prevaricación administrativa requiere que el autor sea autoridad o funcionario que dicte resolución arbitraria en asunto administrativo.'
+      correctAnswer: 0,
+      explanation: 'Es una de las amenazas más comunes actualmente.'
     },
-    
+
     // Pregunta 84
     {
-      questionText: 'El plazo para interponer recurso de alzada es de:',
+      questionText: '¿Qué es un Troyano?',
       options: [
-        '15 días',
-        '1 mes',
-        '2 meses',
-        '3 meses'
+        'Malware que se disfraza de software legítimo',
+        'Un caballo',
+        'Un virus',
+        'Un gusano'
       ],
-      correctAnswer: 1,
-      explanation: 'El plazo para interponer recurso de alzada es de un mes según la Ley 39/2015.'
+      correctAnswer: 0,
+      explanation: 'Engaña a los usuarios para que lo instalen.'
     },
-    
+
     // Pregunta 85
     {
-      questionText: 'La responsabilidad civil derivada del delito comprende:',
+      questionText: '¿Qué es un Gusano (Worm)?',
       options: [
-        'La restitución',
-        'La reparación del daño',
-        'La indemnización de perjuicios',
-        'Todas las anteriores'
+        'Malware que se replica a sí mismo para propagarse a otros ordenadores',
+        'Un animal',
+        'Un virus',
+        'Un troyano'
       ],
-      correctAnswer: 3,
-      explanation: 'La responsabilidad civil comprende la restitución, la reparación del daño y la indemnización de perjuicios materiales y morales.'
+      correctAnswer: 0,
+      explanation: 'No necesita un programa anfitrión para propagarse.'
     },
-    
+
     // Pregunta 86
     {
-      questionText: 'Según el Reglamento Penitenciario, la Administración penitenciaria podrá constituir:',
+      questionText: '¿Qué es un Spyware?',
       options: [
-        'Grupos especializados de funcionarios',
-        'Empresas públicas',
-        'Fundaciones',
-        'Asociaciones'
+        'Malware que espía al usuario',
+        'Un espía',
+        'Una cámara',
+        'Un micrófono'
       ],
       correctAnswer: 0,
-      explanation: 'La Administración penitenciaria podrá constituir grupos especializados de funcionarios para determinadas funciones.'
+      explanation: 'Recopila información sin el conocimiento del usuario.'
     },
-    
+
     // Pregunta 87
     {
-      questionText: 'El Rey sanciona y promulga las leyes en el plazo de:',
+      questionText: '¿Qué es un Adware?',
       options: [
-        '10 días',
-        '15 días',
-        '20 días',
-        '30 días'
+        'Software que muestra publicidad no deseada',
+        'Un anuncio',
+        'Una tele',
+        'Un cartel'
       ],
-      correctAnswer: 1,
-      explanation: 'El Rey sanciona y promulga las leyes en el plazo de quince días según el artículo 91 de la Constitución.'
+      correctAnswer: 0,
+      explanation: 'A menudo viene incluido con software gratuito.'
     },
-    
+
     // Pregunta 88
     {
-      questionText: 'En Conducta Humana, la teoría del aprendizaje social fue desarrollada por:',
+      questionText: '¿Qué es un Rootkit?',
       options: [
-        'Bandura',
-        'Skinner',
-        'Pavlov',
-        'Freud'
+        'Software diseñado para ocultar la existencia de ciertos procesos o programas',
+        'Una raíz',
+        'Un kit',
+        'Un árbol'
       ],
       correctAnswer: 0,
-      explanation: 'La teoría del aprendizaje social fue desarrollada por Albert Bandura.'
+      explanation: 'Permite el acceso privilegiado continuo a un ordenador.'
     },
-    
+
     // Pregunta 89
     {
-      questionText: 'El delito de amenazas requiere:',
+      questionText: '¿Qué es un Botnet?',
       options: [
-        'Anuncio de un mal futuro',
-        'Que el mal sea injusto',
-        'Que el mal sea determinado',
-        'Todas las anteriores'
+        'Una red de ordenadores infectados controlados remotamente',
+        'Un robot',
+        'Una red',
+        'Un chat'
       ],
-      correctAnswer: 3,
-      explanation: 'El delito de amenazas requiere el anuncio de un mal futuro, injusto, determinado y posible.'
+      correctAnswer: 0,
+      explanation: 'Se utiliza a menudo para ataques DDoS.'
     },
-    
+
     // Pregunta 90
     {
-      questionText: 'El delito de coacciones consiste en:',
+      questionText: '¿Qué es un ataque DDoS?',
       options: [
-        'Impedir hacer lo que la ley no prohíbe',
-        'Compeler a hacer lo que no se quiere',
-        'Ambas son correctas',
-        'Ninguna es correcta'
+        'Ataque de denegación de servicio distribuido',
+        'Un virus',
+        'Un error',
+        'Un corte de luz'
       ],
-      correctAnswer: 2,
-      explanation: 'El delito de coacciones consiste en impedir a otro hacer lo que la ley no prohíbe o compelerle a hacer lo que no quiere.'
+      correctAnswer: 0,
+      explanation: 'Intenta hacer que un servicio no esté disponible abrumándolo con tráfico.'
     },
-    
+
     // Continúo con las últimas 60 preguntas...
-    
+
     // Pregunta 91
     {
-      questionText: 'La Unión Europea se fundamenta en:',
+      questionText: '¿Qué es la Ingeniería Social?',
       options: [
-        'El Tratado de la Unión Europea',
-        'El Tratado de Funcionamiento de la UE',
-        'Ambos tratados',
-        'La Constitución Europea'
+        'Manipular a las personas para que revelen información confidencial',
+        'Construir puentes',
+        'Ser sociable',
+        'Una carrera'
       ],
-      correctAnswer: 2,
-      explanation: 'La Unión Europea se fundamenta en el Tratado de la Unión Europea (TUE) y el Tratado de Funcionamiento de la Unión Europea (TFUE).'
+      correctAnswer: 0,
+      explanation: 'Se basa en la interacción humana y el engaño.'
     },
-    
+
     // Pregunta 92
     {
-      questionText: 'El Consejo Europeo está compuesto por:',
+      questionText: '¿Qué es el Hacking Ético?',
       options: [
-        'Los Jefes de Estado o de Gobierno de los Estados miembros',
-        'Los Ministros de los Estados miembros',
-        'Los Parlamentarios europeos',
-        'Los Comisarios europeos'
-      ],
-      correctAnswer: 0,
-      explanation: 'El Consejo Europeo está compuesto por los Jefes de Estado o de Gobierno de los Estados miembros, su Presidente y el Presidente de la Comisión.'
-    },
-    
-    // Pregunta 93
-    {
-      questionText: 'La iniciativa legislativa popular requiere:',
-      options: [
-        '100.000 firmas',
-        '250.000 firmas',
-        '500.000 firmas',
-        '1.000.000 de firmas'
-      ],
-      correctAnswer: 2,
-      explanation: 'La iniciativa legislativa popular requiere al menos 500.000 firmas acreditadas según la Constitución.'
-    },
-    
-    // Pregunta 94
-    {
-      questionText: 'El delito de robo con fuerza en las cosas en casa habitada se agrava cuando:',
-      options: [
-        'Se comete de noche',
-        'Se comete con violencia',
-        'Se utilizan llaves falsas',
-        'Todas las anteriores'
-      ],
-      correctAnswer: 2,
-      explanation: 'El robo con fuerza en casa habitada tiene agravaciones específicas, como el uso de llaves falsas o escalamiento.'
-    },
-    
-    // Pregunta 95
-    {
-      questionText: 'Según el Código Penal, son llaves falsas:',
-      options: [
-        'Las ganzúas',
-        'Las llaves legítimas sustraídas',
-        'Las llaves ilegítimamente obtenidas',
-        'Todas las anteriores'
-      ],
-      correctAnswer: 3,
-      explanation: 'Son llaves falsas las ganzúas, las llaves legítimas sustraídas o ilegítimamente obtenidas, y cualesquiera otras que no sean las destinadas por el propietario.'
-    },
-    
-    // Pregunta 96
-    {
-      questionText: 'La Ley General Presupuestaria regula:',
-      options: [
-        'El régimen presupuestario del Estado',
-        'La contabilidad pública',
-        'El control económico-financiero',
-        'Todas las anteriores'
-      ],
-      correctAnswer: 3,
-      explanation: 'La Ley 47/2003 General Presupuestaria regula el régimen presupuestario, la contabilidad pública y el control económico-financiero del sector público estatal.'
-    },
-    
-    // Pregunta 97
-    {
-      questionText: 'En Conducta Humana, la memoria a corto plazo tiene una capacidad aproximada de:',
-      options: [
-        '3-5 elementos',
-        '5-9 elementos',
-        '10-15 elementos',
-        'Ilimitada'
-      ],
-      correctAnswer: 1,
-      explanation: 'La memoria a corto plazo tiene una capacidad limitada de aproximadamente 7±2 elementos (5-9 elementos).'
-    },
-    
-    // Pregunta 98
-    {
-      questionText: 'El Juez de Vigilancia Penitenciaria debe elevar propuesta sobre medidas de seguridad:',
-      options: [
-        'Al menos anualmente',
-        'Cada seis meses',
-        'Cada dos años',
-        'Solo cuando lo solicite el interno'
-      ],
-      correctAnswer: 0,
-      explanation: 'El JVP está obligado a elevar al menos anualmente una propuesta de mantenimiento, cese, sustitución o suspensión de las medidas de seguridad.'
-    },
-    
-    // Pregunta 99
-    {
-      questionText: 'Los permisos extraordinarios se conceden en casos de:',
-      options: [
-        'Fallecimiento o enfermedad grave de familiares',
-        'Nacimiento de hijos',
-        'Importantes y comprobados beneficios penitenciarios',
-        'Todas las anteriores'
-      ],
-      correctAnswer: 3,
-      explanation: 'Los permisos extraordinarios se conceden por fallecimiento o enfermedad grave de familiares, nacimiento de hijos e importantes y comprobados beneficios penitenciarios.'
-    },
-    
-    // Pregunta 100
-    {
-      questionText: 'La pena de multa se impone por:',
-      options: [
-        'Días-multa',
-        'Cuantía fija',
-        'Porcentaje de ingresos',
-        'Todas las anteriores'
-      ],
-      correctAnswer: 0,
-      explanation: 'La pena de multa se impone por el sistema de días-multa, con un mínimo de 10 días y un máximo de dos años.'
-    },
-    
-    // Pregunta 101
-    {
-      questionText: 'Cuando un interno se encuentre enfermo grave, se pondrá en conocimiento de:',
-      options: [
-        'Sus familiares o allegados inmediatamente',
-        'El Juez de Vigilancia',
-        'El Ministerio Fiscal',
-        'La Junta de Tratamiento'
-      ],
-      correctAnswer: 0,
-      explanation: 'Cuando un interno se encuentre enfermo grave, se pondrá en conocimiento inmediatamente de sus familiares o allegados.'
-    },
-    
-    // Pregunta 102
-    {
-      questionText: 'La complicidad se castiga con:',
-      options: [
-        'La misma pena que los autores',
-        'La pena inferior en grado',
-        'La pena superior en grado',
-        'No se castiga'
-      ],
-      correctAnswer: 1,
-      explanation: 'A los cómplices se les impondrá la pena inferior en grado a la fijada por la ley para los autores del delito.'
-    },
-    
-    // Pregunta 103
-    {
-      questionText: 'La Ley Orgánica General Penitenciaria es del año:',
-      options: [
-        '1978',
-        '1979',
-        '1980',
-        '1981'
-      ],
-      correctAnswer: 1,
-      explanation: 'La LOGP es la Ley Orgánica 1/1979, de 26 de septiembre.'
-    },
-    
-    // Pregunta 104
-    {
-      questionText: 'El delito de falsedad documental puede ser cometido por:',
-      options: [
-        'Solo funcionarios públicos',
-        'Solo particulares',
-        'Funcionarios públicos y particulares',
-        'Solo notarios'
-      ],
-      correctAnswer: 2,
-      explanation: 'El delito de falsedad documental puede ser cometido tanto por funcionarios públicos como por particulares, con diferentes tipos penales.'
-    },
-    
-    // Pregunta 105
-    {
-      questionText: 'Según la LOGP, el trabajo es:',
-      options: [
-        'Un derecho y un deber del interno',
-        'Solo un derecho',
-        'Solo un deber',
-        'Opcional'
-      ],
-      correctAnswer: 0,
-      explanation: 'El trabajo es un derecho y un deber del interno, teniendo por objeto su formación, capacitación para el ejercicio de una actividad laboral y la creación de hábitos laborales.'
-    },
-    
-    // Pregunta 106
-    {
-      questionText: 'El procedimiento administrativo común se regula en:',
-      options: [
-        'La Ley 39/2015',
-        'La Ley 40/2015',
-        'La Constitución',
-        'El TREBEP'
-      ],
-      correctAnswer: 0,
-      explanation: 'El procedimiento administrativo común se regula en la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas.'
-    },
-    
-    // Pregunta 107
-    {
-      questionText: 'Los actos administrativos producen efectos:',
-      options: [
-        'Desde que se dictan',
-        'Desde que se notifican',
-        'Desde que se publican',
-        'Desde que son firmes'
-      ],
-      correctAnswer: 0,
-      explanation: 'Los actos administrativos producen efectos desde la fecha en que se dicten, salvo que en ellos se disponga otra cosa.'
-    },
-    
-    // Pregunta 108
-    {
-      questionText: 'El Congreso de los Diputados está compuesto por:',
-      options: [
-        'Entre 300 y 400 diputados',
-        'Exactamente 350 diputados',
-        'Entre 250 y 350 diputados',
-        'Exactamente 300 diputados'
-      ],
-      correctAnswer: 0,
-      explanation: 'El Congreso está compuesto por un mínimo de 300 y un máximo de 400 diputados, elegidos por sufragio universal.'
-    },
-    
-    // Pregunta 109
-    {
-      questionText: 'La Ley de Protección de Datos Personales se basa en:',
-      options: [
-        'El derecho al honor',
-        'El derecho a la intimidad',
-        'El derecho a la propia imagen',
-        'Todas las anteriores'
-      ],
-      correctAnswer: 1,
-      explanation: 'La protección de datos personales se fundamenta principalmente en el derecho fundamental a la intimidad y a la protección de datos del artículo 18.4 CE.'
-    },
-    
-    // Pregunta 110
-    {
-      questionText: 'Las visitas familiares en establecimientos penitenciarios tendrán una duración mínima de:',
-      options: [
-        '20 minutos',
-        '30 minutos',
-        '45 minutos',
-        '1 hora'
-      ],
-      correctAnswer: 0,
-      explanation: 'Las visitas familiares tendrán una duración mínima de 20 minutos según el Reglamento Penitenciario.'
-    },
-    
-    // Pregunta 111
-    {
-      questionText: 'El delito de quebrantamiento de condena consiste en:',
-      options: [
-        'No cumplir la pena impuesta',
-        'Quebrantar una pena o medida de seguridad',
-        'Fugarse de prisión',
-        'Todas las anteriores'
-      ],
-      correctAnswer: 1,
-      explanation: 'El delito de quebrantamiento de condena consiste en quebrantar una pena de las contempladas en el Código Penal o una medida de seguridad.'
-    },
-    
-    // Pregunta 112
-    {
-      questionText: 'El Reglamento Penitenciario fue aprobado por:',
-      options: [
-        'Ley Orgánica',
-        'Ley Ordinaria',
-        'Real Decreto',
-        'Orden Ministerial'
-      ],
-      correctAnswer: 2,
-      explanation: 'El Reglamento Penitenciario fue aprobado por Real Decreto 190/1996, de 9 de febrero.'
-    },
-    
-    // Pregunta 113
-    {
-      questionText: 'Según la Ley 40/2015, los órganos colegiados quedan válidamente constituidos cuando:',
-      options: [
-        'Asistan todos los miembros',
-        'Asistan la mayoría de los miembros',
-        'Asistan el presidente y el secretario o quienes les sustituyan y la mitad de los miembros',
-        'Asistan el presidente y dos miembros'
-      ],
-      correctAnswer: 2,
-      explanation: 'Los órganos colegiados quedan válidamente constituidos cuando asistan el presidente y el secretario o quienes les sustituyan y la mitad al menos de sus miembros.'
-    },
-    
-    // Pregunta 114
-    {
-      questionText: 'Los módulos de respeto son:',
-      options: [
-        'Una modalidad de vida en régimen ordinario',
-        'Un tipo de establecimiento',
-        'Una sanción disciplinaria',
-        'Un programa de tratamiento'
-      ],
-      correctAnswer: 0,
-      explanation: 'Los módulos de respeto son una modalidad de vida en régimen ordinario basada en el respeto, la responsabilidad y la convivencia.'
-    },
-    
-    // Pregunta 115
-    {
-      questionText: 'El Plan de Empleo del Sector Público se aprueba:',
-      options: [
-        'Anualmente',
-        'Cada dos años',
-        'Cada cuatro años',
-        'No tiene periodicidad fija'
-      ],
-      correctAnswer: 0,
-      explanation: 'El Plan de Empleo del Sector Público se aprueba anualmente junto con la Ley de Presupuestos Generales del Estado.'
-    },
-    
-    // Pregunta 116
-    {
-      questionText: 'El Parlamento Europeo es elegido por:',
-      options: [
-        'Los gobiernos de los Estados miembros',
-        'Sufragio universal directo',
-        'Los parlamentos nacionales',
-        'El Consejo Europeo'
-      ],
-      correctAnswer: 1,
-      explanation: 'El Parlamento Europeo es elegido por sufragio universal directo, libre y secreto por los ciudadanos de la Unión.'
-    },
-    
-    // Pregunta 117
-    {
-      questionText: 'El recurso contencioso-administrativo se interpone ante:',
-      options: [
-        'La Administración',
-        'Los Juzgados y Tribunales del orden contencioso-administrativo',
-        'El Tribunal Supremo',
-        'El Tribunal Constitucional'
-      ],
-      correctAnswer: 1,
-      explanation: 'El recurso contencioso-administrativo se interpone ante los Juzgados y Tribunales del orden contencioso-administrativo.'
-    },
-    
-    // Pregunta 118
-    {
-      questionText: 'Las comunicaciones íntimas de los internos se regulan en:',
-      options: [
-        'El artículo 45 del Reglamento Penitenciario',
-        'El artículo 50 del Reglamento Penitenciario',
-        'La LOGP',
-        'El Código Penal'
-      ],
-      correctAnswer: 0,
-      explanation: 'Las comunicaciones íntimas (vis a vis) se regulan en el artículo 45 del Reglamento Penitenciario.'
-    },
-    
-    // Pregunta 119
-    {
-      questionText: 'El Tratado de Funcionamiento de la Unión Europea regula:',
-      options: [
-        'Las competencias de la UE',
-        'El funcionamiento de las instituciones',
-        'Las políticas de la UE',
-        'Todas las anteriores'
-      ],
-      correctAnswer: 3,
-      explanation: 'El TFUE regula las competencias de la UE, el funcionamiento de sus instituciones y sus políticas.'
-    },
-    
-    // Pregunta 120
-    {
-      questionText: 'La prescripción de las faltas leves es de:',
-      options: [
-        '10 días',
-        '20 días',
-        '1 mes',
-        '2 meses'
-      ],
-      correctAnswer: 2,
-      explanation: 'Las faltas leves prescriben al mes según el Código Penal.'
-    },
-    
-    // Pregunta 121
-    {
-      questionText: 'El delito de malversación requiere:',
-      options: [
-        'Que el autor sea autoridad o funcionario',
-        'Que se apropie de caudales públicos',
-        'Que los tenga a su cargo por razón de su cargo',
-        'Todas las anteriores'
-      ],
-      correctAnswer: 3,
-      explanation: 'El delito de malversación requiere que el autor sea autoridad o funcionario que se apropie de caudales o efectos públicos que tenga a su cargo por razón de su cargo.'
-    },
-    
-    // Pregunta 122
-    {
-      questionText: 'La responsabilidad penal de las personas jurídicas fue introducida en:',
-      options: [
-        '1995',
-        '2010',
-        '2015',
+        'Hackear sistemas para encontrar vulnerabilidades y arreglarlas',
+        'Hackear para robar',
+        'Ser bueno',
         'No existe'
       ],
-      correctAnswer: 1,
-      explanation: 'La responsabilidad penal de las personas jurídicas fue introducida en la reforma del Código Penal de 2010.'
+      correctAnswer: 0,
+      explanation: 'También conocido como "white hat hacking".'
     },
-    
+
+    // Pregunta 93
+    {
+      questionText: '¿Qué es un Pentest?',
+      options: [
+        'Test de penetración',
+        'Un bolígrafo',
+        'Un examen',
+        'Una prueba'
+      ],
+      correctAnswer: 0,
+      explanation: 'Simulación de un ciberataque para evaluar la seguridad.'
+    },
+
+    // Pregunta 94
+    {
+      questionText: '¿Qué es la Criptografía?',
+      options: [
+        'La práctica y el estudio de técnicas para la comunicación segura',
+        'Escribir mal',
+        'Un idioma',
+        'Un juego'
+      ],
+      correctAnswer: 0,
+      explanation: 'Protege la información mediante códigos.'
+    },
+
+    // Pregunta 95
+    {
+      questionText: '¿Qué es el cifrado simétrico?',
+      options: [
+        'Usa la misma clave para cifrar y descifrar',
+        'Usa dos claves',
+        'No usa claves',
+        'Es asimétrico'
+      ],
+      correctAnswer: 0,
+      explanation: 'Es más rápido pero requiere compartir la clave.'
+    },
+
+    // Pregunta 96
+    {
+      questionText: '¿Qué es el cifrado asimétrico?',
+      options: [
+        'Usa un par de claves (pública y privada)',
+        'Usa una clave',
+        'No usa claves',
+        'Es simétrico'
+      ],
+      correctAnswer: 0,
+      explanation: 'La clave pública cifra y la privada descifra (o viceversa).'
+    },
+
+    // Pregunta 97
+    {
+      questionText: '¿Qué es un Hash?',
+      options: [
+        'Una función que convierte una entrada en una cadena de longitud fija',
+        'Una comida',
+        'Una clave',
+        'Un virus'
+      ],
+      correctAnswer: 0,
+      explanation: 'Es unidireccional y se usa para verificar integridad.'
+    },
+
+    // Pregunta 98
+    {
+      questionText: '¿Qué es una firma digital?',
+      options: [
+        'Un esquema matemático para demostrar la autenticidad de un mensaje digital',
+        'Una firma en papel',
+        'Un dibujo',
+        'Un nombre'
+      ],
+      correctAnswer: 0,
+      explanation: 'Garantiza autenticidad, integridad y no repudio.'
+    },
+
+    // Pregunta 99
+    {
+      questionText: '¿Qué es un certificado digital?',
+      options: [
+        'Un documento electrónico que vincula una clave pública con la identidad de su propietario',
+        'Un diploma',
+        'Un papel',
+        'Un archivo'
+      ],
+      correctAnswer: 0,
+      explanation: 'Es emitido por una Autoridad de Certificación (CA).'
+    },
+
+    // Pregunta 100
+    {
+      questionText: '¿Qué es PKI?',
+      options: [
+        'Public Key Infrastructure',
+        'Private Key Infrastructure',
+        'Personal Key Interface',
+        'Public Key Interface'
+      ],
+      correctAnswer: 0,
+      explanation: 'Es la infraestructura necesaria para gestionar certificados digitales.'
+    },
+
+    // Pregunta 101
+    {
+      questionText: '¿Qué es SSL/TLS?',
+      options: [
+        'Protocolos criptográficos para comunicaciones seguras',
+        'Un virus',
+        'Un programa',
+        'Un ordenador'
+      ],
+      correctAnswer: 0,
+      explanation: 'Aseguran la comunicación en redes como Internet.'
+    },
+
+    // Pregunta 102
+    {
+      questionText: '¿Qué es HTTPS?',
+      options: [
+        'HyperText Transfer Protocol Secure',
+        'HyperText Transfer Protocol Standard',
+        'HyperText Transfer Protocol Simple',
+        'HyperText Transfer Protocol System'
+      ],
+      correctAnswer: 0,
+      explanation: 'Es la versión segura de HTTP.'
+    },
+
+    // Pregunta 103
+    {
+      questionText: '¿Qué es VPN?',
+      options: [
+        'Virtual Private Network',
+        'Very Private Network',
+        'Virtual Public Network',
+        'Visual Private Network'
+      ],
+      correctAnswer: 0,
+      explanation: 'Crea una conexión segura sobre una red pública.'
+    },
+
+    // Pregunta 104
+    {
+      questionText: '¿Qué es un Firewall?',
+      options: [
+        'Un sistema de seguridad de red',
+        'Un muro de fuego',
+        'Un bombero',
+        'Un extintor'
+      ],
+      correctAnswer: 0,
+      explanation: 'Controla el tráfico de red entrante y saliente.'
+    },
+
+    // Pregunta 105
+    {
+      questionText: '¿Qué es un IDS?',
+      options: [
+        'Intrusion Detection System',
+        'Internet Data System',
+        'Internal Data Service',
+        'Intelligent Data System'
+      ],
+      correctAnswer: 0,
+      explanation: 'Monitoriza la red en busca de actividad maliciosa.'
+    },
+
+    // Pregunta 106
+    {
+      questionText: '¿Qué es un IPS?',
+      options: [
+        'Intrusion Prevention System',
+        'Internet Protocol System',
+        'Internal Protection Service',
+        'Intelligent Protection System'
+      ],
+      correctAnswer: 0,
+      explanation: 'Detecta y previene ataques.'
+    },
+
+    // Pregunta 107
+    {
+      questionText: '¿Qué es un Antivirus?',
+      options: [
+        'Software para prevenir, detectar y eliminar malware',
+        'Una medicina',
+        'Un médico',
+        'Un hospital'
+      ],
+      correctAnswer: 0,
+      explanation: 'Protege el ordenador de software malicioso.'
+    },
+
+    // Pregunta 108
+    {
+      questionText: '¿Qué es la Autenticación?',
+      options: [
+        'Verificar la identidad de un usuario',
+        'Dar permiso',
+        'Entrar',
+        'Salir'
+      ],
+      correctAnswer: 0,
+      explanation: 'Asegura que el usuario es quien dice ser.'
+    },
+
+    // Pregunta 109
+    {
+      questionText: '¿Qué es la Autorización?',
+      options: [
+        'Determinar qué recursos puede acceder un usuario',
+        'Verificar la identidad',
+        'Entrar',
+        'Salir'
+      ],
+      correctAnswer: 0,
+      explanation: 'Ocurre después de la autenticación.'
+    },
+
+    // Pregunta 110
+    {
+      questionText: '¿Qué es MFA?',
+      options: [
+        'Multi-Factor Authentication',
+        'Multi-Function Application',
+        'Main File Access',
+        'Master File Allocation'
+      ],
+      correctAnswer: 0,
+      explanation: 'Requiere más de un método de verificación.'
+    },
+
+    // Pregunta 111
+    {
+      questionText: '¿Qué es un Token?',
+      options: [
+        'Un dispositivo o cadena de caracteres para autenticación',
+        'Una moneda',
+        'Un juego',
+        'Un regalo'
+      ],
+      correctAnswer: 0,
+      explanation: 'Se usa para verificar la identidad.'
+    },
+
+    // Pregunta 112
+    {
+      questionText: '¿Qué es OAuth?',
+      options: [
+        'Un estándar abierto para delegación de acceso',
+        'Un autor',
+        'Un libro',
+        'Un sistema operativo'
+      ],
+      correctAnswer: 0,
+      explanation: 'Permite a los usuarios compartir información privada sin compartir sus credenciales.'
+    },
+
+    // Pregunta 113
+    {
+      questionText: '¿Qué es OpenID Connect?',
+      options: [
+        'Una capa de identidad sobre OAuth 2.0',
+        'Un DNI',
+        'Una puerta',
+        'Un candado'
+      ],
+      correctAnswer: 0,
+      explanation: 'Permite verificar la identidad del usuario.'
+    },
+
+    // Pregunta 114
+    {
+      questionText: '¿Qué es SAML?',
+      options: [
+        'Security Assertion Markup Language',
+        'Simple Access Markup Language',
+        'Secure Access Management Layer',
+        'System Access Mode Level'
+      ],
+      correctAnswer: 0,
+      explanation: 'Estándar para intercambiar datos de autenticación y autorización.'
+    },
+
+    // Pregunta 115
+    {
+      questionText: '¿Qué es LDAP?',
+      options: [
+        'Lightweight Directory Access Protocol',
+        'Local Data Access Protocol',
+        'Large Data Access Protocol',
+        'Link Data Access Protocol'
+      ],
+      correctAnswer: 0,
+      explanation: 'Protocolo para acceder y mantener servicios de directorio distribuidos.'
+    },
+
+    // Pregunta 116
+    {
+      questionText: '¿Qué es Active Directory?',
+      options: [
+        'Un servicio de directorio de Microsoft',
+        'Un libro',
+        'Una carpeta',
+        'Un archivo'
+      ],
+      correctAnswer: 0,
+      explanation: 'Se utiliza para la gestión de identidades y accesos en redes Windows.'
+    },
+
+    // Pregunta 117
+    {
+      questionText: '¿Qué es Kerberos?',
+      options: [
+        'Un protocolo de autenticación de redes',
+        'Un perro',
+        'Un dios',
+        'Un planeta'
+      ],
+      correctAnswer: 0,
+      explanation: 'Permite a los nodos comunicarse de forma segura.'
+    },
+
+    // Pregunta 118
+    {
+      questionText: '¿Qué es RADIUS?',
+      options: [
+        'Remote Authentication Dial-In User Service',
+        'Radio',
+        'Un círculo',
+        'Una rueda'
+      ],
+      correctAnswer: 0,
+      explanation: 'Protocolo de red para autenticación, autorización y contabilidad.'
+    },
+
+    // Pregunta 119
+    {
+      questionText: '¿Qué es TACACS+?',
+      options: [
+        'Terminal Access Controller Access-Control System Plus',
+        'Un taxi',
+        'Un tren',
+        'Un avión'
+      ],
+      correctAnswer: 0,
+      explanation: 'Protocolo de autenticación remota.'
+    },
+
+    // Pregunta 120
+    {
+      questionText: '¿Qué es 802.1X?',
+      options: [
+        'Un estándar para control de acceso a la red basado en puertos',
+        'Un número',
+        'Una fecha',
+        'Una hora'
+      ],
+      correctAnswer: 0,
+      explanation: 'Proporciona un mecanismo de autenticación para dispositivos que se conectan a una LAN o WLAN.'
+    },
+
+    // Pregunta 121
+    {
+      questionText: '¿Qué es WPA2?',
+      options: [
+        'Wi-Fi Protected Access 2',
+        'Un router',
+        'Una antena',
+        'Un cable'
+      ],
+      correctAnswer: 0,
+      explanation: 'Protocolo de seguridad para redes inalámbricas.'
+    },
+
+    // Pregunta 122
+    {
+      questionText: '¿Qué es WPA3?',
+      options: [
+        'La versión más reciente de Wi-Fi Protected Access',
+        'Un router',
+        'Una antena',
+        'Un cable'
+      ],
+      correctAnswer: 0,
+      explanation: 'Mejora la seguridad de WPA2.'
+    },
+
     // Pregunta 123
     {
-      questionText: 'El principio de proporcionalidad en Derecho Administrativo implica:',
+      questionText: '¿Qué es un ataque Man-in-the-Middle?',
       options: [
-        'Adecuación entre medios y fines',
-        'Necesidad de la medida',
-        'Proporcionalidad en sentido estricto',
-        'Todas las anteriores'
+        'El atacante intercepta la comunicación entre dos partes',
+        'Un hombre en el medio',
+        'Un árbitro',
+        'Un juez'
       ],
-      correctAnswer: 3,
-      explanation: 'El principio de proporcionalidad implica adecuación, necesidad y proporcionalidad en sentido estricto.'
+      correctAnswer: 0,
+      explanation: 'Permite espiar o alterar la comunicación.'
     },
-    
+
     // Pregunta 124
     {
-      questionText: 'La separación interior en establecimientos penitenciarios se realiza atendiendo a:',
+      questionText: '¿Qué es el Spoofing?',
       options: [
-        'Sexo',
-        'Edad',
-        'Situación procesal y penitenciaria',
-        'Todas las anteriores'
+        'Suplantación de identidad',
+        'Un fantasma',
+        'Un susto',
+        'Una broma'
       ],
-      correctAnswer: 3,
-      explanation: 'La separación interior se realiza atendiendo al sexo, edad, situación procesal y penitenciaria, entre otros criterios.'
+      correctAnswer: 0,
+      explanation: 'El atacante se hace pasar por una fuente confiable.'
     },
-    
+
     // Pregunta 125
     {
-      questionText: 'Según la LOGP, la asistencia religiosa es:',
+      questionText: '¿Qué es el Sniffing?',
       options: [
-        'Obligatoria',
-        'Voluntaria',
-        'Prohibida',
-        'Solo para católicos'
+        'Captura de tráfico de red',
+        'Oler',
+        'Un perro',
+        'Un gato'
       ],
-      correctAnswer: 1,
-      explanation: 'La asistencia religiosa es voluntaria y se garantiza la libertad religiosa de los internos.'
+      correctAnswer: 0,
+      explanation: 'Permite analizar los datos que viajan por la red.'
     },
-    
+
     // Pregunta 126
     {
-      questionText: 'Las salidas programadas según el Reglamento Penitenciario tienen una duración máxima de:',
+      questionText: '¿Qué es un ataque de denegación de servicio (DoS)?',
       options: [
-        '1 día',
-        '2 días',
-        '3 días',
-        '7 días'
+        'Intento de hacer que un recurso no esté disponible',
+        'Dos ataques',
+        'Un error',
+        'Un virus'
       ],
-      correctAnswer: 1,
-      explanation: 'Como regla general, la duración de las salidas programadas no será superior a dos días.'
+      correctAnswer: 0,
+      explanation: 'Satura el sistema para que no pueda responder.'
     },
-    
+
     // Pregunta 127
     {
-      questionText: 'El delito de tráfico de drogas se castiga:',
+      questionText: '¿Qué es la Ingeniería Social?',
       options: [
-        'Solo si hay ánimo de lucro',
-        'Aunque no haya ánimo de lucro',
-        'Solo si la droga causa grave daño a la salud',
-        'Solo si se vende a menores'
+        'Manipulación psicológica de las personas',
+        'Construir puentes',
+        'Ser ingeniero',
+        'Ser social'
       ],
-      correctAnswer: 1,
-      explanation: 'El delito de tráfico de drogas se castiga aunque no haya ánimo de lucro, siendo suficiente promover, favorecer o facilitar el consumo ilegal.'
+      correctAnswer: 0,
+      explanation: 'Busca obtener información confidencial o acceso.'
     },
-    
+
     // Pregunta 128
     {
-      questionText: 'Los programas de mantenimiento con metadona en prisión:',
+      questionText: '¿Qué es un Zero-Day?',
       options: [
-        'Están prohibidos',
-        'Son opcionales',
-        'Forman parte de los programas de atención a drogodependientes',
-        'Solo se aplican en tercer grado'
+        'Una vulnerabilidad desconocida por el fabricante',
+        'Un día libre',
+        'El fin del mundo',
+        'Un virus'
       ],
-      correctAnswer: 2,
-      explanation: 'Los programas de mantenimiento con metadona forman parte de los programas de atención a drogodependientes en el medio penitenciario.'
+      correctAnswer: 0,
+      explanation: 'Los ataques ocurren antes de que exista un parche.'
     },
-    
+
     // Pregunta 129
     {
-      questionText: 'Según el TREBEP, el régimen disciplinario de los funcionarios públicos se basa en:',
+      questionText: '¿Qué es un Patch?',
       options: [
-        'Principios de legalidad y tipicidad',
-        'Principio de proporcionalidad',
-        'Principio de irretroactividad',
-        'Todas las anteriores'
+        'Una actualización de software para corregir errores',
+        'Un parche de ropa',
+        'Un pirata',
+        'Un ojo'
       ],
-      correctAnswer: 3,
-      explanation: 'El régimen disciplinario se basa en los principios de legalidad, tipicidad, proporcionalidad e irretroactividad.'
+      correctAnswer: 0,
+      explanation: 'Es esencial mantener el software actualizado.'
     },
-    
+
     // Pregunta 130
     {
-      questionText: 'El régimen de sustituciones en órganos colegiados penitenciarios se rige por:',
+      questionText: '¿Qué es un Exploit?',
       options: [
-        'Normas específicas del Reglamento Penitenciario',
-        'La Ley 40/2015',
-        'El TREBEP',
-        'La LOGP'
+        'Software que aprovecha una vulnerabilidad',
+        'Una explosión',
+        'Un descubrimiento',
+        'Un viaje'
       ],
       correctAnswer: 0,
-      explanation: 'El régimen de sustituciones del Presidente, Secretario y miembros de los órganos colegiados se regula específicamente en el Reglamento Penitenciario.'
+      explanation: 'Se usa para atacar sistemas.'
     },
-    
+
     // Pregunta 131
     {
-      questionText: 'La iniciativa legislativa corresponde a:',
+      questionText: '¿Qué es la Encriptación?',
       options: [
-        'El Gobierno',
-        'El Congreso y el Senado',
-        'Las Asambleas de las CCAA',
-        'Todas las anteriores'
+        'Proceso de codificar información',
+        'Escribir mal',
+        'Un idioma',
+        'Un juego'
       ],
-      correctAnswer: 3,
-      explanation: 'La iniciativa legislativa corresponde al Gobierno, al Congreso, al Senado y a las Asambleas de las CCAA, además de la iniciativa popular.'
+      correctAnswer: 0,
+      explanation: 'Protege la confidencialidad de los datos.'
     },
-    
+
     // Pregunta 132
     {
-      questionText: 'El delito de detención ilegal cometido por particular se castiga con:',
+      questionText: '¿Qué es un Algoritmo de Cifrado?',
       options: [
-        'Prisión de 4 a 6 años',
-        'Prisión de 2 a 4 años',
-        'Prisión de 1 a 3 años',
-        'Multa'
+        'Una fórmula matemática para cifrar datos',
+        'Un número',
+        'Una letra',
+        'Un símbolo'
       ],
       correctAnswer: 0,
-      explanation: 'El particular que encerrare o detuviere a otro será castigado con pena de prisión de 4 a 6 años.'
+      explanation: 'Ejemplos: AES, RSA.'
     },
-    
+
     // Pregunta 133
     {
-      questionText: 'Las medidas de seguridad se aplican a:',
+      questionText: '¿Qué es AES?',
       options: [
-        'Inimputables',
-        'Semiimputables',
-        'Imputables en casos específicos',
-        'Todas las anteriores'
-      ],
-      correctAnswer: 3,
-      explanation: 'Las medidas de seguridad se pueden aplicar a inimputables, semiimputables y, en casos específicos, a imputables (libertad vigilada).'
-    },
-    
-    // Pregunta 134
-    {
-      questionText: 'El delito de robo con violencia se agrava cuando:',
-      options: [
-        'Se usa arma',
-        'La violencia es especialmente grave',
-        'Se actúa en grupo',
-        'Todas las anteriores'
-      ],
-      correctAnswer: 3,
-      explanation: 'El robo con violencia tiene diversas agravaciones como el uso de armas, violencia especialmente grave o actuación en grupo.'
-    },
-    
-    // Pregunta 135
-    {
-      questionText: 'La Subdirección General de Análisis e Inspección del Ministerio del Interior tiene funciones de:',
-      options: [
-        'Control y evaluación',
-        'Inspección',
-        'Análisis',
-        'Todas las anteriores'
-      ],
-      correctAnswer: 3,
-      explanation: 'La Subdirección General de Análisis e Inspección desarrolla funciones de control, evaluación, inspección y análisis.'
-    },
-    
-    // Pregunta 140
-    {
-      questionText: 'Los internos pueden formular quejas ante:',
-      options: [
-        'El Director del centro',
-        'El Juez de Vigilancia Penitenciaria',
-        'El Defensor del Pueblo',
-        'Todas las anteriores'
-      ],
-      correctAnswer: 3,
-      explanation: 'Los internos tienen derecho a formular quejas ante el Director, el JVP, el Defensor del Pueblo y el Ministerio Fiscal.'
-    },
-    
-    // Pregunta 141
-    {
-      questionText: 'El control de las comunicaciones orales de los internos se realiza:',
-      options: [
-        'Siempre',
-        'Nunca',
-        'Cuando lo autorice el Director o el Juez',
-        'Solo en primer grado'
-      ],
-      correctAnswer: 2,
-      explanation: 'El control de las comunicaciones orales requiere autorización del Director o, en su caso, del Juez competente.'
-    },
-    
-    // Pregunta 142
-    {
-      questionText: 'El delito de descubrimiento y revelación de secretos requiere:',
-      options: [
-        'Apoderarse de papeles o efectos',
-        'Interceptar comunicaciones',
-        'Revelar secretos',
-        'Todas las anteriores son modalidades'
-      ],
-      correctAnswer: 3,
-      explanation: 'El delito de descubrimiento y revelación de secretos tiene diversas modalidades: apoderamiento, interceptación y revelación.'
-    },
-    
-    // Pregunta 143
-    {
-      questionText: 'El principio de jerarquía normativa implica:',
-      options: [
-        'Las normas inferiores no pueden contradecir a las superiores',
-        'La Constitución es la norma suprema',
-        'Los reglamentos no pueden contradecir las leyes',
-        'Todas las anteriores'
-      ],
-      correctAnswer: 3,
-      explanation: 'El principio de jerarquía normativa implica que las normas inferiores no pueden contradecir a las superiores, siendo la Constitución la norma suprema.'
-    },
-    
-    // Pregunta 144
-    {
-      questionText: 'El Equipo Técnico en establecimientos penitenciarios está compuesto por:',
-      options: [
-        'Juristas, psicólogos y trabajadores sociales',
-        'Educadores',
-        'Otros profesionales según necesidades',
-        'Todas las anteriores'
-      ],
-      correctAnswer: 3,
-      explanation: 'El Equipo Técnico está compuesto por juristas, psicólogos, trabajadores sociales, educadores y otros profesionales según las necesidades del tratamiento.'
-    },
-    
-    // Pregunta 145
-    {
-      questionText: 'El Boletín Oficial del Estado se publica:',
-      options: [
-        'Diariamente',
-        'Semanalmente',
-        'Mensualmente',
-        'Cuando sea necesario'
+        'Advanced Encryption Standard',
+        'Advanced Electronic System',
+        'Automated Entry System',
+        'Apple Encryption Service'
       ],
       correctAnswer: 0,
-      explanation: 'El BOE se publica diariamente en formato electrónico, siendo esta publicación la que tiene efectos jurídicos.'
+      explanation: 'Estándar de cifrado simétrico.'
     },
-    
+
+    // Pregunta 134
+    {
+      questionText: '¿Qué es RSA?',
+      options: [
+        'Rivest-Shamir-Adleman',
+        'Remote System Access',
+        'Real Secure Algorithm',
+        'Random Security Access'
+      ],
+      correctAnswer: 0,
+      explanation: 'Algoritmo de cifrado asimétrico.'
+    },
+
+    // Pregunta 135
+    {
+      questionText: '¿Qué es SHA?',
+      options: [
+        'Secure Hash Algorithm',
+        'Secure Home Access',
+        'System Hash Access',
+        'Simple Hash Algorithm'
+      ],
+      correctAnswer: 0,
+      explanation: 'Familia de funciones hash criptográficas.'
+    },
+
+    // Pregunta 140
+    {
+      questionText: '¿Qué es MD5?',
+      options: [
+        'Message Digest 5',
+        'Message Data 5',
+        'Master Disk 5',
+        'Main Drive 5'
+      ],
+      correctAnswer: 0,
+      explanation: 'Función hash criptográfica (ya no se considera segura).'
+    },
+
+    // Pregunta 141
+    {
+      questionText: '¿Qué es la Esteganografía?',
+      options: [
+        'Ocultar mensajes dentro de otros objetos',
+        'Escribir mal',
+        'Un dinosaurio',
+        'Un dibujo'
+      ],
+      correctAnswer: 0,
+      explanation: 'A diferencia de la criptografía, oculta la existencia del mensaje.'
+    },
+
+    // Pregunta 142
+    {
+      questionText: '¿Qué es un Certificado Raíz?',
+      options: [
+        'El certificado superior en la jerarquía de confianza',
+        'Una raíz',
+        'Un árbol',
+        'Un papel'
+      ],
+      correctAnswer: 0,
+      explanation: 'Es la base de la confianza en PKI.'
+    },
+
+    // Pregunta 143
+    {
+      questionText: '¿Qué es la Revocación de Certificados?',
+      options: [
+        'Invalidar un certificado antes de su fecha de caducidad',
+        'Romper el papel',
+        'Borrar el archivo',
+        'Perder la clave'
+      ],
+      correctAnswer: 0,
+      explanation: 'Se hace mediante listas CRL o protocolo OCSP.'
+    },
+
+    // Pregunta 144
+    {
+      questionText: '¿Qué es CRL?',
+      options: [
+        'Certificate Revocation List',
+        'Central Registry List',
+        'Common Resource Locator',
+        'Control Room Log'
+      ],
+      correctAnswer: 0,
+      explanation: 'Lista de certificados revocados.'
+    },
+
+    // Pregunta 145
+    {
+      questionText: '¿Qué es OCSP?',
+      options: [
+        'Online Certificate Status Protocol',
+        'Open Certificate System Protocol',
+        'Official Certificate Service Provider',
+        'Only Certificate Secure Protocol'
+      ],
+      correctAnswer: 0,
+      explanation: 'Protocolo para verificar el estado de un certificado en tiempo real.'
+    },
+
     // Pregunta 146
     {
-      questionText: 'El Subdirector de Tratamiento tiene entre sus funciones:',
+      questionText: '¿Qué es la Firma Electrónica Avanzada?',
       options: [
-        'Coordinar las actividades de tratamiento',
-        'Presidir el Equipo Técnico',
-        'Difundir entre los internos las actividades del establecimiento',
-        'Todas las anteriores'
+        'Permite identificar al firmante y detectar cambios posteriores',
+        'Una firma bonita',
+        'Una firma rápida',
+        'Una firma cara'
       ],
-      correctAnswer: 3,
-      explanation: 'El Subdirector de Tratamiento coordina las actividades de tratamiento, preside el Equipo Técnico y difunde las actividades entre los internos.'
+      correctAnswer: 0,
+      explanation: 'Tiene un nivel de seguridad mayor que la firma simple.'
     },
-    
+
     // Pregunta 147
     {
-      questionText: 'El delito de omisión del deber de socorro se castiga cuando:',
+      questionText: '¿Qué es la Firma Electrónica Cualificada?',
       options: [
-        'No se socorre a persona en peligro manifiesto y grave',
-        'No se da aviso a la autoridad',
-        'Ambas conductas',
-        'Solo si hay resultado lesivo'
+        'Firma avanzada creada con un dispositivo cualificado y certificado cualificado',
+        'La mejor firma',
+        'Una firma de juez',
+        'Una firma de rey'
       ],
-      correctAnswer: 2,
-      explanation: 'El delito de omisión del deber de socorro castiga tanto no socorrer como no dar aviso a la autoridad cuando una persona está en peligro manifiesto y grave.'
+      correctAnswer: 0,
+      explanation: 'Tiene el mismo valor jurídico que la firma manuscrita.'
     },
-    
+
     // Pregunta 148
     {
-      questionText: 'El delito de prevaricación judicial requiere que el Juez o Magistrado:',
+      questionText: '¿Qué es el Sellado de Tiempo?',
       options: [
-        'Dicte sentencia injusta',
-        'Actúe con conocimiento de su injusticia',
-        'Sea en causa criminal',
-        'Las opciones A y B son correctas'
+        'Probar que un dato existía en un momento dado',
+        'Poner un sello',
+        'Mirar el reloj',
+        'Esperar'
       ],
-      correctAnswer: 3,
-      explanation: 'La prevaricación judicial requiere que el Juez o Magistrado dicte sentencia o resolución injusta a sabiendas de su injusticia.'
+      correctAnswer: 0,
+      explanation: 'Garantiza la integridad y el momento de creación.'
     },
-    
+
     // Pregunta 149
     {
-      questionText: 'El procedimiento administrativo sancionador se rige por:',
+      questionText: '¿Qué es la Identidad Digital?',
       options: [
-        'Principio de presunción de inocencia',
-        'Principio de legalidad',
-        'Principio de proporcionalidad',
-        'Todas las anteriores'
+        'El conjunto de información sobre una persona en Internet',
+        'El DNI',
+        'Una foto',
+        'Un nombre'
       ],
-      correctAnswer: 3,
-      explanation: 'El procedimiento sancionador se rige por los principios de presunción de inocencia, legalidad, tipicidad, proporcionalidad e irretroactividad.'
+      correctAnswer: 0,
+      explanation: 'Incluye datos personales, imágenes, noticias, comentarios, etc.'
     },
-    
+
     // Pregunta 150
     {
-      questionText: 'Los paquetes que reciben los internos:',
+      questionText: '¿Qué es el Single Sign-On (SSO)?',
       options: [
-        'No pueden ser intervenidos',
-        'Pueden ser intervenidos por razones de seguridad',
-        'Solo pueden contener alimentos',
-        'Están prohibidos'
+        'Acceder a múltiples aplicaciones con una sola autenticación',
+        'Una sola firma',
+        'Un solo usuario',
+        'Una sola contraseña'
       ],
-      correctAnswer: 1,
-      explanation: 'Los paquetes que reciben los internos pueden ser intervenidos y registrados por razones de seguridad y orden del establecimiento.'
+      correctAnswer: 0,
+      explanation: 'Mejora la experiencia de usuario y la seguridad.'
     }
   ]
 };

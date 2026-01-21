@@ -3,76 +3,76 @@ import type { Test } from '../../types';
 
 export const TEST_9: Test = {
   id: 'test-9',
-  title: 'Test 9: Dº Penitenciario IV (Temas 41-45)',
+  title: 'Test 9: Sistemas Operativos y Administración',
   questions: [
-    // Tema 41: Régimen Disciplinario
-    { 
-      questionText: '¿Quién es competente para imponer sanciones por faltas graves y leves?', 
-      options: ['El Juez de Vigilancia', 'El Director del Establecimiento (o Consejo de Dirección)', 'El Jefe de Servicios', 'El funcionario de servicio'], 
+    // Tema: Conceptos básicos SO
+    {
+      questionText: '¿Cuál es el núcleo del sistema operativo Linux?',
+      options: ['Shell', 'Kernel', 'GUI', 'Terminal'],
       correctAnswer: 1,
-      explanation: 'El artículo 44 de la LOGP y el 233 del RP establecen que la competencia para imponer sanciones por faltas graves y leves corresponde al Director (o Consejo de Dirección según el caso). Las muy graves a la Comisión Disciplinaria.'
+      explanation: 'El Kernel es el núcleo del sistema operativo que gestiona los recursos del hardware y permite la comunicación entre software y hardware.'
     },
-    { 
-      questionText: 'La sanción de aislamiento en celda no podrá exceder de:', 
-      options: ['7 días', '14 días', '21 días', '30 días'], 
-      correctAnswer: 1,
-      explanation: 'El artículo 42 de la LOGP establece que el aislamiento en celda no podrá exceder de catorce días.'
+    {
+      questionText: 'En Windows, ¿qué sistema de archivos soporta permisos de seguridad a nivel de archivo?',
+      options: ['FAT', 'FAT32', 'NTFS', 'ExFAT'],
+      correctAnswer: 2,
+      explanation: 'NTFS (New Technology File System) soporta listas de control de acceso (ACL) y permisos de seguridad, a diferencia de FAT32.'
     },
-    
-    // Tema 42: Recompensas
-    { 
-      questionText: 'Las recompensas se conceden por:', 
-      options: ['Cumplir la condena', 'La realización de actos que pongan de relieve buena conducta, espíritu de trabajo y sentido de responsabilidad', 'Pagar una tasa', 'No tener sanciones en un mes'], 
+
+    // Tema: Gestión de Procesos
+    {
+      questionText: '¿Qué comando en Linux muestra los procesos en ejecución?',
+      options: ['ls', 'ps', 'cd', 'mkdir'],
       correctAnswer: 1,
-      explanation: 'El artículo 263 del Reglamento Penitenciario establece que se podrán conceder recompensas a los internos que se distingan por su buena conducta, espíritu de trabajo y sentido de responsabilidad.'
+      explanation: 'El comando "ps" (process status) muestra información sobre los procesos activos.'
     },
-    { 
-      questionText: '¿Cuál de las siguientes es una recompensa reglamentaria?', 
-      options: ['Reducción de condena automática', 'Becas de estudio', 'Libertad definitiva', 'Indulto'], 
+    {
+      questionText: 'En Windows, ¿qué herramienta permite ver el uso de CPU y memoria en tiempo real?',
+      options: ['Explorador de archivos', 'Administrador de tareas', 'Panel de control', 'Bloc de notas'],
       correctAnswer: 1,
-      explanation: 'El artículo 263 del RP enumera las recompensas, entre las que se incluyen las becas de estudio, notas meritorias, premios en metálico, etc.'
+      explanation: 'El Administrador de tareas proporciona información sobre el rendimiento del ordenador y los programas en ejecución.'
     },
-    
-    // Tema 43: Asistencia sanitaria
-    { 
-      questionText: 'La atención sanitaria en prisión incluye:', 
-      options: ['Solo urgencias', 'Atención primaria y especializada equivalente a la del Sistema Nacional de Salud', 'Solo medicina general', 'Solo odontología'], 
+
+    // Tema: Gestión de Memoria
+    {
+      questionText: '¿Qué es la paginación en la gestión de memoria?',
+      options: ['Escribir en papel', 'Técnica de gestión de memoria que divide la memoria en bloques de tamaño fijo', 'Borrar memoria', 'Aumentar la RAM'],
       correctAnswer: 1,
-      explanation: 'El artículo 207 del Reglamento Penitenciario garantiza a los internos una atención médico-sanitaria equivalente a la dispensada al conjunto de la población (Atención Primaria y Especializada).'
+      explanation: 'La paginación permite al sistema operativo utilizar datos que no caben en la memoria física principal moviéndolos al almacenamiento secundario.'
     },
-    { 
-      questionText: '¿Dónde deben permanecer los internos con enfermedades infecto-contagiosas en periodo agudo?', 
-      options: ['En celdas de castigo', 'En la enfermería o zona sanitaria aislados si es necesario', 'En el patio', 'Con el resto de la población'], 
-      correctAnswer: 1,
-      explanation: 'El artículo 215 del RP establece que los internos con enfermedades infecto-contagiosas en periodo agudo serán alojados en la enfermería o departamento sanitario, adoptándose las medidas de aislamiento necesarias.'
+    {
+      questionText: '¿Qué es el Swapping?',
+      options: ['Intercambio de procesos completos entre memoria principal y secundaria', 'Cambiar de usuario', 'Cambiar de disco duro', 'Cambiar de monitor'],
+      correctAnswer: 0,
+      explanation: 'El swapping (intercambio) mueve procesos enteros de la memoria RAM al disco duro para liberar espacio.'
     },
-    
-    // Tema 44: Oficina de gestión
-    { 
-      questionText: 'El Libro de Ingresos y Salidas es llevado por:', 
-      options: ['El servicio médico', 'La Oficina de Gestión', 'El servicio de cocina', 'El capellán'], 
+
+    // Tema: Entrada/Salida
+    {
+      questionText: '¿Qué es un Driver?',
+      options: ['Un conductor', 'Un programa que permite al sistema operativo comunicarse con el hardware', 'Un virus', 'Un juego'],
       correctAnswer: 1,
-      explanation: 'El artículo 307 del Reglamento Penitenciario atribuye a la Oficina de Gestión la llevanza del Libro de Ingresos y Salidas.'
+      explanation: 'Un driver o controlador es software que actúa como intermediario entre el sistema operativo y un dispositivo de hardware.'
     },
-    { 
-      questionText: 'En el expediente personal del interno se archivan:', 
-      options: ['Sus cartas privadas', 'Los documentos judiciales y administrativos relativos a su situación procesal y penitenciaria', 'Sus objetos personales', 'La ropa de calle'], 
-      correctAnswer: 1,
-      explanation: 'El artículo 14 del RP establece que el expediente personal (Protocolo) contendrá los documentos administrativos y judiciales relativos a la situación procesal y penitenciaria del interno.'
+    {
+      questionText: '¿Qué es el Spooling?',
+      options: ['Simultaneous Peripheral Operations On-Line', 'System Power On Line', 'Super Pool', 'Simple Print'],
+      correctAnswer: 0,
+      explanation: 'El spooling es un proceso de gestión de datos en el que los datos se colocan en un búfer temporal para ser procesados por un dispositivo (ej. impresora).'
     },
-    
-    // Tema 45: El Peculio
-    { 
-      questionText: '¿Pueden los internos tener dinero de curso legal (billetes/monedas) en su poder dentro del recinto?', 
-      options: ['Sí, sin límite', 'No, está prohibido salvo autorización expresa (peculio de libre disposición)', 'Sí, hasta 100 euros', 'Depende del módulo'], 
+
+    // Tema: Seguridad y Usuarios
+    {
+      questionText: 'En Linux, ¿quién es el superusuario?',
+      options: ['Admin', 'Root', 'System', 'User1'],
       correctAnswer: 1,
-      explanation: 'El artículo 316 del RP prohíbe a los internos tener en su poder dinero de curso legal, salvo en los supuestos autorizados (como en régimen abierto o salidas).'
+      explanation: 'Root es el nombre convencional del usuario que tiene todos los derechos o permisos en sistemas tipo Unix.'
     },
-    { 
-      questionText: 'El sistema de gestión del dinero de los internos se realiza mediante:', 
-      options: ['Cuentas bancarias externas', 'Cuenta de peculio administrada por el centro (tarjetas o vales)', 'Caja fuerte en la celda', 'Intercambio de bienes'], 
+    {
+      questionText: '¿Qué comando permite cambiar la contraseña de un usuario en Linux?',
+      options: ['pwd', 'passwd', 'pass', 'changepass'],
       correctAnswer: 1,
-      explanation: 'El artículo 317 del RP establece el sistema de resguardo de peculio, gestionándose el dinero mediante cuentas administradas por el centro (actualmente tarjetas monedero).'
+      explanation: 'El comando "passwd" se utiliza para cambiar la contraseña de una cuenta de usuario.'
     },
   ]
 };

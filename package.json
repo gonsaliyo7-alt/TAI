@@ -1,7 +1,7 @@
 {
-  "name": "ayudantes-de-instituciones-penitenciaria",
+  "name": "opotest-tai",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,7 +10,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
-  "homepage": "https://gonsaliyo7-alt.github.io/opotest_penitenciarias",
+  "homepage": "https://gonsaliyo7-alt.github.io/tai",
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
     "react": "^19.1.1",

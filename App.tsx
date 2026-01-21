@@ -5,19 +5,15 @@ import TestView from './components/TestView';
 import ResultsView from './components/ResultsView';
 import InfoModal from './components/InfoModal';
 import StatisticsView from './components/StatisticsView';
+import FlashcardsView from './components/FlashcardsView';
 import FlashcardView from './components/FlashcardView';
+import SalaryView from './components/SalaryView';
 import { TESTS_DATA, ALL_QUESTIONS } from './data/questions';
 import { PRACTICAL_CASES } from './data/practicalCases';
-import type { Test, TestResult, TestResults, Question, UserTrophies } from './types';
+import { RANKS } from './data/ranks';
+import type { Test, TestResult, TestResults, Question, UserTrophies, TestHistory, TestAttempt } from './types';
 import { useCookie } from './hooks/useCookie';
 import { useLocalStorage } from './hooks/useLocalStorage';
-
-// Keywords to filter deadline-related questions
-const TIME_KEYWORDS = [
-    'plazo', 'días', 'dia', 'mes', 'año', 'hora', 'tiempo', 'duración',
-    'prescri', 'caduc', 'antigüedad', 'cómputo', 'tardía', 'prórroga',
-    'vigencia', 'periodo', 'edad', 'fecha'
-];
 
 // Algoritmo Fisher-Yates para una aleatorización perfecta de preguntas.
 const getRandomQuestions = (questions: Question[], count: number): Question[] => {
@@ -32,17 +28,12 @@ const getRandomQuestions = (questions: Question[], count: number): Question[] =>
 // Función para barajar las OPCIONES dentro de una pregunta y actualizar el índice de la correcta.
 const shuffleQuestionOptions = (question: Question): Question => {
     const indices = question.options.map((_, i) => i);
-
-    // Barajar índices
     for (let i = indices.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [indices[i], indices[j]] = [indices[j], indices[i]];
     }
-
     const newOptions = indices.map(i => question.options[i]);
-    // Buscamos dónde ha ido a parar el índice que era la respuesta correcta original
     const newCorrectAnswer = indices.indexOf(question.correctAnswer);
-
     return {
         ...question,
         options: newOptions,
@@ -50,18 +41,39 @@ const shuffleQuestionOptions = (question: Question): Question => {
     };
 };
 
-const getTodayDateString = () => {
-    const date = new Date();
-    return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
+const getTodayDateString = () => new Date().toISOString().split('T')[0];
+
+const getRankInfo = (xp: number) => {
+    let currentRank = RANKS[0];
+    for (let i = 0; i < RANKS.length; i++) {
+        if (xp >= RANKS[i].minXP) {
+            currentRank = RANKS[i];
+        } else {
+            break;
+        }
+    }
+    return currentRank;
 };
 
 function App() {
+    const [theme, setTheme] = useLocalStorage<'light' | 'dark'>('theme', 'light');
     const [results, setResults] = useCookie<TestResults>('testResults', {});
-    // Usamos localStorage para las preguntas falladas porque la lista puede ser muy larga para una cookie
+    const [testHistory, setTestHistory] = useLocalStorage<TestHistory>('testHistory', []);
+
+    const toggleTheme = () => setTheme(prev => prev === 'light' ? 'dark' : 'light');
+
+    React.useEffect(() => {
+        if (theme === 'dark') {
+            document.documentElement.classList.add('dark');
+            document.body.className = 'bg-slate-900 transition-colors duration-300';
+        } else {
+            document.documentElement.classList.remove('dark');
+            document.body.className = 'bg-slate-50 transition-colors duration-300';
+        }
+    }, [theme]);
+
     const [failedQuestionTexts, setFailedQuestionTexts] = useLocalStorage<string[]>('failedQuestions', []);
-    // LocalStorage para el récord de supervivencia
     const [survivalRecord, setSurvivalRecord] = useLocalStorage<number>('survivalRecord', 0);
-    // LocalStorage para la experiencia (XP) y Rangos
     const [userXP, setUserXP] = useLocalStorage<number>('userXP', 0);
     const [userTrophies, setUserTrophies] = useLocalStorage<UserTrophies>('userTrophies', { diamonds: 0, trophies: 0, diplomas: 0 });
     const [dailyProgress, setDailyProgress] = useLocalStorage<{ date: string, count: number, rewards: { diploma: boolean, trophy: boolean, diamond: boolean } }>('dailyProgress', {
@@ -71,440 +83,318 @@ function App() {
     });
 
     const [activeTest, setActiveTest] = useState<Test | null>(null);
-    // Nuevo estado para el mazo de flashcards activo
     const [activeFlashcards, setActiveFlashcards] = useState<{ id: string, title: string, questions: Question[] } | null>(null);
 
     const [lastResult, setLastResult] = useState<TestResult | null>(null);
     const [totalQuestionsInLastTest, setTotalQuestionsInLastTest] = useState<number>(0);
     const [isInfoModalOpen, setIsInfoModalOpen] = useState(false);
 
-    // Estado para controlar la sección actual: 'tests', 'practical', 'stats' o 'flashcards'
-    const [currentSection, setCurrentSection] = useState<'tests' | 'practical' | 'stats' | 'flashcards'>('tests');
+    const [currentSection, setCurrentSection] = useState<'tests' | 'practical' | 'stats' | 'flashcards' | 'salary'>('tests');
 
     const handleStartTest = (testId: string) => {
-        // Buscar en ambas listas de datos
-        const testTemplate = TESTS_DATA.find(t => t.id === testId) || PRACTICAL_CASES.find(t => t.id === testId);
+        let testTemplate = TESTS_DATA.find(t => t.id === testId) || PRACTICAL_CASES.find(t => t.id === testId);
+
         if (!testTemplate) return;
 
-        // Creamos una copia del objeto del test para no modificar el original
         let testWithQuestions = { ...testTemplate };
 
-        // Lógica para el Test de Preguntas Suspendidas
         if (testId === 'test-failed-questions') {
             if (failedQuestionTexts.length === 0) {
-                alert("¡Enhorabuena! No tienes preguntas pendientes de repaso. Falla alguna pregunta primero para usar este test.");
+                alert("No tienes preguntas pendientes de repaso.");
                 return;
             }
-            // Filtramos todas las preguntas buscando las que coincidan con los textos fallados
             const failedQuestions = ALL_QUESTIONS.filter(q => failedQuestionTexts.includes(q.questionText.trim()));
-
-            // Las barajamos para que no salgan siempre en el mismo orden
             testWithQuestions.questions = getRandomQuestions(failedQuestions, failedQuestions.length).map(shuffleQuestionOptions);
             testWithQuestions.totalQuestions = failedQuestions.length;
-
         } else if (testId === 'test-infinite' || testId === 'test-survival') {
             const allQuestionsShuffled = getRandomQuestions(ALL_QUESTIONS, ALL_QUESTIONS.length);
             testWithQuestions.questions = allQuestionsShuffled.map(shuffleQuestionOptions);
             testWithQuestions.totalQuestions = allQuestionsShuffled.length;
         } else if (testId === 'test-ko-exams') {
-             // Filtrar los tests de examen (2019, 2020, 2021, 2022, 2025)
-             const examTests = TESTS_DATA.filter(t => [
-                'test-examen-2019',
-                'test-examen-2020',
-                'test-examen-2021',
-                'test-examen-2022',
-                'test-examen-2025'
-             ].includes(t.id));
-
-             // Aplanar todas las preguntas
-             const allExamQuestions = examTests.flatMap(t => t.questions);
-             
-             // Barajar preguntas
-             const shuffledQuestions = getRandomQuestions(allExamQuestions, allExamQuestions.length);
-
-             testWithQuestions.questions = shuffledQuestions.map(shuffleQuestionOptions);
-             testWithQuestions.totalQuestions = shuffledQuestions.length;
-        }
-        // Si es otro test dinámico (General o Rápido)
-        else if (testTemplate.totalQuestions && testTemplate.questions.length === 0) {
-            // 1. Seleccionar preguntas al azar de toda la base de datos
+            const examIds = ['test-examen-2019', 'test-examen-2020', 'test-examen-2021', 'test-examen-2022', 'test-examen-2025'];
+            const examTests = TESTS_DATA.filter(t => examIds.includes(t.id));
+            const allExamQuestions = examTests.flatMap(t => t.questions);
+            const shuffledQuestions = getRandomQuestions(allExamQuestions, allExamQuestions.length);
+            testWithQuestions.questions = shuffledQuestions.map(shuffleQuestionOptions);
+            testWithQuestions.totalQuestions = shuffledQuestions.length;
+        } else if (testTemplate.totalQuestions && testTemplate.questions.length === 0) {
             const randomQuestions = getRandomQuestions(ALL_QUESTIONS, testTemplate.totalQuestions);
-
-            // 2. Barajar las opciones de cada pregunta seleccionada
             testWithQuestions.questions = randomQuestions.map(shuffleQuestionOptions);
-        }
-        // Si es un test estático (de los temas o casos prácticos), opcionalmente también podríamos barajar sus opciones aquí
-        else {
+        } else {
+            // Shuffle options for regular tests too
             testWithQuestions.questions = testWithQuestions.questions.map(shuffleQuestionOptions);
         }
 
-        // Establecemos el test activo
         setActiveTest(testWithQuestions);
     };
 
-    const handleStartFlashcards = (deckId: string) => {
-        // 1. Deck especial de Plazos
-        if (deckId === 'flashcards-plazos') {
-            const timeQuestions = ALL_QUESTIONS.filter(q =>
-                TIME_KEYWORDS.some(keyword => q.questionText.toLowerCase().includes(keyword) || q.options.some(o => o.toLowerCase().includes(keyword)))
-            );
+    const handleCompleteTest = (testId: string, score: number, totalQuestions: number, detailsX?: { correct: string[], incorrect: string[] }) => {
+        // Fallback if details are not provided (shouldn't happen with current TestView)
+        const details = detailsX || { correct: [], incorrect: [] };
 
-            if (timeQuestions.length === 0) {
-                alert("No se encontraron preguntas relacionadas con plazos.");
-                return;
-            }
+        let newFailed = [...failedQuestionTexts];
+        details.incorrect.forEach(qText => {
+            if (!newFailed.includes(qText.trim())) newFailed.push(qText.trim());
+        });
+        details.correct.forEach(qText => {
+            newFailed = newFailed.filter(f => f !== qText.trim());
+        });
+        setFailedQuestionTexts(newFailed);
 
-            setActiveFlashcards({
-                id: 'flashcards-plazos',
-                title: 'Repaso Intensivo de Plazos',
-                questions: getRandomQuestions(timeQuestions, timeQuestions.length) // Barajadas por defecto
-            });
-            return;
-        }
+        const xpChange = (details.correct.length * 200) - (details.incorrect.length * 100);
+        setUserXP(prev => Math.max(0, prev + xpChange));
 
-        // 2. Deck basado en un Test/Tema existente
-        const sourceTest = TESTS_DATA.find(t => t.id === deckId);
-        if (sourceTest) {
-            setActiveFlashcards({
-                id: deckId,
-                title: `Flashcards: ${sourceTest.title}`,
-                questions: getRandomQuestions(sourceTest.questions, sourceTest.questions.length)
-            });
-        }
-    };
-
-    const handleCompleteTest = (testId: string, score: number, totalQuestions: number, details: { correct: string[], incorrect: string[] }) => {
-        // Actualizar lista de fallos global:
-
-        // Si el test es un Caso Práctico o el test de IA, NO guardamos los fallos en la lista de repaso.
-        // Los casos prácticos dependen del texto del supuesto y no tiene sentido repasarlos aisladamente.
-        // Las preguntas de IA son generadas al momento y no existen en la base de datos para un futuro repaso.
-        const isPracticalCase = PRACTICAL_CASES.some(t => t.id === testId);
-        const isAiTest = testId === 'test-ai' || testId === 'test-ai-ko';
-
-        if (details && !isPracticalCase && !isAiTest) {
-            const currentFailedSet = new Set(failedQuestionTexts);
-
-            // Añadir fallos nuevos
-            details.incorrect.forEach(qText => currentFailedSet.add(qText));
-
-            // Eliminar aciertos (Mastery learning: si la aciertas, sale de la lista de repaso)
-            details.correct.forEach(qText => currentFailedSet.delete(qText));
-
-            setFailedQuestionTexts(Array.from(currentFailedSet));
-        }
-
-        // --- Lógica de Gamificación (XP) ---
-        // +200 XP por acierto, -100 XP por fallo
-        const xpGained = (details.correct.length * 200);
-        const xpLost = (details.incorrect.length * 100);
-        const netXpChange = xpGained - xpLost;
-
-        // Actualizamos XP asegurando que no baje de 0
-        const newUserXP = Math.max(0, userXP + netXpChange);
-        setUserXP(newUserXP);
-        // -----------------------------------
-
-        // --- Lógica de Trofeos Diarios ---
         const today = getTodayDateString();
-        let currentDaily = { ...dailyProgress };
-
-        // Si cambió el día, resetear
-        if (currentDaily.date !== today) {
-            currentDaily = {
-                date: today,
-                count: 0,
-                rewards: { diploma: false, trophy: false, diamond: false }
-            };
-        }
-
-        // Sumar preguntas respondidas (aciertos + fallos)
-        const questionsAnswered = details.correct.length + details.incorrect.length;
-        currentDaily.count += questionsAnswered;
-
-        // Verificar recompensas
-        let newTrophies = { ...userTrophies };
-        let rewardsChanged = false;
-
-        // 100 preguntas -> 1 diploma
-        if (currentDaily.count >= 100 && !currentDaily.rewards.diploma) {
-            currentDaily.rewards.diploma = true;
-            newTrophies.diplomas += 1;
-            rewardsChanged = true;
-        }
-
-        // 500 preguntas -> 1 trofeo
-        if (currentDaily.count >= 500 && !currentDaily.rewards.trophy) {
-            currentDaily.rewards.trophy = true;
-            newTrophies.trophies += 1;
-            rewardsChanged = true;
-        }
-
-        // 1000 preguntas -> 1 diamante
-        if (currentDaily.count >= 1000 && !currentDaily.rewards.diamond) {
-            currentDaily.rewards.diamond = true;
-            newTrophies.diamonds += 1;
-            rewardsChanged = true;
-        }
-
-        setDailyProgress(currentDaily);
-        if (rewardsChanged) {
-            setUserTrophies(newTrophies);
-        }
-        // ---------------------------------
-
-        // Lógica Específica para Supervivencia
-        if (testId === 'test-survival' || testId === 'test-ko-exams' || testId === 'test-ai-ko') {
-            // En supervivencia, el 'score' son los aciertos (la racha).
-            if (testId === 'test-survival' && score > survivalRecord) {
-                setSurvivalRecord(score);
-            }
-            // TODO: Crear récord específico para KO Exams si se desea
-            // No guardamos status de passed/failed en cookie para supervivencia, solo el record en localStorage
+        let newDaily = { ...dailyProgress };
+        if (newDaily.date !== today) {
+            newDaily = { date: today, count: details.correct.length + details.incorrect.length, rewards: { diploma: false, trophy: false, diamond: false } };
         } else {
-            // Para aprobar, se necesita un 80% de aciertos
-            const passingScore = totalQuestions * 0.8;
-            const result: TestResult = {
-                score,
-                status: score >= passingScore ? 'passed' : 'failed',
-                totalQuestions: totalQuestions,
-            };
-
-            // Solo guardamos el resultado si NO es un test infinito ni el de fallos (para no desvirtuar estadísticas globales de temas)
-            if (testId !== 'test-infinite' && testId !== 'test-failed-questions') {
-                setResults({ ...results, [testId]: result });
-            }
-
-            setLastResult(result);
+            newDaily.count += (details.correct.length + details.incorrect.length);
         }
 
-        // En supervivencia, mostramos los resultados de "hasta donde has llegado"
-        if (testId === 'test-survival' || testId === 'test-ko-exams' || testId === 'test-ai-ko') {
-            setLastResult({
-                score: score,
-                status: 'failed' // Siempre es failed al final en muerte súbita (o passed si llega al final de todas las preguntas, improbable)
-            });
+        const newTrophies = { ...userTrophies };
+        if (newDaily.count >= 100 && !newDaily.rewards.diploma) {
+            newDaily.rewards.diploma = true;
+            newTrophies.diplomas++;
+        }
+        if (newDaily.count >= 500 && !newDaily.rewards.trophy) {
+            newDaily.rewards.trophy = true;
+            newTrophies.trophies++;
+        }
+        if (newDaily.count >= 1000 && !newDaily.rewards.diamond) {
+            newDaily.rewards.diamond = true;
+            newTrophies.diamonds++;
         }
 
+        setDailyProgress(newDaily);
+        setUserTrophies(newTrophies);
+
+        const status = score / totalQuestions >= 0.8 ? 'passed' : 'failed';
+        const result: TestResult = { score, status, date: new Date().toISOString(), totalQuestions };
+
+        // Guardar el intento en el historial para gráficas
+        const testTemplate = TESTS_DATA.find(t => t.id === testId) || PRACTICAL_CASES.find(t => t.id === testId);
+        const attempt: TestAttempt = {
+            ...result,
+            id: crypto.randomUUID(),
+            testId,
+            testTitle: testTemplate?.title || 'Test Personalizado'
+        };
+        setTestHistory(prev => [...prev, attempt]);
+
+        if (testId !== 'test-infinite' && testId !== 'test-failed-questions') {
+            setResults(prev => ({ ...prev, [testId]: result }));
+        }
+
+        setLastResult(result);
         setTotalQuestionsInLastTest(totalQuestions);
         setActiveTest(null);
     };
 
-    const handleReturnToDashboard = () => {
-        setLastResult(null);
-        setActiveTest(null);
-        setActiveFlashcards(null);
-    };
+    const currentRank = useMemo(() => getRankInfo(userXP), [userXP]);
 
-    const currentView = useMemo(() => {
-        if (activeTest) return 'test';
-        if (activeFlashcards) return 'flashcards-active';
-        if (lastResult) return 'results';
-        return 'dashboard';
-    }, [activeTest, activeFlashcards, lastResult]);
+    if (activeTest) {
+        return (
+            <div className="min-h-screen bg-slate-50 dark:bg-slate-900 transition-colors duration-300">
+                <main className="container mx-auto px-4 py-8 max-w-4xl">
+                    <TestView
+                        key={activeTest.id + Date.now()}
+                        test={activeTest}
+                        onComplete={handleCompleteTest}
+                        onExit={() => setActiveTest(null)}
+                        onSurvivalUpdate={(score) => {
+                            if (score > survivalRecord) setUserXP(prev => prev + 10); // Bonus for survival
+                        }}
+                    />
+                </main>
+            </div>
+        );
+    }
 
-    const dailyTarget = useMemo(() => {
-        const count = dailyProgress.count;
-        if (count < 100) return { target: 100, icon: '📜', label: 'Diploma' };
-        if (count < 500) return { target: 500, icon: '🏆', label: 'Trofeo' };
-        if (count < 1000) return { target: 1000, icon: '💎', label: 'Diamante' };
-        return { target: null, icon: '👑', label: 'Completo' };
-    }, [dailyProgress.count]);
+    if (activeFlashcards) {
+        return (
+            <div className="min-h-screen bg-slate-50 dark:bg-slate-900 transition-colors duration-300">
+                <main className="container mx-auto px-4 py-8 max-w-4xl">
+                    <FlashcardView
+                        title={activeFlashcards.title}
+                        questions={activeFlashcards.questions}
+                        onExit={() => setActiveFlashcards(null)}
+                    />
+                </main>
+            </div>
+        );
+    }
+
+    if (lastResult) {
+        return (
+            <div className="min-h-screen bg-slate-50 dark:bg-slate-900 transition-colors duration-300 flex items-center justify-center p-4">
+                <div className="max-w-xl w-full">
+                    <ResultsView
+                        result={lastResult}
+                        totalQuestions={totalQuestionsInLastTest}
+                        onReturn={() => setLastResult(null)}
+                    />
+                </div>
+            </div>
+        );
+    }
 
     return (
-        <div className="min-h-screen bg-slate-50 font-sans">
-            <header className="bg-white shadow-md sticky top-0 z-10">
-                <div className="container mx-auto px-4 py-3">
-                    <div className="flex justify-between items-center mb-2 md:mb-0">
-                        <div className="flex items-center gap-2">
-                            <span className="text-2xl" role="img" aria-label="logo">👮‍♂️</span>
-                            <h1 className="text-2xl md:text-3xl font-bold text-slate-800 tracking-tight">OpoTest <span className="text-blue-600">Penitenciarias</span></h1>
+        <div className="min-h-screen bg-slate-50 dark:bg-slate-900 transition-colors duration-300">
+            <header className="bg-white dark:bg-slate-800 shadow-sm border-b border-slate-200 dark:border-slate-700 sticky top-0 z-40">
+                <div className="container mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+                    <div className="flex items-center gap-3">
+                        <div className="bg-blue-600 p-2 rounded-lg shadow-lg">
+                            <span className="text-2xl">💻</span>
                         </div>
-                        <div className="flex items-center gap-3">
-                            {/* Daily Progress Badge */}
-                            <div className="hidden md:flex flex-col items-end justify-center text-xs font-mono text-slate-500 bg-yellow-50 border border-yellow-100 px-3 py-1 rounded" title={`Progreso diario: ${dailyProgress.count} preguntas`}>
-                                {dailyTarget.target ? (
-                                    <>
-                                        <div className="flex items-center gap-1 mb-0.5">
-                                            <span role="img" aria-label={dailyTarget.label}>{dailyTarget.icon}</span>
-                                            <span className="font-bold text-yellow-700">{dailyProgress.count} / {dailyTarget.target}</span>
-                                        </div>
-                                        <div className="w-full bg-yellow-200 h-1.5 rounded-full overflow-hidden">
-                                            <div className="bg-yellow-500 h-full transition-all duration-500" style={{ width: `${(dailyProgress.count / dailyTarget.target) * 100}%` }}></div>
-                                        </div>
-                                    </>
-                                ) : (
-                                    <span className="font-bold text-yellow-600 flex items-center gap-1">👑 Misión Cumplida</span>
-                                )}
-                            </div>
-
-                            {/* Mini badge de XP en el header */}
-                            <div className="hidden md:flex flex-col items-end text-xs font-mono text-slate-500 bg-slate-100 px-2 py-1 rounded">
-                                <span className="font-bold text-blue-600">XP: {userXP.toLocaleString()}</span>
-                            </div>
-                            <button
-                                onClick={() => setIsInfoModalOpen(true)}
-                                className="flex items-center gap-2 bg-blue-50 hover:bg-blue-100 text-blue-600 px-4 py-2 rounded-full transition-colors font-medium border border-blue-200"
-                                aria-label="Información y ayuda sobre la aplicación"
-                            >
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                                <span className="hidden sm:inline">Ayuda</span>
-                            </button>
+                        <div>
+                            <h1 className="text-xl font-black text-slate-800 dark:text-white tracking-tight leading-none">OPOTEST TAI</h1>
+                            <p className="text-[10px] text-slate-400 font-bold tracking-widest uppercase mt-1">Admin. General del Estado</p>
                         </div>
                     </div>
 
-                    {/* Navigation Tabs */}
-                    {currentView === 'dashboard' && (
-                        <div className="flex space-x-4 mt-4 border-b border-slate-200 overflow-x-auto">
-                            <button
-                                onClick={() => setCurrentSection('tests')}
-                                className={`pb-2 px-4 font-semibold transition-colors whitespace-nowrap ${currentSection === 'tests' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-slate-500 hover:text-slate-700'}`}
-                            >
-                                Tests y Temas
-                            </button>
-                            <button
-                                onClick={() => setCurrentSection('practical')}
-                                className={`pb-2 px-4 font-semibold transition-colors whitespace-nowrap ${currentSection === 'practical' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-slate-500 hover:text-slate-700'}`}
-                            >
-                                Casos Prácticos
-                            </button>
-                            <button
-                                onClick={() => setCurrentSection('flashcards')}
-                                className={`pb-2 px-4 font-semibold transition-colors whitespace-nowrap flex items-center gap-2 ${currentSection === 'flashcards' ? 'text-yellow-600 border-b-2 border-yellow-600' : 'text-slate-500 hover:text-slate-700'}`}
-                            >
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg>
-                                Flashcards
-                            </button>
-                            <button
-                                onClick={() => setCurrentSection('stats')}
-                                className={`pb-2 px-4 font-semibold transition-colors whitespace-nowrap ${currentSection === 'stats' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-slate-500 hover:text-slate-700'}`}
-                            >
-                                Estadísticas
-                            </button>
+                    <div className="flex items-center gap-4">
+                        <div className="hidden md:flex items-center gap-3 bg-slate-50 dark:bg-slate-700/50 px-4 py-1.5 rounded-2xl border border-slate-200 dark:border-slate-600 shadow-sm">
+                            <span className="text-2xl">{currentRank.icon}</span>
+                            <div className="flex flex-col">
+                                <span className="text-[10px] font-black text-blue-600 dark:text-blue-400 uppercase tracking-tight leading-none">{currentRank.name}</span>
+                                <span className="text-sm font-black text-slate-700 dark:text-white leading-tight">
+                                    {userXP.toLocaleString()} <span className="text-[10px] text-slate-400 font-bold">XP</span>
+                                </span>
+                            </div>
                         </div>
-                    )}
+
+                        {/* Daily Progress Badge */}
+                        <div className="hidden lg:flex items-center gap-3 bg-slate-50 dark:bg-slate-700/50 px-4 py-1.5 rounded-2xl border border-slate-200 dark:border-slate-600 shadow-sm group">
+                            <span className="text-xl">🎯</span>
+                            <div className="flex flex-col">
+                                <span className="text-[10px] font-black text-orange-600 dark:text-orange-400 uppercase tracking-tight leading-none">Hoy</span>
+                                <span className="text-sm font-black text-slate-700 dark:text-white leading-tight">
+                                    {dailyProgress.count} <span className="text-[10px] text-slate-400 font-bold">Resueltas</span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <button
+                            onClick={() => setIsInfoModalOpen(true)}
+                            className="p-2 text-slate-400 hover:text-blue-500 transition-colors"
+                            title="Ayuda e información"
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </button>
+                        <button
+                            onClick={toggleTheme}
+                            className="p-2 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg hover:bg-slate-200 dark:hover:bg-slate-600 transition-all font-bold text-[10px] flex items-center gap-2 shadow-sm border border-slate-200 dark:border-slate-600"
+                        >
+                            {theme === 'light' ? '🌙 MODO OSCURO' : '☀️ MODO CLARO'}
+                        </button>
+                    </div>
                 </div>
             </header>
+
             <main className="container mx-auto px-4 py-8">
-                {currentView === 'dashboard' && (
-                    <>
-                        {/* Banner de fallos: Solo mostrar si estamos en sección tests y hay fallos */}
-                        {currentSection === 'tests' && failedQuestionTexts.length > 0 && (
-                            <div className="mb-6 bg-orange-50 border border-orange-200 rounded-lg p-4 flex items-center justify-between shadow-sm">
-                                <div className="flex items-center gap-3">
-                                    <div className="bg-orange-100 p-2 rounded-full text-orange-600">
-                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-                                        </svg>
-                                    </div>
-                                    <div>
-                                        <h3 className="font-bold text-orange-800">Preguntas pendientes de repaso</h3>
-                                        <p className="text-orange-700 text-sm">Tienes {failedQuestionTexts.length} preguntas que has fallado anteriormente.</p>
-                                    </div>
-                                </div>
-                                <button
-                                    onClick={() => handleStartTest('test-failed-questions')}
-                                    className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded-lg shadow transition-colors text-sm md:text-base"
-                                >
-                                    Repasar fallos
-                                </button>
+                <div className="mb-8 border-b border-slate-200 dark:border-slate-700 overflow-x-auto">
+                    <div className="flex gap-4 min-w-max">
+                        <button
+                            onClick={() => setCurrentSection('tests')}
+                            className={`pb-2 px-4 font-bold text-sm transition-all whitespace-nowrap ${currentSection === 'tests' ? 'text-blue-600 dark:text-blue-400 border-b-4 border-blue-600 dark:border-blue-400' : 'text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200'}`}
+                        >
+                            🏠 TESTS Y TEMAS
+                        </button>
+                        <button
+                            onClick={() => setCurrentSection('practical')}
+                            className={`pb-2 px-4 font-bold text-sm transition-all whitespace-nowrap ${currentSection === 'practical' ? 'text-blue-600 dark:text-blue-400 border-b-4 border-blue-600 dark:border-blue-400' : 'text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200'}`}
+                        >
+                            📖 CASOS PRÁCTICOS
+                        </button>
+                        <button
+                            onClick={() => setCurrentSection('flashcards')}
+                            className={`pb-2 px-4 font-bold text-sm transition-all whitespace-nowrap ${currentSection === 'flashcards' ? 'text-blue-600 dark:text-blue-400 border-b-4 border-blue-600 dark:border-blue-400' : 'text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200'}`}
+                        >
+                            ⚡ FLASHCARDS
+                        </button>
+                        <button
+                            onClick={() => setCurrentSection('stats')}
+                            className={`pb-2 px-4 font-bold text-sm transition-all whitespace-nowrap ${currentSection === 'stats' ? 'text-blue-600 dark:text-blue-400 border-b-4 border-blue-600 dark:border-blue-400' : 'text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200'}`}
+                        >
+                            📈 ESTADÍSTICAS
+                        </button>
+                        <button
+                            onClick={() => setCurrentSection('salary')}
+                            className={`pb-2 px-4 font-bold text-sm transition-all whitespace-nowrap flex items-center gap-2 ${currentSection === 'salary' ? 'text-green-600 dark:text-green-400 border-b-4 border-green-600 dark:border-green-400' : 'text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200'}`}
+                        >
+                            💰 SUELDOS TAI
+                        </button>
+                    </div>
+                </div>
+
+                {/* Banner de fallos */}
+                {currentSection === 'tests' && failedQuestionTexts.length > 0 && (
+                    <div className="mb-8 bg-gradient-to-r from-orange-50 to-white dark:from-orange-900/10 dark:to-slate-800 border border-orange-200 dark:border-orange-800 rounded-2xl p-6 flex flex-col md:flex-row items-center justify-between shadow-lg gap-4">
+                        <div className="flex items-center gap-4">
+                            <div className="bg-orange-100 dark:bg-orange-900/40 p-3 rounded-xl text-orange-600 dark:text-orange-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                                </svg>
                             </div>
-                        )}
-
-                        {currentSection === 'tests' && (
-                            <Dashboard
-                                tests={TESTS_DATA}
-                                results={results}
-                                onStartTest={handleStartTest}
-                                title={'Tests por Bloques y Temas'}
-                                survivalRecord={survivalRecord}
-                            />
-                        )}
-
-                        {currentSection === 'practical' && (
-                            <Dashboard
-                                tests={PRACTICAL_CASES}
-                                results={results}
-                                onStartTest={handleStartTest}
-                                title={'Supuestos Prácticos Penitenciarios'}
-                            />
-                        )}
-
-                        {currentSection === 'flashcards' && (
-                            <div className="space-y-6 animate-fade-in">
-                                <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded shadow-sm">
-                                    <div className="flex items-start">
-                                        <div className="flex-shrink-0">
-                                            <svg className="h-6 w-6 text-yellow-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                                            </svg>
-                                        </div>
-                                        <div className="ml-3">
-                                            <p className="text-sm text-yellow-700">
-                                                El modo <strong>Flashcards</strong> te permite estudiar sin presión. Se muestra la pregunta y tú decides cuándo ver la respuesta. Ideal para memorizar datos puros.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <h2 className="text-2xl font-bold text-slate-700 mb-6">Mazos de Estudio</h2>
-
-                                {/* Special Decks */}
-                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-                                    <div
-                                        onClick={() => handleStartFlashcards('flashcards-plazos')}
-                                        className="bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl p-6 text-white shadow-lg transform transition hover:scale-105 cursor-pointer"
-                                    >
-                                        <div className="flex justify-between items-start mb-4">
-                                            <h3 className="text-xl font-bold">Repaso de Plazos</h3>
-                                            <span className="bg-white/20 p-2 rounded-lg">⏳</span>
-                                        </div>
-                                        <p className="text-indigo-100 text-sm mb-4">
-                                            Mazo inteligente generado automáticamente con preguntas sobre días, años, prescripciones y tiempos.
-                                        </p>
-                                        <button className="w-full bg-white/20 hover:bg-white/30 py-2 rounded-lg font-semibold transition-colors">
-                                            Empezar Estudio
-                                        </button>
-                                    </div>
-                                </div>
-
-                                <h3 className="text-lg font-bold text-slate-600 mb-4 border-b pb-2">Estudiar Temas Específicos</h3>
-                                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                                    {TESTS_DATA.filter(t => t.questions.length > 0 && !t.id.startsWith('test-')).map(test => (
-                                        <div
-                                            key={test.id}
-                                            onClick={() => handleStartFlashcards(test.id)}
-                                            className="bg-white border border-slate-200 hover:border-yellow-400 p-4 rounded-lg shadow-sm hover:shadow-md transition-all cursor-pointer group"
-                                        >
-                                            <h4 className="font-semibold text-slate-700 group-hover:text-yellow-600 mb-2 line-clamp-2">{test.title}</h4>
-                                            <div className="flex justify-between items-center text-xs text-slate-500">
-                                                <span>{test.questions.length} tarjetas</span>
-                                                <span className="group-hover:translate-x-1 transition-transform">➔</span>
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
+                            <div className="text-center md:text-left">
+                                <h3 className="font-black text-orange-800 dark:text-orange-300 text-lg uppercase tracking-tight">Expedientes con Errores</h3>
+                                <p className="text-orange-700 dark:text-orange-400 text-sm">Hay {failedQuestionTexts.length} conceptos que necesitan revisión inmediata.</p>
                             </div>
-                        )}
-
-                        {currentSection === 'stats' && (
-                            <StatisticsView
-                                results={results}
-                                failedQuestions={failedQuestionTexts}
-                                allTests={[...TESTS_DATA, ...PRACTICAL_CASES]}
-                                userXP={userXP}
-                                userTrophies={userTrophies}
-                            />
-                        )}
-                    </>
+                        </div>
+                        <button
+                            onClick={() => handleStartTest('test-failed-questions')}
+                            className="bg-orange-600 hover:bg-orange-700 text-white font-black py-3 px-8 rounded-xl shadow-lg transition-all transform hover:scale-105 active:scale-95 text-sm uppercase tracking-widest"
+                        >
+                            Repasar Fallos
+                        </button>
+                    </div>
                 )}
-                {/* Usamos una key basada en el ID y un timestamp para forzar el remount completo al reiniciar un test */}
-                {currentView === 'test' && activeTest && <TestView key={activeTest.id + Date.now()} test={activeTest} onComplete={handleCompleteTest} onExit={handleReturnToDashboard} />}
-                {currentView === 'flashcards-active' && activeFlashcards && <FlashcardView key={activeFlashcards.id} title={activeFlashcards.title} questions={activeFlashcards.questions} onExit={handleReturnToDashboard} />}
-                {currentView === 'results' && lastResult && <ResultsView result={lastResult} totalQuestions={totalQuestionsInLastTest} onReturn={handleReturnToDashboard} />}
+
+                {currentSection === 'tests' && (
+                    <Dashboard
+                        tests={TESTS_DATA}
+                        onStartTest={handleStartTest}
+                        results={results}
+                        survivalRecord={survivalRecord}
+                    />
+                )}
+
+                {currentSection === 'practical' && (
+                    <Dashboard
+                        tests={PRACTICAL_CASES}
+                        onStartTest={handleStartTest}
+                        results={results}
+                        survivalRecord={0}
+                    />
+                )}
+
+                {currentSection === 'stats' && (
+                    <StatisticsView
+                        results={results}
+                        failedQuestions={failedQuestionTexts}
+                        allTests={[...TESTS_DATA, ...PRACTICAL_CASES]}
+                        userXP={userXP}
+                        userTrophies={userTrophies}
+                        testHistory={testHistory}
+                    />
+                )}
+
+                {currentSection === 'flashcards' && (
+                    <FlashcardsView
+                        allQuestions={ALL_QUESTIONS}
+                        tests={TESTS_DATA}
+                        onStartDeck={(deck) => setActiveFlashcards(deck)}
+                    />
+                )}
+
+                {currentSection === 'salary' && (
+                    <SalaryView />
+                )}
             </main>
+
             <InfoModal isOpen={isInfoModalOpen} onClose={() => setIsInfoModalOpen(false)} />
         </div>
     );

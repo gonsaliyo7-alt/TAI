@@ -3,76 +3,76 @@ import type { Test } from '../../types';
 
 export const TEST_5: Test = {
   id: 'test-5',
-  title: 'Test 5: Dº Penal II (Temas 21-25)',
+  title: 'Test 5: Bloque III - Desarrollo de Software',
   questions: [
-    // Tema 21: Formas de aparición del delito
-    { 
-      questionText: 'La tentativa existe cuando el sujeto:', 
-      options: ['Piensa en cometer el delito', 'Da principio a la ejecución del delito pero no lo consuma por causas independientes de su voluntad', 'Realiza todos los actos y consigue el resultado', 'Provoca a otros a delinquir'], 
+    // Tema: Java
+    {
+      questionText: 'En Java, ¿qué palabra clave se usa para heredar de una clase?',
+      options: ['implements', 'extends', 'inherits', 'super'],
       correctAnswer: 1,
-      explanation: 'El artículo 16 del Código Penal define la tentativa: "Hay tentativa cuando el sujeto da principio a la ejecución del delito directamente por hechos exteriores, practicando todos o parte de los actos que objetivamente deberían producir el resultado, y sin embargo éste no se produce por causas independientes de la voluntad del autor".'
+      explanation: 'La palabra clave "extends" se utiliza en Java para indicar que una clase hereda de otra (herencia).'
     },
-    { 
-      questionText: '¿Quiénes son responsables criminalmente de los delitos?', 
-      options: ['Solo los autores', 'Los autores y los cómplices', 'Los encubridores únicamente', 'Los testigos'], 
+    {
+      questionText: '¿Cuál de las siguientes NO es una interfaz de la colección de Java?',
+      options: ['List', 'Set', 'Map', 'String'],
+      correctAnswer: 3,
+      explanation: 'String es una clase en Java, no una interfaz de Collections Framework (como List, Set o Map).'
+    },
+
+    // Tema: Patrones de Diseño
+    {
+      questionText: '¿Qué patrón de diseño proporciona una interfaz para crear familias de objetos relacionados o dependientes sin especificar sus clases concretas?',
+      options: ['Factory Method', 'Abstract Factory', 'Builder', 'Prototype'],
       correctAnswer: 1,
-      explanation: 'El artículo 27 del Código Penal establece que son responsables criminalmente de los delitos los autores y los cómplices.'
+      explanation: 'El patrón Abstract Factory permite crear familias de objetos relacionados sin especificar sus clases concretas.'
     },
-    
-    // Tema 22: Causas de extinción
-    { 
-      questionText: '¿Cuál de las siguientes es una causa de extinción de la responsabilidad penal?', 
-      options: ['La embriaguez', 'La prescripción del delito', 'La legítima defensa', 'El estado de necesidad'], 
-      correctAnswer: 1,
-      explanation: 'El artículo 130 del Código Penal enumera las causas de extinción de la responsabilidad criminal, entre las que se encuentra la prescripción del delito.'
-    },
-    { 
-      questionText: 'La prescripción de la pena comienza a computarse desde:', 
-      options: ['El día de comisión del delito', 'El día de la sentencia firme', 'El día que se detiene al autor', 'El día que ingresa en prisión'], 
-      correctAnswer: 1,
-      explanation: 'El artículo 133 del Código Penal establece que el tiempo de la prescripción de la pena se computará desde la fecha de la sentencia firme, o desde el quebrantamiento de la condena si ésta hubiese comenzado a cumplirse.'
-    },
-    
-    // Tema 23: La pena
-    { 
-      questionText: 'La pena de prisión permanente revisable es una pena:', 
-      options: ['Privativa de derechos', 'Privativa de libertad grave', 'Leve', 'De multa'], 
-      correctAnswer: 1,
-      explanation: 'El artículo 33 del Código Penal clasifica la prisión permanente revisable como una pena grave privativa de libertad.'
-    },
-    { 
-      questionText: 'Las medidas de seguridad se aplican a:', 
-      options: ['Sujetos imputables y culpables', 'Sujetos inimputables o semiimputables en función de su peligrosidad', 'Víctimas del delito', 'Testigos protegidos'], 
-      correctAnswer: 1,
-      explanation: 'Las medidas de seguridad se fundamentan en la peligrosidad criminal del sujeto y se aplican a personas inimputables o semiimputables (arts. 6 y 95 CP).'
-    },
-    
-    // Tema 24: Suspensión y Libertad Condicional
-    { 
-      questionText: 'Para la suspensión de la pena de prisión, ¿es necesario haber satisfecho las responsabilidades civiles (o comprometerse a ello)?', 
-      options: ['No, nunca', 'Sí, es un requisito necesario', 'Solo si la víctima lo pide', 'Depende del delito'], 
-      correctAnswer: 1,
-      explanation: 'El artículo 80.2.3ª del Código Penal establece como condición necesaria para la suspensión haber satisfecho las responsabilidades civiles que se hubieren originado y haberse hecho efectivo el decomiso.'
-    },
-    { 
-      questionText: 'La libertad condicional supone:', 
-      options: ['La suspensión de la ejecución del resto de la pena', 'El indulto total', 'La eliminación de los antecedentes', 'Un permiso de fin de semana'], 
+    {
+      questionText: 'El patrón MVC corresponde a las siglas:',
+      options: ['Model View Controller', 'Module View Class', 'Main View Code', 'Model Visual Component'],
       correctAnswer: 0,
-      explanation: 'El artículo 90 del Código Penal regula la libertad condicional como una modalidad de suspensión de la ejecución del resto de la pena de prisión.'
+      explanation: 'MVC significa Modelo-Vista-Controlador, un patrón de arquitectura de software.'
     },
-    
-    // Tema 25: Delitos Admin y Seguridad
-    { 
-      questionText: 'El delito de prevaricación lo comete:', 
-      options: ['El particular que soborna', 'La autoridad o funcionario que dicta resolución arbitraria a sabiendas de su injusticia', 'Quien malversa fondos', 'Quien desobedece a la autoridad'], 
+
+    // Tema: Servicios Web
+    {
+      questionText: '¿Qué lenguaje se utiliza habitualmente para describir servicios web SOAP?',
+      options: ['JSON', 'WSDL', 'HTML', 'CSS'],
       correctAnswer: 1,
-      explanation: 'El artículo 404 del Código Penal define la prevaricación administrativa: "A la autoridad o funcionario público que, a sabiendas de su injusticia, dictare una resolución arbitraria en un asunto administrativo...".'
+      explanation: 'WSDL (Web Services Description Language) es un formato XML para describir servicios de red.'
     },
-    { 
-      questionText: 'Conducir un vehículo de motor con exceso de velocidad punible es un delito contra:', 
-      options: ['El patrimonio', 'La seguridad colectiva (seguridad vial)', 'La Administración Pública', 'El honor'], 
+    {
+      questionText: 'En una arquitectura REST, ¿qué método HTTP se usa típicamente para actualizar un recurso existente?',
+      options: ['GET', 'POST', 'PUT', 'DELETE'],
+      correctAnswer: 2,
+      explanation: 'PUT (o PATCH) se utiliza para actualizar recursos en una API REST.'
+    },
+
+    // Tema: .NET
+    {
+      questionText: '¿Cuál es el lenguaje principal del framework .NET?',
+      options: ['Java', 'C#', 'Python', 'Ruby'],
       correctAnswer: 1,
-      explanation: 'Los delitos contra la seguridad vial (como el exceso de velocidad del art. 379 CP) se encuadran dentro del Título XVII: "De los delitos contra la seguridad colectiva".'
+      explanation: 'C# (C Sharp) es el lenguaje de programación principal desarrollado por Microsoft para la plataforma .NET.'
+    },
+    {
+      questionText: '¿Qué es el CLR en .NET?',
+      options: ['Common Language Runtime', 'Common Library Runtime', 'Code Language Runner', 'Core Library Resource'],
+      correctAnswer: 0,
+      explanation: 'CLR (Common Language Runtime) es el entorno de ejecución de la plataforma .NET.'
+    },
+
+    // Tema: Calidad del Software
+    {
+      questionText: '¿Qué norma ISO se refiere a la calidad del producto software?',
+      options: ['ISO 9001', 'ISO 25000 (SQuaRE)', 'ISO 27001', 'ISO 14001'],
+      correctAnswer: 1,
+      explanation: 'La familia de normas ISO/IEC 25000 (SQuaRE) tiene por objetivo la creación de un marco de trabajo común para evaluar la calidad del producto software.'
+    },
+    {
+      questionText: '¿Qué es la refactorización?',
+      options: ['Escribir código nuevo', 'Cambiar la estructura interna del código sin cambiar su comportamiento externo', 'Corregir bugs', 'Añadir funcionalidades'],
+      correctAnswer: 1,
+      explanation: 'La refactorización es el proceso de reestructurar el código fuente existente, alterando su estructura interna sin cambiar su comportamiento externo.'
     },
   ]
 };

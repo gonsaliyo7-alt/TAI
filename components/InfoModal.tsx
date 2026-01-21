@@ -13,14 +13,14 @@ function InfoModal({ isOpen, onClose }: InfoModalProps) {
   }
 
   return (
-    <div 
+    <div
       className="fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center"
       onClick={onClose}
       role="dialog"
       aria-modal="true"
       aria-labelledby="info-modal-title"
     >
-      <div 
+      <div
         className="bg-white rounded-lg shadow-xl p-6 max-w-2xl w-full m-4 max-h-[90vh] overflow-y-auto"
         onClick={e => e.stopPropagation()} // Prevent closing when clicking inside modal
       >
@@ -37,10 +37,10 @@ function InfoModal({ isOpen, onClose }: InfoModalProps) {
             </svg>
           </button>
         </div>
-        
+
         <div className="text-slate-600 space-y-6">
           <p className="text-lg text-slate-800 font-medium">
-            Bienvenido a tu plataforma de preparación para el Cuerpo de Ayudantes de Instituciones Penitenciarias.
+            Bienvenido a tu plataforma de preparación para el Cuerpo de Técnicos Auxiliares de Informática (TAI) de la Administración del Estado.
           </p>
 
           <div className="bg-blue-50 p-4 rounded-lg border border-blue-100">
@@ -67,34 +67,35 @@ function InfoModal({ isOpen, onClose }: InfoModalProps) {
             <h3 className="text-lg font-semibold text-slate-700 mb-3 border-b pb-2">Estructura del Contenido</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
               <div>
-                <h4 className="font-bold text-slate-800">Parte 1: Org. Estado y Admin.</h4>
+                <h4 className="font-bold text-slate-800">Bloque I: Admin. Pública</h4>
                 <ul className="list-disc list-inside text-slate-600 pl-2">
-                  <li>Constitución y Derechos (Temas 1-4)</li>
-                  <li>Gobierno y Org. Territorial (Temas 5-6)</li>
-                  <li>Unión Europea (Tema 7)</li>
-                  <li>Derecho Administrativo (Temas 8-10)</li>
-                  <li>Función Pública (Temas 11-15)</li>
+                  <li>Constitución y Estado (Temas 1-5)</li>
+                  <li>Derecho Administrativo (Temas 6-9)</li>
+                  <li>Gestión de Personal y Presupuesto (Temas 10-12)</li>
                 </ul>
               </div>
               <div>
-                <h4 className="font-bold text-slate-800">Parte 2: Derecho Penal</h4>
+                <h4 className="font-bold text-slate-800">Bloque II: Tecnología Básica</h4>
                 <ul className="list-disc list-inside text-slate-600 pl-2">
-                  <li>Código Penal y Penas (Temas 16-24)</li>
-                  <li>Tipos Delictivos (Temas 25-27)</li>
+                  <li>Informática Básica y Hardware (Temas 1-4)</li>
+                  <li>Sistemas Operativos (Temas 5-7)</li>
+                  <li>Redes y Comunicaciones (Temas 8-10)</li>
                 </ul>
               </div>
               <div>
-                <h4 className="font-bold text-slate-800">Parte 3: Derecho Penitenciario</h4>
+                <h4 className="font-bold text-slate-800">Bloque III: Desarrollo de Sistemas</h4>
                 <ul className="list-disc list-inside text-slate-600 pl-2">
-                  <li>LOGP y Reglamento (Temas 28-30)</li>
-                  <li>Régimen y Tratamiento (Temas 31-40)</li>
-                  <li>Gestión y Sanidad (Temas 41-47)</li>
+                  <li>Metodologías y Diseño (Temas 1-3)</li>
+                  <li>Bases de Datos y SQL (Temas 4-6)</li>
+                  <li>Lenguajes de Programación y Web (Temas 7-10)</li>
                 </ul>
               </div>
               <div>
-                <h4 className="font-bold text-slate-800">Parte 4: Conducta Humana</h4>
+                <h4 className="font-bold text-slate-800">Bloque IV: Infraestructuras</h4>
                 <ul className="list-disc list-inside text-slate-600 pl-2">
-                  <li>Psicología y Sociología (Temas 48-50)</li>
+                  <li>Administración de Sistemas (Temas 1-3)</li>
+                  <li>Seguridad y Accesibilidad (Temas 4-7)</li>
+                  <li>Cloud y Microservicios (Temas 8-10)</li>
                 </ul>
               </div>
             </div>
@@ -107,33 +108,33 @@ function InfoModal({ isOpen, onClose }: InfoModalProps) {
           <div className="mt-6 border-t pt-4">
             <h3 className="text-lg font-bold text-slate-800 mb-3">🎖️ Sistema de Rangos y Experiencia</h3>
             <p className="text-sm text-slate-600 mb-4">
-                Ganas <span className="text-green-600 font-bold">+200 XP</span> por cada pregunta acertada y pierdes <span className="text-red-600 font-bold">-100 XP</span> por cada fallo. Acumula experiencia para ascender de rango.
+              Ganas <span className="text-green-600 font-bold">+200 XP</span> por cada pregunta acertada y pierdes <span className="text-red-600 font-bold">-100 XP</span> por cada fallo. Acumula experiencia para ascender de rango.
             </p>
             <div className="bg-slate-50 rounded-lg p-4 border border-slate-200 max-h-60 overflow-y-auto">
-                <table className="w-full text-sm text-left">
-                    <thead className="text-xs text-slate-500 uppercase bg-slate-100 sticky top-0">
-                        <tr>
-                            <th className="px-3 py-2 bg-slate-100">Rango</th>
-                            <th className="px-3 py-2 text-right bg-slate-100">XP Necesaria</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {RANKS.map((rank) => (
-                            <tr key={rank.name} className="border-b border-slate-100 last:border-0 hover:bg-slate-100 transition-colors">
-                                <td className="px-3 py-2 font-medium text-slate-700 flex items-center gap-2">
-                                    <span className="text-xl w-8 text-center">{rank.icon}</span> {rank.name}
-                                </td>
-                                <td className="px-3 py-2 text-right text-blue-600 font-mono font-semibold">
-                                    {rank.minXP.toLocaleString()} XP
-                                </td>
-                            </tr>
-                        ))}
-                    </tbody>
-                </table>
+              <table className="w-full text-sm text-left">
+                <thead className="text-xs text-slate-500 uppercase bg-slate-100 sticky top-0">
+                  <tr>
+                    <th className="px-3 py-2 bg-slate-100">Rango</th>
+                    <th className="px-3 py-2 text-right bg-slate-100">XP Necesaria</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {RANKS.map((rank) => (
+                    <tr key={rank.name} className="border-b border-slate-100 last:border-0 hover:bg-slate-100 transition-colors">
+                      <td className="px-3 py-2 font-medium text-slate-700 flex items-center gap-2">
+                        <span className="text-xl w-8 text-center">{rank.icon}</span> {rank.name}
+                      </td>
+                      <td className="px-3 py-2 text-right text-blue-600 font-mono font-semibold">
+                        {rank.minXP.toLocaleString()} XP
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
-        
+
         <div className="mt-8 text-right">
           <button
             onClick={onClose}

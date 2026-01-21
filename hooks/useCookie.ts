@@ -13,7 +13,7 @@ const setCookie = (key: string, value: string, days: number = 365) => {
   document.cookie = `${key}=${encodeURIComponent(value)};expires=${expires.toUTCString()};path=/;SameSite=Lax`;
 };
 
-export const useCookie = <T,>(key: string, initialValue: T): [T, (value: T) => void] => {
+export const useCookie = <T,>(key: string, initialValue: T): [T, (value: T | ((val: T) => T)) => void] => {
   const [storedValue, setStoredValue] = useState<T>(() => {
     try {
       const item = getCookie(key);
