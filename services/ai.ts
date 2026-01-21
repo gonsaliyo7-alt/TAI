@@ -39,8 +39,7 @@ export class AIService {
 
         // Initialize model if not already done
         if (!this.model) {
-            // Usamos el modelo solicitado: gemini-2.0-flash-lite (o gemini-2.5-flash-lite)
-            this.model = this.genAI.getGenerativeModel({ model: "gemini-2.0-flash-lite" });
+            this.model = this.genAI.getGenerativeModel({ model: "gemini-2.5-flash-lite" });
         }
 
         const prompt = `Eres un experto en oposiciones de España. Crea una pregunta de examen tipo test sobre el temario del Cuerpo de Técnicos Auxiliares de Informática de la Administración del Estado.
