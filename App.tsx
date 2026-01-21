@@ -81,6 +81,7 @@ function App() {
         count: 0,
         rewards: { diploma: false, trophy: false, diamond: false }
     });
+    const [aiQuestionsCache, setAiQuestionsCache] = useLocalStorage<Record<string, Question>>('aiQuestionsCache', {});
 
     const [activeTest, setActiveTest] = useState<Test | null>(null);
     const [activeFlashcards, setActiveFlashcards] = useState<{ id: string, title: string, questions: Question[] } | null>(null);
@@ -103,7 +104,12 @@ function App() {
                 alert("No tienes preguntas pendientes de repaso.");
                 return;
             }
-            const failedQuestions = ALL_QUESTIONS.filter(q => failedQuestionTexts.includes(q.questionText.trim()));
+            const failedQuestions = failedQuestionTexts.map(text => {
+                const staticQ = ALL_QUESTIONS.find(q => q.questionText.trim() === text.trim());
+                if (staticQ) return staticQ;
+                return aiQuestionsCache[text.trim()];
+            }).filter(Boolean) as Question[];
+
             testWithQuestions.questions = getRandomQuestions(failedQuestions, failedQuestions.length).map(shuffleQuestionOptions);
             testWithQuestions.totalQuestions = failedQuestions.length;
         } else if (testId === 'test-infinite' || testId === 'test-survival') {
@@ -128,7 +134,7 @@ function App() {
         setActiveTest(testWithQuestions);
     };
 
-    const handleCompleteTest = (testId: string, score: number, totalQuestions: number, detailsX?: { correct: string[], incorrect: string[] }) => {
+    const handleCompleteTest = (testId: string, score: number, totalQuestions: number, detailsX?: { correct: string[], incorrect: string[], questions?: Question[] }) => {
         // Fallback if details are not provided (shouldn't happen with current TestView)
         const details = detailsX || { correct: [], incorrect: [] };
 
@@ -140,6 +146,15 @@ function App() {
             newFailed = newFailed.filter(f => f !== qText.trim());
         });
         setFailedQuestionTexts(newFailed);
+
+        // Si hay objetos de preguntas (de la IA), los guardamos en el cache
+        if (details.questions && details.questions.length > 0) {
+            const newCache = { ...aiQuestionsCache };
+            details.questions.forEach(q => {
+                newCache[q.questionText.trim()] = q;
+            });
+            setAiQuestionsCache(newCache);
+        }
 
         const xpChange = (details.correct.length * 200) - (details.incorrect.length * 100);
         setUserXP(prev => Math.max(0, prev + xpChange));

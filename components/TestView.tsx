@@ -5,8 +5,9 @@ import { aiService } from '../services/ai';
 
 interface TestViewProps {
   test: Test;
-  onComplete: (testId: string, score: number, totalQuestions: number, details: { correct: string[], incorrect: string[] }) => void;
+  onComplete: (testId: string, score: number, totalQuestions: number, details: { correct: string[], incorrect: string[], questions?: Question[] }) => void;
   onExit: () => void;
+  onSurvivalUpdate?: (score: number) => void;
 }
 
 const TestView: React.FC<TestViewProps> = ({ test, onComplete, onExit }) => {
@@ -140,26 +141,26 @@ const TestView: React.FC<TestViewProps> = ({ test, onComplete, onExit }) => {
         }
       }
     });
-    return { score, correct, incorrect };
+    return { score, correct, incorrect, questions: activeQuestions };
   };
 
   const handleSubmit = () => {
-    const { score, correct, incorrect } = getResultsDetails();
-    onComplete(test.id, score, activeQuestions.length, { correct, incorrect });
+    const { score, correct, incorrect, questions } = getResultsDetails();
+    onComplete(test.id, score, activeQuestions.length, { correct, incorrect, questions });
   };
 
   const handleFinishInfinite = () => {
-    const { score, correct, incorrect } = getResultsDetails();
+    const { score, correct, incorrect, questions } = getResultsDetails();
     const answeredCount = answers.filter(a => a !== null).length;
     const totalForStats = answeredCount > 0 ? answeredCount : 1;
 
-    onComplete(test.id, score, totalForStats, { correct, incorrect });
+    onComplete(test.id, score, totalForStats, { correct, incorrect, questions });
   };
 
   const handleFinishSurvival = (finalAnswers: (number | null)[]) => {
-    const { score, correct, incorrect } = getResultsDetails(finalAnswers);
+    const { score, correct, incorrect, questions } = getResultsDetails(finalAnswers);
     const attempted = correct.length + incorrect.length;
-    onComplete(test.id, score, attempted, { correct, incorrect });
+    onComplete(test.id, score, attempted, { correct, incorrect, questions });
   };
 
   // Calculate progress
@@ -249,7 +250,14 @@ const TestView: React.FC<TestViewProps> = ({ test, onComplete, onExit }) => {
   }
 
   // Should not happen if logic is correct, but safe guard
-  if (!currentQuestion) return null;
+  if (!currentQuestion) {
+    return (
+      <div className="text-center p-8">
+        <h3 className="text-xl font-bold text-slate-700 mb-4">No se han encontrado preguntas</h3>
+        <button onClick={onExit} className="px-4 py-2 bg-blue-600 text-white rounded-lg">Volver al inicio</button>
+      </div>
+    );
+  }
 
   return (
     <div className={`flex flex-col transition-colors duration-300 ${isSurvival && lives === 1 ? 'animate-pulse bg-red-50 dark:bg-red-900/10 p-2 rounded-xl' : ''}`}>
