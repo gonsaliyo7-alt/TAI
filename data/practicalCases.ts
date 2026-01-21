@@ -197,6 +197,12 @@ const QUESTIONS_15: Question[] = [
 ];
 
 export const PRACTICAL_CASES: Test[] = [
+  {
+    id: 'test-ai-practical',
+    title: 'Supuesto Práctico por IA (Generativo)',
+    questions: [],
+    totalQuestions: 0,
+  },
   { id: 'case-1', title: 'Caso Práctico 1: Bases de Datos (Diseño)', scenario: SCENARIO_1, questions: QUESTIONS_1 },
   { id: 'case-2', title: 'Caso Práctico 2: Sistemas (Linux)', scenario: SCENARIO_2, questions: QUESTIONS_2 },
   { id: 'case-3', title: 'Caso Práctico 3: Redes (IP)', scenario: SCENARIO_3, questions: QUESTIONS_3 },
